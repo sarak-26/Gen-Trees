@@ -1,0 +1,106 @@
+template:
+  version: 1
+  defaults:
+    seed: 0
+    output_format: csv
+    train_frac: 0.8
+
+vocabulary:
+  regions: [Dammam, Khobar, Buqaiq, Jubail]
+  industries: [Tech, Finance, Retail]
+  occupations: [Analyst, Sales, Manager, Secertary]
+  education_level: [HighSchool, Bachelors, Masters, PhD]
+  contract_type: [Permanent, FixedTerm, Agency, ZeroHours]
+  employment_type: [FullTime, PartTime]
+
+global_knobs:
+  correlation_strength: 0.6
+  missing_rate: 0.03
+  outlier_rate: 0.01
+  category_skew: 0.7
+  noise: 0.15
+
+features:
+  age:
+    kind: integer
+    distribution:
+      type: gaussian_mixture_truncated
+      min: 18
+      max: 70
+
+      means: [28, 42, 55]
+      stds: [6, 7, 6]
+      weights: [0.35, 0.45, 0.20]
+
+  region:
+    kind: categorical
+    values_from_vocab: regions
+    disrtribution:
+      type: categorical_skewed
+      skew_from_knob: category_skew
+
+  employment_type:
+    kind: categorical
+    values_from_vocab: employment_type
+    disrtribution:
+      type: categorical
+      probs: {FullTime: 0.72, PartTime: 0.28}
+  #Feature that depends on another feature
+
+  hours_worked:
+  kind: continuous
+  depends_on: [employment_type]
+  generation:
+    type: normal_by_category_truncated
+    by:
+      FullTime: {mean: 38, std: 3}
+      PartTime: {mean: 20, std: 6}
+    min: 1
+    max: 60
+
+  weekly_earnings:
+    kind: continuous
+    depends_on: [hours_worked]
+    generation:
+      type: lognormal_anchor_median
+      median_formula: "18 * hours_worked"
+      sigma_base: 0.35
+      outliers:
+        rate_from_knob: outlier_rate
+      min: 50
+     
+  tenure_years:
+    kind: continuous
+    distribution: 
+      type: gamma_truncated
+      shape: 2.0
+      scale: 2.0
+      min: 0
+      max: 40
+  
+difficulty_flags:
+  high_cardinality_titles: false
+  sparse: false
+  rare_categories: false
+  outliers: false
+
+presets:
+  D1:
+    n_rows: 5000
+    override_knobs:
+      correlation_strength: 0.25
+      missing_rate: 0.01
+      outlier_rate: 0.003
+    include_features: [age, region, employment_type, hours_worked, weekly_earnings, tenure_years]
+  
+  D2: 20000
+  override_knobs:
+    correlation_strength: 0.6
+    missingness_rate: 0.3
+  include_features: "*"
+
+  D3:
+    n_rows: 60000
+    override_knobs:
+      category_skew: 0.9
+      missing_rate: 0.05
