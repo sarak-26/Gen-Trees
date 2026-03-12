@@ -1,0 +1,27 @@
+=== Evaluation Summary ===
+Real:      data/generated/D1_seed2026_holdout.csv
+Synthetic: synthetic_data/D1_TVAE.csv
+
+Columns:
+  Numeric:     ['age', 'hours_worked', 'tenure_years', 'weekly_earnings']
+  Categorical: ['employment_type', 'region']
+  One-hot features: 15
+
+Joint distribution (logistic regression discriminator):
+  pMSE ratio: 401.927938
+  pMSE:       0.055134
+  null pMSE:  0.000137
+
+Support / coverage:
+  Alpha precision: 0.932500
+  Beta recall:     0.580000
+
+Marginal (numeric):
+  age: KS=0.123000, Wasserstein=3.253250
+  hours_worked: KS=0.033250, Wasserstein=0.427168
+  tenure_years: KS=0.338000, Wasserstein=4.115958
+  weekly_earnings: KS=0.040000, Wasserstein=22.931665
+
+Marginal (categorical TV distance):
+  employment_type: TV=0.034499999999999975
+  region: TV=0.21625000000000003

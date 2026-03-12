@@ -1,0 +1,67 @@
+=== Evaluation Summary ===
+Real:      data/generated/D2_seed2026_holdout_2.csv
+Synthetic: synthetic_data/D2_arf.csv
+
+Columns:
+  Numeric:     ['age', 'bonus', 'distance_from_home', 'hourly_rate', 'hours_worked', 'overtime_hours', 'percent_salary_hike', 'performance_rating', 'tenure_years', 'work-life_balance']
+  Categorical: ['business_trips', 'contract_type', 'department', 'education_field', 'education_level', 'employee_status', 'employment_type', 'family_residence', 'gender', 'job_level', 'job_title', 'marital_status', 'nationality', 'region', 'remote_status']
+  One-hot features: 84
+  Dropped: ['weekly_earnings']
+
+Discriminator (logistic regression, held-out test + permutation null):
+  AUC:               0.514731
+  Accuracy:          0.574091
+  pMSE (test):       0.001444
+  pMSE null mean:    0.000881
+  pMSE ratio (perm): 1.638065
+  Null percentile:   100.0th
+
+Support / coverage (PCA + NN):
+  Alpha precision: 0.959200
+  Beta recall:     0.998250
+
+Global Utility (TabStruct-style):
+  Global utility: 0.9588707798473075
+  Columns used:   25
+  Synth train cap:5000
+  Per-column utility (lowest 5):
+    hours_worked: 0.593035
+    job_level: 0.612680
+    education_field: 0.859541
+    hourly_rate: 0.908207
+    remote_status: 0.991834
+  Per-column utility (highest 5):
+    contract_type: 1.015889
+    job_title: 1.012010
+    marital_status: 1.004605
+    gender: 1.002668
+    age: 1.002035
+
+Marginal (numeric):
+  age: KS=0.0447, Wasserstein=0.6418154666666664
+  bonus: KS=0.12895, Wasserstein=0.009633433333333332
+  distance_from_home: KS=0.015766666666666665, Wasserstein=0.18543188333333313
+  hourly_rate: KS=0.0252, Wasserstein=0.325871933333333
+  hours_worked: KS=0.12176666666666669, Wasserstein=1.2395899833333333
+  overtime_hours: KS=0.0876, Wasserstein=0.23669468333333335
+  percent_salary_hike: KS=0.15456666666666669, Wasserstein=0.0165655
+  performance_rating: KS=0.26493333333333335, Wasserstein=0.2507875666666667
+  tenure_years: KS=0.020050000000000012, Wasserstein=0.23160499999999978
+  work-life_balance: KS=0.01319999999999999, Wasserstein=0.013730566666666656
+
+Marginal (categorical TV distance):
+  business_trips: TV=0.00041666666666670404
+  contract_type: TV=0.005100000000000056
+  department: TV=0.009066666666666653
+  education_field: TV=0.009883333333333327
+  education_level: TV=0.0033999999999999777
+  employee_status: TV=0.006233333333333323
+  employment_type: TV=0.0016333333333333477
+  family_residence: TV=0.0053666666666667
+  gender: TV=0.005099999999999993
+  job_level: TV=0.012883333333333332
+  job_title: TV=0.016500000000000015
+  marital_status: TV=0.006499999999999978
+  nationality: TV=0.005749999999999977
+  region: TV=0.008783333333333306
+  remote_status: TV=0.002099999999999984

@@ -147,72 +147,59 @@ def sample_gamma_truncated(
     return np.clip(x, min_val, max_val)
 
 
-def normal_by_category_truncated_simple(
-    rng: np.random.Generator,
-    categories: np.ndarray,
-    by: Dict[str, Dict[str, float]],
-    min_val: float,
-    max_val: float,
-    noise: float,
-) -> np.ndarray:
-    """One-dimensional category → Normal draw (used for hours_worked, overtime_hours)."""
-    out = np.empty(len(categories), dtype=float)
-    for cat, params in by.items():
-        mask = categories == cat
-        if mask.any():
-            mu = float(params["mean"])
-            sd = float(params["std"])
-            out[mask] = rng.normal(mu, sd, size=mask.sum())
+# def normal_by_category_truncated(
+#     rng: np.random.Generator,
+#     categories: np.ndarray,
+#     by: Dict[str, Dict[str, float]],
+#     min_val: float,
+#     max_val: float,
+#     noise: float,
+# ) -> np.ndarray:
+#     """
+#     Generate a continuous variable with a different Normal(mean, sd) per category.
+#     Example: hours_worked depends on employment_type.
+#     """
+#     out = np.empty(len(categories), dtype=float)
+#     for cat, params in by.items():
+#         mask = categories == cat
+#         if mask.any():
+#             mu = float(params["mean"])
+#             sd = float(params["std"])
+#             out[mask] = rng.normal(mu, sd, size=mask.sum())
 
+#     # Truncate to bounds
+#     out = np.clip(out, min_val, max_val)
+
+    # # Optional extra global noise knob (makes generation harder)
+    # if noise and float(noise) > 0:
+    #     out = out + rng.normal(0.0, float(noise), size=len(out))
+    #     out = np.clip(out, min_val, max_val)
+
+    # return out
+
+def normal_by_category_truncated(rng, rows: pd.DataFrame, by, base_shift, min_val, max_val, noise):
+    out = np.full(len(rows), np.nan)
+    base_feature = by['feature_name']
+    shift_features = base_shift.keys()
+
+    for cat, params in by['categories'].items():
+        for feature in shift_features:
+            for cat2, params2 in base_shift[feature].items():
+                mask_shift = np.array([
+                    (row[base_feature] == cat and row[feature] == cat2)
+                    for _, row in rows.iterrows()
+                ])
+                if mask_shift.any():
+                    mu = params["mean"] + params2['mean_shift']
+                    sd = params["std"]
+                    out[mask_shift] = rng.normal(mu, sd, size=mask_shift.sum())
+    
     out = np.clip(out, min_val, max_val)
-    if noise and float(noise) > 0:
-        out = out + rng.normal(0.0, float(noise), size=len(out))
+
+    if (noise is not None) and float(noise) > 0:
+        out = out + rng.normal(0.0, float(noise), size = len(out))
         out = np.clip(out, min_val, max_val)
-    return out
-
-
-def normal_by_category_truncated_with_shift(
-    rng: np.random.Generator,
-    rows: pd.DataFrame,
-    by: Dict[str, Any],
-    base_shift: Dict[str, Dict[str, float]],
-    min_val: float,
-    max_val: float,
-    noise: float,
-) -> np.ndarray:
-    """
-    Multi-feature variant with a primary category (feature_name) and additive mean shifts
-    from other categorical columns (base_shift). Used for hourly_rate.
-    """
-    out = np.empty(len(rows), dtype=float)
-    base_feature = by["feature_name"]
-    categories_cfg = by["categories"]
-
-    for base_cat, params in categories_cfg.items():
-        base_mask = rows[base_feature] == base_cat
-        if not base_mask.any():
-            continue
-
-        # start with base mean per row, then add any shifts
-        mu = np.full(base_mask.sum(), float(params["mean"]))
-        sd = float(params["std"])
-
-        for shift_feat, shift_map in base_shift.items():
-            def shift_lookup(v):
-                val = shift_map.get(v, 0.0)
-                if isinstance(val, dict):
-                    val = val.get("mean_shift", 0.0)
-                return float(val)
-
-            shifts = rows.loc[base_mask, shift_feat].map(shift_lookup)
-            mu = mu + shifts.to_numpy()
-
-        out[base_mask] = rng.normal(mu, sd, size=mu.shape[0])
-
-    out = np.clip(out, min_val, max_val)
-    if noise and float(noise) > 0:
-        out = out + rng.normal(0.0, float(noise), size=len(out))
-        out = np.clip(out, min_val, max_val)
+    
     return out
 
 
@@ -403,13 +390,8 @@ def generate_dataset_from_preset(template_doc: dict, preset_name: str, out_dir: 
             if dist["type"] == "categorical":
                 probs_map = dist.get("probs")
                 if probs_map:
-                    p = np.array([float(probs_map.get(v, 0.0)) for v in values], dtype=float)
-                    total = p.sum()
-                    if total <= 0:
-                        # If all zero/missing, fall back to uniform to avoid crash.
-                        p = np.ones(len(values), dtype=float) / len(values)
-                    else:
-                        p = p / total
+                    p = np.array([float(probs_map[v]) for v in values], dtype=float)
+                    p = p / p.sum()
                 else:
                     p = np.ones(len(values), dtype=float) / len(values)
 
@@ -442,18 +424,6 @@ def generate_dataset_from_preset(template_doc: dict, preset_name: str, out_dir: 
                         min_val=float(dist["min"]),
                         max_val=float(dist["max"]),
                     )
-                elif dist["type"] == "gaussian_mixture_truncated":
-                    stds = dist["stds"] if "stds" in dist else [dist["std"]]
-                    df[feat] = sample_gaussian_mixture_truncated(
-                        rng=rng,
-                        n_rows=n_rows,
-                        min_val=float(dist["min"]),
-                        max_val=float(dist["max"]),
-                        means=dist["means"],
-                        stds=stds,
-                        weights=dist["weights"],
-                        integer=False,
-                    )
                 else:
                     raise ValueError(f"Unsupported continuous distribution: {dist['type']}")
 
@@ -463,45 +433,26 @@ def generate_dataset_from_preset(template_doc: dict, preset_name: str, out_dir: 
                 depends_on = spec.get("depends_on", [])
 
                 if gen["type"] == "normal_by_category_truncated":
+                    # Example: hours_worked depends on employment_type (categorical)
+                    if len(depends_on) != 1:
+                        raise ValueError(f"{feat}: normal_by_category_truncated expects depends_on with 1 feature")
+
+                    dep_col = depends_on[0]
+                    if dep_col not in df.columns:
+                        raise ValueError(f"{feat} depends_on {dep_col} which hasn't been generated yet")
+
                     # noise knob
                     noise_knob = spec.get("noise_from_knob", "noise")
                     noise = float(knobs.get(noise_knob, 0.0))
 
-                    # Two shapes:
-                    # 1) Simple: by is {cat: {mean, std}}, depends_on length 1
-                    # 2) Shifted: by has feature_name + categories, base_shift provided
-                    if "feature_name" in gen["by"]:
-                        base_feature = gen["by"]["feature_name"]
-                        required_cols = {base_feature} | set(gen.get("base_shift", {}).keys())
-                        missing = required_cols - set(df.columns)
-                        if missing:
-                            raise ValueError(f"{feat} requires columns {missing} to generate")
-
-                        df[feat] = normal_by_category_truncated_with_shift(
-                            rng=rng,
-                            rows=df,
-                            by=gen["by"],
-                            base_shift=gen.get("base_shift", {}),
-                            min_val=float(gen["min"]),
-                            max_val=float(gen["max"]),
-                            noise=noise,
-                        )
-                    else:
-                        if len(depends_on) != 1:
-                            raise ValueError(f"{feat}: normal_by_category_truncated expects depends_on with 1 feature")
-
-                        dep_col = depends_on[0]
-                        if dep_col not in df.columns:
-                            raise ValueError(f"{feat} depends_on {dep_col} which hasn't been generated yet")
-
-                        df[feat] = normal_by_category_truncated_simple(
-                            rng=rng,
-                            categories=df[dep_col].to_numpy(),
-                            by=gen["by"],
-                            min_val=float(gen["min"]),
-                            max_val=float(gen["max"]),
-                            noise=noise,
-                        )
+                    df[feat] = normal_by_category_truncated(
+                        rng=rng,
+                        categories=df[dep_col].to_numpy(),
+                        by=gen["by"],
+                        min_val=float(gen["min"]),
+                        max_val=float(gen["max"]),
+                        noise=noise,
+                    )
 
                 elif gen["type"] == "lognormal_anchor_median":
                     # Example: weekly_earnings depends on hours_worked (continuous)
@@ -512,11 +463,11 @@ def generate_dataset_from_preset(template_doc: dict, preset_name: str, out_dir: 
                     corr_strength = float(knobs.get("correlation_strength", 0.0))
 
                     # pick a parent signal if possible:
+                    # if depends_on contains a numeric parent, use the first one
                     parent_signal = None
-                    for dep in depends_on:
-                        if dep in df.columns:
-                            parent_signal = df[dep].to_numpy(dtype=float)
-                            break
+                    if depends_on:
+                        # hours_worked is numeric, so this works nicely
+                        parent_signal = df[depends_on[0]].to_numpy(dtype=float)
 
                     # 3) sample lognormal anchored at median, with correlation adjustment
                     sigma = float(gen.get("sigma_base", 0.35))
@@ -550,10 +501,6 @@ def generate_dataset_from_preset(template_doc: dict, preset_name: str, out_dir: 
 
         else:
             raise ValueError(f"Unsupported kind: {kind} for feature {feat}")
-
-    # Round all float columns to 3 decimal places to keep outputs tidy
-    float_cols = df.select_dtypes(include="float").columns
-    df[float_cols] = df[float_cols].round(3)
 
     # Apply global missingness knob (MCAR)
     miss_rate = float(knobs.get("missing_rate", 0.0))

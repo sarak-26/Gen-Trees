@@ -1,0 +1,89 @@
+{
+  "effective_knobs": {
+    "category_skew": 0.9,
+    "correlation_strength": 0.6,
+    "missing_rate": 0.0,
+    "noise": 0.15,
+    "outlier_rate": 0.01
+  },
+  "files": {
+    "full": "D3_seed2026.csv",
+    "holdout": "D3_seed2026_holdout.csv",
+    "train": "D3_seed2026_train.csv"
+  },
+  "hashes": {
+    "full_sha256": "2c24f180910b9d4250f187aafaf8fee72c5fd8361907804908e4601c83b614f5",
+    "holdout_sha256": "e49b9dcb2406c75fc61e53b511ce068df896a3b40281a92e2318092f604b8420",
+    "template_sha256": "29d2577f79f46b4685b13995efe03c0f6006ed8e0c48e8de1d0b2ccb6e34efe3",
+    "train_sha256": "ff7a0725ad2942a8a28bfea675e4178331c3321af5d4b2de64042fa4dd438a60"
+  },
+  "included_features": [
+    "gender",
+    "nationality",
+    "age",
+    "education_level",
+    "education_field",
+    "marital_status",
+    "family_residence",
+    "region",
+    "department",
+    "contract_type",
+    "employment_type",
+    "employee_status",
+    "job_level",
+    "job_title",
+    "performance_rating",
+    "remote_status",
+    "business_trips",
+    "hours_worked",
+    "overtime_hours",
+    "hourly_rate",
+    "weekly_earnings",
+    "bonus",
+    "percent_salary_hike",
+    "annual_bonus",
+    "tenure_years",
+    "work-life_balance",
+    "distance_from_home"
+  ],
+  "n_rows": 80000,
+  "notes": {
+    "correlation_strength_effect": "Applied only when a feature uses lognormal_anchor_median and has depends_on; we add correlation_strength * z(parent) to lognormal mu."
+  },
+  "output_format": "csv",
+  "preset": "D3",
+  "seed": 2026,
+  "summary": {
+    "columns": [
+      "gender",
+      "nationality",
+      "age",
+      "education_level",
+      "education_field",
+      "marital_status",
+      "family_residence",
+      "region",
+      "department",
+      "contract_type",
+      "employment_type",
+      "employee_status",
+      "job_level",
+      "job_title",
+      "performance_rating",
+      "remote_status",
+      "business_trips",
+      "hours_worked",
+      "overtime_hours",
+      "hourly_rate",
+      "weekly_earnings",
+      "bonus",
+      "percent_salary_hike",
+      "annual_bonus",
+      "tenure_years",
+      "work-life_balance",
+      "distance_from_home"
+    ],
+    "null_rate_overall": 0.0
+  },
+  "train_frac": 0.8
+}
