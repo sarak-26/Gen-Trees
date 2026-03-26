@@ -268,12 +268,12 @@ def compute_beta_recall_curve(z_real: np.ndarray, z_syn: np.ndarray, betas=None,
 
 
 def integrated_alpha_precision(alphas: np.ndarray, p_alpha: np.ndarray) -> float:
-    delta = np.trapz(np.abs(p_alpha - alphas), alphas)
+    delta = np.trapezoid(np.abs(p_alpha - alphas), alphas)
     return float(1 - 2 * delta)
 
 
 def integrated_beta_recall(betas: np.ndarray, r_beta: np.ndarray) -> float:
-    delta = np.trapz(np.abs(r_beta - betas), betas)
+    delta = np.trapezoid(np.abs(r_beta - betas), betas)
     return float(1 - 2 * delta)
 
 
