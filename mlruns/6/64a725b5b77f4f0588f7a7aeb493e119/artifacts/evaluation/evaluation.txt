@@ -1,0 +1,85 @@
+=== Evaluation Summary ===
+Real:      /Users/sarakhan/Projects/Uni/Gen-Trees/data/ibm_hr.csv
+Synthetic: /Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/ibm_hr_arf.csv
+
+Columns:
+  Numeric:     ['Age', 'DailyRate', 'DistanceFromHome', 'HourlyRate', 'MonthlyIncome', 'MonthlyRate', 'NumCompaniesWorked', 'PercentSalaryHike', 'TotalWorkingYears', 'YearsAtCompany', 'YearsInCurrentRole', 'YearsSinceLastPromotion', 'YearsWithCurrManager']
+  Categorical: ['Attrition', 'BusinessTravel', 'Department', 'EducationField', 'Gender', 'JobRole', 'MaritalStatus', 'OverTime']
+  Discrete/Ordinal: ['Education', 'EnvironmentSatisfaction', 'JobInvolvement', 'JobLevel', 'JobSatisfaction', 'PerformanceRating', 'RelationshipSatisfaction', 'StockOptionLevel', 'TrainingTimesLastYear', 'WorkLifeBalance']
+  One-hot features: 104
+  Dropped: ['EmployeeCount', 'EmployeeNumber', 'StandardHours', 'Over18']
+
+Discriminator (logistic regression, held-out test + permutation null):
+  AUC:               0.481327
+  Accuracy:          0.490930
+  pMSE (test):       0.007051
+  pMSE null mean:    0.008390
+  pMSE ratio (perm): 0.840356
+  Null percentile:   18.0th
+
+Support / coverage (paper-style one-class embedding):
+  Alpha precision (alpha=1.0): 0.989116
+  Beta recall (beta=1.0):      0.950340
+  Integrated IP_alpha:         0.953997
+  Integrated IR_beta:          0.928078
+  Embedder radius:             327.669556
+  Alpha grid:                  [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.7, 0.75, 0.7999999999999999, 0.85, 0.9, 0.95, 1.0]
+  P_alpha curve:               [0.06054421768707483, 0.1054421768707483, 0.1707482993197279, 0.23197278911564626, 0.27687074829931974, 0.33197278911564626, 0.36394557823129253, 0.41904761904761906, 0.46462585034013604, 0.49863945578231295, 0.5326530612244897, 0.5802721088435374, 0.6265306122448979, 0.6625850340136055, 0.7163265306122449, 0.7578231292517007, 0.8170068027210884, 0.863265306122449, 0.9102040816326531, 0.9891156462585035]
+  Beta grid:                   [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.7, 0.75, 0.7999999999999999, 0.85, 0.9, 0.95, 1.0]
+  R_beta curve:                [0.08571428571428572, 0.14285714285714285, 0.19591836734693877, 0.24217687074829933, 0.29931972789115646, 0.34217687074829933, 0.38843537414965984, 0.4448979591836735, 0.5, 0.5571428571428572, 0.6006802721088436, 0.6489795918367347, 0.6965986394557823, 0.7394557823129252, 0.7775510204081633, 0.8183673469387756, 0.8687074829931973, 0.9074829931972789, 0.9442176870748299, 0.9503401360544218]
+
+Global Utility (TabStruct-style):
+  Global utility: 0.8338769671588747
+  Columns used:   31
+  Synth train cap:5000
+  Skipped (too few rows): 0
+  Skipped (single-class/fit fail): 0
+  Per-column utility (lowest 5):
+    PerformanceRating: 0.000031
+    JobLevel: 0.473419
+    JobRole: 0.504051
+    MonthlyIncome: 0.530071
+    Department: 0.609557
+  Per-column utility (highest 5):
+    Gender: 1.037259
+    MonthlyRate: 1.036010
+    HourlyRate: 1.028094
+    Education: 1.022060
+    TrainingTimesLastYear: 1.021669
+
+Marginal (numeric):
+  Age: KS=0.07210884353741497, Wasserstein=0.6543816326530613, Wasserstein/IQR=0.050337048665620096
+  DailyRate: KS=0.05374149659863946, Wasserstein=43.61778571428572, Wasserstein/IQR=0.06303148224607763
+  DistanceFromHome: KS=0.13333333333333333, Wasserstein=1.7181374149659872, Wasserstein/IQR=0.14317811791383225
+  HourlyRate: KS=0.0673469387755102, Wasserstein=2.40071768707483, Wasserstein/IQR=0.06715294229579945
+  MonthlyIncome: KS=0.08435374149659863, Wasserstein=718.8606632653061, Wasserstein/IQR=0.1314668367346939
+  MonthlyRate: KS=0.050340136054421766, Wasserstein=835.0988959183674, Wasserstein/IQR=0.06726802496422468
+  NumCompaniesWorked: KS=0.029251700680272108, Wasserstein=0.13809523809523802, Wasserstein/IQR=0.04603174603174601
+  PercentSalaryHike: KS=0.15918367346938775, Wasserstein=0.6321850340136055, Wasserstein/IQR=0.10536417233560091
+  TotalWorkingYears: KS=0.10952380952380952, Wasserstein=0.6980938775510206, Wasserstein/IQR=0.07756598639455785
+  YearsAtCompany: KS=0.1054421768707483, Wasserstein=0.6527877551020402, Wasserstein/IQR=0.10879795918367337
+  YearsInCurrentRole: KS=0.145578231292517, Wasserstein=0.608308163265306, Wasserstein/IQR=0.12166163265306121
+  YearsSinceLastPromotion: KS=0.21564625850340136, Wasserstein=0.6689571428571428, Wasserstein/IQR=0.22298571428571426
+  YearsWithCurrManager: KS=0.15034013605442176, Wasserstein=0.5504809523809524, Wasserstein/IQR=0.11009619047619049
+
+Marginal (discrete/ordinal):
+  Education: KS=0.017006802721088437, Wasserstein=0.023129251700680212, Wasserstein/IQR=0.011564625850340106, TV=0.0224489795918367
+  EnvironmentSatisfaction: KS=0.023809523809523808, Wasserstein=0.036734693877550906, Wasserstein/IQR=0.018367346938775453, TV=0.02448979591836735
+  JobInvolvement: KS=0.011564625850340135, Wasserstein=0.03061224489795933, Wasserstein/IQR=0.03061224489795933, TV=0.022448979591836733
+  JobLevel: KS=0.005442176870748299, Wasserstein=0.00748299319727902, Wasserstein/IQR=0.00374149659863951, TV=0.007482993197278957
+  JobSatisfaction: KS=0.017006802721088437, Wasserstein=0.033333333333333326, Wasserstein/IQR=0.016666666666666663, TV=0.02857142857142861
+  PerformanceRating: KS=0.0020408163265306124, Wasserstein=0.0020408163265306367, Wasserstein/IQR=NA, TV=0.002040816326530623
+  RelationshipSatisfaction: KS=0.011564625850340135, Wasserstein=0.020408163265306145, Wasserstein/IQR=0.010204081632653073, TV=0.013605442176870736
+  StockOptionLevel: KS=0.022448979591836733, Wasserstein=0.02993197278911558, Wasserstein/IQR=0.02993197278911558, TV=0.022448979591836726
+  TrainingTimesLastYear: KS=0.010884353741496598, Wasserstein=0.04013605442176883, Wasserstein/IQR=0.04013605442176883, TV=0.01632653061224487
+  WorkLifeBalance: KS=0.015646258503401362, Wasserstein=0.03741496598639447, Wasserstein/IQR=0.03741496598639447, TV=0.028571428571428577
+
+Marginal (categorical TV distance):
+  Attrition: TV=0.02040816326530609
+  BusinessTravel: TV=0.01428571428571427
+  Department: TV=0.008163265306122432
+  EducationField: TV=0.015646258503401345
+  Gender: TV=0.0027210884353741083
+  JobRole: TV=0.023809523809523815
+  MaritalStatus: TV=0.0034013605442177047
+  OverTime: TV=0.012244897959183626

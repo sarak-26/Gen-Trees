@@ -22,6 +22,14 @@ def _require_mlflow():
     return mlflow
 
 
+def _set_or_restore_experiment(mlflow, experiment_name: str) -> None:
+    experiment = mlflow.get_experiment_by_name(experiment_name)
+    if experiment is not None and getattr(experiment, "lifecycle_stage", None) == "deleted":
+        client = mlflow.tracking.MlflowClient()
+        client.restore_experiment(experiment.experiment_id)
+    mlflow.set_experiment(experiment_name)
+
+
 def _sanitize_name(value: str) -> str:
     sanitized = re.sub(r"[^A-Za-z0-9_.-]+", "_", value.strip())
     return sanitized.strip("._-") or "unknown"
@@ -62,6 +70,7 @@ def _collect_summary_metrics(results: dict) -> dict[str, float]:
         "global_utility.num_columns_used": utility.get("num_columns_used"),
         "columns.numeric_count": len(results.get("columns", {}).get("numeric", [])),
         "columns.categorical_count": len(results.get("columns", {}).get("categorical", [])),
+        "columns.discrete_ordinal_count": len(results.get("columns", {}).get("discrete_ordinal", [])),
         "columns.dropped_count": len(results.get("dropped_columns", [])),
         "encoding.one_hot_feature_count": results.get("encoding", {}).get("one_hot_feature_count"),
     }
@@ -80,10 +89,32 @@ def _collect_per_column_metrics(results: dict) -> dict[str, float]:
         column_name = _sanitize_name(column)
         ks = values.get("ks")
         wasserstein = values.get("wasserstein")
+        wasserstein_normalized_iqr = values.get("wasserstein_normalized_iqr")
         if _is_finite_number(ks):
             metrics[f"marginal_numeric.{column_name}.ks"] = float(ks)
         if _is_finite_number(wasserstein):
             metrics[f"marginal_numeric.{column_name}.wasserstein"] = float(wasserstein)
+        if _is_finite_number(wasserstein_normalized_iqr):
+            metrics[f"marginal_numeric.{column_name}.wasserstein_normalized_iqr"] = float(
+                wasserstein_normalized_iqr
+            )
+
+    for column, values in results.get("marginal_discrete_ordinal", {}).items():
+        column_name = _sanitize_name(column)
+        ks = values.get("ks")
+        wasserstein = values.get("wasserstein")
+        wasserstein_normalized_iqr = values.get("wasserstein_normalized_iqr")
+        tv = values.get("tv")
+        if _is_finite_number(ks):
+            metrics[f"marginal_discrete_ordinal.{column_name}.ks"] = float(ks)
+        if _is_finite_number(wasserstein):
+            metrics[f"marginal_discrete_ordinal.{column_name}.wasserstein"] = float(wasserstein)
+        if _is_finite_number(wasserstein_normalized_iqr):
+            metrics[f"marginal_discrete_ordinal.{column_name}.wasserstein_normalized_iqr"] = float(
+                wasserstein_normalized_iqr
+            )
+        if _is_finite_number(tv):
+            metrics[f"marginal_discrete_ordinal.{column_name}.tv"] = float(tv)
 
     for column, value in results.get("marginal_categorical_tv", {}).items():
         column_name = _sanitize_name(column)
@@ -172,7 +203,7 @@ def main() -> None:
 
     tracking_uri = args.tracking_uri or f"sqlite:///{Path('mlflow.db').resolve()}"
     mlflow.set_tracking_uri(tracking_uri)
-    mlflow.set_experiment(args.experiment_name)
+    _set_or_restore_experiment(mlflow, args.experiment_name)
 
     model_name = args.model_name or _infer_model_name(args.synthetic)
     dataset_name = args.dataset_name or _infer_dataset_name(args.real)

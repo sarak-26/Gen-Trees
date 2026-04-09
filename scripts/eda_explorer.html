@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dataset Explorer</title>
+  <style>
+    :root {
+      --bg: #f3efe5;
+      --panel: rgba(255, 252, 246, 0.88);
+      --panel-strong: #fffaf2;
+      --ink: #13231b;
+      --muted: #5d6d63;
+      --line: rgba(19, 35, 27, 0.12);
+      --accent: #116466;
+      --accent-soft: #d6ece8;
+      --accent-warm: #d97b3d;
+      --danger: #b24c2f;
+      --shadow: 0 20px 60px rgba(19, 35, 27, 0.12);
+      --radius: 22px;
+      --mono: "SFMono-Regular", "JetBrains Mono", "Menlo", monospace;
+      --sans: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(17, 100, 102, 0.14), transparent 32%),
+        radial-gradient(circle at top right, rgba(217, 123, 61, 0.18), transparent 26%),
+        linear-gradient(180deg, #f7f2e8, #eee7d8 58%, #f8f4ed);
+      min-height: 100vh;
+    }
+
+    .shell {
+      width: min(1440px, calc(100vw - 32px));
+      margin: 24px auto 40px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1.4fr 0.9fr;
+      align-items: stretch;
+      margin-bottom: 22px;
+    }
+
+    .hero-card,
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card {
+      padding: 26px 28px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -80px auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(17, 100, 102, 0.18), transparent 65%);
+      pointer-events: none;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p,
+    .subtle {
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .upload-card {
+      padding: 24px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .dropzone {
+      border: 1.5px dashed rgba(17, 100, 102, 0.32);
+      background: linear-gradient(135deg, rgba(214, 236, 232, 0.7), rgba(255, 250, 242, 0.95));
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .dropzone input[type="file"] {
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font: inherit;
+    }
+
+    .button-row,
+    .control-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .button-row {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    button,
+    select,
+    input[type="text"] {
+      width: 100%;
+      border: 1px solid rgba(19, 35, 27, 0.15);
+      border-radius: 14px;
+      background: #fffdf8;
+      color: var(--ink);
+      padding: 12px 14px;
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--accent), #1b7f81);
+      color: #f9fffd;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    button.secondary {
+      background: linear-gradient(135deg, #294e58, #3c6873);
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(17, 100, 102, 0.2);
+    }
+
+    .layout {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .panel {
+      padding: 20px;
+    }
+
+    .span-12 { grid-column: span 12; }
+    .span-8 { grid-column: span 8; }
+    .span-7 { grid-column: span 7; }
+    .span-6 { grid-column: span 6; }
+    .span-5 { grid-column: span 5; }
+    .span-4 { grid-column: span 4; }
+
+    .panel h2,
+    .panel h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-size: 0.96rem;
+    }
+
+    .stat-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    }
+
+    .stat {
+      border-radius: 18px;
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      padding: 14px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .stat-value {
+      margin-top: 6px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.66);
+      max-height: 460px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid rgba(19, 35, 27, 0.08);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: #f7f3ea;
+      z-index: 1;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    tbody tr:hover {
+      background: rgba(214, 236, 232, 0.36);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .warn {
+      color: var(--danger);
+      font-weight: 700;
+    }
+
+    .svg-wrap {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(246,241,232,0.85));
+      overflow: auto;
+      min-height: 280px;
+      padding: 12px;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      font-family: var(--sans);
+    }
+
+    .muted-block {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.55);
+      border: 1px dashed rgba(19, 35, 27, 0.16);
+      color: var(--muted);
+    }
+
+    .mono {
+      font-family: var(--mono);
+      font-size: 0.9rem;
+    }
+
+    .footer-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .chip-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 1080px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .span-8,
+      .span-7,
+      .span-6,
+      .span-5,
+      .span-4 {
+        grid-column: span 12;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-card hero">
+        <div class="pill">Standalone HTML EDA</div>
+        <h1>Dataset Explorer</h1>
+        <p>Load a CSV locally in the browser and inspect shape, feature types, missingness, distributions, pairwise relationships, and strongest associations without a backend.</p>
+      </div>
+      <div class="hero-card upload-card">
+        <div class="dropzone">
+          <label for="fileInput"><strong>Choose a CSV file</strong></label>
+          <input id="fileInput" type="file" accept=".csv,text/csv" />
+        </div>
+        <div class="button-row">
+          <button id="loadSampleBtn" class="secondary" type="button">Load Sample Dataset</button>
+          <button id="refreshPairBtn" type="button">Refresh Pair Plot</button>
+        </div>
+        <p id="statusText" class="subtle">No dataset loaded.</p>
+        <p class="subtle">Sample load uses <span class="mono">../data/employee_data.csv</span> when served from the repo. Browser security may block that under <span class="mono">file://</span>.</p>
+      </div>
+    </section>
+
+    <section class="layout">
+      <div class="panel span-12">
+        <h2>Overview</h2>
+        <p class="section-copy">Quick structural stats for the loaded dataset.</p>
+        <div id="overviewStats" class="stat-grid"></div>
+      </div>
+
+      <div class="panel span-7">
+        <h2>Preview</h2>
+        <p class="section-copy">First rows from the current dataset.</p>
+        <div id="previewTable" class="table-wrap"></div>
+      </div>
+
+      <div class="panel span-5">
+        <h2>Feature Controls</h2>
+        <p class="section-copy">Inspect one feature or compare two features directly.</p>
+        <div class="control-grid">
+          <select id="singleFeatureSelect"></select>
+          <select id="pairFeatureX"></select>
+          <select id="pairFeatureY"></select>
+          <input id="profileFilter" type="text" placeholder="Filter feature profile by column name" />
+        </div>
+        <div id="featureWarnings" class="footer-note"></div>
+      </div>
+
+      <div class="panel span-12">
+        <h2>Feature Profile</h2>
+        <p class="section-copy">Inferred type, missingness, uniqueness, and notes for every column.</p>
+        <div id="profileTable" class="table-wrap"></div>
+      </div>
+
+      <div class="panel span-6">
+        <h2>Missingness</h2>
+        <p class="section-copy">Columns with the highest missing percentage.</p>
+        <div id="missingChart" class="svg-wrap"></div>
+      </div>
+
+      <div class="panel span-6">
+        <h2>Single Feature View</h2>
+        <p class="section-copy">Distribution for the currently selected feature.</p>
+        <div id="singleFeatureSummary" class="footer-note"></div>
+        <div id="singleFeatureChart" class="svg-wrap"></div>
+      </div>
+
+      <div class="panel span-8">
+        <h2>Pair Explorer</h2>
+        <p class="section-copy">A pair-specific plot to judge whether a measured relationship looks real or flimsy.</p>
+        <div id="pairSummary" class="footer-note"></div>
+        <div id="pairChart" class="svg-wrap"></div>
+      </div>
+
+      <div class="panel span-4">
+        <h2>Association Summary</h2>
+        <p class="section-copy">Top pairwise relationships. High-cardinality categorical features are capped for browser responsiveness.</p>
+        <div id="associationInfo" class="footer-note"></div>
+        <div id="associationTable" class="table-wrap"></div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const MAX_PREVIEW_ROWS = 8;
+    const MAX_PROFILE_ROWS = 500;
+    const MAX_CATEGORY_LEVELS = 16;
+    const MAX_ASSOCIATION_ROWS = 25;
+    const MAX_ASSOCIATION_CATEGORY_LEVELS = 40;
+
+    const appState = {
+      fileName: "",
+      rows: [],
+      columns: [],
+      columnStats: [],
+      associationSummary: [],
+      numericColumns: [],
+      categoricalColumns: [],
+      duplicateCount: 0,
+    };
+
+    const els = {
+      fileInput: document.getElementById("fileInput"),
+      loadSampleBtn: document.getElementById("loadSampleBtn"),
+      refreshPairBtn: document.getElementById("refreshPairBtn"),
+      statusText: document.getElementById("statusText"),
+      overviewStats: document.getElementById("overviewStats"),
+      previewTable: document.getElementById("previewTable"),
+      singleFeatureSelect: document.getElementById("singleFeatureSelect"),
+      pairFeatureX: document.getElementById("pairFeatureX"),
+      pairFeatureY: document.getElementById("pairFeatureY"),
+      profileFilter: document.getElementById("profileFilter"),
+      profileTable: document.getElementById("profileTable"),
+      missingChart: document.getElementById("missingChart"),
+      singleFeatureSummary: document.getElementById("singleFeatureSummary"),
+      singleFeatureChart: document.getElementById("singleFeatureChart"),
+      pairSummary: document.getElementById("pairSummary"),
+      pairChart: document.getElementById("pairChart"),
+      associationInfo: document.getElementById("associationInfo"),
+      associationTable: document.getElementById("associationTable"),
+      featureWarnings: document.getElementById("featureWarnings"),
+    };
+
+    function setStatus(text) {
+      els.statusText.textContent = text;
+    }
+
+    function formatNumber(value) {
+      return new Intl.NumberFormat().format(value);
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function parseCSV(text) {
+      const rows = [];
+      let row = [];
+      let field = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < text.length; i += 1) {
+        const char = text[i];
+        const next = text[i + 1];
+
+        if (char === '"') {
+          if (inQuotes && next === '"') {
+            field += '"';
+            i += 1;
+          } else {
+            inQuotes = !inQuotes;
+          }
+        } else if (char === "," && !inQuotes) {
+          row.push(field);
+          field = "";
+        } else if ((char === "\n" || char === "\r") && !inQuotes) {
+          if (char === "\r" && next === "\n") {
+            i += 1;
+          }
+          row.push(field);
+          if (row.some(cell => cell !== "")) {
+            rows.push(row);
+          }
+          row = [];
+          field = "";
+        } else {
+          field += char;
+        }
+      }
+
+      row.push(field);
+      if (row.some(cell => cell !== "")) {
+        rows.push(row);
+      }
+
+      if (!rows.length) {
+        throw new Error("The CSV appears to be empty.");
+      }
+
+      const headers = rows[0].map((header, index) => header?.trim() || `column_${index + 1}`);
+      const dataRows = rows.slice(1).map(rawRow => {
+        const padded = Array.from({ length: headers.length }, (_, index) => rawRow[index] ?? "");
+        const record = {};
+        headers.forEach((header, index) => {
+          record[header] = padded[index];
+        });
+        return record;
+      });
+
+      return { headers, rows: dataRows };
+    }
+
+    function isMissing(value) {
+      if (value === null || value === undefined) {
+        return true;
+      }
+      const normalized = String(value).trim().toLowerCase();
+      return normalized === "" || normalized === "na" || normalized === "nan" || normalized === "null" || normalized === "none";
+    }
+
+    function numericCandidate(value) {
+      if (isMissing(value)) {
+        return null;
+      }
+      const trimmed = String(value).trim().replaceAll(",", "");
+      if (!trimmed || /^[-+]?(\d+(\.\d+)?|\.\d+)(e[-+]?\d+)?$/i.test(trimmed) === false) {
+        return null;
+      }
+      const parsed = Number(trimmed);
+      return Number.isFinite(parsed) ? parsed : null;
+    }
+
+    function dateCandidate(value) {
+      if (isMissing(value)) {
+        return null;
+      }
+      const parsed = Date.parse(String(value).trim());
+      return Number.isFinite(parsed) ? new Date(parsed) : null;
+    }
+
+    function booleanLike(values) {
+      const set = new Set(values.map(v => String(v).trim().toLowerCase()));
+      if (!set.size) {
+        return false;
+      }
+      const booleanTokens = new Set(["0", "1", "true", "false", "yes", "no", "y", "n"]);
+      return [...set].every(v => booleanTokens.has(v)) || set.size === 2;
+    }
+
+    function cardinalityBucket(uniqueCount) {
+      if (uniqueCount <= 1) return "constant";
+      if (uniqueCount <= 10) return "low";
+      if (uniqueCount <= 30) return "medium";
+      if (uniqueCount <= 100) return "high";
+      return "very high";
+    }
+
+    function inferColumnStats(columnName, rows) {
+      const rawValues = rows.map(row => row[columnName]);
+      const nonNull = rawValues.filter(value => !isMissing(value));
+      const trimmed = nonNull.map(value => String(value).trim());
+      const uniqueValues = [...new Set(trimmed)];
+      const uniqueCount = uniqueValues.length;
+      const missingCount = rawValues.length - nonNull.length;
+      const missingPct = rawValues.length ? (missingCount / rawValues.length) * 100 : 0;
+      const uniquePct = nonNull.length ? (uniqueCount / nonNull.length) * 100 : 0;
+      const numericValues = trimmed.map(numericCandidate).filter(value => value !== null);
+      const dateValues = trimmed.map(dateCandidate).filter(value => value !== null);
+      const dateRate = nonNull.length ? dateValues.length / nonNull.length : 0;
+      const numericRate = nonNull.length ? numericValues.length / nonNull.length : 0;
+      const averageLength = trimmed.length ? trimmed.reduce((sum, value) => sum + value.length, 0) / trimmed.length : 0;
+      const averageWords = trimmed.length ? trimmed.reduce((sum, value) => sum + value.split(/\s+/).filter(Boolean).length, 0) / trimmed.length : 0;
+      const lowerName = columnName.toLowerCase();
+
+      let inferredType = "categorical_medium";
+      if (!nonNull.length) {
+        inferredType = "empty";
+      } else if (uniqueCount <= 1) {
+        inferredType = "constant";
+      } else if (dateRate >= 0.8) {
+        inferredType = "datetime";
+      } else if (booleanLike(trimmed)) {
+        inferredType = "binary";
+      } else if (["id", "email", "number", "code"].some(token => lowerName.includes(token)) && uniquePct > 80) {
+        inferredType = "identifier";
+      } else if (numericRate >= 0.95) {
+        const allIntegers = numericValues.every(value => Number.isInteger(value));
+        inferredType = allIntegers && uniqueCount <= 20 ? "numeric_discrete" : "numeric_continuous";
+      } else if (averageLength > 25 || averageWords > 3) {
+        inferredType = "text_like";
+      } else {
+        inferredType = `categorical_${cardinalityBucket(uniqueCount)}`;
+      }
+
+      const notes = [];
+      if (uniqueCount <= 1) notes.push("constant");
+      if (uniquePct >= 95 && nonNull.length > 20) notes.push("near-unique");
+      if (missingPct >= 30) notes.push("high-missingness");
+      if (["high", "very high"].includes(cardinalityBucket(uniqueCount))) notes.push("high-cardinality");
+
+      const sortedNumeric = numericValues.slice().sort((a, b) => a - b);
+      const sampleValues = uniqueValues.slice(0, 5).join(", ");
+
+      return {
+        column: columnName,
+        inferred_type: inferredType,
+        rows: rawValues.length,
+        non_null: nonNull.length,
+        missing_count: missingCount,
+        missing_pct: missingPct,
+        unique_count: uniqueCount,
+        unique_pct_non_null: uniquePct,
+        cardinality: cardinalityBucket(uniqueCount),
+        sample_values: sampleValues,
+        notes: notes.join(", "),
+        numeric_values: sortedNumeric,
+        trimmed_values: trimmed,
+        raw_values: rawValues,
+        min: sortedNumeric.length ? sortedNumeric[0] : null,
+        median: sortedNumeric.length ? quantile(sortedNumeric, 0.5) : null,
+        max: sortedNumeric.length ? sortedNumeric[sortedNumeric.length - 1] : null,
+      };
+    }
+
+    function quantile(sortedValues, q) {
+      if (!sortedValues.length) return null;
+      const position = (sortedValues.length - 1) * q;
+      const base = Math.floor(position);
+      const rest = position - base;
+      if (sortedValues[base + 1] !== undefined) {
+        return sortedValues[base] + rest * (sortedValues[base + 1] - sortedValues[base]);
+      }
+      return sortedValues[base];
+    }
+
+    function computeDuplicateCount(rows, columns) {
+      const seen = new Set();
+      let duplicates = 0;
+      for (const row of rows) {
+        const key = columns.map(column => String(row[column] ?? "")).join("\u241f");
+        if (seen.has(key)) {
+          duplicates += 1;
+        } else {
+          seen.add(key);
+        }
+      }
+      return duplicates;
+    }
+
+    function renderStats() {
+      const stats = [
+        ["Rows", formatNumber(appState.rows.length)],
+        ["Columns", formatNumber(appState.columns.length)],
+        ["Duplicate Rows", formatNumber(appState.duplicateCount)],
+        ["Numeric Features", formatNumber(appState.numericColumns.length)],
+        ["Categorical Features", formatNumber(appState.categoricalColumns.length)],
+        ["Loaded File", escapeHtml(appState.fileName || "Sample data")],
+      ];
+
+      els.overviewStats.innerHTML = stats.map(([label, value]) => `
+        <div class="stat">
+          <div class="stat-label">${label}</div>
+          <div class="stat-value">${value}</div>
+        </div>
+      `).join("");
+    }
+
+    function renderPreview() {
+      const headers = appState.columns;
+      const previewRows = appState.rows.slice(0, MAX_PREVIEW_ROWS);
+      els.previewTable.innerHTML = `
+        <table>
+          <thead>
+            <tr>${headers.map(header => `<th>${escapeHtml(header)}</th>`).join("")}</tr>
+          </thead>
+          <tbody>
+            ${previewRows.map(row => `<tr>${headers.map(header => `<td>${escapeHtml(row[header] ?? "")}</td>`).join("")}</tr>`).join("")}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function renderFeatureProfile() {
+      const filterValue = els.profileFilter.value.trim().toLowerCase();
+      const rows = appState.columnStats
+        .filter(stat => !filterValue || stat.column.toLowerCase().includes(filterValue))
+        .slice(0, MAX_PROFILE_ROWS);
+
+      els.profileTable.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Column</th>
+              <th>Type</th>
+              <th>Missing %</th>
+              <th>Unique</th>
+              <th>Cardinality</th>
+              <th>Notes</th>
+              <th>Sample Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map(stat => `
+              <tr>
+                <td>${escapeHtml(stat.column)}</td>
+                <td><span class="pill">${escapeHtml(stat.inferred_type)}</span></td>
+                <td>${stat.missing_pct.toFixed(2)}</td>
+                <td>${formatNumber(stat.unique_count)}</td>
+                <td>${escapeHtml(stat.cardinality)}</td>
+                <td>${escapeHtml(stat.notes || "-")}</td>
+                <td>${escapeHtml(stat.sample_values || "-")}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function populateSelectors() {
+      const options = appState.columns.map(column => `<option value="${escapeHtml(column)}">${escapeHtml(column)}</option>`).join("");
+      els.singleFeatureSelect.innerHTML = options;
+      els.pairFeatureX.innerHTML = options;
+      els.pairFeatureY.innerHTML = options;
+      if (appState.columns.length) {
+        els.singleFeatureSelect.value = appState.columns[0];
+        els.pairFeatureX.value = appState.columns[0];
+        els.pairFeatureY.value = appState.columns[Math.min(1, appState.columns.length - 1)];
+      }
+    }
+
+    function getStat(columnName) {
+      return appState.columnStats.find(stat => stat.column === columnName);
+    }
+
+    function isNumericType(type) {
+      return type === "numeric_continuous" || type === "numeric_discrete";
+    }
+
+    function isCategoricalType(type) {
+      return type === "binary" || type.startsWith("categorical_");
+    }
+
+    function renderMissingChart() {
+      const rows = appState.columnStats
+        .filter(stat => stat.missing_pct > 0)
+        .sort((a, b) => b.missing_pct - a.missing_pct)
+        .slice(0, 15);
+      if (!rows.length) {
+        els.missingChart.innerHTML = `<div class="muted-block">No missing values detected.</div>`;
+        return;
+      }
+      els.missingChart.innerHTML = barChartSvg(rows.map(row => ({ label: row.column, value: row.missing_pct })), {
+        width: 860,
+        height: 420,
+        color: "#d97b3d",
+        xLabel: "Missing %",
+      });
+    }
+
+    function histogram(values, bins = 18) {
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      if (min === max) {
+        return [{ label: String(min), value: values.length }];
+      }
+      const step = (max - min) / bins;
+      const counts = Array.from({ length: bins }, () => 0);
+      for (const value of values) {
+        const index = Math.min(bins - 1, Math.floor((value - min) / step));
+        counts[index] += 1;
+      }
+      return counts.map((count, index) => {
+        const start = min + index * step;
+        const end = start + step;
+        return { label: `${start.toFixed(1)}-${end.toFixed(1)}`, value: count };
+      });
+    }
+
+    function valueCounts(values, limit = MAX_CATEGORY_LEVELS) {
+      const map = new Map();
+      for (const value of values) {
+        const key = String(value);
+        map.set(key, (map.get(key) || 0) + 1);
+      }
+      return [...map.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, limit)
+        .map(([label, value]) => ({ label, value }));
+    }
+
+    function renderSingleFeatureView() {
+      const column = els.singleFeatureSelect.value;
+      const stat = getStat(column);
+      if (!stat) {
+        return;
+      }
+
+      const notes = [];
+      notes.push(`Type: ${stat.inferred_type}`);
+      notes.push(`Missing: ${stat.missing_pct.toFixed(2)}%`);
+      notes.push(`Unique: ${formatNumber(stat.unique_count)}`);
+      if (stat.notes) notes.push(stat.notes);
+      els.singleFeatureSummary.textContent = notes.join(" | ");
+
+      if (isNumericType(stat.inferred_type)) {
+        const values = stat.numeric_values;
+        els.singleFeatureChart.innerHTML = values.length
+          ? barChartSvg(histogram(values), { width: 860, height: 360, color: "#116466", xLabel: column })
+          : `<div class="muted-block">No numeric values available.</div>`;
+      } else if (stat.inferred_type === "datetime") {
+        const dated = stat.trimmed_values
+          .map(dateCandidate)
+          .filter(Boolean)
+          .map(date => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`);
+        const counts = valueCounts(dated, 18).sort((a, b) => a.label.localeCompare(b.label));
+        els.singleFeatureChart.innerHTML = counts.length
+          ? barChartSvg(counts, { width: 860, height: 360, color: "#d97b3d", xLabel: column })
+          : `<div class="muted-block">No parseable datetime values available.</div>`;
+      } else {
+        const counts = valueCounts(stat.trimmed_values, MAX_CATEGORY_LEVELS);
+        els.singleFeatureChart.innerHTML = counts.length
+          ? barChartSvg(counts, { width: 860, height: 420, color: "#294e58", xLabel: "Count", horizontal: true })
+          : `<div class="muted-block">No non-null values available.</div>`;
+      }
+    }
+
+    function rank(values) {
+      const indexed = values.map((value, index) => ({ value, index })).sort((a, b) => a.value - b.value);
+      const ranks = new Array(values.length);
+      let i = 0;
+      while (i < indexed.length) {
+        let j = i;
+        while (j < indexed.length && indexed[j].value === indexed[i].value) {
+          j += 1;
+        }
+        const avgRank = (i + j - 1) / 2 + 1;
+        for (let k = i; k < j; k += 1) {
+          ranks[indexed[k].index] = avgRank;
+        }
+        i = j;
+      }
+      return ranks;
+    }
+
+    function pearson(x, y) {
+      if (x.length !== y.length || x.length < 2) return NaN;
+      const meanX = x.reduce((sum, value) => sum + value, 0) / x.length;
+      const meanY = y.reduce((sum, value) => sum + value, 0) / y.length;
+      let numerator = 0;
+      let denomX = 0;
+      let denomY = 0;
+      for (let i = 0; i < x.length; i += 1) {
+        const dx = x[i] - meanX;
+        const dy = y[i] - meanY;
+        numerator += dx * dy;
+        denomX += dx * dx;
+        denomY += dy * dy;
+      }
+      if (denomX === 0 || denomY === 0) return NaN;
+      return numerator / Math.sqrt(denomX * denomY);
+    }
+
+    function spearman(x, y) {
+      return pearson(rank(x), rank(y));
+    }
+
+    function correlationRatio(categories, values) {
+      if (categories.length !== values.length || categories.length < 2) return NaN;
+      const groups = new Map();
+      for (let i = 0; i < categories.length; i += 1) {
+        const category = String(categories[i]);
+        if (!groups.has(category)) groups.set(category, []);
+        groups.get(category).push(values[i]);
+      }
+      if (groups.size < 2) return NaN;
+      const grandMean = values.reduce((sum, value) => sum + value, 0) / values.length;
+      let numerator = 0;
+      let denominator = 0;
+      for (const [, groupValues] of groups.entries()) {
+        const groupMean = groupValues.reduce((sum, value) => sum + value, 0) / groupValues.length;
+        numerator += groupValues.length * (groupMean - grandMean) ** 2;
+      }
+      for (const value of values) {
+        denominator += (value - grandMean) ** 2;
+      }
+      if (denominator === 0) return 0;
+      return Math.sqrt(numerator / denominator);
+    }
+
+    function cramersV(left, right) {
+      if (left.length !== right.length || left.length < 2) return NaN;
+      const rowLabels = [...new Set(left.map(String))];
+      const colLabels = [...new Set(right.map(String))];
+      if (rowLabels.length < 2 || colLabels.length < 2) return NaN;
+      const table = Array.from({ length: rowLabels.length }, () => Array.from({ length: colLabels.length }, () => 0));
+      const rowIndex = new Map(rowLabels.map((label, index) => [label, index]));
+      const colIndex = new Map(colLabels.map((label, index) => [label, index]));
+
+      for (let i = 0; i < left.length; i += 1) {
+        table[rowIndex.get(String(left[i]))][colIndex.get(String(right[i]))] += 1;
+      }
+
+      const n = left.length;
+      const rowTotals = table.map(row => row.reduce((sum, value) => sum + value, 0));
+      const colTotals = colLabels.map((_, col) => table.reduce((sum, row) => sum + row[col], 0));
+      let chi2 = 0;
+      for (let r = 0; r < rowLabels.length; r += 1) {
+        for (let c = 0; c < colLabels.length; c += 1) {
+          const expected = (rowTotals[r] * colTotals[c]) / n;
+          if (expected > 0) {
+            chi2 += ((table[r][c] - expected) ** 2) / expected;
+          }
+        }
+      }
+      const phi2 = chi2 / n;
+      const rows = rowLabels.length;
+      const cols = colLabels.length;
+      const phi2corr = Math.max(0, phi2 - ((cols - 1) * (rows - 1)) / (n - 1));
+      const rowsCorr = rows - ((rows - 1) ** 2) / (n - 1);
+      const colsCorr = cols - ((cols - 1) ** 2) / (n - 1);
+      const denom = Math.min(colsCorr - 1, rowsCorr - 1);
+      return denom > 0 ? Math.sqrt(phi2corr / denom) : NaN;
+    }
+
+    function getPairData(featureX, featureY) {
+      const statX = getStat(featureX);
+      const statY = getStat(featureY);
+      const points = [];
+      for (const row of appState.rows) {
+        const rawX = row[featureX];
+        const rawY = row[featureY];
+        if (isMissing(rawX) || isMissing(rawY)) continue;
+        points.push({ x: rawX, y: rawY });
+      }
+      return { statX, statY, points };
+    }
+
+    function renderPairExplorer() {
+      const featureX = els.pairFeatureX.value;
+      const featureY = els.pairFeatureY.value;
+      const { statX, statY, points } = getPairData(featureX, featureY);
+      if (!statX || !statY) return;
+
+      const warnings = [];
+      for (const stat of [statX, statY]) {
+        if (["high", "very high"].includes(stat.cardinality) || stat.notes.includes("near-unique")) {
+          warnings.push(`${stat.column} is high-cardinality or near-unique.`);
+        }
+      }
+
+      if (!points.length) {
+        els.pairSummary.textContent = "No overlapping non-null rows for this pair.";
+        els.pairChart.innerHTML = `<div class="muted-block">Nothing to plot.</div>`;
+        els.featureWarnings.innerHTML = warnings.map(message => `<span class="warn">${escapeHtml(message)}</span>`).join("<br>");
+        return;
+      }
+
+      els.featureWarnings.innerHTML = warnings.map(message => `<span class="warn">${escapeHtml(message)}</span>`).join("<br>");
+
+      const xNumeric = isNumericType(statX.inferred_type);
+      const yNumeric = isNumericType(statY.inferred_type);
+      const xDate = statX.inferred_type === "datetime";
+      const yDate = statY.inferred_type === "datetime";
+      const xCategorical = isCategoricalType(statX.inferred_type) || ["identifier", "text_like"].includes(statX.inferred_type);
+      const yCategorical = isCategoricalType(statY.inferred_type) || ["identifier", "text_like"].includes(statY.inferred_type);
+
+      if ((xNumeric || xDate) && (yNumeric || yDate)) {
+        const scatter = points
+          .map(point => ({
+            x: xDate ? dateCandidate(point.x)?.getTime() : numericCandidate(point.x),
+            y: yDate ? dateCandidate(point.y)?.getTime() : numericCandidate(point.y),
+          }))
+          .filter(point => point.x !== null && point.y !== null);
+        const rho = spearman(scatter.map(point => point.x), scatter.map(point => point.y));
+        els.pairSummary.textContent = `Numeric pair | rows used: ${formatNumber(scatter.length)} | Spearman: ${Number.isFinite(rho) ? rho.toFixed(3) : "n/a"}`;
+        els.pairChart.innerHTML = scatter.length
+          ? scatterPlotSvg(scatter, {
+              width: 860,
+              height: 420,
+              labelX: featureX,
+              labelY: featureY,
+              xDate,
+              yDate,
+            })
+          : `<div class="muted-block">No parseable numeric or datetime values for this pair.</div>`;
+        return;
+      }
+
+      if ((xCategorical && (yNumeric || yDate)) || (yCategorical && (xNumeric || xDate))) {
+        const categoricalFeature = xCategorical ? featureX : featureY;
+        const numericFeature = categoricalFeature === featureX ? featureY : featureX;
+        const numericIsDate = categoricalFeature === featureX ? yDate : xDate;
+        const grouped = points
+          .map(point => ({
+            category: String(categoricalFeature === featureX ? point.x : point.y),
+            value: numericIsDate
+              ? dateCandidate(categoricalFeature === featureX ? point.y : point.x)?.getTime()
+              : numericCandidate(categoricalFeature === featureX ? point.y : point.x),
+          }))
+          .filter(point => point.value !== null);
+        const counts = valueCounts(grouped.map(item => item.category), MAX_CATEGORY_LEVELS);
+        const keep = new Set(counts.map(item => item.label));
+        const filtered = grouped.filter(item => keep.has(item.category));
+        const eta = correlationRatio(filtered.map(item => item.category), filtered.map(item => item.value));
+        els.pairSummary.textContent = `Categorical vs numeric pair | rows used: ${formatNumber(filtered.length)} | Correlation ratio: ${Number.isFinite(eta) ? eta.toFixed(3) : "n/a"} | top ${keep.size} categories shown`;
+        els.pairChart.innerHTML = filtered.length
+          ? boxPlotSvg(filtered, { width: 860, height: 420, labelX: categoricalFeature, labelY: numericFeature, numericIsDate })
+          : `<div class="muted-block">No values available after filtering.</div>`;
+        return;
+      }
+
+      if (xCategorical && yCategorical) {
+        const xCounts = valueCounts(points.map(point => String(point.x)), MAX_CATEGORY_LEVELS);
+        const yCounts = valueCounts(points.map(point => String(point.y)), MAX_CATEGORY_LEVELS);
+        const keepX = new Set(xCounts.map(item => item.label));
+        const keepY = new Set(yCounts.map(item => item.label));
+        const filtered = points
+          .map(point => ({ x: String(point.x), y: String(point.y) }))
+          .filter(point => keepX.has(point.x) && keepY.has(point.y));
+        const cv = cramersV(filtered.map(point => point.x), filtered.map(point => point.y));
+        els.pairSummary.textContent = `Categorical pair | rows used: ${formatNumber(filtered.length)} | Cramer's V: ${Number.isFinite(cv) ? cv.toFixed(3) : "n/a"} | top levels shown`;
+        els.pairChart.innerHTML = filtered.length
+          ? heatmapSvg(filtered, { width: 860, height: 440, labelX: featureX, labelY: featureY })
+          : `<div class="muted-block">No values available after filtering.</div>`;
+        return;
+      }
+
+      els.pairSummary.textContent = `Unsupported pair: ${statX.inferred_type} vs ${statY.inferred_type}`;
+      els.pairChart.innerHTML = `<div class="muted-block">This pair is not plotted by the browser explorer.</div>`;
+    }
+
+    function computeAssociationSummary() {
+      const numeric = appState.columnStats.filter(stat => isNumericType(stat.inferred_type));
+      const categorical = appState.columnStats.filter(stat => isCategoricalType(stat.inferred_type) && stat.unique_count <= MAX_ASSOCIATION_CATEGORY_LEVELS);
+      const rows = [];
+
+      for (let i = 0; i < numeric.length; i += 1) {
+        for (let j = i + 1; j < numeric.length; j += 1) {
+          const left = numeric[i].column;
+          const right = numeric[j].column;
+          const paired = appState.rows
+            .map(row => ({ x: numericCandidate(row[left]), y: numericCandidate(row[right]) }))
+            .filter(point => point.x !== null && point.y !== null);
+          const value = spearman(paired.map(point => point.x), paired.map(point => point.y));
+          if (Number.isFinite(value)) {
+            rows.push({ pair_type: "numeric-numeric", feature_a: left, feature_b: right, association: Math.abs(value), metric: "abs(spearman)" });
+          }
+        }
+      }
+
+      for (const numStat of numeric) {
+        for (const catStat of categorical) {
+          const paired = appState.rows
+            .map(row => ({ category: row[catStat.column], value: numericCandidate(row[numStat.column]) }))
+            .filter(point => !isMissing(point.category) && point.value !== null);
+          const value = correlationRatio(paired.map(point => String(point.category)), paired.map(point => point.value));
+          if (Number.isFinite(value)) {
+            rows.push({ pair_type: "numeric-categorical", feature_a: numStat.column, feature_b: catStat.column, association: value, metric: "correlation_ratio" });
+          }
+        }
+      }
+
+      for (let i = 0; i < categorical.length; i += 1) {
+        for (let j = i + 1; j < categorical.length; j += 1) {
+          const left = categorical[i].column;
+          const right = categorical[j].column;
+          const paired = appState.rows
+            .map(row => ({ x: row[left], y: row[right] }))
+            .filter(point => !isMissing(point.x) && !isMissing(point.y));
+          const value = cramersV(paired.map(point => String(point.x)), paired.map(point => String(point.y)));
+          if (Number.isFinite(value)) {
+            rows.push({ pair_type: "categorical-categorical", feature_a: left, feature_b: right, association: value, metric: "cramers_v" });
+          }
+        }
+      }
+
+      appState.associationSummary = rows.sort((a, b) => b.association - a.association).slice(0, MAX_ASSOCIATION_ROWS);
+      els.associationInfo.textContent = `Computed with ${numeric.length} numeric and ${categorical.length} categorical features. Categorical features above ${MAX_ASSOCIATION_CATEGORY_LEVELS} distinct levels are omitted from the summary table.`;
+    }
+
+    function renderAssociationTable() {
+      if (!appState.associationSummary.length) {
+        els.associationTable.innerHTML = `<div class="muted-block">No association rows available for this dataset.</div>`;
+        return;
+      }
+      els.associationTable.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Pair Type</th>
+              <th>Feature A</th>
+              <th>Feature B</th>
+              <th>Association</th>
+              <th>Metric</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${appState.associationSummary.map(row => `
+              <tr>
+                <td>${escapeHtml(row.pair_type)}</td>
+                <td>${escapeHtml(row.feature_a)}</td>
+                <td>${escapeHtml(row.feature_b)}</td>
+                <td>${row.association.toFixed(3)}</td>
+                <td>${escapeHtml(row.metric)}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function barChartSvg(data, options) {
+      const width = options.width || 800;
+      const height = options.height || 360;
+      const margin = options.horizontal
+        ? { top: 20, right: 20, bottom: 24, left: 180 }
+        : { top: 20, right: 20, bottom: 86, left: 52 };
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
+      const maxValue = Math.max(...data.map(item => item.value), 1);
+      const step = options.horizontal ? innerHeight / data.length : innerWidth / data.length;
+      const barSize = Math.max(10, step * 0.74);
+      const color = options.color || "#116466";
+
+      const bars = data.map((item, index) => {
+        const label = escapeHtml(item.label);
+        if (options.horizontal) {
+          const y = margin.top + index * step + (step - barSize) / 2;
+          const barWidth = (item.value / maxValue) * innerWidth;
+          return `
+            <text x="${margin.left - 10}" y="${y + barSize / 2 + 4}" text-anchor="end" font-size="12" fill="#5d6d63">${label}</text>
+            <rect x="${margin.left}" y="${y}" width="${barWidth}" height="${barSize}" rx="7" fill="${color}"></rect>
+            <text x="${margin.left + barWidth + 8}" y="${y + barSize / 2 + 4}" font-size="12" fill="#13231b">${item.value.toFixed(1).replace(".0", "")}</text>
+          `;
+        }
+        const x = margin.left + index * step + (step - barSize) / 2;
+        const barHeight = (item.value / maxValue) * innerHeight;
+        const y = margin.top + innerHeight - barHeight;
+        return `
+          <rect x="${x}" y="${y}" width="${barSize}" height="${barHeight}" rx="7" fill="${color}"></rect>
+          <text x="${x + barSize / 2}" y="${height - 58}" text-anchor="end" transform="rotate(-40 ${x + barSize / 2} ${height - 58})" font-size="11" fill="#5d6d63">${label}</text>
+        `;
+      }).join("");
+
+      return `
+        <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+          <rect x="0" y="0" width="${width}" height="${height}" fill="transparent"></rect>
+          ${bars}
+          ${options.xLabel ? `<text x="${width / 2}" y="${height - 12}" text-anchor="middle" font-size="12" fill="#5d6d63">${escapeHtml(options.xLabel)}</text>` : ""}
+        </svg>
+      `;
+    }
+
+    function scatterPlotSvg(points, options) {
+      const width = options.width || 800;
+      const height = options.height || 360;
+      const margin = { top: 18, right: 18, bottom: 48, left: 56 };
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
+      const minX = Math.min(...points.map(point => point.x));
+      const maxX = Math.max(...points.map(point => point.x));
+      const minY = Math.min(...points.map(point => point.y));
+      const maxY = Math.max(...points.map(point => point.y));
+      const spanX = maxX - minX || 1;
+      const spanY = maxY - minY || 1;
+
+      const circles = points.slice(0, 2500).map(point => {
+        const x = margin.left + ((point.x - minX) / spanX) * innerWidth;
+        const y = margin.top + innerHeight - ((point.y - minY) / spanY) * innerHeight;
+        return `<circle cx="${x}" cy="${y}" r="3.2" fill="rgba(17,100,102,0.35)"></circle>`;
+      }).join("");
+
+      return `
+        <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+          <line x1="${margin.left}" y1="${margin.top + innerHeight}" x2="${margin.left + innerWidth}" y2="${margin.top + innerHeight}" stroke="rgba(19,35,27,0.22)"></line>
+          <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + innerHeight}" stroke="rgba(19,35,27,0.22)"></line>
+          ${circles}
+          <text x="${width / 2}" y="${height - 10}" text-anchor="middle" font-size="12" fill="#5d6d63">${escapeHtml(options.labelX)}</text>
+          <text x="16" y="${height / 2}" transform="rotate(-90 16 ${height / 2})" text-anchor="middle" font-size="12" fill="#5d6d63">${escapeHtml(options.labelY)}</text>
+        </svg>
+      `;
+    }
+
+    function boxPlotSvg(items, options) {
+      const width = options.width || 800;
+      const height = options.height || 360;
+      const margin = { top: 20, right: 18, bottom: 92, left: 56 };
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
+      const grouped = new Map();
+      for (const item of items) {
+        if (!grouped.has(item.category)) grouped.set(item.category, []);
+        grouped.get(item.category).push(item.value);
+      }
+      const categories = [...grouped.keys()];
+      const allValues = [...grouped.values()].flat();
+      const minValue = Math.min(...allValues);
+      const maxValue = Math.max(...allValues);
+      const span = maxValue - minValue || 1;
+      const step = innerWidth / categories.length;
+      const boxWidth = Math.min(34, step * 0.42);
+
+      const svg = categories.map((category, index) => {
+        const values = grouped.get(category).slice().sort((a, b) => a - b);
+        const q1 = quantile(values, 0.25);
+        const median = quantile(values, 0.5);
+        const q3 = quantile(values, 0.75);
+        const min = values[0];
+        const max = values[values.length - 1];
+        const x = margin.left + index * step + step / 2;
+        const y = value => margin.top + innerHeight - ((value - minValue) / span) * innerHeight;
+        return `
+          <line x1="${x}" y1="${y(min)}" x2="${x}" y2="${y(max)}" stroke="rgba(19,35,27,0.28)"></line>
+          <rect x="${x - boxWidth / 2}" y="${y(q3)}" width="${boxWidth}" height="${Math.max(2, y(q1) - y(q3))}" fill="rgba(17,100,102,0.36)" stroke="#116466"></rect>
+          <line x1="${x - boxWidth / 2}" y1="${y(median)}" x2="${x + boxWidth / 2}" y2="${y(median)}" stroke="#d1495b" stroke-width="2"></line>
+          <text x="${x}" y="${height - 46}" text-anchor="end" transform="rotate(-40 ${x} ${height - 46})" font-size="11" fill="#5d6d63">${escapeHtml(category)}</text>
+        `;
+      }).join("");
+
+      return `
+        <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+          <line x1="${margin.left}" y1="${margin.top + innerHeight}" x2="${margin.left + innerWidth}" y2="${margin.top + innerHeight}" stroke="rgba(19,35,27,0.22)"></line>
+          <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + innerHeight}" stroke="rgba(19,35,27,0.22)"></line>
+          ${svg}
+          <text x="${width / 2}" y="${height - 10}" text-anchor="middle" font-size="12" fill="#5d6d63">${escapeHtml(options.labelX)}</text>
+          <text x="16" y="${height / 2}" transform="rotate(-90 16 ${height / 2})" text-anchor="middle" font-size="12" fill="#5d6d63">${escapeHtml(options.labelY)}</text>
+        </svg>
+      `;
+    }
+
+    function heatmapSvg(points, options) {
+      const width = options.width || 800;
+      const height = options.height || 420;
+      const margin = { top: 20, right: 18, bottom: 88, left: 140 };
+      const xLabels = [...new Set(points.map(point => point.x))];
+      const yLabels = [...new Set(points.map(point => point.y))];
+      const gridWidth = width - margin.left - margin.right;
+      const gridHeight = height - margin.top - margin.bottom;
+      const cellWidth = gridWidth / xLabels.length;
+      const cellHeight = gridHeight / yLabels.length;
+      const counts = new Map();
+      for (const point of points) {
+        const key = `${point.x}\u241f${point.y}`;
+        counts.set(key, (counts.get(key) || 0) + 1);
+      }
+      const max = Math.max(...counts.values(), 1);
+      const cells = [];
+      yLabels.forEach((yLabel, rowIndex) => {
+        xLabels.forEach((xLabel, colIndex) => {
+          const key = `${xLabel}\u241f${yLabel}`;
+          const value = counts.get(key) || 0;
+          const intensity = value / max;
+          const fill = `rgba(17,100,102,${0.1 + intensity * 0.8})`;
+          const x = margin.left + colIndex * cellWidth;
+          const y = margin.top + rowIndex * cellHeight;
+          cells.push(`<rect x="${x}" y="${y}" width="${cellWidth - 1}" height="${cellHeight - 1}" fill="${fill}"></rect>`);
+          if (value > 0) {
+            cells.push(`<text x="${x + cellWidth / 2}" y="${y + cellHeight / 2 + 4}" text-anchor="middle" font-size="11" fill="#0e1e18">${value}</text>`);
+          }
+        });
+      });
+
+      const xAxis = xLabels.map((label, index) => {
+        const x = margin.left + index * cellWidth + cellWidth / 2;
+        return `<text x="${x}" y="${height - 48}" text-anchor="end" transform="rotate(-40 ${x} ${height - 48})" font-size="11" fill="#5d6d63">${escapeHtml(label)}</text>`;
+      }).join("");
+
+      const yAxis = yLabels.map((label, index) => {
+        const y = margin.top + index * cellHeight + cellHeight / 2 + 4;
+        return `<text x="${margin.left - 10}" y="${y}" text-anchor="end" font-size="11" fill="#5d6d63">${escapeHtml(label)}</text>`;
+      }).join("");
+
+      return `
+        <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+          ${cells.join("")}
+          ${xAxis}
+          ${yAxis}
+          <text x="${width / 2}" y="${height - 10}" text-anchor="middle" font-size="12" fill="#5d6d63">${escapeHtml(options.labelX)}</text>
+          <text x="16" y="${height / 2}" transform="rotate(-90 16 ${height / 2})" text-anchor="middle" font-size="12" fill="#5d6d63">${escapeHtml(options.labelY)}</text>
+        </svg>
+      `;
+    }
+
+    function processDataset(headers, rows, fileName) {
+      appState.fileName = fileName;
+      appState.columns = headers;
+      appState.rows = rows;
+      appState.duplicateCount = computeDuplicateCount(rows, headers);
+      appState.columnStats = headers
+        .map(column => inferColumnStats(column, rows))
+        .sort((a, b) => {
+          if (a.inferred_type === b.inferred_type) return b.unique_count - a.unique_count;
+          return a.inferred_type.localeCompare(b.inferred_type);
+        });
+      appState.numericColumns = appState.columnStats.filter(stat => isNumericType(stat.inferred_type)).map(stat => stat.column);
+      appState.categoricalColumns = appState.columnStats.filter(stat => isCategoricalType(stat.inferred_type)).map(stat => stat.column);
+
+      populateSelectors();
+      renderStats();
+      renderPreview();
+      renderFeatureProfile();
+      renderMissingChart();
+      renderSingleFeatureView();
+      computeAssociationSummary();
+      renderAssociationTable();
+      renderPairExplorer();
+      setStatus(`Loaded ${fileName} with ${formatNumber(rows.length)} rows and ${formatNumber(headers.length)} columns.`);
+    }
+
+    async function loadSample() {
+      try {
+        setStatus("Loading sample dataset...");
+        const response = await fetch("../data/employee_data.csv");
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const text = await response.text();
+        const parsed = parseCSV(text);
+        processDataset(parsed.headers, parsed.rows, "employee_data.csv");
+      } catch (error) {
+        setStatus(`Sample load failed: ${error.message}`);
+      }
+    }
+
+    els.fileInput.addEventListener("change", async event => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      try {
+        setStatus(`Reading ${file.name}...`);
+        const text = await file.text();
+        const parsed = parseCSV(text);
+        processDataset(parsed.headers, parsed.rows, file.name);
+      } catch (error) {
+        setStatus(`Failed to load file: ${error.message}`);
+      }
+    });
+
+    els.loadSampleBtn.addEventListener("click", loadSample);
+    els.refreshPairBtn.addEventListener("click", renderPairExplorer);
+    els.singleFeatureSelect.addEventListener("change", renderSingleFeatureView);
+    els.pairFeatureX.addEventListener("change", renderPairExplorer);
+    els.pairFeatureY.addEventListener("change", renderPairExplorer);
+    els.profileFilter.addEventListener("input", renderFeatureProfile);
+
+    els.overviewStats.innerHTML = `
+      <div class="muted-block">
+        Load a CSV to start exploring it.
+      </div>
+    `;
+    els.previewTable.innerHTML = `<div class="muted-block">Dataset preview appears here after loading a CSV.</div>`;
+    els.profileTable.innerHTML = `<div class="muted-block">Feature profile appears here after loading a CSV.</div>`;
+    els.missingChart.innerHTML = `<div class="muted-block">Missingness chart appears here after loading a CSV.</div>`;
+    els.singleFeatureChart.innerHTML = `<div class="muted-block">Single feature plot appears here after loading a CSV.</div>`;
+    els.pairChart.innerHTML = `<div class="muted-block">Pair plot appears here after loading a CSV.</div>`;
+    els.associationTable.innerHTML = `<div class="muted-block">Association summary appears here after loading a CSV.</div>`;
+  </script>
+</body>
+</html>

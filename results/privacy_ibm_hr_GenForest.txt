@@ -1,0 +1,29 @@
+Privacy Evaluation
+================================================================================
+Dataset: ibm_hr
+Model: GenForest
+Train CSV: /var/folders/gt/zx9wmkj52wq_750fg8lw9vqm0000gn/T/tmphbty4okq/ibm_hr_train.csv
+Holdout CSV: /var/folders/gt/zx9wmkj52wq_750fg8lw9vqm0000gn/T/tmphbty4okq/ibm_hr_holdout.csv
+Synthetic CSV: /Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/ibm_hr_GenForest_privacy.csv
+
+Privacy Metric Interpretation
+================================================================================
+
+Exact matches (train vs synth): 0 (lower is better, ideally 0)
+Exact matches (holdout vs synth): 0
+
+Median DCR train-train:  4.239325
+Median DCR train-synth:  2.604282
+Median DCR holdout-synth:4.835611
+Interpretation: train-synth distances should generally not be unusually smaller than holdout-synth distances.
+
+Share synth closer to train than holdout: 0.982143
+Interpretation: values near 0.5 are usually more reassuring; much higher values can indicate training-specific leakage.
+
+Median NNDR vs train:   0.575003
+Median NNDR vs holdout: 0.962028
+Interpretation: higher NNDR is generally better; very low values may indicate synthetic points lying unusually close to specific real records or outliers.
+
+MIA average accuracy:  0.525510
+MIA average precision: 1.000000
+Interpretation: values near 0.5 suggest attack performance close to chance.

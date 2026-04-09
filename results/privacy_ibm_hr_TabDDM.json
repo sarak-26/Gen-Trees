@@ -1,0 +1,70 @@
+{
+  "data_summary": {
+    "training_csv_rows": 1176,
+    "synthetic_csv_rows": 1176,
+    "num_columns": 35,
+    "holdout_fraction": 0.2,
+    "real_train_rows": 1176,
+    "real_holdout_rows": 294
+  },
+  "exact_match_train_vs_synth": {
+    "count": 0,
+    "share_of_synth": 0.0,
+    "share_of_real": 0.0
+  },
+  "exact_match_holdout_vs_synth": {
+    "count": 0,
+    "share_of_synth": 0.0,
+    "share_of_real": 0.0
+  },
+  "dcr_train_to_synth": {
+    "mean": 4.953215762168268,
+    "median": 4.907386641922022,
+    "min": 2.545551121184159,
+    "p5": 3.877397211146934
+  },
+  "dcr_holdout_to_synth": {
+    "mean": 5.274910360185629,
+    "median": 5.206352996380151,
+    "min": 3.2236354255320645,
+    "p5": 4.148750186418166
+  },
+  "dcr_train_to_train": {
+    "mean": 4.3153632124378785,
+    "median": 4.239325156544471,
+    "min": 2.6566111016409395,
+    "p5": 3.525921304912958
+  },
+  "share_synth_closer_to_train_than_holdout": 0.8001700680272109,
+  "nndr_vs_train": {
+    "mean": 0.9576734102421549,
+    "median": 0.96990518060786,
+    "min": 0.6564433404594171,
+    "p5": 0.8734131823344402
+  },
+  "nndr_vs_holdout": {
+    "mean": 0.9538093379725865,
+    "median": 0.9656911191445119,
+    "min": 0.7476841730821345,
+    "p5": 0.8684363964664733
+  },
+  "distance_based_mia": {
+    "avg_accuracy": 0.5093537414965985,
+    "avg_precision": 0.63507329299798,
+    "avg_recall": 0.05102040816326529,
+    "avg_tpr": 0.05102040816326529,
+    "avg_fpr": 0.03231292517006803,
+    "avg_threshold": 3.81096706974731
+  },
+  "metadata": {
+    "dataset_name": "ibm_hr",
+    "model_name": "TabDDM",
+    "run_name": "ibm_hr_TabDDM_privacy",
+    "experiment_name": "synthetic-data-privacy"
+  },
+  "paths": {
+    "train": "/var/folders/gt/zx9wmkj52wq_750fg8lw9vqm0000gn/T/tmphbty4okq/ibm_hr_train.csv",
+    "holdout": "/var/folders/gt/zx9wmkj52wq_750fg8lw9vqm0000gn/T/tmphbty4okq/ibm_hr_holdout.csv",
+    "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/ibm_hr_TabDDM_privacy.csv"
+  }
+}

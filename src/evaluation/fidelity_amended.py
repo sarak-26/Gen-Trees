@@ -16,10 +16,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from scipy.stats import ks_2samp, wasserstein_distance
-
-from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import HistGradientBoostingClassifier, HistGradientBoostingRegressor
-from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression, Ridge
 from sklearn.metrics import (
     accuracy_score,
@@ -30,7 +27,38 @@ from sklearn.metrics import (
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import NearestNeighbors
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import StandardScaler
+
+try:
+    from .preprocessing import (
+        build_global_utility_preprocessor,
+        drop_leaky_columns,
+        infer_types_by_numeric_coercion,
+        one_hot_encode_aligned,
+        remove_id_like_and_constant,
+        split_numeric_by_cardinality,
+    )
+except ImportError:
+    from preprocessing import (
+        build_global_utility_preprocessor,
+        drop_leaky_columns,
+        infer_types_by_numeric_coercion,
+        one_hot_encode_aligned,
+        remove_id_like_and_constant,
+        split_numeric_by_cardinality,
+    )
+
+
+def _trapezoid_integral(y: np.ndarray, x: np.ndarray) -> float:
+    y = np.asarray(y, dtype=float)
+    x = np.asarray(x, dtype=float)
+    if y.ndim != 1 or x.ndim != 1:
+        raise ValueError("Trapezoid integral expects 1D inputs.")
+    if len(y) != len(x):
+        raise ValueError("Trapezoid integral expects x and y of equal length.")
+    if len(y) < 2:
+        return 0.0
+    return float(np.sum((x[1:] - x[:-1]) * (y[1:] + y[:-1]) * 0.5))
 
 
 # -----------------------
@@ -43,11 +71,13 @@ def evaluate_numerical_features(samples: np.ndarray, data: np.ndarray):
     samples = samples[np.isfinite(samples)]
     data = data[np.isfinite(data)]
     if len(samples) < 2 or len(data) < 2:
-        return None, None
+        return None, None, None
 
     ks_statistic, _ = ks_2samp(samples, data)
     w_distance = wasserstein_distance(samples, data)
-    return float(ks_statistic), float(w_distance)
+    real_iqr = float(np.percentile(data, 75) - np.percentile(data, 25))
+    w_distance_normalized_iqr = float(w_distance / real_iqr) if real_iqr > 0 else None
+    return float(ks_statistic), float(w_distance), w_distance_normalized_iqr
 
 
 def evaluate_categorical_tv(samples: np.ndarray, data: np.ndarray):
@@ -116,6 +146,7 @@ class DeepSVDDEmbedder:
         batch_size: int = 256,
         epochs: int = 200,
         warm_up_epochs: int = 10,
+        seed: int = 0,
         device: str | None = None,
     ):
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
@@ -125,6 +156,11 @@ class DeepSVDDEmbedder:
         self.batch_size = batch_size
         self.epochs = epochs
         self.warm_up_epochs = warm_up_epochs
+        self.seed = seed
+
+        torch.manual_seed(self.seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(self.seed)
 
         self.model = FeedForwardEmbedder(
             input_dim=input_dim,
@@ -166,6 +202,10 @@ class DeepSVDDEmbedder:
     def fit(self, X_real: np.ndarray):
         X_real = np.asarray(X_real, dtype=np.float32)
         X_tensor = torch.tensor(X_real, dtype=torch.float32, device=self.device)
+
+        torch.manual_seed(self.seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(self.seed)
 
         self.center_ = self._initialize_center(X_tensor)
         R = torch.tensor(0.0, dtype=torch.float32, device=self.device)
@@ -268,12 +308,12 @@ def compute_beta_recall_curve(z_real: np.ndarray, z_syn: np.ndarray, betas=None,
 
 
 def integrated_alpha_precision(alphas: np.ndarray, p_alpha: np.ndarray) -> float:
-    delta = np.trapezoid(np.abs(p_alpha - alphas), alphas)
+    delta = _trapezoid_integral(np.abs(p_alpha - alphas), alphas)
     return float(1 - 2 * delta)
 
 
 def integrated_beta_recall(betas: np.ndarray, r_beta: np.ndarray) -> float:
-    delta = np.trapezoid(np.abs(r_beta - betas), betas)
+    delta = _trapezoid_integral(np.abs(r_beta - betas), betas)
     return float(1 - 2 * delta)
 
 
@@ -292,6 +332,7 @@ def alpha_beta_metrics(
     batch_size=256,
     epochs=200,
     warm_up_epochs=10,
+    seed=0,
 ):
     embedder = DeepSVDDEmbedder(
         input_dim=X_real.shape[1],
@@ -306,6 +347,7 @@ def alpha_beta_metrics(
         batch_size=batch_size,
         epochs=epochs,
         warm_up_epochs=warm_up_epochs,
+        seed=seed,
     )
 
     z_real = embedder.fit_transform(X_real)
@@ -341,109 +383,6 @@ def alpha_beta_metrics(
             "k_recall": int(k),
         },
     }
-
-
-# -----------------------
-# Cleaning & Encoding
-# -----------------------
-def drop_leaky_columns(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-    drop_cols = [c for c in df.columns if c.strip().lower().startswith("unnamed")]
-    if drop_cols:
-        df = df.drop(columns=drop_cols, errors="ignore")
-    return df
-
-
-def strip_object_whitespace(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-    for c in df.columns:
-        if pd.api.types.is_object_dtype(df[c]) or pd.api.types.is_string_dtype(df[c]):
-            df[c] = df[c].astype("string").str.strip()
-    return df
-
-
-def infer_types_by_numeric_coercion(
-    real_df: pd.DataFrame,
-    synth_df: pd.DataFrame,
-    numeric_threshold: float = 0.95,
-    categorical_cols=None,
-    numeric_cols=None,
-):
-    shared = sorted(set(real_df.columns).intersection(set(synth_df.columns)))
-    if not shared:
-        raise ValueError("real.csv and synthetic.csv share no columns.")
-    real_df = real_df[shared].copy()
-    synth_df = synth_df[shared].copy()
-
-    real_df = strip_object_whitespace(real_df)
-    synth_df = strip_object_whitespace(synth_df)
-
-    if categorical_cols is not None or numeric_cols is not None:
-        if categorical_cols is None:
-            categorical_cols = [c for c in shared if c not in (numeric_cols or [])]
-        if numeric_cols is None:
-            numeric_cols = [c for c in shared if c not in (categorical_cols or [])]
-        return real_df, synth_df, categorical_cols, numeric_cols
-
-    categorical_cols = []
-    numeric_cols = []
-
-    for c in shared:
-        r_num = pd.to_numeric(real_df[c], errors="coerce")
-        s_num = pd.to_numeric(synth_df[c], errors="coerce")
-
-        r_ok = float(r_num.notna().mean())
-        s_ok = float(s_num.notna().mean())
-
-        if r_ok >= numeric_threshold and s_ok >= numeric_threshold:
-            numeric_cols.append(c)
-            real_df[c] = r_num
-            synth_df[c] = s_num
-        else:
-            categorical_cols.append(c)
-
-    return real_df, synth_df, categorical_cols, numeric_cols
-
-
-def remove_id_like_and_constant(real_df, synth_df, numeric_cols, categorical_cols, id_unique_threshold=0.98):
-    to_drop = []
-
-    def nunique_ratio(s: pd.Series) -> float:
-        s2 = s.dropna()
-        if len(s2) == 0:
-            return 0.0
-        return float(s2.nunique()) / float(len(s2))
-
-    for c in numeric_cols + categorical_cols:
-        r = nunique_ratio(real_df[c])
-        s = nunique_ratio(synth_df[c])
-
-        if r >= id_unique_threshold and s >= id_unique_threshold:
-            to_drop.append(c)
-            continue
-        if real_df[c].dropna().nunique() <= 1 and synth_df[c].dropna().nunique() <= 1:
-            to_drop.append(c)
-
-    if to_drop:
-        real_df = real_df.drop(columns=to_drop, errors="ignore")
-        synth_df = synth_df.drop(columns=to_drop, errors="ignore")
-        numeric_cols = [c for c in numeric_cols if c not in to_drop]
-        categorical_cols = [c for c in categorical_cols if c not in to_drop]
-
-    return real_df, synth_df, numeric_cols, categorical_cols, to_drop
-
-
-def one_hot_encode_aligned(real_df, synth_df, categorical_cols, numeric_cols):
-    combined = pd.concat(
-        [synth_df[categorical_cols + numeric_cols], real_df[categorical_cols + numeric_cols]],
-        axis=0,
-        ignore_index=True,
-    )
-    X = pd.get_dummies(combined, columns=categorical_cols, dummy_na=True)
-
-    X_synth = X.iloc[: len(synth_df)].to_numpy(dtype=float)
-    X_real = X.iloc[len(synth_df):].to_numpy(dtype=float)
-    return X_real, X_synth, X.columns.tolist()
 
 
 # -----------------------
@@ -498,21 +437,6 @@ def discriminator_eval_with_permutation(X_real, X_synth, test_size=0.3, seed=0, 
         "permutations": permutations,
         "test_size": test_size,
     }
-
-
-# -----------------------
-# Global Utility (TabStruct-style) -- robust to single-class targets
-# -----------------------
-def _build_global_utility_preprocessor(feature_cols, categorical_cols, numeric_cols):
-    cat = [c for c in feature_cols if c in (categorical_cols or [])]
-    num = [c for c in feature_cols if c in (numeric_cols or [])]
-    return ColumnTransformer(
-        transformers=[
-            ("cat", OneHotEncoder(handle_unknown="ignore"), cat),
-            ("num", StandardScaler(with_mean=True, with_std=True), num),
-        ],
-        remainder="drop",
-    )
 
 
 def _best_balanced_accuracy(Xtr, ytr, Xte, yte, preprocessor, seed=0):
@@ -601,10 +525,12 @@ def compute_global_utility_metric(
         X_syn_tr, y_syn_tr = synth_t[feature_cols], synth_t[target]
         X_te, y_te = Dtest_t[feature_cols], Dtest_t[target]
 
-        preprocessor = _build_global_utility_preprocessor(
+        preprocessor = build_global_utility_preprocessor(
             feature_cols=feature_cols,
             categorical_cols=categorical_cols,
             numeric_cols=numeric_cols,
+            real_df=real_df,
+            synth_df=synth_df,
         )
 
         is_cat = target in (categorical_cols or [])
@@ -703,14 +629,24 @@ def run_evaluation(
     real_df, synth_df, numeric_cols, categorical_cols, dropped = remove_id_like_and_constant(
         real_df, synth_df, numeric_cols, categorical_cols, id_unique_threshold=id_unique_threshold
     )
+    discrete_ordinal_cols, continuous_numeric_cols = split_numeric_by_cardinality(
+        real_df,
+        synth_df,
+        numeric_cols=numeric_cols,
+    )
 
     results = {
         "paths": {"real": real_path, "synthetic": synth_path},
-        "columns": {"numeric": numeric_cols, "categorical": categorical_cols},
+        "columns": {
+            "numeric": continuous_numeric_cols,
+            "categorical": categorical_cols,
+            "discrete_ordinal": discrete_ordinal_cols,
+        },
         "dropped_columns": dropped,
         "encoding": {"one_hot_feature_count": None},
         "marginal_numeric": {},
         "marginal_categorical_tv": {},
+        "marginal_discrete_ordinal": {},
         "support": {},
         "discriminator": {},
         "global_utility": {},
@@ -736,9 +672,23 @@ def run_evaluation(
         },
     }
 
-    for c in numeric_cols:
-        ks, w = evaluate_numerical_features(synth_df[c].values, real_df[c].values)
-        results["marginal_numeric"][c] = {"ks": ks, "wasserstein": w}
+    for c in continuous_numeric_cols:
+        ks, w, w_norm_iqr = evaluate_numerical_features(synth_df[c].values, real_df[c].values)
+        results["marginal_numeric"][c] = {
+            "ks": ks,
+            "wasserstein": w,
+            "wasserstein_normalized_iqr": w_norm_iqr,
+        }
+
+    for c in discrete_ordinal_cols:
+        ks, w, w_norm_iqr = evaluate_numerical_features(synth_df[c].values, real_df[c].values)
+        tv = evaluate_categorical_tv(synth_df[c].values, real_df[c].values)
+        results["marginal_discrete_ordinal"][c] = {
+            "ks": ks,
+            "wasserstein": w,
+            "wasserstein_normalized_iqr": w_norm_iqr,
+            "tv": tv,
+        }
 
     for c in categorical_cols:
         tv = evaluate_categorical_tv(synth_df[c].values, real_df[c].values)
@@ -766,6 +716,7 @@ def run_evaluation(
         batch_size=svdd_batch_size,
         epochs=svdd_epochs,
         warm_up_epochs=svdd_warm_up_epochs,
+        seed=seed,
     )
 
     results["global_utility"] = compute_global_utility_metric(
@@ -790,6 +741,7 @@ def format_results(results: dict) -> str:
     lines.append("Columns:")
     lines.append(f"  Numeric:     {results['columns']['numeric']}")
     lines.append(f"  Categorical: {results['columns']['categorical']}")
+    lines.append(f"  Discrete/Ordinal: {results['columns'].get('discrete_ordinal', [])}")
     lines.append(f"  One-hot features: {results['encoding']['one_hot_feature_count']}")
     if results.get("dropped_columns"):
         lines.append(f"  Dropped: {results['dropped_columns']}")
@@ -844,7 +796,19 @@ def format_results(results: dict) -> str:
     for col, m in results["marginal_numeric"].items():
         lines.append(
             f"  {col}: KS={m['ks'] if m['ks'] is not None else 'NA'}, "
-            f"Wasserstein={m['wasserstein'] if m['wasserstein'] is not None else 'NA'}"
+            f"Wasserstein={m['wasserstein'] if m['wasserstein'] is not None else 'NA'}, "
+            "Wasserstein/IQR="
+            f"{m['wasserstein_normalized_iqr'] if m.get('wasserstein_normalized_iqr') is not None else 'NA'}"
+        )
+    lines.append("")
+    lines.append("Marginal (discrete/ordinal):")
+    for col, m in results.get("marginal_discrete_ordinal", {}).items():
+        lines.append(
+            f"  {col}: KS={m['ks'] if m['ks'] is not None else 'NA'}, "
+            f"Wasserstein={m['wasserstein'] if m['wasserstein'] is not None else 'NA'}, "
+            "Wasserstein/IQR="
+            f"{m['wasserstein_normalized_iqr'] if m.get('wasserstein_normalized_iqr') is not None else 'NA'}, "
+            f"TV={m['tv'] if m.get('tv') is not None else 'NA'}"
         )
     lines.append("")
     lines.append("Marginal (categorical TV distance):")

@@ -1,0 +1,7 @@
+{
+  "model_name": "TVAE",
+  "dataset_name": "ibm_hr",
+  "tracking_uri": "sqlite:////Users/sarakhan/Projects/Uni/Gen-Trees/mlflow.db",
+  "experiment_name": "full_test",
+  "run_name": "ibm_hr_TVAE"
+}

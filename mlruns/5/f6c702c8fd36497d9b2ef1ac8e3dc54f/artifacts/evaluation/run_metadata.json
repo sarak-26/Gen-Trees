@@ -1,0 +1,7 @@
+{
+  "model_name": "ibm_hr_TVAE",
+  "dataset_name": "ibm_hr",
+  "tracking_uri": "sqlite:////Users/sarakhan/Projects/Uni/Gen-Trees/mlflow.db",
+  "experiment_name": "ibm_hr_discrete_ordinal_check",
+  "run_name": "ibm_hr_TVAE_ordinal_check"
+}

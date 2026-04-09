@@ -1,0 +1,6 @@
+,Age,Attrition,BusinessTravel,DailyRate,Department,DistanceFromHome,Education,EducationField,EmployeeCount,EmployeeNumber,EnvironmentSatisfaction,Gender,HourlyRate,JobInvolvement,JobLevel,JobRole,JobSatisfaction,MaritalStatus,MonthlyIncome,MonthlyRate,NumCompaniesWorked,Over18,OverTime,PercentSalaryHike,PerformanceRating,RelationshipSatisfaction,StandardHours,StockOptionLevel,TotalWorkingYears,TrainingTimesLastYear,WorkLifeBalance,YearsAtCompany,YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager
+0,21,No,Non-Travel,1488,Research & Development,1,2,Life Sciences,1,81,4,Male,30,3,5,Laboratory Technician,4,Divorced,19545,24907,0,Y,No,11,3,3,80,1,0,0,4,0,0,15,0
+1,21,Yes,Non-Travel,103,Research & Development,1,3,Medical,1,81,2,Female,30,3,4,Research Director,2,Single,19545,24907,1,Y,No,11,3,3,80,3,31,2,4,0,16,15,17
+2,21,No,Non-Travel,103,Research & Development,29,3,Medical,1,81,2,Female,30,2,5,Manufacturing Director,4,Divorced,1232,2094,1,Y,No,11,3,4,80,1,0,2,4,0,16,0,0
+3,21,Yes,Non-Travel,103,Research & Development,1,4,Life Sciences,1,81,4,Male,30,3,5,Sales Executive,4,Divorced,1232,2094,3,Y,No,23,3,3,80,1,0,2,2,0,0,15,17
+4,21,No,Non-Travel,103,Research & Development,29,2,Life Sciences,1,81,4,Female,30,3,4,Laboratory Technician,4,Single,1232,2094,5,Y,No,11,3,3,80,1,31,2,4,0,0,0,17

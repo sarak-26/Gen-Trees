@@ -239,71 +239,26 @@ def repeated_distance_based_mia(
 # Main evaluation
 # =========================================================
 
-def evaluate_privacy(
-    train_csv: str,
-    synth_csv: str,
-    output_txt: str,
-    holdout_fraction: float = 0.2,
-    random_state: int = 42,
-    mia_runs: int = 20,
-    mia_threshold_quantile: float = 0.05,
-) -> None:
-    train_df = pd.read_csv(train_csv)
-    synth_df = pd.read_csv(synth_csv)
-
-    train_df, synth_df = align_columns(train_df, synth_df)
-
-    # Create internal train/holdout split from real data
-    real_train_df, real_holdout_df = train_test_split(
-        train_df,
-        test_size=holdout_fraction,
-        random_state=random_state,
-        shuffle=True,
-    )
-
-    real_train_df = real_train_df.reset_index(drop=True)
-    real_holdout_df = real_holdout_df.reset_index(drop=True)
-    synth_df = synth_df.reset_index(drop=True)
-
-    # Fit preprocessing on real data only
-    real_all_df = pd.concat([real_train_df, real_holdout_df], axis=0, ignore_index=True)
-    preprocessor = make_preprocessor(real_all_df)
-    preprocessor.fit(real_all_df)
-
-    X_train = preprocessor.transform(real_train_df)
-    X_holdout = preprocessor.transform(real_holdout_df)
-    X_synth = preprocessor.transform(synth_df)
-
-    results = {
-        "data_summary": {
-            "training_csv_rows": int(len(train_df)),
-            "synthetic_csv_rows": int(len(synth_df)),
-            "num_columns": int(train_df.shape[1]),
-            "holdout_fraction": float(holdout_fraction),
-            "real_train_rows": int(len(real_train_df)),
-            "real_holdout_rows": int(len(real_holdout_df)),
-        },
-        "exact_match_train_vs_synth": exact_match_count(real_train_df, synth_df),
-        "exact_match_holdout_vs_synth": exact_match_count(real_holdout_df, synth_df),
-        "dcr_train_to_synth": dcr_summary(X_synth, X_train),
-        "dcr_holdout_to_synth": dcr_summary(X_synth, X_holdout),
-        "dcr_train_to_train": train_train_dcr(X_train),
-        "share_synth_closer_to_train_than_holdout": share_synth_closer_to_train_than_holdout(
-            X_synth, X_train, X_holdout
-        ),
-        "nndr_vs_train": nndr_against_reference(X_synth, X_train),
-        "nndr_vs_holdout": nndr_against_reference(X_synth, X_holdout),
-        "distance_based_mia": repeated_distance_based_mia(
-            X_train=X_train,
-            X_holdout=X_holdout,
-            X_synth=X_synth,
-            n_runs=mia_runs,
-            threshold_quantile=mia_threshold_quantile,
-            random_state=random_state,
-        ),
-    }
-
+def format_privacy_results(results: Dict[str, object]) -> str:
     interpretation = []
+    metadata = results.get("metadata", {})
+    paths = results.get("paths", {})
+
+    if metadata or paths:
+        interpretation.append("Privacy Evaluation")
+        interpretation.append("=" * 80)
+        if metadata.get("dataset_name"):
+            interpretation.append(f"Dataset: {metadata['dataset_name']}")
+        if metadata.get("model_name"):
+            interpretation.append(f"Model: {metadata['model_name']}")
+        if paths.get("train"):
+            interpretation.append(f"Train CSV: {paths['train']}")
+        if paths.get("holdout"):
+            interpretation.append(f"Holdout CSV: {paths['holdout']}")
+        if paths.get("synthetic"):
+            interpretation.append(f"Synthetic CSV: {paths['synthetic']}")
+        interpretation.append("")
+
     interpretation.append("Privacy Metric Interpretation")
     interpretation.append("=" * 80)
     interpretation.append("")
@@ -359,6 +314,102 @@ def evaluate_privacy(
         "Interpretation: values near 0.5 suggest attack performance close to chance."
     )
     interpretation.append("")
+    return "\n".join(interpretation)
+
+
+def run_privacy_evaluation(
+    train_csv: str,
+    synth_csv: str,
+    holdout_csv: str | None = None,
+    holdout_fraction: float = 0.2,
+    random_state: int = 42,
+    mia_runs: int = 20,
+    mia_threshold_quantile: float = 0.05,
+) -> Dict[str, object]:
+    train_df = pd.read_csv(train_csv)
+    synth_df = pd.read_csv(synth_csv)
+
+    train_df, synth_df = align_columns(train_df, synth_df)
+
+    if holdout_csv is not None:
+        holdout_df = pd.read_csv(holdout_csv)
+        train_df, holdout_df = align_columns(train_df, holdout_df)
+        real_train_df = train_df
+        real_holdout_df = holdout_df
+    else:
+        # Create internal train/holdout split from real data
+        real_train_df, real_holdout_df = train_test_split(
+            train_df,
+            test_size=holdout_fraction,
+            random_state=random_state,
+            shuffle=True,
+        )
+
+    real_train_df = real_train_df.reset_index(drop=True)
+    real_holdout_df = real_holdout_df.reset_index(drop=True)
+    synth_df = synth_df.reset_index(drop=True)
+
+    # Fit preprocessing on real data only
+    real_all_df = pd.concat([real_train_df, real_holdout_df], axis=0, ignore_index=True)
+    preprocessor = make_preprocessor(real_all_df)
+    preprocessor.fit(real_all_df)
+
+    X_train = preprocessor.transform(real_train_df)
+    X_holdout = preprocessor.transform(real_holdout_df)
+    X_synth = preprocessor.transform(synth_df)
+
+    results = {
+        "data_summary": {
+            "training_csv_rows": int(len(train_df)),
+            "synthetic_csv_rows": int(len(synth_df)),
+            "num_columns": int(train_df.shape[1]),
+            "holdout_fraction": float(holdout_fraction),
+            "real_train_rows": int(len(real_train_df)),
+            "real_holdout_rows": int(len(real_holdout_df)),
+        },
+        "exact_match_train_vs_synth": exact_match_count(real_train_df, synth_df),
+        "exact_match_holdout_vs_synth": exact_match_count(real_holdout_df, synth_df),
+        "dcr_train_to_synth": dcr_summary(X_synth, X_train),
+        "dcr_holdout_to_synth": dcr_summary(X_synth, X_holdout),
+        "dcr_train_to_train": train_train_dcr(X_train),
+        "share_synth_closer_to_train_than_holdout": share_synth_closer_to_train_than_holdout(
+            X_synth, X_train, X_holdout
+        ),
+        "nndr_vs_train": nndr_against_reference(X_synth, X_train),
+        "nndr_vs_holdout": nndr_against_reference(X_synth, X_holdout),
+        "distance_based_mia": repeated_distance_based_mia(
+            X_train=X_train,
+            X_holdout=X_holdout,
+            X_synth=X_synth,
+            n_runs=mia_runs,
+            threshold_quantile=mia_threshold_quantile,
+            random_state=random_state,
+        ),
+    }
+
+    return results
+
+
+def evaluate_privacy(
+    train_csv: str,
+    synth_csv: str,
+    output_txt: str,
+    holdout_csv: str | None = None,
+    holdout_fraction: float = 0.2,
+    random_state: int = 42,
+    mia_runs: int = 20,
+    mia_threshold_quantile: float = 0.05,
+) -> None:
+    results = run_privacy_evaluation(
+        train_csv=train_csv,
+        synth_csv=synth_csv,
+        holdout_csv=holdout_csv,
+        holdout_fraction=holdout_fraction,
+        random_state=random_state,
+        mia_runs=mia_runs,
+        mia_threshold_quantile=mia_threshold_quantile,
+    )
+    interpretation = format_privacy_results(results)
 
     with open(output_txt, "w", encoding="utf-8") as f:
         f.write("SYNTHETIC DATA PRIVACY EVALUATION\n")
@@ -367,7 +418,7 @@ def evaluate_privacy(
         f.write("-" * 80 + "\n")
         f.write(json.dumps(results, indent=2))
         f.write("\n\n")
-        f.write("\n".join(interpretation))
+        f.write(interpretation)
         f.write("\n")
 
     print(f"Done. Results written to: {output_txt}")
@@ -382,6 +433,7 @@ def main():
     parser.add_argument("--train_csv", required=True, help="Path to the real training CSV file")
     parser.add_argument("--synth_csv", required=True, help="Path to the synthetic CSV file")
     parser.add_argument("--output_txt", required=True, help="Path to output TXT file")
+    parser.add_argument("--holdout_csv", default=None, help="Optional external holdout CSV file")
     parser.add_argument("--holdout_fraction", type=float, default=0.2, help="Fraction of training data used as holdout")
     parser.add_argument("--random_state", type=int, default=42, help="Random seed")
     parser.add_argument("--mia_runs", type=int, default=20, help="Number of repeated MIA runs")
@@ -399,6 +451,7 @@ def main():
         train_csv=args.train_csv,
         synth_csv=args.synth_csv,
         output_txt=args.output_txt,
+        holdout_csv=args.holdout_csv,
         holdout_fraction=args.holdout_fraction,
         random_state=args.random_state,
         mia_runs=args.mia_runs,

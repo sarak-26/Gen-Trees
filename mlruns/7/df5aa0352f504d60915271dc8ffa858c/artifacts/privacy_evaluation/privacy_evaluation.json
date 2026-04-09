@@ -1,0 +1,70 @@
+{
+  "data_summary": {
+    "training_csv_rows": 1176,
+    "synthetic_csv_rows": 1176,
+    "num_columns": 35,
+    "holdout_fraction": 0.2,
+    "real_train_rows": 1176,
+    "real_holdout_rows": 294
+  },
+  "exact_match_train_vs_synth": {
+    "count": 0,
+    "share_of_synth": 0.0,
+    "share_of_real": 0.0
+  },
+  "exact_match_holdout_vs_synth": {
+    "count": 0,
+    "share_of_synth": 0.0,
+    "share_of_real": 0.0
+  },
+  "dcr_train_to_synth": {
+    "mean": 14021.662948651594,
+    "median": 13992.036307541057,
+    "min": 19.535454696172373,
+    "p5": 1288.9618719048892
+  },
+  "dcr_holdout_to_synth": {
+    "mean": 14021.668444865256,
+    "median": 13992.041601311957,
+    "min": 19.408763002965436,
+    "p5": 1288.965319006683
+  },
+  "dcr_train_to_train": {
+    "mean": 4.3153632124378785,
+    "median": 4.239325156544471,
+    "min": 2.6566111016409395,
+    "p5": 3.525921304912958
+  },
+  "share_synth_closer_to_train_than_holdout": 0.9914965986394558,
+  "nndr_vs_train": {
+    "mean": 0.9999907551771371,
+    "median": 0.9999994942519489,
+    "min": 0.9952872756808961,
+    "p5": 0.9999950879075614
+  },
+  "nndr_vs_holdout": {
+    "mean": 0.9999904424021445,
+    "median": 0.9999990456450849,
+    "min": 0.9969999332606415,
+    "p5": 0.9999916325575637
+  },
+  "distance_based_mia": {
+    "avg_accuracy": 0.5094387755102039,
+    "avg_precision": 0.6172045044327655,
+    "avg_recall": 0.05102040816326529,
+    "avg_tpr": 0.05102040816326529,
+    "avg_fpr": 0.032142857142857154,
+    "avg_threshold": 20.162652906347027
+  },
+  "metadata": {
+    "dataset_name": "ibm_hr",
+    "model_name": "CTGAN",
+    "run_name": "ibm_hr_CTGAN_privacy",
+    "experiment_name": "synthetic-data-privacy"
+  },
+  "paths": {
+    "train": "/var/folders/gt/zx9wmkj52wq_750fg8lw9vqm0000gn/T/tmphbty4okq/ibm_hr_train.csv",
+    "holdout": "/var/folders/gt/zx9wmkj52wq_750fg8lw9vqm0000gn/T/tmphbty4okq/ibm_hr_holdout.csv",
+    "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/ibm_hr_CTGAN_privacy.csv"
+  }
+}
