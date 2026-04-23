@@ -1,0 +1,1766 @@
+[
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/ibm_hr.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/ibm_hr_TabDDM_seed2026.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Age",
+        "DailyRate",
+        "DistanceFromHome",
+        "EmployeeNumber",
+        "HourlyRate",
+        "MonthlyIncome",
+        "MonthlyRate",
+        "NumCompaniesWorked",
+        "PercentSalaryHike",
+        "TotalWorkingYears",
+        "YearsAtCompany",
+        "YearsInCurrentRole",
+        "YearsSinceLastPromotion",
+        "YearsWithCurrManager"
+      ],
+      "categorical": [
+        "Attrition",
+        "BusinessTravel",
+        "Department",
+        "EducationField",
+        "Gender",
+        "JobRole",
+        "MaritalStatus",
+        "OverTime"
+      ],
+      "discrete_ordinal": [
+        "Education",
+        "EnvironmentSatisfaction",
+        "JobInvolvement",
+        "JobLevel",
+        "JobSatisfaction",
+        "PerformanceRating",
+        "RelationshipSatisfaction",
+        "StockOptionLevel",
+        "TrainingTimesLastYear",
+        "WorkLifeBalance"
+      ]
+    },
+    "dropped_columns": [
+      "EmployeeCount",
+      "StandardHours",
+      "Over18"
+    ],
+    "encoding": {
+      "one_hot_feature_count": 105
+    },
+    "marginal_numeric": {
+      "Age": {
+        "ks": 0.5795918367346938,
+        "wasserstein": 13.297278911564625,
+        "wasserstein_normalized_iqr": 1.0228676085818942
+      },
+      "DailyRate": {
+        "ks": 0.46802721088435373,
+        "wasserstein": 282.5088435374149,
+        "wasserstein_normalized_iqr": 0.40824977389799844
+      },
+      "DistanceFromHome": {
+        "ks": 0.4673469387755102,
+        "wasserstein": 8.233333333333333,
+        "wasserstein_normalized_iqr": 0.686111111111111
+      },
+      "EmployeeNumber": {
+        "ks": 0.5183673469387755,
+        "wasserstein": 450.1965986394557,
+        "wasserstein_normalized_iqr": 0.42291836415167283
+      },
+      "HourlyRate": {
+        "ks": 0.4306122448979592,
+        "wasserstein": 13.434013605442177,
+        "wasserstein_normalized_iqr": 0.3757766043480329
+      },
+      "MonthlyIncome": {
+        "ks": 0.40816326530612246,
+        "wasserstein": 4165.205442176872,
+        "wasserstein_normalized_iqr": 0.7617420340484403
+      },
+      "MonthlyRate": {
+        "ks": 0.5163265306122449,
+        "wasserstein": 5429.627891156462,
+        "wasserstein_normalized_iqr": 0.4373617859081286
+      },
+      "NumCompaniesWorked": {
+        "ks": 0.0761904761904762,
+        "wasserstein": 0.3299319727891155,
+        "wasserstein_normalized_iqr": 0.10997732426303851
+      },
+      "PercentSalaryHike": {
+        "ks": 0.3802721088435374,
+        "wasserstein": 2.317687074829932,
+        "wasserstein_normalized_iqr": 0.386281179138322
+      },
+      "TotalWorkingYears": {
+        "ks": 0.6904761904761905,
+        "wasserstein": 19.508163265306123,
+        "wasserstein_normalized_iqr": 2.1675736961451246
+      },
+      "YearsAtCompany": {
+        "ks": 0.39591836734693875,
+        "wasserstein": 11.740136054421768,
+        "wasserstein_normalized_iqr": 1.956689342403628
+      },
+      "YearsInCurrentRole": {
+        "ks": 0.3727891156462585,
+        "wasserstein": 3.951700680272109,
+        "wasserstein_normalized_iqr": 0.7903401360544218
+      },
+      "YearsSinceLastPromotion": {
+        "ks": 0.32040816326530613,
+        "wasserstein": 3.5306122448979593,
+        "wasserstein_normalized_iqr": 1.1768707482993197
+      },
+      "YearsWithCurrManager": {
+        "ks": 0.3476190476190476,
+        "wasserstein": 3.844897959183674,
+        "wasserstein_normalized_iqr": 0.7689795918367348
+      }
+    },
+    "marginal_categorical_tv": {
+      "Attrition": 0.32721088435374146,
+      "BusinessTravel": 0.1551020408163265,
+      "Department": 0.13061224489795917,
+      "EducationField": 0.35442176870748304,
+      "Gender": 0.0598639455782313,
+      "JobRole": 0.20340136054421767,
+      "MaritalStatus": 0.126530612244898,
+      "OverTime": 0.014285714285714318
+    },
+    "marginal_discrete_ordinal": {
+      "Education": {
+        "ks": 0.13401360544217686,
+        "wasserstein": 0.3034013605442175,
+        "wasserstein_normalized_iqr": 0.15170068027210876,
+        "tv": 0.23809523809523814
+      },
+      "EnvironmentSatisfaction": {
+        "ks": 0.1380952380952381,
+        "wasserstein": 0.24285714285714288,
+        "wasserstein_normalized_iqr": 0.12142857142857144,
+        "tv": 0.22993197278911565
+      },
+      "JobInvolvement": {
+        "ks": 0.06666666666666667,
+        "wasserstein": 0.10680272108843543,
+        "wasserstein_normalized_iqr": 0.10680272108843543,
+        "tv": 0.10068027210884355
+      },
+      "JobLevel": {
+        "ks": 0.18843537414965986,
+        "wasserstein": 0.5170068027210885,
+        "wasserstein_normalized_iqr": 0.2585034013605442,
+        "tv": 0.18843537414965988
+      },
+      "JobSatisfaction": {
+        "ks": 0.12380952380952381,
+        "wasserstein": 0.17551020408163265,
+        "wasserstein_normalized_iqr": 0.08775510204081632,
+        "tv": 0.13877551020408163
+      },
+      "PerformanceRating": {
+        "ks": 0.005442176870748299,
+        "wasserstein": 0.0054421768707483276,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.005442176870748314
+      },
+      "RelationshipSatisfaction": {
+        "ks": 0.18639455782312925,
+        "wasserstein": 0.41496598639455773,
+        "wasserstein_normalized_iqr": 0.20748299319727886,
+        "tv": 0.1863945578231293
+      },
+      "StockOptionLevel": {
+        "ks": 0.1,
+        "wasserstein": 0.21020408163265303,
+        "wasserstein_normalized_iqr": 0.21020408163265303,
+        "tv": 0.16258503401360544
+      },
+      "TrainingTimesLastYear": {
+        "ks": 0.1619047619047619,
+        "wasserstein": 0.4156462585034014,
+        "wasserstein_normalized_iqr": 0.4156462585034014,
+        "tv": 0.22312925170068026
+      },
+      "WorkLifeBalance": {
+        "ks": 0.2523809523809524,
+        "wasserstein": 0.5360544217687075,
+        "wasserstein_normalized_iqr": 0.5360544217687075,
+        "tv": 0.2523809523809524
+      }
+    },
+    "support": {
+      "alpha_precision": 0.9598639455782313,
+      "beta_recall": 0.6496598639455783,
+      "IP_alpha": 0.4518537414965986,
+      "IR_beta": 0.7247789115646258,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.017687074829931974,
+        0.02857142857142857,
+        0.03469387755102041,
+        0.04829931972789116,
+        0.05986394557823129,
+        0.06598639455782312,
+        0.0782312925170068,
+        0.11292517006802721,
+        0.1326530612244898,
+        0.14285714285714285,
+        0.16326530612244897,
+        0.1816326530612245,
+        0.20340136054421767,
+        0.23333333333333334,
+        0.2938775510204082,
+        0.36394557823129253,
+        0.5142857142857142,
+        0.5925170068027211,
+        0.754421768707483,
+        0.9598639455782313
+      ],
+      "alpha_radii": [
+        39.24906883239746,
+        46.51387405395508,
+        52.146945571899415,
+        58.871072387695314,
+        65.81789207458496,
+        72.26227035522462,
+        79.10787506103516,
+        86.41074829101561,
+        93.99490013122559,
+        101.164981842041,
+        109.24825172424316,
+        118.76231231689454,
+        128.41532211303712,
+        139.18783721923828,
+        149.38459396362305,
+        163.89618835449218,
+        184.125121307373,
+        205.72805175781252,
+        233.02597198486328,
+        357.7297668457031
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.16666666666666666,
+        0.24081632653061225,
+        0.31700680272108844,
+        0.37006802721088433,
+        0.4095238095238095,
+        0.45510204081632655,
+        0.507482993197279,
+        0.5285714285714286,
+        0.5387755102040817,
+        0.5414965986394558,
+        0.5482993197278911,
+        0.5727891156462585,
+        0.5891156462585034,
+        0.5897959183673469,
+        0.6054421768707483,
+        0.6183673469387755,
+        0.6312925170068027,
+        0.638095238095238,
+        0.6469387755102041,
+        0.6496598639455783
+      ],
+      "beta_radii": [
+        66.91276931762695,
+        81.00407104492187,
+        101.61815338134765,
+        113.65365905761719,
+        125.273193359375,
+        138.49422607421874,
+        151.38362350463868,
+        166.69459533691406,
+        173.82892913818358,
+        182.45996856689453,
+        187.6379867553711,
+        196.71844787597655,
+        205.97810668945314,
+        214.73900756835937,
+        229.0842514038086,
+        249.98912048339844,
+        262.2968643188476,
+        297.44491271972663,
+        336.16976470947264,
+        492.650634765625
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 291.67676284609115,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.9001599127935377,
+      "accuracy": 0.8514739229024944,
+      "pmse_test": 0.14312377808890178,
+      "pmse_null_mean": 0.008453392695166024,
+      "pmse_ratio_perm": 16.930927409860598,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.8449821633693635,
+      "num_columns_used": 32,
+      "per_column": {
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 6.361948139442964,
+          "perf_synth": 7.221844722353167,
+          "utility": 0.8809311725785742
+        },
+        "Attrition": {
+          "type": "categorical",
+          "perf_ref": 0.7254350736278448,
+          "perf_synth": 0.6323962516733601,
+          "utility": 0.8717475548994279
+        },
+        "BusinessTravel": {
+          "type": "categorical",
+          "perf_ref": 0.331455467759243,
+          "perf_synth": 0.36799239098624525,
+          "utility": 1.110231771024943
+        },
+        "DailyRate": {
+          "type": "numerical",
+          "perf_ref": 425.1831330217475,
+          "perf_synth": 433.2599212804663,
+          "utility": 0.9813580996948703
+        },
+        "Department": {
+          "type": "categorical",
+          "perf_ref": 0.9428005545652605,
+          "perf_synth": 0.6471380471380471,
+          "utility": 0.6863997311037351
+        },
+        "DistanceFromHome": {
+          "type": "numerical",
+          "perf_ref": 8.88173195762116,
+          "perf_synth": 9.01559694247987,
+          "utility": 0.9851518445519716
+        },
+        "Education": {
+          "type": "numerical",
+          "perf_ref": 1.0170054798359536,
+          "perf_synth": 0.9970676658923446,
+          "utility": 1.0199964502166112
+        },
+        "EducationField": {
+          "type": "categorical",
+          "perf_ref": 0.2887358007213402,
+          "perf_synth": 0.21509302500176197,
+          "utility": 0.7449475418857009
+        },
+        "EmployeeNumber": {
+          "type": "numerical",
+          "perf_ref": 634.5883923448865,
+          "perf_synth": 676.7457374702642,
+          "utility": 0.9377057840320272
+        },
+        "EnvironmentSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.0635750810071178,
+          "perf_synth": 1.1065378849304635,
+          "utility": 0.9611736710433141
+        },
+        "Gender": {
+          "type": "categorical",
+          "perf_ref": 0.4789325842696629,
+          "perf_synth": 0.5145292522278186,
+          "utility": 1.0743250075841844
+        },
+        "HourlyRate": {
+          "type": "numerical",
+          "perf_ref": 21.266208011279527,
+          "perf_synth": 21.127211037054604,
+          "utility": 1.0065790498320455
+        },
+        "JobInvolvement": {
+          "type": "numerical",
+          "perf_ref": 0.7011940317224301,
+          "perf_synth": 0.7428187426138995,
+          "utility": 0.9439638386815652
+        },
+        "JobLevel": {
+          "type": "numerical",
+          "perf_ref": 0.20467425302097836,
+          "perf_synth": 0.4440747305810747,
+          "utility": 0.4609004722091724
+        },
+        "JobRole": {
+          "type": "categorical",
+          "perf_ref": 0.7102209337503456,
+          "perf_synth": 0.47707829070236113,
+          "utility": 0.6717322287068239
+        },
+        "JobSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.1252701895065356,
+          "perf_synth": 1.2180323896403094,
+          "utility": 0.923842583397009
+        },
+        "MaritalStatus": {
+          "type": "categorical",
+          "perf_ref": 0.609723670043271,
+          "perf_synth": 0.5687357912270614,
+          "utility": 0.9327763037093496
+        },
+        "MonthlyIncome": {
+          "type": "numerical",
+          "perf_ref": 1037.3928739144217,
+          "perf_synth": 1941.7116907959453,
+          "utility": 0.5342672029178411
+        },
+        "MonthlyRate": {
+          "type": "numerical",
+          "perf_ref": 7366.3360543707,
+          "perf_synth": 7541.168863865864,
+          "utility": 0.9768162187253372
+        },
+        "NumCompaniesWorked": {
+          "type": "numerical",
+          "perf_ref": 2.0150753054851727,
+          "perf_synth": 2.161260259013954,
+          "utility": 0.9323612448250559
+        },
+        "OverTime": {
+          "type": "categorical",
+          "perf_ref": 0.5857142857142857,
+          "perf_synth": 0.5523809523809524,
+          "utility": 0.943089430894309
+        },
+        "PercentSalaryHike": {
+          "type": "numerical",
+          "perf_ref": 2.374535754651751,
+          "perf_synth": 2.554853358918072,
+          "utility": 0.9294215444354577
+        },
+        "PerformanceRating": {
+          "type": "numerical",
+          "perf_ref": 1.058484489647086e-05,
+          "perf_synth": 0.1919281250553187,
+          "utility": 5.515004584877819e-05
+        },
+        "RelationshipSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.1268754500427136,
+          "perf_synth": 1.1315345945673276,
+          "utility": 0.9958824550773937
+        },
+        "StockOptionLevel": {
+          "type": "numerical",
+          "perf_ref": 0.6609951235348848,
+          "perf_synth": 0.6993454989286689,
+          "utility": 0.9451624762688352
+        },
+        "TotalWorkingYears": {
+          "type": "numerical",
+          "perf_ref": 2.7326652322221614,
+          "perf_synth": 4.538953682627118,
+          "utility": 0.6020473931429307
+        },
+        "TrainingTimesLastYear": {
+          "type": "numerical",
+          "perf_ref": 1.280309542008952,
+          "perf_synth": 1.3368035522906183,
+          "utility": 0.9577394822261929
+        },
+        "WorkLifeBalance": {
+          "type": "numerical",
+          "perf_ref": 0.7204324298148488,
+          "perf_synth": 0.6874873466911768,
+          "utility": 1.047921002884248
+        },
+        "YearsAtCompany": {
+          "type": "numerical",
+          "perf_ref": 1.968564135068735,
+          "perf_synth": 3.389778369536172,
+          "utility": 0.5807353521280793
+        },
+        "YearsInCurrentRole": {
+          "type": "numerical",
+          "perf_ref": 1.869366749133495,
+          "perf_synth": 2.333089255654709,
+          "utility": 0.8012409917891955
+        },
+        "YearsSinceLastPromotion": {
+          "type": "numerical",
+          "perf_ref": 2.5558466598739136,
+          "perf_synth": 3.14721284426755,
+          "utility": 0.8120984459405811
+        },
+        "YearsWithCurrManager": {
+          "type": "numerical",
+          "perf_ref": 1.8853026872208816,
+          "perf_synth": 2.396080631201747,
+          "utility": 0.7868277313670007
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2026,
+        "synth_train_cap": 5000
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2026,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000
+    }
+  },
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/ibm_hr.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/ibm_hr_TabDDM_seed2003.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Age",
+        "DailyRate",
+        "DistanceFromHome",
+        "EmployeeNumber",
+        "HourlyRate",
+        "MonthlyIncome",
+        "MonthlyRate",
+        "NumCompaniesWorked",
+        "PercentSalaryHike",
+        "TotalWorkingYears",
+        "YearsAtCompany",
+        "YearsInCurrentRole",
+        "YearsSinceLastPromotion",
+        "YearsWithCurrManager"
+      ],
+      "categorical": [
+        "Attrition",
+        "BusinessTravel",
+        "Department",
+        "EducationField",
+        "Gender",
+        "JobRole",
+        "MaritalStatus",
+        "OverTime"
+      ],
+      "discrete_ordinal": [
+        "Education",
+        "EnvironmentSatisfaction",
+        "JobInvolvement",
+        "JobLevel",
+        "JobSatisfaction",
+        "PerformanceRating",
+        "RelationshipSatisfaction",
+        "StockOptionLevel",
+        "TrainingTimesLastYear",
+        "WorkLifeBalance"
+      ]
+    },
+    "dropped_columns": [
+      "EmployeeCount",
+      "StandardHours",
+      "Over18"
+    ],
+    "encoding": {
+      "one_hot_feature_count": 105
+    },
+    "marginal_numeric": {
+      "Age": {
+        "ks": 0.6428571428571429,
+        "wasserstein": 14.934013605442177,
+        "wasserstein_normalized_iqr": 1.148770277341706
+      },
+      "DailyRate": {
+        "ks": 0.5034013605442177,
+        "wasserstein": 311.47687074829935,
+        "wasserstein_normalized_iqr": 0.45011108489638635
+      },
+      "DistanceFromHome": {
+        "ks": 0.47959183673469385,
+        "wasserstein": 5.07482993197279,
+        "wasserstein_normalized_iqr": 0.4229024943310658
+      },
+      "EmployeeNumber": {
+        "ks": 0.42925170068027213,
+        "wasserstein": 448.18503401360545,
+        "wasserstein_normalized_iqr": 0.4210286839019309
+      },
+      "HourlyRate": {
+        "ks": 0.6965986394557823,
+        "wasserstein": 22.078231292517003,
+        "wasserstein_normalized_iqr": 0.617572903287189
+      },
+      "MonthlyIncome": {
+        "ks": 0.5564625850340136,
+        "wasserstein": 4102.0952380952385,
+        "wasserstein_normalized_iqr": 0.7502002995785001
+      },
+      "MonthlyRate": {
+        "ks": 0.5238095238095238,
+        "wasserstein": 5834.108163265306,
+        "wasserstein_normalized_iqr": 0.46994306361636035
+      },
+      "NumCompaniesWorked": {
+        "ks": 0.16598639455782313,
+        "wasserstein": 0.7598639455782314,
+        "wasserstein_normalized_iqr": 0.2532879818594105
+      },
+      "PercentSalaryHike": {
+        "ks": 0.4272108843537415,
+        "wasserstein": 3.7095238095238092,
+        "wasserstein_normalized_iqr": 0.6182539682539682
+      },
+      "TotalWorkingYears": {
+        "ks": 0.691156462585034,
+        "wasserstein": 19.52448979591837,
+        "wasserstein_normalized_iqr": 2.1693877551020413
+      },
+      "YearsAtCompany": {
+        "ks": 0.48707482993197276,
+        "wasserstein": 15.657142857142858,
+        "wasserstein_normalized_iqr": 2.6095238095238096
+      },
+      "YearsInCurrentRole": {
+        "ks": 0.40816326530612246,
+        "wasserstein": 4.460544217687075,
+        "wasserstein_normalized_iqr": 0.892108843537415
+      },
+      "YearsSinceLastPromotion": {
+        "ks": 0.4197278911564626,
+        "wasserstein": 4.743537414965987,
+        "wasserstein_normalized_iqr": 1.5811791383219955
+      },
+      "YearsWithCurrManager": {
+        "ks": 0.4272108843537415,
+        "wasserstein": 3.7714285714285722,
+        "wasserstein_normalized_iqr": 0.7542857142857144
+      }
+    },
+    "marginal_categorical_tv": {
+      "Attrition": 0.15782312925170064,
+      "BusinessTravel": 0.2510204081632653,
+      "Department": 0.08435374149659866,
+      "EducationField": 0.20000000000000004,
+      "Gender": 0.07619047619047614,
+      "JobRole": 0.3190476190476191,
+      "MaritalStatus": 0.4414965986394558,
+      "OverTime": 0.254421768707483
+    },
+    "marginal_discrete_ordinal": {
+      "Education": {
+        "ks": 0.23673469387755103,
+        "wasserstein": 0.34149659863945564,
+        "wasserstein_normalized_iqr": 0.17074829931972782,
+        "tv": 0.2755102040816326
+      },
+      "EnvironmentSatisfaction": {
+        "ks": 0.23265306122448978,
+        "wasserstein": 0.4333333333333333,
+        "wasserstein_normalized_iqr": 0.21666666666666665,
+        "tv": 0.2326530612244898
+      },
+      "JobInvolvement": {
+        "ks": 0.04829931972789116,
+        "wasserstein": 0.06870748299319723,
+        "wasserstein_normalized_iqr": 0.06870748299319723,
+        "tv": 0.06326530612244895
+      },
+      "JobLevel": {
+        "ks": 0.10136054421768707,
+        "wasserstein": 0.16054421768707489,
+        "wasserstein_normalized_iqr": 0.08027210884353744,
+        "tv": 0.15238095238095242
+      },
+      "JobSatisfaction": {
+        "ks": 0.29863945578231293,
+        "wasserstein": 0.6945578231292517,
+        "wasserstein_normalized_iqr": 0.34727891156462587,
+        "tv": 0.2986394557823129
+      },
+      "PerformanceRating": {
+        "ks": 0.0782312925170068,
+        "wasserstein": 0.07823129251700678,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.07823129251700678
+      },
+      "RelationshipSatisfaction": {
+        "ks": 0.1836734693877551,
+        "wasserstein": 0.2877551020408163,
+        "wasserstein_normalized_iqr": 0.14387755102040814,
+        "tv": 0.19115646258503405
+      },
+      "StockOptionLevel": {
+        "ks": 0.20340136054421767,
+        "wasserstein": 0.3523809523809524,
+        "wasserstein_normalized_iqr": 0.3523809523809524,
+        "tv": 0.2034013605442177
+      },
+      "TrainingTimesLastYear": {
+        "ks": 0.1,
+        "wasserstein": 0.33401360544217684,
+        "wasserstein_normalized_iqr": 0.33401360544217684,
+        "tv": 0.1945578231292517
+      },
+      "WorkLifeBalance": {
+        "ks": 0.09591836734693877,
+        "wasserstein": 0.16734693877551024,
+        "wasserstein_normalized_iqr": 0.16734693877551024,
+        "tv": 0.09591836734693876
+      }
+    },
+    "support": {
+      "alpha_precision": 0.919047619047619,
+      "beta_recall": 0.38231292517006804,
+      "IP_alpha": 0.39988095238095234,
+      "IR_beta": 0.4547108843537415,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.0013605442176870747,
+        0.006802721088435374,
+        0.009523809523809525,
+        0.01020408163265306,
+        0.012244897959183673,
+        0.017687074829931974,
+        0.022448979591836733,
+        0.03605442176870748,
+        0.05986394557823129,
+        0.07551020408163266,
+        0.10748299319727891,
+        0.21972789115646257,
+        0.23197278911564626,
+        0.28503401360544217,
+        0.3469387755102041,
+        0.39387755102040817,
+        0.45510204081632655,
+        0.5462585034013605,
+        0.6768707482993197,
+        0.919047619047619
+      ],
+      "alpha_radii": [
+        34.724827194213866,
+        41.142063522338866,
+        47.132150650024414,
+        51.397698974609376,
+        56.955726623535156,
+        63.94938163757324,
+        69.83052787780761,
+        75.34562072753906,
+        83.0419548034668,
+        89.85457992553711,
+        97.01992530822754,
+        106.11676635742188,
+        114.42763519287111,
+        122.6367431640625,
+        134.3509635925293,
+        148.83883361816405,
+        164.40413436889648,
+        183.30850524902345,
+        206.62691421508788,
+        311.7362060546875
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.11836734693877551,
+        0.14829931972789115,
+        0.16122448979591836,
+        0.18503401360544217,
+        0.19795918367346937,
+        0.20680272108843537,
+        0.21020408163265306,
+        0.21564625850340136,
+        0.23605442176870747,
+        0.24489795918367346,
+        0.2537414965986395,
+        0.2605442176870748,
+        0.2707482993197279,
+        0.2714285714285714,
+        0.2836734693877551,
+        0.29863945578231293,
+        0.3149659863945578,
+        0.3414965986394558,
+        0.3578231292517007,
+        0.38231292517006804
+      ],
+      "beta_radii": [
+        72.62715911865234,
+        80.02389602661133,
+        85.36055297851563,
+        93.72209777832032,
+        99.32880973815918,
+        102.88123321533203,
+        106.12356376647949,
+        112.1578399658203,
+        116.52686767578125,
+        123.15637207031249,
+        131.05233306884764,
+        136.35706787109376,
+        138.74419250488282,
+        143.42475585937498,
+        158.06570434570312,
+        175.5509582519531,
+        194.6648246765136,
+        229.41116485595708,
+        263.14528503417966,
+        571.2013549804688
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 289.85188054634034,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.9610758891614091,
+      "accuracy": 0.9206349206349206,
+      "pmse_test": 0.19918004557752841,
+      "pmse_null_mean": 0.008581492220850993,
+      "pmse_ratio_perm": 23.210420804620448,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.7636156200787731,
+      "num_columns_used": 32,
+      "per_column": {
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 6.859832581125238,
+          "perf_synth": 8.456400379073859,
+          "utility": 0.8112000701977788
+        },
+        "Attrition": {
+          "type": "categorical",
+          "perf_ref": 0.7391248169523645,
+          "perf_synth": 0.5116719786372642,
+          "utility": 0.6922673503875066
+        },
+        "BusinessTravel": {
+          "type": "categorical",
+          "perf_ref": 0.32924946461477167,
+          "perf_synth": 0.3309676776731909,
+          "utility": 1.0052185751021026
+        },
+        "DailyRate": {
+          "type": "numerical",
+          "perf_ref": 408.094564199863,
+          "perf_synth": 436.1071884936688,
+          "utility": 0.9357666531694593
+        },
+        "Department": {
+          "type": "categorical",
+          "perf_ref": 0.9056007226738934,
+          "perf_synth": 0.5723096639833393,
+          "utility": 0.6319668808274879
+        },
+        "DistanceFromHome": {
+          "type": "numerical",
+          "perf_ref": 8.363298899379554,
+          "perf_synth": 9.150410768436936,
+          "utility": 0.9139807065522769
+        },
+        "Education": {
+          "type": "numerical",
+          "perf_ref": 1.0502458195742688,
+          "perf_synth": 1.1204990800889432,
+          "utility": 0.9373018133052837
+        },
+        "EducationField": {
+          "type": "categorical",
+          "perf_ref": 0.31443928448572406,
+          "perf_synth": 0.18737021922006444,
+          "utility": 0.595886800615625
+        },
+        "EmployeeNumber": {
+          "type": "numerical",
+          "perf_ref": 610.424065757759,
+          "perf_synth": 705.2845008600913,
+          "utility": 0.8655004682696835
+        },
+        "EnvironmentSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.1067764336897246,
+          "perf_synth": 1.1519526699061684,
+          "utility": 0.9607829059329984
+        },
+        "Gender": {
+          "type": "categorical",
+          "perf_ref": 0.5360576923076923,
+          "perf_synth": 0.5353708791208791,
+          "utility": 0.9987187700192185
+        },
+        "HourlyRate": {
+          "type": "numerical",
+          "perf_ref": 21.308296662179718,
+          "perf_synth": 23.40531701747066,
+          "utility": 0.910404103745929
+        },
+        "JobInvolvement": {
+          "type": "numerical",
+          "perf_ref": 0.7155405158800351,
+          "perf_synth": 0.7992094738163856,
+          "utility": 0.8953103526953773
+        },
+        "JobLevel": {
+          "type": "numerical",
+          "perf_ref": 0.227335103794993,
+          "perf_synth": 0.6378686388608007,
+          "utility": 0.3563979947360343
+        },
+        "JobRole": {
+          "type": "categorical",
+          "perf_ref": 0.6913144790079775,
+          "perf_synth": 0.37992791414811544,
+          "utility": 0.5495732053714605
+        },
+        "JobSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.1102625889687454,
+          "perf_synth": 1.1662836639231113,
+          "utility": 0.9519661668192078
+        },
+        "MaritalStatus": {
+          "type": "categorical",
+          "perf_ref": 0.585684732865049,
+          "perf_synth": 0.5259818007662835,
+          "utility": 0.898063021368662
+        },
+        "MonthlyIncome": {
+          "type": "numerical",
+          "perf_ref": 1038.464804519998,
+          "perf_synth": 3231.636089783385,
+          "utility": 0.3213433615879707
+        },
+        "MonthlyRate": {
+          "type": "numerical",
+          "perf_ref": 7473.6017503141475,
+          "perf_synth": 7943.544518857949,
+          "utility": 0.9408396632727167
+        },
+        "NumCompaniesWorked": {
+          "type": "numerical",
+          "perf_ref": 2.169638120704889,
+          "perf_synth": 2.296615511729218,
+          "utility": 0.9447110801194918
+        },
+        "OverTime": {
+          "type": "categorical",
+          "perf_ref": 0.5668813944676013,
+          "perf_synth": 0.5058734369079196,
+          "utility": 0.892379679144385
+        },
+        "PercentSalaryHike": {
+          "type": "numerical",
+          "perf_ref": 2.4271059478795016,
+          "perf_synth": 2.7979290467706646,
+          "utility": 0.8674651527281714
+        },
+        "PerformanceRating": {
+          "type": "numerical",
+          "perf_ref": 9.822384787230164e-06,
+          "perf_synth": 0.274495714953492,
+          "utility": 3.5783381131812484e-05
+        },
+        "RelationshipSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.0622624753230114,
+          "perf_synth": 1.1631312735294144,
+          "utility": 0.9132782339345705
+        },
+        "StockOptionLevel": {
+          "type": "numerical",
+          "perf_ref": 0.6839600786295548,
+          "perf_synth": 0.7811610238078853,
+          "utility": 0.8755686187407173
+        },
+        "TotalWorkingYears": {
+          "type": "numerical",
+          "perf_ref": 2.990428176875439,
+          "perf_synth": 6.250519734086379,
+          "utility": 0.47842872338559883
+        },
+        "TrainingTimesLastYear": {
+          "type": "numerical",
+          "perf_ref": 1.340498214123085,
+          "perf_synth": 1.3422946222381376,
+          "utility": 0.9986616886596348
+        },
+        "WorkLifeBalance": {
+          "type": "numerical",
+          "perf_ref": 0.7548307403028938,
+          "perf_synth": 0.8387969353668248,
+          "utility": 0.8998968742926907
+        },
+        "YearsAtCompany": {
+          "type": "numerical",
+          "perf_ref": 1.821800537989287,
+          "perf_synth": 4.8412761787001,
+          "utility": 0.37630584803332723
+        },
+        "YearsInCurrentRole": {
+          "type": "numerical",
+          "perf_ref": 2.029274531166327,
+          "perf_synth": 2.4311186292359976,
+          "utility": 0.8347081490647151
+        },
+        "YearsSinceLastPromotion": {
+          "type": "numerical",
+          "perf_ref": 2.5443261641600405,
+          "perf_synth": 4.94109500810177,
+          "utility": 0.5149316416681288
+        },
+        "YearsWithCurrManager": {
+          "type": "numerical",
+          "perf_ref": 2.072195705958618,
+          "perf_synth": 3.1074879175647356,
+          "utility": 0.6668395053913994
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2003,
+        "synth_train_cap": 5000
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2003,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000
+    }
+  },
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/ibm_hr.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/ibm_hr_TabDDM_seed42.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Age",
+        "DailyRate",
+        "DistanceFromHome",
+        "EmployeeNumber",
+        "HourlyRate",
+        "MonthlyIncome",
+        "MonthlyRate",
+        "NumCompaniesWorked",
+        "PercentSalaryHike",
+        "TotalWorkingYears",
+        "YearsAtCompany",
+        "YearsInCurrentRole",
+        "YearsSinceLastPromotion",
+        "YearsWithCurrManager"
+      ],
+      "categorical": [
+        "Attrition",
+        "BusinessTravel",
+        "Department",
+        "EducationField",
+        "Gender",
+        "JobRole",
+        "MaritalStatus",
+        "OverTime"
+      ],
+      "discrete_ordinal": [
+        "Education",
+        "EnvironmentSatisfaction",
+        "JobInvolvement",
+        "JobLevel",
+        "JobSatisfaction",
+        "PerformanceRating",
+        "RelationshipSatisfaction",
+        "StockOptionLevel",
+        "TrainingTimesLastYear",
+        "WorkLifeBalance"
+      ]
+    },
+    "dropped_columns": [
+      "EmployeeCount",
+      "StandardHours",
+      "Over18"
+    ],
+    "encoding": {
+      "one_hot_feature_count": 105
+    },
+    "marginal_numeric": {
+      "Age": {
+        "ks": 0.46870748299319726,
+        "wasserstein": 11.839455782312925,
+        "wasserstein_normalized_iqr": 0.910727367870225
+      },
+      "DailyRate": {
+        "ks": 0.6122448979591837,
+        "wasserstein": 367.2843537414966,
+        "wasserstein_normalized_iqr": 0.5307577366206598
+      },
+      "DistanceFromHome": {
+        "ks": 0.636734693877551,
+        "wasserstein": 4.699999999999999,
+        "wasserstein_normalized_iqr": 0.3916666666666666
+      },
+      "EmployeeNumber": {
+        "ks": 0.5843537414965987,
+        "wasserstein": 500.2551020408163,
+        "wasserstein_normalized_iqr": 0.46994373136760575
+      },
+      "HourlyRate": {
+        "ks": 0.4340136054421769,
+        "wasserstein": 14.087755102040816,
+        "wasserstein_normalized_iqr": 0.3940630797773655
+      },
+      "MonthlyIncome": {
+        "ks": 0.5095238095238095,
+        "wasserstein": 4234.787755102041,
+        "wasserstein_normalized_iqr": 0.7744674021766718
+      },
+      "MonthlyRate": {
+        "ks": 0.39727891156462586,
+        "wasserstein": 5177.6238095238095,
+        "wasserstein_normalized_iqr": 0.4170626130350646
+      },
+      "NumCompaniesWorked": {
+        "ks": 0.10476190476190476,
+        "wasserstein": 0.6537414965986394,
+        "wasserstein_normalized_iqr": 0.2179138321995465
+      },
+      "PercentSalaryHike": {
+        "ks": 0.6741496598639456,
+        "wasserstein": 2.9653061224489794,
+        "wasserstein_normalized_iqr": 0.4942176870748299
+      },
+      "TotalWorkingYears": {
+        "ks": 0.46938775510204084,
+        "wasserstein": 13.14013605442177,
+        "wasserstein_normalized_iqr": 1.4600151171579745
+      },
+      "YearsAtCompany": {
+        "ks": 0.4897959183673469,
+        "wasserstein": 11.125850340136054,
+        "wasserstein_normalized_iqr": 1.8543083900226758
+      },
+      "YearsInCurrentRole": {
+        "ks": 0.43537414965986393,
+        "wasserstein": 5.399319727891156,
+        "wasserstein_normalized_iqr": 1.0798639455782313
+      },
+      "YearsSinceLastPromotion": {
+        "ks": 0.33197278911564626,
+        "wasserstein": 3.580952380952381,
+        "wasserstein_normalized_iqr": 1.1936507936507936
+      },
+      "YearsWithCurrManager": {
+        "ks": 0.43741496598639457,
+        "wasserstein": 3.7482993197278915,
+        "wasserstein_normalized_iqr": 0.7496598639455783
+      }
+    },
+    "marginal_categorical_tv": {
+      "Attrition": 0.3972789115646258,
+      "BusinessTravel": 0.12312925170068023,
+      "Department": 0.22993197278911562,
+      "EducationField": 0.18435374149659867,
+      "Gender": 0.15374149659863945,
+      "JobRole": 0.33741496598639453,
+      "MaritalStatus": 0.16802721088435374,
+      "OverTime": 0.21632653061224494
+    },
+    "marginal_discrete_ordinal": {
+      "Education": {
+        "ks": 0.10272108843537416,
+        "wasserstein": 0.18707482993197272,
+        "wasserstein_normalized_iqr": 0.09353741496598636,
+        "tv": 0.13197278911564625
+      },
+      "EnvironmentSatisfaction": {
+        "ks": 0.12857142857142856,
+        "wasserstein": 0.24625850340136052,
+        "wasserstein_normalized_iqr": 0.12312925170068026,
+        "tv": 0.24625850340136055
+      },
+      "JobInvolvement": {
+        "ks": 0.12040816326530612,
+        "wasserstein": 0.16802721088435363,
+        "wasserstein_normalized_iqr": 0.16802721088435363,
+        "tv": 0.12244897959183675
+      },
+      "JobLevel": {
+        "ks": 0.23537414965986395,
+        "wasserstein": 0.6653061224489796,
+        "wasserstein_normalized_iqr": 0.3326530612244898,
+        "tv": 0.32653061224489793
+      },
+      "JobSatisfaction": {
+        "ks": 0.2789115646258503,
+        "wasserstein": 0.6360544217687075,
+        "wasserstein_normalized_iqr": 0.31802721088435376,
+        "tv": 0.2789115646258503
+      },
+      "PerformanceRating": {
+        "ks": 0.10136054421768707,
+        "wasserstein": 0.10136054421768703,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.10136054421768705
+      },
+      "RelationshipSatisfaction": {
+        "ks": 0.20476190476190476,
+        "wasserstein": 0.3204081632653061,
+        "wasserstein_normalized_iqr": 0.16020408163265304,
+        "tv": 0.20476190476190476
+      },
+      "StockOptionLevel": {
+        "ks": 0.12108843537414966,
+        "wasserstein": 0.27346938775510193,
+        "wasserstein_normalized_iqr": 0.27346938775510193,
+        "tv": 0.12108843537414964
+      },
+      "TrainingTimesLastYear": {
+        "ks": 0.11224489795918367,
+        "wasserstein": 0.31224489795918375,
+        "wasserstein_normalized_iqr": 0.31224489795918375,
+        "tv": 0.2183673469387755
+      },
+      "WorkLifeBalance": {
+        "ks": 0.10476190476190476,
+        "wasserstein": 0.1578231292517007,
+        "wasserstein_normalized_iqr": 0.1578231292517007,
+        "tv": 0.10476190476190472
+      }
+    },
+    "support": {
+      "alpha_precision": 0.9333333333333333,
+      "beta_recall": 0.4782312925170068,
+      "IP_alpha": 0.48903061224489797,
+      "IR_beta": 0.6214115646258503,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.009523809523809525,
+        0.0163265306122449,
+        0.024489795918367346,
+        0.047619047619047616,
+        0.05918367346938776,
+        0.07687074829931972,
+        0.09251700680272108,
+        0.13673469387755102,
+        0.18503401360544217,
+        0.20612244897959184,
+        0.22040816326530613,
+        0.24829931972789115,
+        0.26598639455782314,
+        0.29183673469387755,
+        0.32108843537414966,
+        0.40816326530612246,
+        0.49863945578231295,
+        0.5755102040816327,
+        0.719047619047619,
+        0.9333333333333333
+      ],
+      "alpha_radii": [
+        45.974252700805664,
+        53.42152099609375,
+        58.52752323150635,
+        63.41319580078125,
+        68.13112258911133,
+        72.77346420288086,
+        77.30803413391114,
+        84.44763946533203,
+        90.66020164489746,
+        97.30731964111327,
+        104.3375144958496,
+        112.96604461669922,
+        118.89974708557129,
+        126.05410079956054,
+        135.36634826660156,
+        148.97243041992186,
+        162.81408691406244,
+        181.46715850830083,
+        201.28816604614258,
+        295.9803771972656
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.055782312925170066,
+        0.11904761904761904,
+        0.17755102040816326,
+        0.23129251700680273,
+        0.2598639455782313,
+        0.2925170068027211,
+        0.3047619047619048,
+        0.30952380952380953,
+        0.3346938775510204,
+        0.35034013605442177,
+        0.3551020408163265,
+        0.35918367346938773,
+        0.3768707482993197,
+        0.408843537414966,
+        0.42244897959183675,
+        0.42993197278911566,
+        0.4380952380952381,
+        0.45510204081632655,
+        0.4782312925170068,
+        0.4782312925170068
+      ],
+      "beta_radii": [
+        67.39996223449707,
+        81.7042007446289,
+        93.19211883544922,
+        104.98842010498048,
+        109.46096229553223,
+        118.46312255859375,
+        126.38756217956544,
+        128.9837707519531,
+        132.87149353027343,
+        138.16143798828122,
+        141.77707443237304,
+        143.70031127929687,
+        157.50619506835938,
+        169.69042816162107,
+        186.64731979370117,
+        199.09263305664058,
+        212.7159225463867,
+        244.76603088378909,
+        348.68878784179685,
+        498.80755615234375
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 264.6883879855234,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.933767308888786,
+      "accuracy": 0.8798185941043084,
+      "pmse_test": 0.15268548279014282,
+      "pmse_null_mean": 0.00859056961444118,
+      "pmse_ratio_perm": 17.773615678926674,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.8229728339007698,
+      "num_columns_used": 32,
+      "per_column": {
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 6.712391349723812,
+          "perf_synth": 8.043599731346461,
+          "utility": 0.8345009167431793
+        },
+        "Attrition": {
+          "type": "categorical",
+          "perf_ref": 0.6815987933634993,
+          "perf_synth": 0.5399698340874811,
+          "utility": 0.7922106660765655
+        },
+        "BusinessTravel": {
+          "type": "categorical",
+          "perf_ref": 0.33593208593208596,
+          "perf_synth": 0.3533110229538801,
+          "utility": 1.0517334834913852
+        },
+        "DailyRate": {
+          "type": "numerical",
+          "perf_ref": 404.22848193271335,
+          "perf_synth": 433.6873072085254,
+          "utility": 0.9320735820805388
+        },
+        "Department": {
+          "type": "categorical",
+          "perf_ref": 0.9335518822913781,
+          "perf_synth": 0.6749207375257796,
+          "utility": 0.7229600735946295
+        },
+        "DistanceFromHome": {
+          "type": "numerical",
+          "perf_ref": 8.147527866832537,
+          "perf_synth": 9.58959129228407,
+          "utility": 0.8496220139630102
+        },
+        "Education": {
+          "type": "numerical",
+          "perf_ref": 1.0165695966949666,
+          "perf_synth": 1.0281261094897436,
+          "utility": 0.9887596349435066
+        },
+        "EducationField": {
+          "type": "categorical",
+          "perf_ref": 0.32440381891182807,
+          "perf_synth": 0.2439988470474925,
+          "utility": 0.75214542130224
+        },
+        "EmployeeNumber": {
+          "type": "numerical",
+          "perf_ref": 586.2045744953294,
+          "perf_synth": 654.55905318597,
+          "utility": 0.8955717160156365
+        },
+        "EnvironmentSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.1289907566035275,
+          "perf_synth": 1.1994888798446453,
+          "utility": 0.9412265303782987
+        },
+        "Gender": {
+          "type": "categorical",
+          "perf_ref": 0.5169747899159663,
+          "perf_synth": 0.5196638655462185,
+          "utility": 1.0052015604681406
+        },
+        "HourlyRate": {
+          "type": "numerical",
+          "perf_ref": 20.16833577841308,
+          "perf_synth": 23.265394541034432,
+          "utility": 0.8668813134821806
+        },
+        "JobInvolvement": {
+          "type": "numerical",
+          "perf_ref": 0.7267250542900819,
+          "perf_synth": 0.7171506436271613,
+          "utility": 1.0133506268843262
+        },
+        "JobLevel": {
+          "type": "numerical",
+          "perf_ref": 0.2375354901928929,
+          "perf_synth": 0.4291926504963634,
+          "utility": 0.5534472454693293
+        },
+        "JobRole": {
+          "type": "categorical",
+          "perf_ref": 0.6753348185842465,
+          "perf_synth": 0.4711051734659668,
+          "utility": 0.6975875676802491
+        },
+        "JobSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.1345010717472725,
+          "perf_synth": 1.2010153784345325,
+          "utility": 0.9446182722706197
+        },
+        "MaritalStatus": {
+          "type": "categorical",
+          "perf_ref": 0.6089943602138724,
+          "perf_synth": 0.5847432798652311,
+          "utility": 0.9601784812257956
+        },
+        "MonthlyIncome": {
+          "type": "numerical",
+          "perf_ref": 1148.4269314561568,
+          "perf_synth": 2082.67446431804,
+          "utility": 0.5514193173882327
+        },
+        "MonthlyRate": {
+          "type": "numerical",
+          "perf_ref": 7535.8728330478025,
+          "perf_synth": 7551.919191305955,
+          "utility": 0.9978751946556015
+        },
+        "NumCompaniesWorked": {
+          "type": "numerical",
+          "perf_ref": 1.9791862246593264,
+          "perf_synth": 2.3525489323271596,
+          "utility": 0.8412943924195022
+        },
+        "OverTime": {
+          "type": "categorical",
+          "perf_ref": 0.5314201927105153,
+          "perf_synth": 0.5222036028487641,
+          "utility": 0.9826566811194323
+        },
+        "PercentSalaryHike": {
+          "type": "numerical",
+          "perf_ref": 2.289635751026359,
+          "perf_synth": 2.605540898625896,
+          "utility": 0.8787564041822801
+        },
+        "PerformanceRating": {
+          "type": "numerical",
+          "perf_ref": 9.389161292391704e-06,
+          "perf_synth": 0.23654214145363783,
+          "utility": 3.9693397695192405e-05
+        },
+        "RelationshipSatisfaction": {
+          "type": "numerical",
+          "perf_ref": 1.0960393335651533,
+          "perf_synth": 1.1553897271547158,
+          "utility": 0.9486317108464173
+        },
+        "StockOptionLevel": {
+          "type": "numerical",
+          "perf_ref": 0.5691430973883264,
+          "perf_synth": 0.6215844337450881,
+          "utility": 0.9156328030275804
+        },
+        "TotalWorkingYears": {
+          "type": "numerical",
+          "perf_ref": 2.855503628748353,
+          "perf_synth": 4.7229123924775465,
+          "utility": 0.604606520607174
+        },
+        "TrainingTimesLastYear": {
+          "type": "numerical",
+          "perf_ref": 1.285675619777406,
+          "perf_synth": 1.3154574987447796,
+          "utility": 0.9773600599063127
+        },
+        "WorkLifeBalance": {
+          "type": "numerical",
+          "perf_ref": 0.772695853918975,
+          "perf_synth": 0.804998283327016,
+          "utility": 0.9598726729272804
+        },
+        "YearsAtCompany": {
+          "type": "numerical",
+          "perf_ref": 1.7094623603622068,
+          "perf_synth": 4.360380153175388,
+          "utility": 0.39204434024343354
+        },
+        "YearsInCurrentRole": {
+          "type": "numerical",
+          "perf_ref": 2.101863749612467,
+          "perf_synth": 2.4812039397429624,
+          "utility": 0.8471144656614592
+        },
+        "YearsSinceLastPromotion": {
+          "type": "numerical",
+          "perf_ref": 2.729355819471038,
+          "perf_synth": 3.184918161216375,
+          "utility": 0.8569626223703815
+        },
+        "YearsWithCurrManager": {
+          "type": "numerical",
+          "perf_ref": 1.9836728629293037,
+          "perf_synth": 2.5471062693719553,
+          "utility": 0.7787947000022192
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 42,
+        "synth_train_cap": 5000
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 42,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000
+    }
+  }
+]

@@ -16,8 +16,10 @@ RESULTS_DIR = ROOT / "results"
 
 MODEL_MODULES = {
     "ctgan": ("CTGAN", "src.models.CTGAN"),
+    "ctabganplus": ("CTABGANPlus", "src.models.CTABGANPlus"),
     "tvae": ("TVAE", "src.models.TVAE"),
     "gaussiancopula": ("GaussianCopula", "src.models.GaussianCopula"),
+    "forestflow": ("ForestFlow", "src.models.ForestFlow"),
     "genforest": ("GenForest", "src.models.GenForests"),
     "arf": ("arf", "src.models.adversarial_rforest"),
     "tabddm": ("TabDDM", "src.models.TabDDM"),
@@ -39,6 +41,13 @@ def _resolve_models(selection: str) -> list[tuple[str, str]]:
 
     key = selection.strip().lower()
     aliases = {
+        "ctabgan+": "ctabganplus",
+        "ctabgan_plus": "ctabganplus",
+        "ctabgan": "ctabganplus",
+        "forest_flow": "forestflow",
+        "forest-flows": "forestflow",
+        "forestflows": "forestflow",
+        "forestdiffusion": "forestflow",
         "gaussian_copula": "gaussiancopula",
         "copula": "gaussiancopula",
         "genforests": "genforest",

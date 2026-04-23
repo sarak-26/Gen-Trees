@@ -1,7 +1,0 @@
-{
-  "model_name": "TabDDM",
-  "dataset_name": "ibm_hr",
-  "tracking_uri": "sqlite:////Users/sarakhan/Projects/Uni/Gen-Trees/mlflow.db",
-  "experiment_name": "synthetic-data-privacy",
-  "run_name": "ibm_hr_TabDDM_privacy"
-}

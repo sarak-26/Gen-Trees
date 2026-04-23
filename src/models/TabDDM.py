@@ -1,13 +1,37 @@
 import os
+import random
 from pathlib import Path
 from typing import Any, Dict, Optional
 
+import numpy as np
 import pandas as pd
+
+try:
+    from ..date_columns import finalize_synthetic_dates
+except ImportError:
+    from date_columns import finalize_synthetic_dates
+
+try:
+    from .backend_adapters import adapt_for_synthcity
+except ImportError:
+    from backend_adapters import adapt_for_synthcity
 
 try:
     from .preprocessing import prepare_training_dataframe
 except ImportError:
     from preprocessing import prepare_training_dataframe
+
+
+def _seed_everything(seed: int) -> None:
+    random.seed(seed)
+    np.random.seed(seed)
+    try:
+        import torch
+    except ImportError:
+        return
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
 
 
 class TabDDM:
@@ -71,21 +95,23 @@ class TabDDM:
         )
 
 
-def generate(train_data, n_generated, output_dir):
-    df = prepare_training_dataframe(train_data)
+def generate(train_data, n_generated, output_dir, *, seed: int = 42):
+    df = adapt_for_synthcity(prepare_training_dataframe(train_data))
+    _seed_everything(seed)
     model = TabDDM(
         plugin_name="ddpm",
-        plugin_kwargs={"n_iter": 1000, "batch_size": 256, "lr": 1e-3},
+        plugin_kwargs={"n_iter": 1000, "batch_size": 256, "lr": 1e-3, "random_state": seed},
     )
     model.fit(df)
     new_data = model.sample(n_generated)
+    new_data = finalize_synthetic_dates(new_data, df)
 
     float_cols = new_data.select_dtypes(include="float").columns
     new_data[float_cols] = new_data[float_cols].round(3)
 
     os.makedirs("synthetic_data", exist_ok=True)
     output_path = os.path.join("synthetic_data", f"{output_dir}")
-    new_data.to_csv(output_path)
+    new_data.to_csv(output_path, index=False)
     return new_data
 
 

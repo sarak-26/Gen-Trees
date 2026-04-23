@@ -10,6 +10,11 @@ import numpy as np
 import pandas as pd
 
 try:
+    from ..date_columns import finalize_synthetic_dates
+except ImportError:
+    from date_columns import finalize_synthetic_dates
+
+try:
     from .preprocessing import prepare_training_dataframe
 except ImportError:
     from preprocessing import prepare_training_dataframe
@@ -688,20 +693,21 @@ class GenerativeForest:
             raise RuntimeError("GenerativeForest is not fitted yet.")
 
 
-def generate(train_data, n_generated, output_dir):
+def generate(train_data, n_generated, output_dir, *, seed: int = 42):
     df = prepare_training_dataframe(train_data)
 
     gf = GenerativeForest(
         n_trees=50,
         n_splits=300,
         max_numeric_splits=12,
-        random_state=42,
+        random_state=seed,
     )
 
     gf.fit(df)
     synthetic = gf.sample(n_generated)
+    synthetic = finalize_synthetic_dates(synthetic, df)
     output_dir = os.path.join('synthetic_data', f'{output_dir}')
-    synthetic.to_csv(output_dir)
+    synthetic.to_csv(output_dir, index=False)
 
 
 if __name__ == "__main__":

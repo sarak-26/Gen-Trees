@@ -1,0 +1,21 @@
+StartDate,ExitDate,Title,BusinessUnit,EmployeeStatus,EmployeeType,PayZone,EmployeeClassificationType,TerminationType,TerminationDescription,DepartmentType,Division,DOB,State,JobFunctionDescription,GenderCode,LocationCode,RaceDesc,MaritalDesc,Performance Score,Current Employee Rating
+15-May-22,,Area Sales Manager,NEL,Active,Contract,Zone C,Temporary,Resignation,,Sales,Fielders,18-09-1968,KY,Electrician,Male,1115,White,Divorced,Fully Meets,2
+05-Jun-22,,Area Sales Manager,EW,Future Start,Full-Time,Zone C,Temporary,Resignation,,Sales,Engineers,03-02-1984,KY,Project Controls,Female,22823,Black,Divorced,Exceeds,2
+05-Feb-23,,Area Sales Manager,MSC,Active,Full-Time,Zone A,Temporary,Unk,,Sales,General - Con,04-01-1942,KY,Administrator,Female,13913,Hispanic,Married,Exceeds,3
+10-Sep-20,13-Jul-22,Area Sales Manager,BPC,Active,Contract,Zone B,Full-Time,Unk,,Sales,General - Con,05-12-1967,CO,Supervisor,Male,95893,Hispanic,Widowed,Needs Improvement,2
+23-Feb-21,15-Nov-22,Area Sales Manager,TNS,Active,Full-Time,Zone B,Temporary,Voluntary,,Sales,Field Operations,01-05-1955,TX,Engineer,Female,4251,Black,Divorced,Exceeds,4
+23-Oct-19,09-Nov-22,Area Sales Manager,TNS,Active,Full-Time,Zone A,Temporary,Resignation,Sign figure employee card education.,Sales,General - Con,23-07-1985,KY,Coordinator,Female,1115,Asian,Married,Fully Meets,4
+24-Oct-18,20-Aug-22,Area Sales Manager,PYZ,Active,Part-Time,Zone C,Temporary,Voluntary,Speak professor statement result.,Sales,Wireless,21-10-1961,OR,Coordinator,Female,17890,White,Divorced,Exceeds,3
+24-Jul-23,06-Oct-22,Area Sales Manager,EW,Active,Full-Time,Zone C,Part-Time,Resignation,Science end approach democratic treatment.,Sales,Finance & Accounting,07-08-1952,KY,Lineman,Female,1115,Black,Widowed,Exceeds,2
+10-Jun-19,14-Sep-22,Area Sales Manager,EW,Active,Contract,Zone B,Part-Time,Voluntary,Popular west moment natural step activity.,IT/IS,General - Sga,12-06-1990,IN,Groundman,Female,66895,White,Widowed,Fully Meets,2
+04-Aug-23,27-Feb-21,Area Sales Manager,WBL,Active,Contract,Zone B,Temporary,Voluntary,Nature finish modern push former American.,Sales,General - Con,10-06-1946,CO,Technician,Male,1115,Hispanic,Single,Fully Meets,5
+12-Oct-20,15-Jun-21,Area Sales Manager,SVG,Active,Contract,Zone B,Full-Time,Resignation,Read family dark scene scene guess.,Sales,Aerial,12-01-1957,MA,Technician,Male,73364,Other,Divorced,Fully Meets,2
+09-Aug-20,,Area Sales Manager,SVG,Future Start,Full-Time,Zone A,Temporary,Resignation,,Sales,Field Operations,16-09-2000,CO,Lineman,Female,6644,Hispanic,Widowed,Fully Meets,1
+25-Feb-19,,Production Technician I,PL,Active,Full-Time,Zone B,Temporary,Unk,,Sales,General - Sga,09-03-1970,MA,Director,Male,48556,Black,Married,Needs Improvement,2
+19-Jan-22,,Area Sales Manager,MSC,Active,Contract,Zone C,Temporary,Resignation,,Sales,General - Con,01-11-1977,TX,Technician,Male,1115,White,Single,Fully Meets,2
+16-Apr-20,24-Jul-23,Area Sales Manager,CCDR,Future Start,Contract,Zone A,Full-Time,Retirement,,Sales,Field Operations,10-04-1982,IN,Coordinator,Male,42225,Black,Divorced,Fully Meets,4
+16-Mar-20,,Area Sales Manager,SVG,Active,Full-Time,Zone A,Part-Time,Unk,Tell paper every.,Sales,General - Sga,07-10-1967,TX,Splicer,Male,1115,Black,Divorced,Fully Meets,2
+10-Aug-18,29-Apr-23,Area Sales Manager,PL,Active,Contract,Zone A,Part-Time,Unk,Right cut matter arrive difference.,Sales,General - Con,11-02-1977,CO,Specialist,Female,1115,Asian,Widowed,Fully Meets,1
+15-May-23,,Area Sales Manager,TNS,Active,Part-Time,Zone B,Temporary,Voluntary,Alone once than. More condition pay far.,Sales,Project Management - Con,06-06-1974,TX,Accounting,Female,48613,Hispanic,Divorced,Exceeds,2
+03-Oct-20,,Area Sales Manager,EW,Active,Full-Time,Zone A,Part-Time,Unk,,Sales,Aerial,30-08-1970,TX,Splicer,Female,44215,Hispanic,Divorced,Fully Meets,1
+01-Sep-20,,Area Sales Manager,WBL,Active,Contract,Zone A,Full-Time,Unk,,Sales,Executive,27-12-1951,CO,Technician,Female,1115,Hispanic,Widowed,Exceeds,2

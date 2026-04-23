@@ -1,0 +1,1331 @@
+[
+  {
+    "paths": {
+      "real": "data/Absenteeism_at_work.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/Absenteeism_at_work_arf_seed2026.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Absenteeism time in hours",
+        "Age",
+        "Body mass index",
+        "Distance from Residence to Work",
+        "Height",
+        "Hit target",
+        "Service time",
+        "Transportation expense",
+        "Weight",
+        "Work load Average/day "
+      ],
+      "categorical": [
+        "Day of the week",
+        "Education",
+        "Month of absence",
+        "Pet",
+        "Reason for absence",
+        "Seasons",
+        "Son"
+      ],
+      "discrete_ordinal": [
+        "Disciplinary failure",
+        "Social drinker",
+        "Social smoker"
+      ]
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 91
+    },
+    "marginal_numeric": {
+      "Absenteeism time in hours": {
+        "ks": 0.22702702702702704,
+        "wasserstein": 3.1684864864864877,
+        "wasserstein_normalized_iqr": 0.5280810810810813
+      },
+      "Age": {
+        "ks": 0.09864864864864865,
+        "wasserstein": 0.8664175675675674,
+        "wasserstein_normalized_iqr": 0.0962686186186186
+      },
+      "Body mass index": {
+        "ks": 0.08378378378378379,
+        "wasserstein": 0.36608648648648634,
+        "wasserstein_normalized_iqr": 0.05229806949806948
+      },
+      "Distance from Residence to Work": {
+        "ks": 0.08648648648648649,
+        "wasserstein": 2.1422743243243234,
+        "wasserstein_normalized_iqr": 0.0630080683624801
+      },
+      "Height": {
+        "ks": 0.12297297297297298,
+        "wasserstein": 0.6604162162162157,
+        "wasserstein_normalized_iqr": 0.22013873873873857
+      },
+      "Hit target": {
+        "ks": 0.0972972972972973,
+        "wasserstein": 0.5797405405405406,
+        "wasserstein_normalized_iqr": 0.14493513513513515
+      },
+      "Service time": {
+        "ks": 0.08648648648648649,
+        "wasserstein": 0.5685932432432431,
+        "wasserstein_normalized_iqr": 0.08122760617760616
+      },
+      "Transportation expense": {
+        "ks": 0.12162162162162163,
+        "wasserstein": 9.25302297297297,
+        "wasserstein_normalized_iqr": 0.11423485151818481
+      },
+      "Weight": {
+        "ks": 0.07162162162162163,
+        "wasserstein": 1.1220756756756747,
+        "wasserstein_normalized_iqr": 0.05610378378378374
+      },
+      "Work load Average/day ": {
+        "ks": 0.10270270270270271,
+        "wasserstein": 4.039617567567568,
+        "wasserstein_normalized_iqr": 0.08106798249182358
+      }
+    },
+    "marginal_categorical_tv": {
+      "Day of the week": 0.028378378378378366,
+      "Education": 0.006756756756756743,
+      "Month of absence": 0.05540540540540541,
+      "Pet": 0.024324324324324346,
+      "Reason for absence": 0.08513513513513513,
+      "Seasons": 0.03243243243243245,
+      "Son": 0.028378378378378373
+    },
+    "marginal_discrete_ordinal": {
+      "Disciplinary failure": {
+        "ks": 0.006756756756756757,
+        "wasserstein": 0.006756756756756799,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.006756756756756778
+      },
+      "Social drinker": {
+        "ks": 0.014864864864864866,
+        "wasserstein": 0.01486486486486488,
+        "wasserstein_normalized_iqr": 0.01486486486486488,
+        "tv": 0.014864864864864907
+      },
+      "Social smoker": {
+        "ks": 0.004054054054054054,
+        "wasserstein": 0.004054054054054013,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.0040540540540540335
+      }
+    },
+    "support": {
+      "alpha_precision": 0.995945945945946,
+      "beta_recall": 0.7256756756756757,
+      "IP_alpha": 0.9616216216216217,
+      "IR_beta": 0.8141891891891893,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.06756756756756757,
+        0.10945945945945947,
+        0.1554054054054054,
+        0.19324324324324324,
+        0.22162162162162163,
+        0.27702702702702703,
+        0.3310810810810811,
+        0.37972972972972974,
+        0.43513513513513513,
+        0.4743243243243243,
+        0.5121621621621621,
+        0.5635135135135135,
+        0.6148648648648649,
+        0.6567567567567567,
+        0.731081081081081,
+        0.7932432432432432,
+        0.8608108108108108,
+        0.8891891891891892,
+        0.9297297297297298,
+        0.995945945945946
+      ],
+      "alpha_radii": [
+        0.6686372965574264,
+        0.7197499573230743,
+        0.7625365048646927,
+        0.7980685234069824,
+        0.8278726190328598,
+        0.8738240957260132,
+        0.9283616423606873,
+        0.9647502779960632,
+        1.0174282431602477,
+        1.0618260502815247,
+        1.1074920415878293,
+        1.1674847602844238,
+        1.2294362723827361,
+        1.293231976032257,
+        1.424621731042862,
+        1.5232843637466429,
+        1.6790868401527403,
+        1.7940884590148927,
+        1.9988827288150777,
+        3.4637467861175537
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.06486486486486487,
+        0.10810810810810811,
+        0.1608108108108108,
+        0.20945945945945946,
+        0.2716216216216216,
+        0.327027027027027,
+        0.3418918918918919,
+        0.3675675675675676,
+        0.4175675675675676,
+        0.43648648648648647,
+        0.4797297297297297,
+        0.48783783783783785,
+        0.5121621621621621,
+        0.5418918918918919,
+        0.5743243243243243,
+        0.6108108108108108,
+        0.6527027027027027,
+        0.6891891891891891,
+        0.7013513513513514,
+        0.7256756756756757
+      ],
+      "beta_radii": [
+        0.6557787656784058,
+        0.716480016708374,
+        0.7650800943374634,
+        0.8199819803237915,
+        0.8714115172624588,
+        0.9059626221656799,
+        0.9465163826942443,
+        0.9898407220840454,
+        1.0377533257007598,
+        1.0901157855987547,
+        1.1513787388801575,
+        1.2196109771728516,
+        1.2849038302898408,
+        1.3578376293182373,
+        1.4582350850105286,
+        1.5469286203384398,
+        1.627197653055191,
+        1.8431082010269169,
+        2.196203160285949,
+        4.028990268707275
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 2.3658733686029456,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.4759151042934827,
+      "accuracy": 0.49099099099099097,
+      "pmse_test": 0.01088989190393137,
+      "pmse_null_mean": 0.01782809163220125,
+      "pmse_ratio_perm": 0.6108276829956356,
+      "pmse_null_percentile": 0.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.46694589574723,
+      "num_columns_used": 20,
+      "per_column": {
+        "Absenteeism time in hours": {
+          "type": "numerical",
+          "perf_ref": 11.899593799432447,
+          "perf_synth": 10.82262706637543,
+          "utility": 1.0995106572971565
+        },
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 0.2204448093135197,
+          "perf_synth": 1.9649109413202885,
+          "utility": 0.11219073835753368
+        },
+        "Body mass index": {
+          "type": "numerical",
+          "perf_ref": 0.03772554632447471,
+          "perf_synth": 0.8740730035767823,
+          "utility": 0.04316063551911398
+        },
+        "Day of the week": {
+          "type": "categorical",
+          "perf_ref": 0.2782220986281053,
+          "perf_synth": 0.3357162279075516,
+          "utility": 1.2066483200398028
+        },
+        "Disciplinary failure": {
+          "type": "numerical",
+          "perf_ref": 0.014346837912572847,
+          "perf_synth": 0.12283059250359873,
+          "utility": 0.11680182941519644
+        },
+        "Distance from Residence to Work": {
+          "type": "numerical",
+          "perf_ref": 0.36459853092226785,
+          "perf_synth": 3.621695551964509,
+          "utility": 0.10067067363641304
+        },
+        "Education": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.6666666666666666,
+          "utility": 0.6666666666666666
+        },
+        "Height": {
+          "type": "numerical",
+          "perf_ref": 0.11819257242500965,
+          "perf_synth": 1.3480145294122003,
+          "utility": 0.08767900482240895
+        },
+        "Hit target": {
+          "type": "numerical",
+          "perf_ref": 0.29393166117391095,
+          "perf_synth": 2.666161463185638,
+          "utility": 0.11024525904845592
+        },
+        "Month of absence": {
+          "type": "categorical",
+          "perf_ref": 0.9907407407407408,
+          "perf_synth": 0.5152334933584933,
+          "utility": 0.5200487596515633
+        },
+        "Pet": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.8652641421224871,
+          "utility": 0.8652641421224871
+        },
+        "Reason for absence": {
+          "type": "categorical",
+          "perf_ref": 0.225062656641604,
+          "perf_synth": 0.19755639097744362,
+          "utility": 0.8777839643652563
+        },
+        "Seasons": {
+          "type": "categorical",
+          "perf_ref": 0.9000521765056648,
+          "perf_synth": 0.8401883323394952,
+          "utility": 0.9334884735254092
+        },
+        "Service time": {
+          "type": "numerical",
+          "perf_ref": 0.35334920740906356,
+          "perf_synth": 1.181341174088114,
+          "utility": 0.29910851764039836
+        },
+        "Social drinker": {
+          "type": "numerical",
+          "perf_ref": 0.04790869470782421,
+          "perf_synth": 0.14139870193496878,
+          "utility": 0.3388199046541324
+        },
+        "Social smoker": {
+          "type": "numerical",
+          "perf_ref": 0.039199202957509185,
+          "perf_synth": 0.11524114420560837,
+          "utility": 0.34014937310559523
+        },
+        "Son": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.9573643410852715,
+          "utility": 0.9573643410852715
+        },
+        "Transportation expense": {
+          "type": "numerical",
+          "perf_ref": 4.20641888151681,
+          "perf_synth": 20.17316159517082,
+          "utility": 0.2085155993854612
+        },
+        "Weight": {
+          "type": "numerical",
+          "perf_ref": 0.4952277833104337,
+          "perf_synth": 2.6608830219022597,
+          "utility": 0.1861140753780286
+        },
+        "Work load Average/day ": {
+          "type": "numerical",
+          "perf_ref": 8.053873492700479,
+          "perf_synth": 29.974930366308307,
+          "utility": 0.26868697922824863
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2026,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2026,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200
+    }
+  },
+  {
+    "paths": {
+      "real": "data/Absenteeism_at_work.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/Absenteeism_at_work_arf_seed2003.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Absenteeism time in hours",
+        "Age",
+        "Body mass index",
+        "Distance from Residence to Work",
+        "Height",
+        "Hit target",
+        "Service time",
+        "Transportation expense",
+        "Weight",
+        "Work load Average/day "
+      ],
+      "categorical": [
+        "Day of the week",
+        "Education",
+        "Month of absence",
+        "Pet",
+        "Reason for absence",
+        "Seasons",
+        "Son"
+      ],
+      "discrete_ordinal": [
+        "Disciplinary failure",
+        "Social drinker",
+        "Social smoker"
+      ]
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 91
+    },
+    "marginal_numeric": {
+      "Absenteeism time in hours": {
+        "ks": 0.1972972972972973,
+        "wasserstein": 2.860921621621623,
+        "wasserstein_normalized_iqr": 0.47682027027027046
+      },
+      "Age": {
+        "ks": 0.0891891891891892,
+        "wasserstein": 0.9259486486486489,
+        "wasserstein_normalized_iqr": 0.10288318318318321
+      },
+      "Body mass index": {
+        "ks": 0.08108108108108109,
+        "wasserstein": 0.37273648648648633,
+        "wasserstein_normalized_iqr": 0.05324806949806948
+      },
+      "Distance from Residence to Work": {
+        "ks": 0.09324324324324325,
+        "wasserstein": 1.7898594594594583,
+        "wasserstein_normalized_iqr": 0.052642925278219364
+      },
+      "Height": {
+        "ks": 0.11621621621621622,
+        "wasserstein": 0.9108527027027027,
+        "wasserstein_normalized_iqr": 0.3036175675675676
+      },
+      "Hit target": {
+        "ks": 0.10675675675675676,
+        "wasserstein": 0.591662162162162,
+        "wasserstein_normalized_iqr": 0.1479155405405405
+      },
+      "Service time": {
+        "ks": 0.07567567567567568,
+        "wasserstein": 0.4882797297297299,
+        "wasserstein_normalized_iqr": 0.06975424710424713
+      },
+      "Transportation expense": {
+        "ks": 0.09594594594594595,
+        "wasserstein": 7.5211351351351325,
+        "wasserstein_normalized_iqr": 0.09285352018685349
+      },
+      "Weight": {
+        "ks": 0.07702702702702703,
+        "wasserstein": 1.1335608108108106,
+        "wasserstein_normalized_iqr": 0.05667804054054053
+      },
+      "Work load Average/day ": {
+        "ks": 0.08783783783783784,
+        "wasserstein": 5.059071621621621,
+        "wasserstein_normalized_iqr": 0.10152662295046404
+      }
+    },
+    "marginal_categorical_tv": {
+      "Day of the week": 0.04594594594594595,
+      "Education": 0.01621621621621621,
+      "Month of absence": 0.04729729729729729,
+      "Pet": 0.014864864864864824,
+      "Reason for absence": 0.06486486486486485,
+      "Seasons": 0.02972972972972973,
+      "Son": 0.029729729729729718
+    },
+    "marginal_discrete_ordinal": {
+      "Disciplinary failure": {
+        "ks": 0.0013513513513513514,
+        "wasserstein": 0.0013513513513513375,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.0013513513513513445
+      },
+      "Social drinker": {
+        "ks": 0.032432432432432434,
+        "wasserstein": 0.032432432432432434,
+        "wasserstein_normalized_iqr": 0.032432432432432434,
+        "tv": 0.032432432432432434
+      },
+      "Social smoker": {
+        "ks": 0.016216216216216217,
+        "wasserstein": 0.016216216216216273,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.016216216216216245
+      }
+    },
+    "support": {
+      "alpha_precision": 0.9135135135135135,
+      "beta_recall": 0.7675675675675676,
+      "IP_alpha": 0.7993243243243244,
+      "IR_beta": 0.8089864864864864,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.060810810810810814,
+        0.0972972972972973,
+        0.13378378378378378,
+        0.1581081081081081,
+        0.18513513513513513,
+        0.22162162162162163,
+        0.25675675675675674,
+        0.28243243243243243,
+        0.3202702702702703,
+        0.3810810810810811,
+        0.4283783783783784,
+        0.47162162162162163,
+        0.5081081081081081,
+        0.55,
+        0.6040540540540541,
+        0.654054054054054,
+        0.6932432432432433,
+        0.7351351351351352,
+        0.8108108108108109,
+        0.9135135135135135
+      ],
+      "alpha_radii": [
+        0.42855400294065477,
+        0.47629474103450775,
+        0.5100048571825028,
+        0.5304885149002075,
+        0.5514639019966125,
+        0.5714930236339569,
+        0.5905202716588974,
+        0.6111923575401306,
+        0.6314479827880859,
+        0.6648255586624146,
+        0.6967567652463913,
+        0.723198652267456,
+        0.7499605864286423,
+        0.7848115146160125,
+        0.8190637230873108,
+        0.8683272004127502,
+        0.9281864047050477,
+        0.978119057416916,
+        1.0845879495143889,
+        1.3619686365127563
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.07837837837837838,
+        0.1472972972972973,
+        0.22297297297297297,
+        0.30405405405405406,
+        0.38513513513513514,
+        0.4337837837837838,
+        0.4972972972972973,
+        0.5324324324324324,
+        0.5905405405405405,
+        0.6121621621621621,
+        0.6621621621621622,
+        0.6905405405405406,
+        0.7067567567567568,
+        0.7175675675675676,
+        0.7418918918918919,
+        0.7486486486486487,
+        0.7554054054054054,
+        0.7594594594594595,
+        0.7675675675675676,
+        0.7675675675675676
+      ],
+      "beta_radii": [
+        0.4227573320269585,
+        0.48571392297744753,
+        0.5310788840055466,
+        0.5647960901260376,
+        0.5931213945150375,
+        0.6219742715358734,
+        0.6478203922510147,
+        0.6806457638740538,
+        0.7104833036661147,
+        0.7465628683567046,
+        0.7810628682374954,
+        0.8180948853492737,
+        0.8683038383722306,
+        0.9303870320320129,
+        0.9998528063297272,
+        1.0684663295745849,
+        1.1727916955947877,
+        1.2959751605987548,
+        1.5761281490325927,
+        7.474015712738037
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 1.2641430450731252,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.5043827611395179,
+      "accuracy": 0.5202702702702703,
+      "pmse_test": 0.014931776233034648,
+      "pmse_null_mean": 0.019893391094628027,
+      "pmse_ratio_perm": 0.75058978944353,
+      "pmse_null_percentile": 4.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.48620157021182103,
+      "num_columns_used": 20,
+      "per_column": {
+        "Absenteeism time in hours": {
+          "type": "numerical",
+          "perf_ref": 8.733698494645157,
+          "perf_synth": 9.117767444351092,
+          "utility": 0.9578768649178605
+        },
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 0.17928698384133002,
+          "perf_synth": 1.5238205700167669,
+          "utility": 0.11765623024721164
+        },
+        "Body mass index": {
+          "type": "numerical",
+          "perf_ref": 0.09769545585642102,
+          "perf_synth": 0.7327628870048962,
+          "utility": 0.1333247870341013
+        },
+        "Day of the week": {
+          "type": "categorical",
+          "perf_ref": 0.25114774114774113,
+          "perf_synth": 0.3090598290598291,
+          "utility": 1.2305897223977833
+        },
+        "Disciplinary failure": {
+          "type": "numerical",
+          "perf_ref": 0.012796146720431893,
+          "perf_synth": 0.07879691690958357,
+          "utility": 0.16239400248508426
+        },
+        "Distance from Residence to Work": {
+          "type": "numerical",
+          "perf_ref": 0.7594467509618061,
+          "perf_synth": 4.324762019284923,
+          "utility": 0.17560428702788525
+        },
+        "Education": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 1.0,
+          "utility": 1.0
+        },
+        "Height": {
+          "type": "numerical",
+          "perf_ref": 0.17420435784605004,
+          "perf_synth": 1.5722759095287866,
+          "utility": 0.11079757489781761
+        },
+        "Hit target": {
+          "type": "numerical",
+          "perf_ref": 0.4114844296672359,
+          "perf_synth": 2.580352017171104,
+          "utility": 0.15946833103738894
+        },
+        "Month of absence": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.40706700706700705,
+          "utility": 0.40706700706700705
+        },
+        "Pet": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.9166666666666666,
+          "utility": 0.9166666666666666
+        },
+        "Reason for absence": {
+          "type": "categorical",
+          "perf_ref": 0.30192931927211847,
+          "perf_synth": 0.2382232203226118,
+          "utility": 0.7890032703578199
+        },
+        "Seasons": {
+          "type": "categorical",
+          "perf_ref": 0.8918650793650794,
+          "perf_synth": 0.7977182539682539,
+          "utility": 0.8944382647385983
+        },
+        "Service time": {
+          "type": "numerical",
+          "perf_ref": 0.7570106913110147,
+          "perf_synth": 1.4356963205936468,
+          "utility": 0.5272777261127186
+        },
+        "Social drinker": {
+          "type": "numerical",
+          "perf_ref": 0.031121100117451853,
+          "perf_synth": 0.12554692670204373,
+          "utility": 0.24788420501371974
+        },
+        "Social smoker": {
+          "type": "numerical",
+          "perf_ref": 0.03495055415255818,
+          "perf_synth": 0.16518570177318012,
+          "utility": 0.2115834105336157
+        },
+        "Son": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.9845454545454546,
+          "utility": 0.9845454545454546
+        },
+        "Transportation expense": {
+          "type": "numerical",
+          "perf_ref": 6.6202093226879155,
+          "perf_synth": 16.741609891270848,
+          "utility": 0.3954344513868838
+        },
+        "Weight": {
+          "type": "numerical",
+          "perf_ref": 0.2089330156184301,
+          "perf_synth": 2.322717564247227,
+          "utility": 0.08995196783046824
+        },
+        "Work load Average/day ": {
+          "type": "numerical",
+          "perf_ref": 7.232122518495089,
+          "perf_synth": 34.038774932646255,
+          "utility": 0.21246717993833647
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2003,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2003,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200
+    }
+  },
+  {
+    "paths": {
+      "real": "data/Absenteeism_at_work.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/Absenteeism_at_work_arf_seed42.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Absenteeism time in hours",
+        "Age",
+        "Body mass index",
+        "Distance from Residence to Work",
+        "Height",
+        "Hit target",
+        "Service time",
+        "Transportation expense",
+        "Weight",
+        "Work load Average/day "
+      ],
+      "categorical": [
+        "Day of the week",
+        "Education",
+        "Month of absence",
+        "Pet",
+        "Reason for absence",
+        "Seasons",
+        "Son"
+      ],
+      "discrete_ordinal": [
+        "Disciplinary failure",
+        "Social drinker",
+        "Social smoker"
+      ]
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 91
+    },
+    "marginal_numeric": {
+      "Absenteeism time in hours": {
+        "ks": 0.13783783783783785,
+        "wasserstein": 2.051537837837838,
+        "wasserstein_normalized_iqr": 0.34192297297297297
+      },
+      "Age": {
+        "ks": 0.07972972972972973,
+        "wasserstein": 0.969927027027027,
+        "wasserstein_normalized_iqr": 0.10776966966966967
+      },
+      "Body mass index": {
+        "ks": 0.13648648648648648,
+        "wasserstein": 0.5697310810810807,
+        "wasserstein_normalized_iqr": 0.08139015444015439
+      },
+      "Distance from Residence to Work": {
+        "ks": 0.12837837837837837,
+        "wasserstein": 2.1142270270270265,
+        "wasserstein_normalized_iqr": 0.062183147853736076
+      },
+      "Height": {
+        "ks": 0.11891891891891893,
+        "wasserstein": 0.7444081081081084,
+        "wasserstein_normalized_iqr": 0.24813603603603615
+      },
+      "Hit target": {
+        "ks": 0.08108108108108109,
+        "wasserstein": 0.5419162162162162,
+        "wasserstein_normalized_iqr": 0.13547905405405405
+      },
+      "Service time": {
+        "ks": 0.08378378378378379,
+        "wasserstein": 0.4279837837837838,
+        "wasserstein_normalized_iqr": 0.06114054054054054
+      },
+      "Transportation expense": {
+        "ks": 0.07972972972972973,
+        "wasserstein": 7.445068918918915,
+        "wasserstein_normalized_iqr": 0.09191443109776438
+      },
+      "Weight": {
+        "ks": 0.07027027027027027,
+        "wasserstein": 1.2741378378378374,
+        "wasserstein_normalized_iqr": 0.06370689189189187
+      },
+      "Work load Average/day ": {
+        "ks": 0.07972972972972973,
+        "wasserstein": 4.279022972972973,
+        "wasserstein_normalized_iqr": 0.08587242570686282
+      }
+    },
+    "marginal_categorical_tv": {
+      "Day of the week": 0.021621621621621623,
+      "Education": 0.016216216216216196,
+      "Month of absence": 0.02702702702702702,
+      "Pet": 0.014864864864864845,
+      "Reason for absence": 0.062162162162162166,
+      "Seasons": 0.012162162162162163,
+      "Son": 0.05405405405405406
+    },
+    "marginal_discrete_ordinal": {
+      "Disciplinary failure": {
+        "ks": 0.008108108108108109,
+        "wasserstein": 0.008108108108108136,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.008108108108108122
+      },
+      "Social drinker": {
+        "ks": 0.022972972972972974,
+        "wasserstein": 0.022972972972973016,
+        "wasserstein_normalized_iqr": 0.022972972972973016,
+        "tv": 0.022972972972972988
+      },
+      "Social smoker": {
+        "ks": 0.010810810810810811,
+        "wasserstein": 0.010810810810810811,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.010810810810810811
+      }
+    },
+    "support": {
+      "alpha_precision": 0.9837837837837838,
+      "beta_recall": 0.6837837837837838,
+      "IP_alpha": 0.8789189189189189,
+      "IR_beta": 0.8002702702702703,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.05810810810810811,
+        0.11081081081081082,
+        0.14189189189189189,
+        0.17162162162162162,
+        0.21216216216216216,
+        0.23648648648648649,
+        0.2810810810810811,
+        0.32297297297297295,
+        0.3716216216216216,
+        0.40405405405405403,
+        0.4608108108108108,
+        0.5351351351351351,
+        0.577027027027027,
+        0.6094594594594595,
+        0.6567567567567567,
+        0.7121621621621622,
+        0.7648648648648648,
+        0.8081081081081081,
+        0.8959459459459459,
+        0.9837837837837838
+      ],
+      "alpha_radii": [
+        0.4874768227338791,
+        0.5593072950839997,
+        0.5984111219644547,
+        0.6224520921707154,
+        0.6494948118925095,
+        0.673947411775589,
+        0.7101022213697433,
+        0.7411432743072509,
+        0.7777123570442199,
+        0.8107011616230011,
+        0.8575867116451262,
+        0.9177963972091675,
+        0.9620048999786377,
+        1.0065642714500425,
+        1.0566106140613556,
+        1.1244775772094726,
+        1.2104437232017518,
+        1.2989324808120728,
+        1.5364098429679867,
+        2.306783676147461
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.0472972972972973,
+        0.07162162162162163,
+        0.12297297297297298,
+        0.20270270270270271,
+        0.25135135135135134,
+        0.2716216216216216,
+        0.3202702702702703,
+        0.3621621621621622,
+        0.37567567567567567,
+        0.41216216216216217,
+        0.45,
+        0.5013513513513513,
+        0.5283783783783784,
+        0.5743243243243243,
+        0.5891891891891892,
+        0.6135135135135135,
+        0.6418918918918919,
+        0.6608108108108108,
+        0.6702702702702703,
+        0.6837837837837838
+      ],
+      "beta_radii": [
+        0.47912227660417556,
+        0.5481014132499695,
+        0.6061871826648713,
+        0.6454195380210876,
+        0.6828831881284714,
+        0.7285858631134033,
+        0.7604409247636795,
+        0.8070232272148131,
+        0.8521165937185288,
+        0.8944290280342101,
+        0.933611363172531,
+        0.9967259407043457,
+        1.0391660451889038,
+        1.1192582488059997,
+        1.1814267337322235,
+        1.2739386796951293,
+        1.3966405570507048,
+        1.5422803044319153,
+        1.8483146071434016,
+        6.407978534698486
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 1.777248661390083,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.4369978086194303,
+      "accuracy": 0.43243243243243246,
+      "pmse_test": 0.016425369062548417,
+      "pmse_null_mean": 0.019302937842054634,
+      "pmse_ratio_perm": 0.8509258640808054,
+      "pmse_null_percentile": 22.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.4690960670896224,
+      "num_columns_used": 20,
+      "per_column": {
+        "Absenteeism time in hours": {
+          "type": "numerical",
+          "perf_ref": 10.249725488007936,
+          "perf_synth": 8.920283797217404,
+          "utility": 1.1490358065967854
+        },
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 0.3250238584848922,
+          "perf_synth": 3.1484020690400016,
+          "utility": 0.10323454608324444
+        },
+        "Body mass index": {
+          "type": "numerical",
+          "perf_ref": 0.08825132709159852,
+          "perf_synth": 1.1391075134292625,
+          "utility": 0.07747409796808337
+        },
+        "Day of the week": {
+          "type": "categorical",
+          "perf_ref": 0.28438398047905683,
+          "perf_synth": 0.35763492308483824,
+          "utility": 1.2575775980151453
+        },
+        "Disciplinary failure": {
+          "type": "numerical",
+          "perf_ref": 0.01721757143054052,
+          "perf_synth": 0.07178926192522309,
+          "utility": 0.23983491359020567
+        },
+        "Distance from Residence to Work": {
+          "type": "numerical",
+          "perf_ref": 1.1064094298123062,
+          "perf_synth": 5.389964449676748,
+          "utility": 0.20527212009323378
+        },
+        "Education": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.6944444444444444,
+          "utility": 0.6944444444444444
+        },
+        "Height": {
+          "type": "numerical",
+          "perf_ref": 0.18853243571659373,
+          "perf_synth": 1.5723652170292035,
+          "utility": 0.11990371808961996
+        },
+        "Hit target": {
+          "type": "numerical",
+          "perf_ref": 0.42286366332952846,
+          "perf_synth": 2.5323856579191553,
+          "utility": 0.1669823322554246
+        },
+        "Month of absence": {
+          "type": "categorical",
+          "perf_ref": 0.9833333333333334,
+          "perf_synth": 0.5235990860990861,
+          "utility": 0.5324736468804265
+        },
+        "Pet": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.614006864006864,
+          "utility": 0.614006864006864
+        },
+        "Reason for absence": {
+          "type": "categorical",
+          "perf_ref": 0.2167800453514739,
+          "perf_synth": 0.1929705215419501,
+          "utility": 0.8901673640167364
+        },
+        "Seasons": {
+          "type": "categorical",
+          "perf_ref": 0.9218767186382886,
+          "perf_synth": 0.8129520018698785,
+          "utility": 0.8818445953062969
+        },
+        "Service time": {
+          "type": "numerical",
+          "perf_ref": 0.5126382728809946,
+          "perf_synth": 1.6841668124368259,
+          "utility": 0.30438687491962674
+        },
+        "Social drinker": {
+          "type": "numerical",
+          "perf_ref": 0.026623807739878595,
+          "perf_synth": 0.1582481057926467,
+          "utility": 0.16824092526430556
+        },
+        "Social smoker": {
+          "type": "numerical",
+          "perf_ref": 0.04842069231287182,
+          "perf_synth": 0.2101185308011692,
+          "utility": 0.23044465487287893
+        },
+        "Son": {
+          "type": "categorical",
+          "perf_ref": 1.0,
+          "perf_synth": 0.9610878922088453,
+          "utility": 0.9610878922088453
+        },
+        "Transportation expense": {
+          "type": "numerical",
+          "perf_ref": 7.093952803462512,
+          "perf_synth": 24.36070514008129,
+          "utility": 0.2912047398739148
+        },
+        "Weight": {
+          "type": "numerical",
+          "perf_ref": 0.325039921556968,
+          "perf_synth": 3.186575978754151,
+          "utility": 0.10200287823799141
+        },
+        "Work load Average/day ": {
+          "type": "numerical",
+          "perf_ref": 14.544921341937778,
+          "perf_synth": 37.07589106689663,
+          "utility": 0.39230132906837334
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 42,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 42,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200
+    }
+  }
+]

@@ -1,0 +1,62 @@
+=== Evaluation Summary ===
+Real:      data/Absenteeism_at_work.csv
+Synthetic: 3 synthetic runs averaged
+Runs:      3 (seeds=[2026, 2003, 42])
+
+Columns:
+  Numeric:     ['Absenteeism time in hours', 'Age', 'Body mass index', 'Distance from Residence to Work', 'Height', 'Hit target', 'Service time', 'Transportation expense', 'Weight', 'Work load Average/day ']
+  Categorical: ['Day of the week', 'Education', 'Month of absence', 'Pet', 'Reason for absence', 'Seasons', 'Son']
+  Discrete/Ordinal: ['Disciplinary failure', 'Social drinker', 'Social smoker']
+  One-hot features: 91.0
+
+Discriminator (logistic regression, held-out test + permutation null):
+  AUC:               0.936511 +/- 0.012114
+  Accuracy:          0.859610 +/- 0.014045
+  pMSE (test):       0.170880 +/- 0.004162
+  pMSE null mean:    0.018390 +/- 0.000122
+  pMSE ratio (perm): 9.292250 +/- 0.228148
+  Null percentile:   100.0 +/- 0.0th
+
+Support / coverage (paper-style one-class embedding):
+  Alpha precision (alpha=1.0): 0.681532 +/- 0.289413
+  Beta recall (beta=1.0):      0.073423 +/- 0.032401
+  Integrated IP_alpha:         0.148559 +/- 0.078060
+  Integrated IR_beta:          0.118716 +/- 0.044955
+  Embedder radius:             1.802422 +/- 0.450132
+  Alpha grid:                  [0.05000000000000001, 0.10000000000000002, 0.15, 0.20000000000000004, 0.25, 0.3, 0.3499999999999999, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.6999999999999998, 0.75, 0.7999999999999999, 0.85, 0.9, 0.9499999999999998, 1.0]
+  P_alpha curve:               [0.0009009009009009009, 0.0013513513513513514, 0.0036036036036036037, 0.004054054054054054, 0.0045045045045045045, 0.005855855855855856, 0.007207207207207207, 0.008108108108108109, 0.010810810810810811, 0.014864864864864866, 0.02027027027027027, 0.02837837837837838, 0.04009009009009009, 0.05630630630630631, 0.0855855855855856, 0.11936936936936937, 0.16936936936936933, 0.21711711711711712, 0.3225225225225225, 0.6815315315315315]
+  Beta grid:                   [0.05000000000000001, 0.10000000000000002, 0.15, 0.20000000000000004, 0.25, 0.3, 0.3499999999999999, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.6999999999999998, 0.75, 0.7999999999999999, 0.85, 0.9, 0.9499999999999998, 1.0]
+  R_beta curve:                [0.02657657657657658, 0.033783783783783786, 0.03828828828828829, 0.04594594594594595, 0.04774774774774775, 0.05180180180180181, 0.05585585585585586, 0.06171171171171171, 0.06531531531531533, 0.06621621621621622, 0.06846846846846848, 0.06936936936936937, 0.06936936936936937, 0.07117117117117117, 0.07342342342342344, 0.07342342342342344, 0.07342342342342344, 0.07342342342342344, 0.07342342342342344, 0.07342342342342344]
+
+Global Utility (TabStruct-style):
+  Global utility: NA
+  Columns used:   0.000000 +/- 0.000000
+  Synth train cap:5000.0
+  Skipped (too few rows): 20.00 +/- 0.00
+  Skipped (single-class/fit fail): 0.00 +/- 0.00
+
+Marginal (numeric):
+  Absenteeism time in hours: KS=0.427928 +/- 0.013347, Wasserstein=21.691892 +/- 0.916464, Wasserstein/IQR=3.615315 +/- 0.152744
+  Age: KS=0.305405 +/- 0.026087, Wasserstein=4.745045 +/- 0.206234, Wasserstein/IQR=0.527227 +/- 0.022915
+  Body mass index: KS=0.247748 +/- 0.005443, Wasserstein=2.685135 +/- 0.064705, Wasserstein/IQR=0.383591 +/- 0.009244
+  Distance from Residence to Work: KS=0.223874 +/- 0.010886, Wasserstein=3.876126 +/- 0.142426, Wasserstein/IQR=0.114004 +/- 0.004189
+  Height: KS=0.336937 +/- 0.010717, Wasserstein=6.958559 +/- 0.224775, Wasserstein/IQR=2.319520 +/- 0.074925
+  Hit target: KS=0.295045 +/- 0.007982, Wasserstein=3.018018 +/- 0.115387, Wasserstein/IQR=0.754505 +/- 0.028847
+  Service time: KS=0.330180 +/- 0.003875, Wasserstein=5.456306 +/- 0.178765, Wasserstein/IQR=0.779472 +/- 0.025538
+  Transportation expense: KS=0.238288 +/- 0.009384, Wasserstein=34.265315 +/- 1.803532, Wasserstein/IQR=0.423029 +/- 0.022266
+  Weight: KS=0.225676 +/- 0.004413, Wasserstein=5.900450 +/- 0.173820, Wasserstein/IQR=0.295023 +/- 0.008691
+  Work load Average/day : KS=0.268919 +/- 0.027584, Wasserstein=25.405629 +/- 0.356039, Wasserstein/IQR=0.509846 +/- 0.007145
+
+Marginal (discrete/ordinal):
+  Disciplinary failure: KS=0.161261 +/- 0.016746, Wasserstein=0.161261 +/- 0.016746, Wasserstein/IQR=NA, TV=0.161261 +/- 0.016746
+  Social drinker: KS=0.028378 +/- 0.016027, Wasserstein=0.028378 +/- 0.016027, Wasserstein/IQR=0.028378 +/- 0.016027, TV=0.028378 +/- 0.016027
+  Social smoker: KS=0.127928 +/- 0.006742, Wasserstein=0.127928 +/- 0.006742, Wasserstein/IQR=NA, TV=0.127928 +/- 0.006742
+
+Marginal (categorical TV distance):
+  Day of the week: TV=0.540991 +/- 0.002777
+  Education: TV=0.329279 +/- 0.006651
+  Month of absence: TV=0.256306 +/- 0.007007
+  Pet: TV=0.193694 +/- 0.006742
+  Reason for absence: TV=0.396847 +/- 0.011694
+  Seasons: TV=0.096847 +/- 0.015302
+  Son: TV=0.176577 +/- 0.019280

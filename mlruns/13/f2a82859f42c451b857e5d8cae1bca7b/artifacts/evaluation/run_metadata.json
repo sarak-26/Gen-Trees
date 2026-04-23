@@ -1,0 +1,17 @@
+{
+  "model_name": "TVAE",
+  "dataset_name": "Employee",
+  "tracking_uri": "sqlite:////Users/sarakhan/Projects/Uni/Gen-Trees/mlflow.db",
+  "experiment_name": "Dataset4_full",
+  "run_name": "Employee_TVAE",
+  "synthetic_paths": [
+    "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/Employee_TVAE_seed2026.csv",
+    "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/Employee_TVAE_seed2003.csv",
+    "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/Employee_TVAE_seed42.csv"
+  ],
+  "seeds": [
+    2026,
+    2003,
+    42
+  ]
+}

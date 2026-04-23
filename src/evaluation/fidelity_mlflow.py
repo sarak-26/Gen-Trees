@@ -6,9 +6,9 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 try:
-    from .fidelity_amended import format_results, run_evaluation
+    from .fidelity_amended import aggregate_evaluation_results, format_results, run_evaluation
 except ImportError:
-    from fidelity_amended import format_results, run_evaluation
+    from fidelity_amended import aggregate_evaluation_results, format_results, run_evaluation
 
 
 def _require_mlflow():
@@ -121,6 +121,24 @@ def _collect_per_column_metrics(results: dict) -> dict[str, float]:
         if _is_finite_number(value):
             metrics[f"marginal_categorical.{column_name}.tv"] = float(value)
 
+    for column, values in results.get("marginal_date", {}).items():
+        column_name = _sanitize_name(column)
+        ks = values.get("ks")
+        wasserstein_normalized = values.get("wasserstein_normalized")
+        if _is_finite_number(ks):
+            metrics[f"marginal_date.{column_name}.ks"] = float(ks)
+        if _is_finite_number(wasserstein_normalized):
+            metrics[f"marginal_date.{column_name}.wasserstein_normalized"] = float(wasserstein_normalized)
+
+    temporal = results.get("temporal_consistency", {})
+    overall = temporal.get("overall")
+    if _is_finite_number(overall):
+        metrics["temporal_consistency.overall"] = float(overall)
+    for pair_name, values in temporal.get("pairs", {}).items():
+        score = values.get("score")
+        if _is_finite_number(score):
+            metrics[f"temporal_consistency.{_sanitize_name(pair_name)}.score"] = float(score)
+
     for column, values in results.get("global_utility", {}).get("per_column", {}).items():
         column_name = _sanitize_name(column)
         utility = values.get("utility")
@@ -142,10 +160,27 @@ def _log_metrics(mlflow, metrics: dict[str, float], batch_size: int = 100) -> No
         mlflow.log_metrics(dict(items[start:start + batch_size]))
 
 
+def _aggregate_metric_dicts(metric_dicts: list[dict[str, float]]) -> tuple[dict[str, float], dict[str, float]]:
+    keys = sorted({key for metric_dict in metric_dicts for key in metric_dict})
+    mean_metrics: dict[str, float] = {}
+    std_metrics: dict[str, float] = {}
+
+    for key in keys:
+        values = [metric_dict[key] for metric_dict in metric_dicts if key in metric_dict]
+        if not values:
+            continue
+        mean_value = float(sum(values) / len(values))
+        variance = sum((value - mean_value) ** 2 for value in values) / len(values)
+        mean_metrics[key] = mean_value
+        std_metrics[f"{key}.std"] = float(math.sqrt(variance))
+
+    return mean_metrics, std_metrics
+
+
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Run fidelity_amended evaluation and log results to MLflow.")
     parser.add_argument("--real", required=True, help="Path to real.csv")
-    parser.add_argument("--synthetic", required=True, help="Path to synthetic.csv")
+    parser.add_argument("--synthetic", nargs="+", required=True, help="One or more paths to synthetic CSV files.")
     parser.add_argument("--categorical", nargs="*", default=None, help="Categorical columns (optional).")
     parser.add_argument("--numeric", nargs="*", default=None, help="Numeric columns (optional).")
     parser.add_argument("--numeric_threshold", type=float, default=0.95)
@@ -162,9 +197,13 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--svdd_epochs", type=int, default=200)
     parser.add_argument("--svdd_warm_up_epochs", type=int, default=10)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--seeds", nargs="*", type=int, default=None, help="Optional per-run seeds matching --synthetic.")
     parser.add_argument("--permutations", type=int, default=50)
     parser.add_argument("--id_unique_threshold", type=float, default=0.98)
     parser.add_argument("--global_utility_test_size", type=float, default=0.2)
+    parser.add_argument("--global_utility_min_real_train_rows", type=int, default=200)
+    parser.add_argument("--global_utility_min_real_test_rows", type=int, default=100)
+    parser.add_argument("--global_utility_min_synth_train_rows", type=int, default=200)
     parser.add_argument("--synth_train_cap", type=int, default=5000)
 
     parser.add_argument("--experiment-name", default="synthetic-data-fidelity")
@@ -205,43 +244,68 @@ def main() -> None:
     mlflow.set_tracking_uri(tracking_uri)
     _set_or_restore_experiment(mlflow, args.experiment_name)
 
-    model_name = args.model_name or _infer_model_name(args.synthetic)
+    synthetic_paths = args.synthetic
+    seeds = args.seeds if args.seeds else [args.seed] * len(synthetic_paths)
+    if len(seeds) != len(synthetic_paths):
+        raise SystemExit("When provided, --seeds must contain exactly one seed per --synthetic path.")
+
+    model_name = args.model_name or _infer_model_name(synthetic_paths[0])
     dataset_name = args.dataset_name or _infer_dataset_name(args.real)
     run_name = args.run_name or f"{dataset_name}_{model_name}"
     synth_cap = None if args.synth_train_cap is None or args.synth_train_cap <= 0 else args.synth_train_cap
 
-    results = run_evaluation(
-        real_path=args.real,
-        synth_path=args.synthetic,
-        categorical_cols=args.categorical,
-        numeric_cols=args.numeric,
-        numeric_threshold=args.numeric_threshold,
-        k=args.k,
-        rep_dim=args.rep_dim,
-        hidden_dim=args.hidden_dim,
-        num_layers=args.num_layers,
-        activation=args.activation,
-        dropout_prob=args.dropout_prob,
-        nu=args.nu,
-        svdd_lr=args.svdd_lr,
-        svdd_weight_decay=args.svdd_weight_decay,
-        svdd_batch_size=args.svdd_batch_size,
-        svdd_epochs=args.svdd_epochs,
-        svdd_warm_up_epochs=args.svdd_warm_up_epochs,
-        seed=args.seed,
-        permutations=args.permutations,
-        id_unique_threshold=args.id_unique_threshold,
-        global_utility_test_size=args.global_utility_test_size,
-        synth_train_cap=synth_cap,
-    )
+    run_results = []
+    for synthetic_path, seed in zip(synthetic_paths, seeds):
+        run_results.append(
+            run_evaluation(
+                real_path=args.real,
+                synth_path=synthetic_path,
+                categorical_cols=args.categorical,
+                numeric_cols=args.numeric,
+                numeric_threshold=args.numeric_threshold,
+                k=args.k,
+                rep_dim=args.rep_dim,
+                hidden_dim=args.hidden_dim,
+                num_layers=args.num_layers,
+                activation=args.activation,
+                dropout_prob=args.dropout_prob,
+                nu=args.nu,
+                svdd_lr=args.svdd_lr,
+                svdd_weight_decay=args.svdd_weight_decay,
+                svdd_batch_size=args.svdd_batch_size,
+                svdd_epochs=args.svdd_epochs,
+                svdd_warm_up_epochs=args.svdd_warm_up_epochs,
+                seed=seed,
+                permutations=args.permutations,
+                id_unique_threshold=args.id_unique_threshold,
+                global_utility_test_size=args.global_utility_test_size,
+                synth_train_cap=synth_cap,
+                global_utility_min_real_train_rows=args.global_utility_min_real_train_rows,
+                global_utility_min_real_test_rows=args.global_utility_min_real_test_rows,
+                global_utility_min_synth_train_rows=args.global_utility_min_synth_train_rows,
+            )
+        )
+
+    results = run_results[0] if len(run_results) == 1 else aggregate_evaluation_results(run_results, seeds=seeds)
+    results["metadata"] = {
+        "model_name": model_name,
+        "dataset_name": dataset_name,
+        "run_name": run_name,
+    }
 
     report_text = format_results(results)
-    summary_metrics = _collect_summary_metrics(results)
-    per_column_metrics = {} if args.skip_per_column_metrics else _collect_per_column_metrics(results)
+    summary_metric_runs = [_collect_summary_metrics(result) for result in run_results]
+    summary_metrics, summary_std_metrics = _aggregate_metric_dicts(summary_metric_runs)
+    if args.skip_per_column_metrics:
+        per_column_metrics = {}
+        per_column_std_metrics = {}
+    else:
+        per_column_metric_runs = [_collect_per_column_metrics(result) for result in run_results]
+        per_column_metrics, per_column_std_metrics = _aggregate_metric_dicts(per_column_metric_runs)
 
     params = {
         "real_path": args.real,
-        "synthetic_path": args.synthetic,
+        "synthetic_paths": ",".join(synthetic_paths),
         "model_name": model_name,
         "dataset_name": dataset_name,
         "numeric_threshold": args.numeric_threshold,
@@ -258,9 +322,14 @@ def main() -> None:
         "svdd_epochs": args.svdd_epochs,
         "svdd_warm_up_epochs": args.svdd_warm_up_epochs,
         "seed": args.seed,
+        "seeds": ",".join(str(seed) for seed in seeds),
+        "num_runs": len(run_results),
         "permutations": args.permutations,
         "id_unique_threshold": args.id_unique_threshold,
         "global_utility_test_size": args.global_utility_test_size,
+        "global_utility_min_real_train_rows": args.global_utility_min_real_train_rows,
+        "global_utility_min_real_test_rows": args.global_utility_min_real_test_rows,
+        "global_utility_min_synth_train_rows": args.global_utility_min_synth_train_rows,
         "synth_train_cap": "None" if synth_cap is None else synth_cap,
     }
 
@@ -273,23 +342,30 @@ def main() -> None:
         "task": "synthetic_data_fidelity_evaluation",
         "model_name": model_name,
         "dataset_name": dataset_name,
+        "aggregation": "mean_across_runs" if len(run_results) > 1 else "single_run",
     }
 
     with mlflow.start_run(run_name=run_name):
         mlflow.set_tags(tags)
         mlflow.log_params(params)
         _log_metrics(mlflow, summary_metrics)
+        if len(run_results) > 1:
+            _log_metrics(mlflow, summary_std_metrics)
         if per_column_metrics:
             _log_metrics(mlflow, per_column_metrics)
+            if len(run_results) > 1:
+                _log_metrics(mlflow, per_column_std_metrics)
 
         with TemporaryDirectory() as tmp_dir:
             tmp_path = Path(tmp_dir)
             txt_path = tmp_path / "evaluation.txt"
             json_path = tmp_path / "evaluation.json"
+            per_run_path = tmp_path / "evaluation_runs.json"
             meta_path = tmp_path / "run_metadata.json"
 
             txt_path.write_text(report_text, encoding="utf-8")
             json_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+            per_run_path.write_text(json.dumps(run_results, indent=2), encoding="utf-8")
             meta_path.write_text(
                 json.dumps(
                     {
@@ -298,6 +374,8 @@ def main() -> None:
                         "tracking_uri": tracking_uri,
                         "experiment_name": args.experiment_name,
                         "run_name": run_name,
+                        "synthetic_paths": synthetic_paths,
+                        "seeds": seeds,
                     },
                     indent=2,
                 ),
@@ -306,6 +384,7 @@ def main() -> None:
 
             mlflow.log_artifact(str(txt_path), artifact_path=args.artifact_subdir)
             mlflow.log_artifact(str(json_path), artifact_path=args.artifact_subdir)
+            mlflow.log_artifact(str(per_run_path), artifact_path=args.artifact_subdir)
             mlflow.log_artifact(str(meta_path), artifact_path=args.artifact_subdir)
 
     if args.output:

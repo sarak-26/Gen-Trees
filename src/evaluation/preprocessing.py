@@ -62,8 +62,16 @@ def infer_types_by_numeric_coercion(
     return real_df, synth_df, categorical_cols, numeric_cols
 
 
-def remove_id_like_and_constant(real_df, synth_df, numeric_cols, categorical_cols, id_unique_threshold=0.98):
+def remove_id_like_and_constant(
+    real_df,
+    synth_df,
+    numeric_cols,
+    categorical_cols,
+    id_unique_threshold=0.98,
+    protected_cols=None,
+):
     to_drop = []
+    protected = set(protected_cols or [])
 
     def nunique_ratio(s: pd.Series) -> float:
         s2 = s.dropna()
@@ -72,10 +80,16 @@ def remove_id_like_and_constant(real_df, synth_df, numeric_cols, categorical_col
         return float(s2.nunique()) / float(len(s2))
 
     for c in numeric_cols + categorical_cols:
+        if c in protected:
+            if real_df[c].dropna().nunique() <= 1 and synth_df[c].dropna().nunique() <= 1:
+                to_drop.append(c)
+            continue
         r = nunique_ratio(real_df[c])
         s = nunique_ratio(synth_df[c])
 
-        if r >= id_unique_threshold and s >= id_unique_threshold:
+        # If the real data says a column is effectively an identifier, drop it
+        # from both frames even when the synthetic model collapses it into repeats.
+        if r >= id_unique_threshold:
             to_drop.append(c)
             continue
         if real_df[c].dropna().nunique() <= 1 and synth_df[c].dropna().nunique() <= 1:
@@ -129,6 +143,13 @@ def one_hot_encode_aligned(
         axis=0,
         ignore_index=True,
     )
+    if continuous_numeric_cols:
+        real_medians = real_df[continuous_numeric_cols].apply(pd.to_numeric, errors="coerce").median()
+        combined.loc[:, continuous_numeric_cols] = (
+            combined[continuous_numeric_cols]
+            .apply(pd.to_numeric, errors="coerce")
+            .fillna(real_medians)
+        )
     X = pd.get_dummies(combined, columns=one_hot_cols, dummy_na=True)
 
     X_synth = X.iloc[: len(synth_df)].to_numpy(dtype=float)
@@ -161,4 +182,5 @@ def build_global_utility_preprocessor(
             ("num", StandardScaler(with_mean=True, with_std=True), num),
         ],
         remainder="drop",
+        sparse_threshold=0.0,
     )

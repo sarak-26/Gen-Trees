@@ -1,0 +1,1016 @@
+[
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/aug_combined.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/aug_combined_TabDDM_seed2026.csv"
+    },
+    "columns": {
+      "numeric": [
+        "city_development_index",
+        "training_hours"
+      ],
+      "categorical": [
+        "city",
+        "company_size",
+        "company_type",
+        "education_level",
+        "enrolled_university",
+        "experience",
+        "gender",
+        "last_new_job",
+        "major_discipline",
+        "relevent_experience",
+        "target"
+      ],
+      "discrete_ordinal": []
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 185
+    },
+    "marginal_numeric": {
+      "city_development_index": {
+        "ks": 0.038,
+        "wasserstein": 0.00501857142857143,
+        "wasserstein_normalized_iqr": 0.02835351089588378
+      },
+      "training_hours": {
+        "ks": 0.014857142857142857,
+        "wasserstein": 1.5017142857142853,
+        "wasserstein_normalized_iqr": 0.023103296703296698
+      }
+    },
+    "marginal_categorical_tv": {
+      "city": 0.2054285714285714,
+      "company_size": 0.024285714285714292,
+      "company_type": 0.02828571428571432,
+      "education_level": 0.02799999999999996,
+      "enrolled_university": 0.02400000000000002,
+      "experience": 0.06114285714285713,
+      "gender": 0.018857142857142874,
+      "last_new_job": 0.02428571428571429,
+      "major_discipline": 0.026571428571428624,
+      "relevent_experience": 0.01685714285714282,
+      "target": 0.02799999999999997
+    },
+    "marginal_discrete_ordinal": {},
+    "support": {
+      "alpha_precision": 0.9565714285714285,
+      "beta_recall": 0.9568571428571429,
+      "IP_alpha": 0.8338285714285715,
+      "IR_beta": 0.4127571428571427,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.046,
+        0.08971428571428572,
+        0.12457142857142857,
+        0.166,
+        0.2017142857142857,
+        0.246,
+        0.28514285714285714,
+        0.3302857142857143,
+        0.36457142857142855,
+        0.4082857142857143,
+        0.44685714285714284,
+        0.4868571428571429,
+        0.5274285714285715,
+        0.5762857142857143,
+        0.6182857142857143,
+        0.658,
+        0.7077142857142857,
+        0.758,
+        0.8162857142857143,
+        0.9565714285714285
+      ],
+      "alpha_radii": [
+        0.037683067843317986,
+        0.040214601531624795,
+        0.04166343547403813,
+        0.043070629239082336,
+        0.04416467994451523,
+        0.045227217674255374,
+        0.04635559879243374,
+        0.047409843653440475,
+        0.04839039780199528,
+        0.049353279173374176,
+        0.05033358577638864,
+        0.05138804614543915,
+        0.052399632334709165,
+        0.05366407707333565,
+        0.054881623946130276,
+        0.056341545283794404,
+        0.05807829480618239,
+        0.06025814637541771,
+        0.06325994096696376,
+        0.07883131504058838
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.3357142857142857,
+        0.47285714285714286,
+        0.5785714285714286,
+        0.6648571428571428,
+        0.7314285714285714,
+        0.7751428571428571,
+        0.8097142857142857,
+        0.8488571428571429,
+        0.8782857142857143,
+        0.8948571428571429,
+        0.9165714285714286,
+        0.9282857142857143,
+        0.9397142857142857,
+        0.946,
+        0.9502857142857143,
+        0.954,
+        0.956,
+        0.9562857142857143,
+        0.9562857142857143,
+        0.9568571428571429
+      ],
+      "beta_radii": [
+        0.0379192914813757,
+        0.04054187089204788,
+        0.04251491390168667,
+        0.04400447756052017,
+        0.04541611950844526,
+        0.046571462601423266,
+        0.04788908213376999,
+        0.04923501834273338,
+        0.05038547925651073,
+        0.05174646526575088,
+        0.052992132678627964,
+        0.05430836156010628,
+        0.056033651903271676,
+        0.05789509937167167,
+        0.05993328616023064,
+        0.06225994750857353,
+        0.06543315872550011,
+        0.06955887377262115,
+        0.07732761204242704,
+        0.1495632827281952
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 0.06762421506027991,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.6332961451247165,
+      "accuracy": 0.5942857142857143,
+      "pmse_test": 0.02837727279765968,
+      "pmse_null_mean": 0.009678714649657767,
+      "pmse_ratio_perm": 2.931925759239434,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.8436225586696456,
+      "num_columns_used": 13,
+      "per_column": {
+        "city": {
+          "type": "categorical",
+          "perf_ref": 0.49226979916635094,
+          "perf_synth": 0.04553688900331368,
+          "utility": 0.09250392585616564
+        },
+        "city_development_index": {
+          "type": "numerical",
+          "perf_ref": 0.027561592295262772,
+          "perf_synth": 0.08874931368151592,
+          "utility": 0.3105555542003375
+        },
+        "company_size": {
+          "type": "categorical",
+          "perf_ref": 0.20791730539575368,
+          "perf_synth": 0.2064976438791094,
+          "utility": 0.9931719896333686
+        },
+        "company_type": {
+          "type": "categorical",
+          "perf_ref": 0.22798338977584262,
+          "perf_synth": 0.21005519637595108,
+          "utility": 0.9213618438715256
+        },
+        "education_level": {
+          "type": "categorical",
+          "perf_ref": 0.4212126842561625,
+          "perf_synth": 0.4061253561253561,
+          "utility": 0.9641812113102678
+        },
+        "enrolled_university": {
+          "type": "categorical",
+          "perf_ref": 0.48364509995374894,
+          "perf_synth": 0.39538688181989484,
+          "utility": 0.8175144994908575
+        },
+        "experience": {
+          "type": "categorical",
+          "perf_ref": 0.09503773855378134,
+          "perf_synth": 0.08490170702737548,
+          "utility": 0.8933472988662295
+        },
+        "gender": {
+          "type": "categorical",
+          "perf_ref": 0.3483519404572036,
+          "perf_synth": 0.34456406166932485,
+          "utility": 0.9891262876764595
+        },
+        "last_new_job": {
+          "type": "categorical",
+          "perf_ref": 0.21776172432411586,
+          "perf_synth": 0.2098532806620276,
+          "utility": 0.9636830407793917
+        },
+        "major_discipline": {
+          "type": "categorical",
+          "perf_ref": 0.16666666666666666,
+          "perf_synth": 0.17687280040221218,
+          "utility": 1.0612368024132732
+        },
+        "relevent_experience": {
+          "type": "categorical",
+          "perf_ref": 0.5969982078853047,
+          "perf_synth": 0.5813172043010753,
+          "utility": 0.973733583489681
+        },
+        "target": {
+          "type": "categorical",
+          "perf_ref": 0.7331723027375201,
+          "perf_synth": 0.7103059581320451,
+          "utility": 0.9688117724577202
+        },
+        "training_hours": {
+          "type": "numerical",
+          "perf_ref": 64.91405581977892,
+          "perf_synth": 63.77469207755386,
+          "utility": 1.0178654526601167
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2026,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2026,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200
+    }
+  },
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/aug_combined.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/aug_combined_TabDDM_seed2003.csv"
+    },
+    "columns": {
+      "numeric": [
+        "city_development_index",
+        "training_hours"
+      ],
+      "categorical": [
+        "city",
+        "company_size",
+        "company_type",
+        "education_level",
+        "enrolled_university",
+        "experience",
+        "gender",
+        "last_new_job",
+        "major_discipline",
+        "relevent_experience",
+        "target"
+      ],
+      "discrete_ordinal": []
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 185
+    },
+    "marginal_numeric": {
+      "city_development_index": {
+        "ks": 0.03571428571428571,
+        "wasserstein": 0.007210857142857143,
+        "wasserstein_normalized_iqr": 0.04073930589184825
+      },
+      "training_hours": {
+        "ks": 0.018,
+        "wasserstein": 1.1957142857142855,
+        "wasserstein_normalized_iqr": 0.018395604395604392
+      }
+    },
+    "marginal_categorical_tv": {
+      "city": 0.20771428571428574,
+      "company_size": 0.03057142857142859,
+      "company_type": 0.03742857142857145,
+      "education_level": 0.01685714285714287,
+      "enrolled_university": 0.023428571428571448,
+      "experience": 0.062,
+      "gender": 0.022000000000000013,
+      "last_new_job": 0.020571428571428553,
+      "major_discipline": 0.022000000000000013,
+      "relevent_experience": 0.0040000000000000036,
+      "target": 0.0217142857142857
+    },
+    "marginal_discrete_ordinal": {},
+    "support": {
+      "alpha_precision": 0.7582857142857143,
+      "beta_recall": 0.9302857142857143,
+      "IP_alpha": 0.7303571428571429,
+      "IR_beta": 0.4076000000000001,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.04285714285714286,
+        0.07542857142857143,
+        0.11028571428571429,
+        0.14657142857142857,
+        0.18457142857142858,
+        0.22371428571428573,
+        0.26057142857142856,
+        0.29542857142857143,
+        0.32771428571428574,
+        0.3577142857142857,
+        0.39914285714285713,
+        0.43142857142857144,
+        0.46714285714285714,
+        0.5088571428571429,
+        0.5468571428571428,
+        0.5831428571428572,
+        0.6191428571428571,
+        0.652,
+        0.6882857142857143,
+        0.7582857142857143
+      ],
+      "alpha_radii": [
+        0.038733896240592,
+        0.041066741570830345,
+        0.04293709564954042,
+        0.04445376843214035,
+        0.04581683222204447,
+        0.04714868851006031,
+        0.048379174806177615,
+        0.04948529228568077,
+        0.05069192685186863,
+        0.05179851874709129,
+        0.0529026286676526,
+        0.05411495789885521,
+        0.05532211530953646,
+        0.056697312742471695,
+        0.05817693751305342,
+        0.05986371412873268,
+        0.06152292732149363,
+        0.06321757733821869,
+        0.06533562242984771,
+        0.07116462290287018
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.36028571428571426,
+        0.51,
+        0.6128571428571429,
+        0.6888571428571428,
+        0.746,
+        0.7942857142857143,
+        0.8305714285714285,
+        0.8605714285714285,
+        0.8797142857142857,
+        0.8957142857142857,
+        0.9094285714285715,
+        0.9171428571428571,
+        0.9231428571428572,
+        0.9271428571428572,
+        0.9288571428571428,
+        0.9294285714285714,
+        0.9302857142857143,
+        0.9302857142857143,
+        0.9302857142857143,
+        0.9302857142857143
+      ],
+      "beta_radii": [
+        0.039197704195976256,
+        0.042196353524923326,
+        0.04423567596822977,
+        0.04610168412327766,
+        0.04790907818824053,
+        0.049455740675330165,
+        0.051255911402404306,
+        0.05290917307138443,
+        0.05460293795913458,
+        0.056372473016381264,
+        0.058234861679375166,
+        0.06059882789850235,
+        0.06317195594310761,
+        0.06633835658431053,
+        0.0705005843192339,
+        0.07549122422933578,
+        0.08190200701355935,
+        0.08917934894561767,
+        0.09920122437179087,
+        0.14487400650978088
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 0.06724909891060848,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.6290412698412697,
+      "accuracy": 0.5985714285714285,
+      "pmse_test": 0.02778198540927584,
+      "pmse_null_mean": 0.009152595470702126,
+      "pmse_ratio_perm": 3.035421536787815,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.8573229296408834,
+      "num_columns_used": 13,
+      "per_column": {
+        "city": {
+          "type": "categorical",
+          "perf_ref": 0.6579303675048356,
+          "perf_synth": 0.05837079899658123,
+          "utility": 0.08871880958763044
+        },
+        "city_development_index": {
+          "type": "numerical",
+          "perf_ref": 0.019877274279671526,
+          "perf_synth": 0.08979459661827316,
+          "utility": 0.22136381283800444
+        },
+        "company_size": {
+          "type": "categorical",
+          "perf_ref": 0.1709318010102126,
+          "perf_synth": 0.1965467294933546,
+          "utility": 1.149854669123925
+        },
+        "company_type": {
+          "type": "categorical",
+          "perf_ref": 0.2417334000667334,
+          "perf_synth": 0.1864114114114114,
+          "utility": 0.7711446219676317
+        },
+        "education_level": {
+          "type": "categorical",
+          "perf_ref": 0.44793408168139476,
+          "perf_synth": 0.35574396942918557,
+          "utility": 0.7941882164756066
+        },
+        "enrolled_university": {
+          "type": "categorical",
+          "perf_ref": 0.3696557410843125,
+          "perf_synth": 0.39121830550401976,
+          "utility": 1.0583314744590675
+        },
+        "experience": {
+          "type": "categorical",
+          "perf_ref": 0.0890974036361737,
+          "perf_synth": 0.07534977648614012,
+          "utility": 0.8457011474074871
+        },
+        "gender": {
+          "type": "categorical",
+          "perf_ref": 0.3484351905404537,
+          "perf_synth": 0.3484351905404537,
+          "utility": 1.0
+        },
+        "last_new_job": {
+          "type": "categorical",
+          "perf_ref": 0.22261491402116404,
+          "perf_synth": 0.20512979497354497,
+          "utility": 0.9214557608392906
+        },
+        "major_discipline": {
+          "type": "categorical",
+          "perf_ref": 0.16603535353535354,
+          "perf_synth": 0.17992424242424243,
+          "utility": 1.0836501901140685
+        },
+        "relevent_experience": {
+          "type": "categorical",
+          "perf_ref": 0.5995280995280996,
+          "perf_synth": 0.6747640497640498,
+          "utility": 1.1254919499105545
+        },
+        "target": {
+          "type": "categorical",
+          "perf_ref": 0.6426666666666666,
+          "perf_synth": 0.7124444444444444,
+          "utility": 1.1085753803596128
+        },
+        "training_hours": {
+          "type": "numerical",
+          "perf_ref": 63.20361117113971,
+          "perf_synth": 64.70992543439819,
+          "utility": 0.9767220522486068
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2003,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2003,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200
+    }
+  },
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/aug_combined.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/aug_combined_TabDDM_seed42.csv"
+    },
+    "columns": {
+      "numeric": [
+        "city_development_index",
+        "training_hours"
+      ],
+      "categorical": [
+        "city",
+        "company_size",
+        "company_type",
+        "education_level",
+        "enrolled_university",
+        "experience",
+        "gender",
+        "last_new_job",
+        "major_discipline",
+        "relevent_experience",
+        "target"
+      ],
+      "discrete_ordinal": []
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 185
+    },
+    "marginal_numeric": {
+      "city_development_index": {
+        "ks": 0.028285714285714286,
+        "wasserstein": 0.005874571428571431,
+        "wasserstein_normalized_iqr": 0.03318966908797418
+      },
+      "training_hours": {
+        "ks": 0.012285714285714285,
+        "wasserstein": 0.697714285714284,
+        "wasserstein_normalized_iqr": 0.010734065934065907
+      }
+    },
+    "marginal_categorical_tv": {
+      "city": 0.19799999999999998,
+      "company_size": 0.024571428571428574,
+      "company_type": 0.03800000000000002,
+      "education_level": 0.01714285714285711,
+      "enrolled_university": 0.018285714285714277,
+      "experience": 0.06228571428571427,
+      "gender": 0.019714285714285757,
+      "last_new_job": 0.026000000000000002,
+      "major_discipline": 0.02857142857142858,
+      "relevent_experience": 0.013142857142857123,
+      "target": 0.017428571428571397
+    },
+    "marginal_discrete_ordinal": {},
+    "support": {
+      "alpha_precision": 0.9757142857142858,
+      "beta_recall": 0.9597142857142857,
+      "IP_alpha": 0.9191142857142858,
+      "IR_beta": 0.7061571428571428,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.045714285714285714,
+        0.08171428571428571,
+        0.13457142857142856,
+        0.174,
+        0.2257142857142857,
+        0.2822857142857143,
+        0.33057142857142857,
+        0.37342857142857144,
+        0.414,
+        0.4594285714285714,
+        0.504,
+        0.5431428571428571,
+        0.59,
+        0.6311428571428571,
+        0.6742857142857143,
+        0.7308571428571429,
+        0.7834285714285715,
+        0.8342857142857143,
+        0.8885714285714286,
+        0.9757142857142858
+      ],
+      "alpha_radii": [
+        0.07441468872129918,
+        0.08036941662430763,
+        0.0861765094101429,
+        0.09032987803220749,
+        0.09450832940638065,
+        0.09814934059977531,
+        0.10126280337572098,
+        0.10410862118005752,
+        0.10667184814810753,
+        0.10968256369233131,
+        0.11249093599617481,
+        0.11494363993406295,
+        0.11809893809258938,
+        0.12145411372184753,
+        0.12486009486019611,
+        0.12927792966365814,
+        0.1336611919105053,
+        0.13855194598436354,
+        0.145278699696064,
+        0.1700635850429535
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.14142857142857143,
+        0.2297142857142857,
+        0.3157142857142857,
+        0.3842857142857143,
+        0.4482857142857143,
+        0.5117142857142857,
+        0.5642857142857143,
+        0.6157142857142858,
+        0.664,
+        0.7005714285714286,
+        0.738,
+        0.78,
+        0.8188571428571428,
+        0.8651428571428571,
+        0.8997142857142857,
+        0.9237142857142857,
+        0.948,
+        0.9554285714285714,
+        0.9594285714285714,
+        0.9597142857142857
+      ],
+      "beta_radii": [
+        0.07551040165126324,
+        0.08252828866243363,
+        0.0879756361246109,
+        0.0924845278263092,
+        0.09623931720852852,
+        0.09924040734767914,
+        0.10248422175645829,
+        0.1057264894247055,
+        0.10898410230875015,
+        0.1118675209581852,
+        0.11541283875703812,
+        0.11878915280103683,
+        0.12292075231671333,
+        0.12697538137435913,
+        0.13089599087834358,
+        0.13512594997882843,
+        0.1406309187412262,
+        0.14671579450368882,
+        0.15743956938385964,
+        0.23262259364128113
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 0.1486043249217135,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.6339138321995464,
+      "accuracy": 0.589047619047619,
+      "pmse_test": 0.028069895856184787,
+      "pmse_null_mean": 0.009736140466985144,
+      "pmse_ratio_perm": 2.8830619228809056,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.8589710095691575,
+      "num_columns_used": 13,
+      "per_column": {
+        "city": {
+          "type": "categorical",
+          "perf_ref": 0.5866332497911445,
+          "perf_synth": 0.049675589836660615,
+          "utility": 0.08467912423025171
+        },
+        "city_development_index": {
+          "type": "numerical",
+          "perf_ref": 0.017599153292575307,
+          "perf_synth": 0.09122213221028157,
+          "utility": 0.19292635313551376
+        },
+        "company_size": {
+          "type": "categorical",
+          "perf_ref": 0.2355819403483737,
+          "perf_synth": 0.20865621059245526,
+          "utility": 0.8857054589324579
+        },
+        "company_type": {
+          "type": "categorical",
+          "perf_ref": 0.2032847326964974,
+          "perf_synth": 0.23097871627283392,
+          "utility": 1.1362324814509481
+        },
+        "education_level": {
+          "type": "categorical",
+          "perf_ref": 0.4092380111797587,
+          "perf_synth": 0.3588660530408103,
+          "utility": 0.8769128068193489
+        },
+        "enrolled_university": {
+          "type": "categorical",
+          "perf_ref": 0.3918300653594771,
+          "perf_synth": 0.4049019607843138,
+          "utility": 1.0333611342785656
+        },
+        "experience": {
+          "type": "categorical",
+          "perf_ref": 0.08488893975525916,
+          "perf_synth": 0.06561326135686686,
+          "utility": 0.7729306261337997
+        },
+        "gender": {
+          "type": "categorical",
+          "perf_ref": 0.346060346060346,
+          "perf_synth": 0.34473759473759474,
+          "utility": 0.9961776859504133
+        },
+        "last_new_job": {
+          "type": "categorical",
+          "perf_ref": 0.20751718173608238,
+          "perf_synth": 0.22588321394131425,
+          "utility": 1.0885036701615847
+        },
+        "major_discipline": {
+          "type": "categorical",
+          "perf_ref": 0.16666666666666666,
+          "perf_synth": 0.17857142857142858,
+          "utility": 1.0714285714285716
+        },
+        "relevent_experience": {
+          "type": "categorical",
+          "perf_ref": 0.5347039646650542,
+          "perf_synth": 0.5656220422757388,
+          "utility": 1.0578227947684136
+        },
+        "target": {
+          "type": "categorical",
+          "perf_ref": 0.6737700361345317,
+          "perf_synth": 0.6332345038450848,
+          "utility": 0.9398377337733774
+        },
+        "training_hours": {
+          "type": "numerical",
+          "perf_ref": 65.27128846964119,
+          "perf_synth": 63.36374305014546,
+          "utility": 1.0301046833358016
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 42,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 42,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200
+    }
+  }
+]

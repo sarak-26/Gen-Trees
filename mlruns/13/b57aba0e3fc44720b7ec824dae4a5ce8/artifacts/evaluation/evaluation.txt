@@ -1,0 +1,65 @@
+=== Evaluation Summary ===
+Model:     CTGAN
+Dataset:   Employee
+Real:      /Users/sarakhan/Projects/Uni/Gen-Trees/data/Employee.csv
+Synthetic: 3 synthetic runs averaged
+Runs:      3 (seeds=[2026, 2003, 42])
+
+Columns:
+  Numeric:     ['Age', 'ExperienceInCurrentDomain']
+  Categorical: ['City', 'Education', 'EverBenched', 'Gender']
+  Discrete/Ordinal: ['JoiningYear', 'LeaveOrNot', 'PaymentTier']
+  One-hot features: 31.0
+
+Discriminator (logistic regression, held-out test + permutation null):
+  AUC:               0.652135 +/- 0.013561
+  Accuracy:          0.614733 +/- 0.014160
+  pMSE (test):       0.020345 +/- 0.003335
+  pMSE null mean:    0.000661 +/- 0.000016
+  pMSE ratio (perm): 30.912862 +/- 5.873442
+  Null percentile:   100.0 +/- 0.0th
+
+Support / coverage (paper-style one-class embedding):
+  Alpha precision (alpha=1.0): 0.990759 +/- 0.002724
+  Beta recall (beta=1.0):      0.807364 +/- 0.018088
+  Integrated IP_alpha:         0.823956 +/- 0.032537
+  Integrated IR_beta:          0.867991 +/- 0.014282
+  Embedder radius:             0.034753 +/- 0.010233
+  Alpha grid:                  [0.05000000000000001, 0.10000000000000002, 0.15, 0.20000000000000004, 0.25, 0.3, 0.3499999999999999, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.6999999999999998, 0.75, 0.7999999999999999, 0.85, 0.9, 0.9499999999999998, 1.0]
+  P_alpha curve:               [0.020631850419084462, 0.04348449029300094, 0.07185328461924206, 0.10079518590156888, 0.13876352174224516, 0.1785944551901999, 0.2271652697184612, 0.27824342717959744, 0.3397807865892972, 0.3893545382907085, 0.4470950641163407, 0.49666881581775196, 0.5476036965398667, 0.6029801561716455, 0.6537001217852282, 0.7093631348950499, 0.7625188050719965, 0.8263485923060391, 0.894548320080235, 0.9907586503331184]
+  Beta grid:                   [0.05000000000000001, 0.10000000000000002, 0.15, 0.20000000000000004, 0.25, 0.3, 0.3499999999999999, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.6999999999999998, 0.75, 0.7999999999999999, 0.85, 0.9, 0.9499999999999998, 1.0]
+  R_beta curve:                [0.10602478687585071, 0.18360914105594958, 0.24034672970843185, 0.28676839315137187, 0.32982305322730854, 0.37431048069345946, 0.428254172935024, 0.47610860376817826, 0.515438068629558, 0.5604269646822838, 0.5950999355254675, 0.6352890608209757, 0.6713947990543735, 0.7047782792463644, 0.7380901210688444, 0.7618740597464003, 0.7794254602765242, 0.7922487284189411, 0.8051436349308689, 0.807364424385701]
+
+Global Utility (TabStruct-style):
+  Global utility: 0.894899 +/- 0.014008
+  Columns used:   9.000000 +/- 0.000000
+  Synth train cap:5000.0
+  Skipped (too few rows): 0.00 +/- 0.00
+  Skipped (single-class/fit fail): 0.00 +/- 0.00
+  Per-column utility (lowest 5):
+    LeaveOrNot: 0.718555 +/- 0.029894
+    Gender: 0.758170 +/- 0.008431
+    ExperienceInCurrentDomain: 0.813503 +/- 0.024612
+    City: 0.909592 +/- 0.020953
+    Education: 0.917857 +/- 0.031759
+  Per-column utility (highest 5):
+    EverBenched: 1.066163 +/- 0.042278
+    Age: 0.989623 +/- 0.004476
+    JoiningYear: 0.942874 +/- 0.016495
+    PaymentTier: 0.937751 +/- 0.038157
+    Education: 0.917857 +/- 0.031759
+
+Marginal (numeric):
+  Age: KS=0.108962 +/- 0.013916, Wasserstein=0.861810 +/- 0.185795, Wasserstein/IQR=0.143635 +/- 0.030966
+  ExperienceInCurrentDomain: KS=0.053514 +/- 0.013573, Wasserstein=0.163550 +/- 0.030010, Wasserstein/IQR=0.081775 +/- 0.015005
+
+Marginal (discrete/ordinal):
+  JoiningYear: KS=0.057669 +/- 0.001876, Wasserstein=0.164983 +/- 0.040869, Wasserstein/IQR=0.041246 +/- 0.010217, TV=0.095494 +/- 0.021945
+  LeaveOrNot: KS=0.097715 +/- 0.052718, Wasserstein=0.097715 +/- 0.052718, Wasserstein/IQR=0.097715 +/- 0.052718, TV=0.097715 +/- 0.052718
+  PaymentTier: KS=0.026435 +/- 0.005775, Wasserstein=0.038828 +/- 0.013026, Wasserstein/IQR=NA, TV=0.027796 +/- 0.005533
+
+Marginal (categorical TV distance):
+  City: TV=0.056881 +/- 0.014561
+  Education: TV=0.079805 +/- 0.028255
+  EverBenched: TV=0.068056 +/- 0.044214
+  Gender: TV=0.112830 +/- 0.026238

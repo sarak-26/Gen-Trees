@@ -1,0 +1,69 @@
+=== Evaluation Summary ===
+Model:     arf
+Dataset:   aug_combined
+Real:      /Users/sarakhan/Projects/Uni/Gen-Trees/data/aug_combined.csv
+Synthetic: 3 synthetic runs averaged
+Runs:      3 (seeds=[2026, 2003, 42])
+
+Columns:
+  Numeric:     ['city_development_index', 'training_hours']
+  Categorical: ['city', 'company_size', 'company_type', 'education_level', 'enrolled_university', 'experience', 'gender', 'last_new_job', 'major_discipline', 'relevent_experience', 'target']
+  Discrete/Ordinal: []
+  One-hot features: 185.0
+
+Discriminator (logistic regression, held-out test + permutation null):
+  AUC:               0.515494 +/- 0.016081
+  Accuracy:          0.519841 +/- 0.018097
+  pMSE (test):       0.010721 +/- 0.001219
+  pMSE null mean:    0.009482 +/- 0.000138
+  pMSE ratio (perm): 1.129171 +/- 0.115478
+  Null percentile:   79.3 +/- 25.0th
+
+Support / coverage (paper-style one-class embedding):
+  Alpha precision (alpha=1.0): 0.944857 +/- 0.057721
+  Beta recall (beta=1.0):      0.939810 +/- 0.008249
+  Integrated IP_alpha:         0.886690 +/- 0.079766
+  Integrated IR_beta:          0.583386 +/- 0.178386
+  Embedder radius:             0.094493 +/- 0.038263
+  Alpha grid:                  [0.05000000000000001, 0.10000000000000002, 0.15, 0.20000000000000004, 0.25, 0.3, 0.3499999999999999, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.6999999999999998, 0.75, 0.7999999999999999, 0.85, 0.9, 0.9499999999999998, 1.0]
+  P_alpha curve:               [0.04695238095238095, 0.0860952380952381, 0.1280952380952381, 0.17304761904761903, 0.21504761904761904, 0.257047619047619, 0.3039047619047619, 0.35009523809523807, 0.3947619047619047, 0.4385714285714286, 0.4827619047619048, 0.5214285714285715, 0.5706666666666665, 0.6185714285714284, 0.666, 0.7161904761904762, 0.7624761904761904, 0.8104761904761905, 0.8570476190476191, 0.9448571428571428]
+  Beta grid:                   [0.05000000000000001, 0.10000000000000002, 0.15, 0.20000000000000004, 0.25, 0.3, 0.3499999999999999, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.6999999999999998, 0.75, 0.7999999999999999, 0.85, 0.9, 0.9499999999999998, 1.0]
+  R_beta curve:                [0.25561904761904763, 0.38009523809523804, 0.4706666666666666, 0.544, 0.6027619047619047, 0.6552380952380953, 0.6981904761904763, 0.7293333333333333, 0.7547619047619047, 0.7826666666666666, 0.8030476190476191, 0.8193333333333334, 0.832095238095238, 0.8458095238095238, 0.8611428571428571, 0.8827619047619047, 0.903142857142857, 0.9197142857142856, 0.9327619047619047, 0.9398095238095238]
+
+Global Utility (TabStruct-style):
+  Global utility: 0.876780 +/- 0.023224
+  Columns used:   13.000000 +/- 0.000000
+  Synth train cap:5000.0
+  Skipped (too few rows): 0.00 +/- 0.00
+  Skipped (single-class/fit fail): 0.00 +/- 0.00
+  Per-column utility (lowest 5):
+    city: 0.203877 +/- 0.007632
+    city_development_index: 0.450428 +/- 0.082708
+    company_type: 0.868471 +/- 0.052203
+    education_level: 0.898313 +/- 0.044627
+    company_size: 0.905637 +/- 0.149827
+  Per-column utility (highest 5):
+    major_discipline: 1.068188 +/- 0.096432
+    experience: 1.051704 +/- 0.082021
+    last_new_job: 1.037089 +/- 0.107004
+    training_hours: 1.028595 +/- 0.019847
+    relevent_experience: 0.977929 +/- 0.018219
+
+Marginal (numeric):
+  city_development_index: KS=0.166571 +/- 0.009092, Wasserstein=0.016582 +/- 0.000818, Wasserstein/IQR=0.093684 +/- 0.004620
+  training_hours: KS=0.119524 +/- 0.017194, Wasserstein=11.108762 +/- 2.019028, Wasserstein/IQR=0.170904 +/- 0.031062
+
+Marginal (discrete/ordinal):
+
+Marginal (categorical TV distance):
+  city: TV=0.053048 +/- 0.003571
+  company_size: TV=0.024381 +/- 0.004783
+  company_type: TV=0.017714 +/- 0.003591
+  education_level: TV=0.010857 +/- 0.005436
+  enrolled_university: TV=0.012095 +/- 0.008256
+  experience: TV=0.025810 +/- 0.004149
+  gender: TV=0.005714 +/- 0.001633
+  last_new_job: TV=0.019143 +/- 0.000617
+  major_discipline: TV=0.010952 +/- 0.002117
+  relevent_experience: TV=0.013238 +/- 0.006988
+  target: TV=0.006762 +/- 0.002972

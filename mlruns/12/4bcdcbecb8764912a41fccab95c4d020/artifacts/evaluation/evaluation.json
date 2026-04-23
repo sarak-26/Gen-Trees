@@ -1,0 +1,703 @@
+{
+  "paths": {
+    "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/aug_combined.csv",
+    "synthetic": "3 synthetic runs averaged"
+  },
+  "columns": {
+    "numeric": [
+      "city_development_index",
+      "training_hours"
+    ],
+    "categorical": [
+      "city",
+      "company_size",
+      "company_type",
+      "education_level",
+      "enrolled_university",
+      "experience",
+      "gender",
+      "last_new_job",
+      "major_discipline",
+      "relevent_experience",
+      "target"
+    ],
+    "discrete_ordinal": []
+  },
+  "dropped_columns": [],
+  "encoding": {
+    "one_hot_feature_count": 185.0
+  },
+  "marginal_numeric": {
+    "city_development_index": {
+      "ks": 0.20942857142857144,
+      "wasserstein": 0.012991523809523809,
+      "wasserstein_normalized_iqr": 0.07339843960182942
+    },
+    "training_hours": {
+      "ks": 0.12638095238095237,
+      "wasserstein": 9.468285714285715,
+      "wasserstein_normalized_iqr": 0.14566593406593406
+    }
+  },
+  "marginal_categorical_tv": {
+    "city": 0.15314285714285714,
+    "company_size": 0.10838095238095237,
+    "company_type": 0.10952380952380951,
+    "education_level": 0.10933333333333335,
+    "enrolled_university": 0.06857142857142855,
+    "experience": 0.14352380952380953,
+    "gender": 0.10771428571428569,
+    "last_new_job": 0.09352380952380952,
+    "major_discipline": 0.11228571428571421,
+    "relevent_experience": 0.07714285714285717,
+    "target": 0.12790476190476194
+  },
+  "marginal_discrete_ordinal": {},
+  "support": {
+    "alpha_precision": 0.8483809523809525,
+    "beta_recall": 0.8084761904761905,
+    "IP_alpha": 0.6293952380952382,
+    "IR_beta": 0.6578285714285713,
+    "alphas": [
+      0.05000000000000001,
+      0.10000000000000002,
+      0.15,
+      0.20000000000000004,
+      0.25,
+      0.3,
+      0.3499999999999999,
+      0.39999999999999997,
+      0.44999999999999996,
+      0.49999999999999994,
+      0.5499999999999999,
+      0.6,
+      0.65,
+      0.6999999999999998,
+      0.75,
+      0.7999999999999999,
+      0.85,
+      0.9,
+      0.9499999999999998,
+      1.0
+    ],
+    "alpha_precision_curve": [
+      0.026857142857142857,
+      0.05228571428571429,
+      0.07895238095238095,
+      0.10476190476190476,
+      0.1321904761904762,
+      0.16142857142857145,
+      0.1892380952380952,
+      0.21819047619047618,
+      0.248,
+      0.2795238095238095,
+      0.3121904761904762,
+      0.34657142857142853,
+      0.3838095238095238,
+      0.4275238095238095,
+      0.4694285714285715,
+      0.5202857142857144,
+      0.5742857142857143,
+      0.6337142857142858,
+      0.698952380952381,
+      0.8483809523809525
+    ],
+    "alpha_radii": [
+      0.05027721760173639,
+      0.05388358657558759,
+      0.05692568017790715,
+      0.05928475856781006,
+      0.061496613857646786,
+      0.063508415594697,
+      0.06533252565811078,
+      0.0670012523730596,
+      0.06858472426732382,
+      0.07027812053759892,
+      0.07190905014673869,
+      0.07348221465945244,
+      0.07527356191227834,
+      0.07727183451255162,
+      0.0793062187731266,
+      0.08182772969206174,
+      0.08442080467939377,
+      0.08734255656599998,
+      0.09129142103095848,
+      0.10668650766213734
+    ],
+    "betas": [
+      0.05000000000000001,
+      0.10000000000000002,
+      0.15,
+      0.20000000000000004,
+      0.25,
+      0.3,
+      0.3499999999999999,
+      0.39999999999999997,
+      0.44999999999999996,
+      0.49999999999999994,
+      0.5499999999999999,
+      0.6,
+      0.65,
+      0.6999999999999998,
+      0.75,
+      0.7999999999999999,
+      0.85,
+      0.9,
+      0.9499999999999998,
+      1.0
+    ],
+    "beta_recall_curve": [
+      0.22057142857142856,
+      0.3417142857142857,
+      0.4211428571428571,
+      0.48323809523809524,
+      0.538952380952381,
+      0.5839047619047619,
+      0.6189523809523809,
+      0.6573333333333333,
+      0.6853333333333333,
+      0.7124761904761905,
+      0.731904761904762,
+      0.7486666666666667,
+      0.7647619047619049,
+      0.7787619047619048,
+      0.7879999999999999,
+      0.7960952380952381,
+      0.8023809523809525,
+      0.8072380952380952,
+      0.8080952380952381,
+      0.8084761904761905
+    ],
+    "beta_radii": [
+      0.05374792609363794,
+      0.05838428661227227,
+      0.06159094298879305,
+      0.0645014060040315,
+      0.06709688777724902,
+      0.06954602052768072,
+      0.07174560688436031,
+      0.07396064052979151,
+      0.07610038841764132,
+      0.0783260427415371,
+      0.08046560095002253,
+      0.08284960190455119,
+      0.08551760831226905,
+      0.0885159949461619,
+      0.09166459242502849,
+      0.09544374694426853,
+      0.10004257559776307,
+      0.10642446130514144,
+      0.11590419734517732,
+      0.1822653462489446
+    ],
+    "embedder": {
+      "rep_dim": 32.0,
+      "hidden_dim": 64.0,
+      "num_layers": 3.0,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "lr": 0.001,
+      "weight_decay": 1e-05,
+      "batch_size": 256.0,
+      "epochs": 200.0,
+      "warm_up_epochs": 10.0,
+      "radius": 0.09449254629753397,
+      "k_recall": 5.0
+    }
+  },
+  "discriminator": {
+    "auc": 0.7395685563114135,
+    "accuracy": 0.68,
+    "pmse_test": 0.053386176727862056,
+    "pmse_null_mean": 0.00963831795806854,
+    "pmse_ratio_perm": 5.532681040282289,
+    "pmse_null_percentile": 100.0,
+    "permutations": 50.0,
+    "test_size": 0.3
+  },
+  "global_utility": {
+    "global_utility": 0.7436971760074055,
+    "num_columns_used": 13.0,
+    "per_column": {
+      "city": {
+        "type": "categorical",
+        "perf_ref": 0.5789444721541104,
+        "perf_synth": 0.024337231439862564,
+        "utility": 0.04272008421493125
+      },
+      "city_development_index": {
+        "type": "numerical",
+        "perf_ref": 0.021679339955836537,
+        "perf_synth": 0.10997791100992967,
+        "utility": 0.1955736221760308
+      },
+      "company_size": {
+        "type": "categorical",
+        "perf_ref": 0.2048103489181133,
+        "perf_synth": 0.14738347915962288,
+        "utility": 0.7361877690442117
+      },
+      "company_type": {
+        "type": "categorical",
+        "perf_ref": 0.2243338408463578,
+        "perf_synth": 0.16147990886244679,
+        "utility": 0.7238422494293263
+      },
+      "education_level": {
+        "type": "categorical",
+        "perf_ref": 0.42612825903910534,
+        "perf_synth": 0.3302895111516099,
+        "utility": 0.7755493916729487
+      },
+      "enrolled_university": {
+        "type": "categorical",
+        "perf_ref": 0.41504363546584616,
+        "perf_synth": 0.3468985789381161,
+        "utility": 0.8505220739993837
+      },
+      "experience": {
+        "type": "categorical",
+        "perf_ref": 0.08967469398173807,
+        "perf_synth": 0.06149881380181047,
+        "utility": 0.6879638943718654
+      },
+      "gender": {
+        "type": "categorical",
+        "perf_ref": 0.3476158256860011,
+        "perf_synth": 0.3285445785445786,
+        "utility": 0.9451647465107667
+      },
+      "last_new_job": {
+        "type": "categorical",
+        "perf_ref": 0.21596460669378745,
+        "perf_synth": 0.18495857077437428,
+        "utility": 0.8566930566383446
+      },
+      "major_discipline": {
+        "type": "categorical",
+        "perf_ref": 0.16645622895622894,
+        "perf_synth": 0.16433317987538912,
+        "utility": 0.9872521037943326
+      },
+      "relevent_experience": {
+        "type": "categorical",
+        "perf_ref": 0.5770767573594862,
+        "perf_synth": 0.5259602292676223,
+        "utility": 0.9159385323987493
+      },
+      "target": {
+        "type": "categorical",
+        "perf_ref": 0.6832030018462394,
+        "perf_synth": 0.6599612602530248,
+        "utility": 0.9651618708511781
+      },
+      "training_hours": {
+        "type": "numerical",
+        "perf_ref": 64.46298515351994,
+        "perf_synth": 65.53515958060028,
+        "utility": 0.9854938929942034
+      }
+    },
+    "skipped": {
+      "too_few_rows": 0.0,
+      "single_class_or_failed_fit": 0.0
+    },
+    "settings": {
+      "test_size": 0.20000000000000004,
+      "seed": 1357.0,
+      "synth_train_cap": 5000.0,
+      "min_real_train_rows": 200.0,
+      "min_real_test_rows": 100.0,
+      "min_synth_train_rows": 200.0
+    }
+  },
+  "settings": {
+    "numeric_threshold": 0.9499999999999998,
+    "id_unique_threshold": 0.98,
+    "k": 5.0,
+    "rep_dim": 32.0,
+    "hidden_dim": 64.0,
+    "num_layers": 3.0,
+    "activation": "ReLU",
+    "dropout_prob": 0.0,
+    "nu": 0.01,
+    "svdd_lr": 0.001,
+    "svdd_weight_decay": 1e-05,
+    "svdd_batch_size": 256.0,
+    "svdd_epochs": 200.0,
+    "svdd_warm_up_epochs": 10.0,
+    "seed": [
+      2026,
+      2003,
+      42
+    ],
+    "permutations": 50.0,
+    "global_utility_test_size": 0.20000000000000004,
+    "synth_train_cap": 5000.0,
+    "global_utility_min_real_train_rows": 200.0,
+    "global_utility_min_real_test_rows": 100.0,
+    "global_utility_min_synth_train_rows": 200.0
+  },
+  "multi_run": {
+    "num_runs": 3,
+    "seeds": [
+      2026,
+      2003,
+      42
+    ],
+    "real_paths": [
+      "/Users/sarakhan/Projects/Uni/Gen-Trees/data/aug_combined.csv",
+      "/Users/sarakhan/Projects/Uni/Gen-Trees/data/aug_combined.csv",
+      "/Users/sarakhan/Projects/Uni/Gen-Trees/data/aug_combined.csv"
+    ],
+    "synthetic_paths": [
+      "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/aug_combined_CTGAN_seed2026.csv",
+      "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/aug_combined_CTGAN_seed2003.csv",
+      "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/aug_combined_CTGAN_seed42.csv"
+    ],
+    "std": {
+      "paths": {
+        "real": null,
+        "synthetic": null
+      },
+      "columns": {
+        "numeric": [
+          null,
+          null
+        ],
+        "categorical": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "discrete_ordinal": []
+      },
+      "dropped_columns": [],
+      "encoding": {
+        "one_hot_feature_count": 0.0
+      },
+      "marginal_numeric": {
+        "city_development_index": {
+          "ks": 0.03492343423123508,
+          "wasserstein": 0.0026851712757374247,
+          "wasserstein_normalized_iqr": 0.0151704591849572
+        },
+        "training_hours": {
+          "ks": 0.013635354872328451,
+          "wasserstein": 1.3468287974066364,
+          "wasserstein_normalized_iqr": 0.020720443037025173
+        }
+      },
+      "marginal_categorical_tv": {
+        "city": 0.03607098066671465,
+        "company_size": 0.021169009994021545,
+        "company_type": 0.08609260425806915,
+        "education_level": 0.0270472837001344,
+        "enrolled_university": 0.023230287525198685,
+        "experience": 0.012585129619052168,
+        "gender": 0.07489457442907041,
+        "last_new_job": 0.056809184527785814,
+        "major_discipline": 0.07097494048515116,
+        "relevent_experience": 0.03811047314407559,
+        "target": 0.03409177955323798
+      },
+      "marginal_discrete_ordinal": {},
+      "support": {
+        "alpha_precision": 0.13727658823704986,
+        "beta_recall": 0.05784160089114747,
+        "IP_alpha": 0.14022443882087882,
+        "IR_beta": 0.09480452284052908,
+        "alphas": [
+          6.938893903907228e-18,
+          1.3877787807814457e-17,
+          0.0,
+          2.7755575615628914e-17,
+          0.0,
+          0.0,
+          5.551115123125783e-17,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1102230246251565e-16,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1102230246251565e-16,
+          0.0
+        ],
+        "alpha_precision_curve": [
+          0.013144927373183107,
+          0.02272461580016934,
+          0.035522405180973736,
+          0.04356640616382933,
+          0.05505536277713137,
+          0.0617120810893698,
+          0.06675789676169666,
+          0.06773149603807342,
+          0.06956463250271719,
+          0.07243343961598935,
+          0.07956149663016492,
+          0.07727008908152408,
+          0.08468278811644435,
+          0.09033583097684243,
+          0.0941265612025082,
+          0.10184582185132304,
+          0.10792590050585632,
+          0.11123939986188638,
+          0.11618079584967148,
+          0.13727658823704986
+        ],
+        "alpha_radii": [
+          0.017073160108113654,
+          0.018731540792450672,
+          0.020689994532635467,
+          0.02195947556182941,
+          0.023352550530080212,
+          0.024507390401656493,
+          0.025419970595567797,
+          0.02625254891231439,
+          0.02694804894761371,
+          0.02788102585862675,
+          0.028714886843665677,
+          0.029338783788463503,
+          0.030305608506494892,
+          0.0312661209272088,
+          0.032239535695510566,
+          0.03358315576149675,
+          0.03484659882297212,
+          0.03623065673668366,
+          0.038184174790364456,
+          0.04492352757805279
+        ],
+        "betas": [
+          6.938893903907228e-18,
+          1.3877787807814457e-17,
+          0.0,
+          2.7755575615628914e-17,
+          0.0,
+          0.0,
+          5.551115123125783e-17,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1102230246251565e-16,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.1102230246251565e-16,
+          0.0
+        ],
+        "beta_recall_curve": [
+          0.07220869226135616,
+          0.10401281972269892,
+          0.11399964196148572,
+          0.11879722238062418,
+          0.11068625349165154,
+          0.10358586653608563,
+          0.0875912999541872,
+          0.06700688697808853,
+          0.05062457972726648,
+          0.03337874457748765,
+          0.020983094372210853,
+          0.013271284192834696,
+          0.014345272673343042,
+          0.025367324135329078,
+          0.034843869447798693,
+          0.042857354496831944,
+          0.05045498206737867,
+          0.056333474217913466,
+          0.057329378126505806,
+          0.05784160089114747
+        ],
+        "beta_radii": [
+          0.016714005888134487,
+          0.018598079002261403,
+          0.02015688026448334,
+          0.0216245276960039,
+          0.022870903228279508,
+          0.02392313310698346,
+          0.02475250555809244,
+          0.025522783189629108,
+          0.026367406493677137,
+          0.026923980080626003,
+          0.02747550533048601,
+          0.028203444637264905,
+          0.028946066201887888,
+          0.029251006280034186,
+          0.029520097757640196,
+          0.029708465405657736,
+          0.03014586558959357,
+          0.03089563779911815,
+          0.03252613729689963,
+          0.053134395815219546
+        ],
+        "embedder": {
+          "rep_dim": 0.0,
+          "hidden_dim": 0.0,
+          "num_layers": 0.0,
+          "activation": null,
+          "dropout_prob": 0.0,
+          "nu": 0.0,
+          "lr": 0.0,
+          "weight_decay": 0.0,
+          "batch_size": 0.0,
+          "epochs": 0.0,
+          "warm_up_epochs": 0.0,
+          "radius": 0.03826311206576203,
+          "k_recall": 0.0
+        }
+      },
+      "discriminator": {
+        "auc": 0.0068399219197304295,
+        "accuracy": 0.0054433105395181635,
+        "pmse_test": 0.003925424720905738,
+        "pmse_null_mean": 0.00027156664228906573,
+        "pmse_ratio_perm": 0.2765428323914631,
+        "pmse_null_percentile": 0.0,
+        "permutations": 0.0,
+        "test_size": 0.0
+      },
+      "global_utility": {
+        "global_utility": 0.017254192210306645,
+        "num_columns_used": 0.0,
+        "per_column": {
+          "city": {
+            "type": null,
+            "perf_ref": 0.06784882190930683,
+            "perf_synth": 0.00041145317079764615,
+            "utility": 0.005832736053152372
+          },
+          "city_development_index": {
+            "type": null,
+            "perf_ref": 0.004262090898958408,
+            "perf_synth": 0.006458989859380094,
+            "utility": 0.026427779248363495
+          },
+          "company_size": {
+            "type": null,
+            "perf_ref": 0.026484586876475598,
+            "perf_synth": 0.012734964497247146,
+            "utility": 0.14471881889136226
+          },
+          "company_type": {
+            "type": null,
+            "perf_ref": 0.015907323495344117,
+            "perf_synth": 0.012972691401965565,
+            "utility": 0.0817999793243515
+          },
+          "education_level": {
+            "type": null,
+            "perf_ref": 0.01617546752857393,
+            "perf_synth": 0.009190549329535705,
+            "utility": 0.01771161082209633
+          },
+          "enrolled_university": {
+            "type": null,
+            "perf_ref": 0.049346028963357505,
+            "perf_synth": 0.013726003204311348,
+            "utility": 0.12523752859891424
+          },
+          "experience": {
+            "type": null,
+            "perf_ref": 0.004163290154876123,
+            "perf_synth": 0.0013755164021133496,
+            "utility": 0.046875800202116485
+          },
+          "gender": {
+            "type": null,
+            "perf_ref": 0.0011004151620975667,
+            "perf_synth": 0.0037648156625072118,
+            "utility": 0.01267682178182106
+          },
+          "last_new_job": {
+            "type": null,
+            "perf_ref": 0.006293255854268504,
+            "perf_synth": 0.01379576307340099,
+            "utility": 0.06187817112258458
+          },
+          "major_discipline": {
+            "type": null,
+            "perf_ref": 0.0002976038641357477,
+            "perf_synth": 0.0015819041856155978,
+            "utility": 0.009991819444394671
+          },
+          "relevent_experience": {
+            "type": null,
+            "perf_ref": 0.029979885017291735,
+            "perf_synth": 0.022991167611717028,
+            "utility": 0.08850336960801548
+          },
+          "target": {
+            "type": null,
+            "perf_ref": 0.037545999979901414,
+            "perf_synth": 0.04778445536117823,
+            "utility": 0.0197710686528874
+          },
+          "training_hours": {
+            "type": null,
+            "perf_ref": 0.902374981979622,
+            "perf_synth": 2.5761088962564487,
+            "utility": 0.0483152902726066
+          }
+        },
+        "skipped": {
+          "too_few_rows": 0.0,
+          "single_class_or_failed_fit": 0.0
+        },
+        "settings": {
+          "test_size": 2.7755575615628914e-17,
+          "seed": 929.8928253657335,
+          "synth_train_cap": 0.0,
+          "min_real_train_rows": 0.0,
+          "min_real_test_rows": 0.0,
+          "min_synth_train_rows": 0.0
+        }
+      },
+      "settings": {
+        "numeric_threshold": 1.1102230246251565e-16,
+        "id_unique_threshold": 0.0,
+        "k": 0.0,
+        "rep_dim": 0.0,
+        "hidden_dim": 0.0,
+        "num_layers": 0.0,
+        "activation": null,
+        "dropout_prob": 0.0,
+        "nu": 0.0,
+        "svdd_lr": 0.0,
+        "svdd_weight_decay": 0.0,
+        "svdd_batch_size": 0.0,
+        "svdd_epochs": 0.0,
+        "svdd_warm_up_epochs": 0.0,
+        "seed": 929.8928253657335,
+        "permutations": 0.0,
+        "global_utility_test_size": 2.7755575615628914e-17,
+        "synth_train_cap": 0.0,
+        "global_utility_min_real_train_rows": 0.0,
+        "global_utility_min_real_test_rows": 0.0,
+        "global_utility_min_synth_train_rows": 0.0
+      }
+    }
+  },
+  "metadata": {
+    "model_name": "CTGAN",
+    "dataset_name": "aug_combined",
+    "run_name": "aug_combined_CTGAN"
+  }
+}

@@ -8,6 +8,7 @@ python fidelity_amended.py \
 
 import argparse
 import json
+import math
 from collections import Counter
 
 import numpy as np
@@ -28,6 +29,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import NearestNeighbors
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+
+try:
+    from ..date_columns import apply_date_metadata_and_encode, detect_and_encode_date_columns
+except ImportError:
+    from date_columns import apply_date_metadata_and_encode, detect_and_encode_date_columns
 
 try:
     from .preprocessing import (
@@ -80,6 +86,31 @@ def evaluate_numerical_features(samples: np.ndarray, data: np.ndarray):
     return float(ks_statistic), float(w_distance), w_distance_normalized_iqr
 
 
+def evaluate_date_features(samples: np.ndarray, data: np.ndarray):
+    samples = pd.to_numeric(pd.Series(samples), errors="coerce").to_numpy(dtype=float)
+    data = pd.to_numeric(pd.Series(data), errors="coerce").to_numpy(dtype=float)
+
+    samples = samples[np.isfinite(samples)]
+    data = data[np.isfinite(data)]
+    if len(samples) < 2 or len(data) < 2:
+        return None, None
+
+    real_min = float(np.min(data))
+    real_max = float(np.max(data))
+    real_range = real_max - real_min
+
+    ks_statistic, _ = ks_2samp(samples, data)
+
+    if real_range > 0:
+        samples_norm = (samples - real_min) / real_range
+        data_norm = (data - real_min) / real_range
+        w_distance = float(wasserstein_distance(samples_norm, data_norm))
+    else:
+        w_distance = 0.0 if np.allclose(samples, real_min) else None
+
+    return float(ks_statistic), w_distance
+
+
 def evaluate_categorical_tv(samples: np.ndarray, data: np.ndarray):
     samples = pd.Series(samples, dtype="string").fillna("<NA>").str.strip().to_numpy(dtype=object)
     data = pd.Series(data, dtype="string").fillna("<NA>").str.strip().to_numpy(dtype=object)
@@ -97,6 +128,58 @@ def evaluate_categorical_tv(samples: np.ndarray, data: np.ndarray):
     r = r / r.sum()
     tv = 0.5 * np.abs(s - r).sum()
     return float(tv)
+
+
+def _load_with_date_metadata(real_path: str, synth_path: str):
+    real_df = drop_leaky_columns(pd.read_csv(real_path))
+    synth_df = drop_leaky_columns(pd.read_csv(synth_path))
+
+    real_df, date_metadata = detect_and_encode_date_columns(real_df)
+    synth_df = apply_date_metadata_and_encode(synth_df, date_metadata)
+    return real_df, synth_df, date_metadata
+
+
+def _detect_temporal_orderings(real_df: pd.DataFrame, date_cols: list[str], threshold: float = 0.95):
+    relationships = []
+    for left in date_cols:
+        for right in date_cols:
+            if left == right:
+                continue
+            pair = pd.DataFrame({"left": real_df[left], "right": real_df[right]}).dropna()
+            if len(pair) == 0:
+                continue
+
+            left_before = float((pair["left"] <= pair["right"]).mean())
+            if left_before >= threshold:
+                relationships.append({"left": left, "right": right, "direction": "<=", "real_fraction": left_before})
+    unique_relationships = {}
+    for rel in relationships:
+        key = (rel["left"], rel["right"], rel["direction"])
+        unique_relationships[key] = rel
+    return list(unique_relationships.values())
+
+
+def _temporal_consistency_scores(synth_df: pd.DataFrame, relationships: list[dict]):
+    scores = {}
+    values = []
+    for rel in relationships:
+        left = rel["left"]
+        right = rel["right"]
+        pair = pd.DataFrame({"left": synth_df[left], "right": synth_df[right]}).dropna()
+        if len(pair) == 0:
+            score = None
+            valid_rows = 0
+        else:
+            score = float((pair["left"] <= pair["right"]).mean())
+            valid_rows = int(len(pair))
+            values.append(score)
+        scores[f"{left} <= {right}"] = {
+            "score": score,
+            "valid_rows": valid_rows,
+            "real_fraction": rel["real_fraction"],
+        }
+    overall = float(np.mean(values)) if values else None
+    return {"overall": overall, "pairs": scores}
 
 
 # -----------------------
@@ -460,7 +543,7 @@ def _best_balanced_accuracy(Xtr, ytr, Xte, yte, preprocessor, seed=0):
             score = balanced_accuracy_score(yte, pred)
             best = max(best, score)
             any_fit = True
-        except ValueError:
+        except (TypeError, ValueError):
             continue
 
     return float(best) if any_fit else None
@@ -481,7 +564,7 @@ def _best_rmse(Xtr, ytr, Xte, yte, preprocessor, seed=0):
             rmse = np.sqrt(mean_squared_error(yte, pred))
             best = min(best, rmse)
             any_fit = True
-        except ValueError:
+        except (TypeError, ValueError):
             continue
     return float(best) if any_fit else None
 
@@ -494,6 +577,9 @@ def compute_global_utility_metric(
     test_size: float = 0.2,
     seed: int = 0,
     synth_train_cap: int | None = 5000,
+    min_real_train_rows: int = 200,
+    min_real_test_rows: int = 100,
+    min_synth_train_rows: int = 200,
 ):
     cols = [c for c in real_df.columns if c in synth_df.columns]
     real_df = real_df[cols].copy()
@@ -517,7 +603,11 @@ def compute_global_utility_metric(
         if synth_train_cap is not None and len(synth_t) > synth_train_cap:
             synth_t = synth_t.sample(n=synth_train_cap, random_state=seed)
 
-        if len(Dref_t) < 200 or len(Dtest_t) < 200 or len(synth_t) < 200:
+        if (
+            len(Dref_t) < min_real_train_rows
+            or len(Dtest_t) < min_real_test_rows
+            or len(synth_t) < min_synth_train_rows
+        ):
             skipped["too_few_rows"] += 1
             continue
 
@@ -556,7 +646,11 @@ def compute_global_utility_metric(
             X_syn_tr, y_syn_tr = X_syn_tr.loc[ok_syn], y_syn_tr.loc[ok_syn]
             X_te, y_te = X_te.loc[ok_te], y_te.loc[ok_te]
 
-            if len(X_ref_tr) < 200 or len(X_syn_tr) < 200 or len(X_te) < 200:
+            if (
+                len(X_ref_tr) < min_real_train_rows
+                or len(X_syn_tr) < min_synth_train_rows
+                or len(X_te) < min_real_test_rows
+            ):
                 skipped["too_few_rows"] += 1
                 continue
 
@@ -584,7 +678,14 @@ def compute_global_utility_metric(
         "num_columns_used": int(len(utilities)),
         "per_column": per_col,
         "skipped": skipped,
-        "settings": {"test_size": test_size, "seed": seed, "synth_train_cap": synth_train_cap},
+        "settings": {
+            "test_size": test_size,
+            "seed": seed,
+            "synth_train_cap": synth_train_cap,
+            "min_real_train_rows": int(min_real_train_rows),
+            "min_real_test_rows": int(min_real_test_rows),
+            "min_synth_train_rows": int(min_synth_train_rows),
+        },
     }
 
 
@@ -614,9 +715,12 @@ def run_evaluation(
     id_unique_threshold=0.98,
     global_utility_test_size=0.2,
     synth_train_cap=5000,
+    global_utility_min_real_train_rows=200,
+    global_utility_min_real_test_rows=100,
+    global_utility_min_synth_train_rows=200,
 ):
-    real_df = drop_leaky_columns(pd.read_csv(real_path))
-    synth_df = drop_leaky_columns(pd.read_csv(synth_path))
+    real_df, synth_df, date_metadata = _load_with_date_metadata(real_path, synth_path)
+    date_cols = [column for column in date_metadata if column in real_df.columns and column in synth_df.columns]
 
     real_df, synth_df, categorical_cols, numeric_cols = infer_types_by_numeric_coercion(
         real_df,
@@ -625,15 +729,27 @@ def run_evaluation(
         categorical_cols=categorical_cols,
         numeric_cols=numeric_cols,
     )
+    if date_cols:
+        numeric_cols = list(dict.fromkeys(list(numeric_cols) + [column for column in date_cols if column in real_df.columns]))
+        categorical_cols = [column for column in categorical_cols if column not in date_cols]
 
     real_df, synth_df, numeric_cols, categorical_cols, dropped = remove_id_like_and_constant(
-        real_df, synth_df, numeric_cols, categorical_cols, id_unique_threshold=id_unique_threshold
+        real_df,
+        synth_df,
+        numeric_cols,
+        categorical_cols,
+        id_unique_threshold=id_unique_threshold,
+        protected_cols=date_cols,
     )
     discrete_ordinal_cols, continuous_numeric_cols = split_numeric_by_cardinality(
         real_df,
         synth_df,
         numeric_cols=numeric_cols,
     )
+    date_cols = [column for column in date_cols if column in numeric_cols]
+    continuous_numeric_cols = [column for column in continuous_numeric_cols if column not in date_cols]
+    discrete_ordinal_cols = [column for column in discrete_ordinal_cols if column not in date_cols]
+    temporal_orderings = _detect_temporal_orderings(real_df, date_cols)
 
     results = {
         "paths": {"real": real_path, "synthetic": synth_path},
@@ -641,12 +757,15 @@ def run_evaluation(
             "numeric": continuous_numeric_cols,
             "categorical": categorical_cols,
             "discrete_ordinal": discrete_ordinal_cols,
+            "date": date_cols,
         },
         "dropped_columns": dropped,
         "encoding": {"one_hot_feature_count": None},
         "marginal_numeric": {},
         "marginal_categorical_tv": {},
         "marginal_discrete_ordinal": {},
+        "marginal_date": {},
+        "temporal_consistency": {},
         "support": {},
         "discriminator": {},
         "global_utility": {},
@@ -669,6 +788,11 @@ def run_evaluation(
             "permutations": permutations,
             "global_utility_test_size": global_utility_test_size,
             "synth_train_cap": synth_train_cap,
+            "global_utility_min_real_train_rows": global_utility_min_real_train_rows,
+            "global_utility_min_real_test_rows": global_utility_min_real_test_rows,
+            "global_utility_min_synth_train_rows": global_utility_min_synth_train_rows,
+            "date_column_metadata": date_metadata,
+            "temporal_orderings": temporal_orderings,
         },
     }
 
@@ -690,9 +814,18 @@ def run_evaluation(
             "tv": tv,
         }
 
+    for c in date_cols:
+        ks, w_norm = evaluate_date_features(synth_df[c].values, real_df[c].values)
+        results["marginal_date"][c] = {
+            "ks": ks,
+            "wasserstein_normalized": w_norm,
+        }
+
     for c in categorical_cols:
         tv = evaluate_categorical_tv(synth_df[c].values, real_df[c].values)
         results["marginal_categorical_tv"][c] = tv
+
+    results["temporal_consistency"] = _temporal_consistency_scores(synth_df, temporal_orderings)
 
     X_real, X_synth, feature_names = one_hot_encode_aligned(real_df, synth_df, categorical_cols, numeric_cols)
     results["encoding"]["one_hot_feature_count"] = int(len(feature_names))
@@ -727,43 +860,169 @@ def run_evaluation(
         test_size=global_utility_test_size,
         seed=seed,
         synth_train_cap=synth_train_cap,
+        min_real_train_rows=global_utility_min_real_train_rows,
+        min_real_test_rows=global_utility_min_real_test_rows,
+        min_synth_train_rows=global_utility_min_synth_train_rows,
     )
 
     return results
 
 
+def _is_finite_numeric(value) -> bool:
+    return isinstance(value, (int, float, np.integer, np.floating)) and not isinstance(
+        value, (bool, np.bool_)
+    ) and math.isfinite(float(value))
+
+
+def _aggregate_values(values):
+    present = [value for value in values if value is not None]
+    if not present:
+        return None
+
+    if all(isinstance(value, dict) for value in present):
+        keys = list(dict.fromkeys(key for value in present for key in value.keys()))
+        return {key: _aggregate_values([value.get(key) if value is not None else None for value in values]) for key in keys}
+
+    if all(isinstance(value, list) for value in present):
+        lengths = {len(value) for value in present}
+        if len(lengths) == 1:
+            length = lengths.pop()
+            return [_aggregate_values([value[idx] if value is not None else None for value in values]) for idx in range(length)]
+        return present[0]
+
+    if all(_is_finite_numeric(value) for value in present):
+        return float(np.mean([float(value) for value in present]))
+
+    if all(value == present[0] for value in present):
+        return present[0]
+
+    return present[0]
+
+
+def _std_values(values):
+    present = [value for value in values if value is not None]
+    if not present:
+        return None
+
+    if all(isinstance(value, dict) for value in present):
+        keys = list(dict.fromkeys(key for value in present for key in value.keys()))
+        return {
+            key: _std_values([value.get(key) if value is not None else None for value in values])
+            for key in keys
+        }
+
+    if all(isinstance(value, list) for value in present):
+        lengths = {len(value) for value in present}
+        if len(lengths) == 1:
+            length = lengths.pop()
+            return [
+                _std_values([value[idx] if value is not None else None for value in values])
+                for idx in range(length)
+            ]
+        return None
+
+    if all(_is_finite_numeric(value) for value in present):
+        return float(np.std([float(value) for value in present], ddof=0))
+
+    return None
+
+
+def aggregate_evaluation_results(results_list: list[dict], seeds: list[int] | None = None) -> dict:
+    if not results_list:
+        raise ValueError("results_list must contain at least one evaluation result.")
+
+    aggregated = _aggregate_values(results_list)
+    std_tree = _std_values(results_list)
+    real_paths = [result.get("paths", {}).get("real") for result in results_list]
+    synthetic_paths = [result.get("paths", {}).get("synthetic") for result in results_list]
+
+    aggregated.setdefault("paths", {})
+    aggregated["paths"]["real"] = real_paths[0]
+    aggregated["paths"]["synthetic"] = f"{len(results_list)} synthetic runs averaged"
+    aggregated["multi_run"] = {
+        "num_runs": len(results_list),
+        "seeds": list(seeds or []),
+        "real_paths": real_paths,
+        "synthetic_paths": synthetic_paths,
+        "std": std_tree,
+    }
+    if "settings" in aggregated:
+        aggregated["settings"]["seed"] = list(seeds or [])
+
+    return aggregated
+
+
+def _get_nested(mapping: dict | None, *keys):
+    current = mapping
+    for key in keys:
+        if not isinstance(current, dict):
+            return None
+        current = current.get(key)
+    return current
+
+
+def _format_stat(mean, std=None, *, precision: int = 6, suffix: str = "") -> str:
+    if mean is None:
+        return "NA"
+    if _is_finite_numeric(mean):
+        mean_text = f"{float(mean):.{precision}f}"
+        if _is_finite_numeric(std):
+            mean_text = f"{mean_text} +/- {float(std):.{precision}f}"
+        return f"{mean_text}{suffix}"
+    return f"{mean}{suffix}"
+
+
 def format_results(results: dict) -> str:
     lines = []
     lines.append("=== Evaluation Summary ===")
+    metadata = results.get("metadata", {})
+    if metadata.get("model_name"):
+        lines.append(f"Model:     {metadata['model_name']}")
+    if metadata.get("dataset_name"):
+        lines.append(f"Dataset:   {metadata['dataset_name']}")
     lines.append(f"Real:      {results['paths']['real']}")
     lines.append(f"Synthetic: {results['paths']['synthetic']}")
+    multi_run = results.get("multi_run")
+    if multi_run:
+        lines.append(f"Runs:      {multi_run.get('num_runs')} (seeds={multi_run.get('seeds', [])})")
     lines.append("")
     lines.append("Columns:")
     lines.append(f"  Numeric:     {results['columns']['numeric']}")
     lines.append(f"  Categorical: {results['columns']['categorical']}")
     lines.append(f"  Discrete/Ordinal: {results['columns'].get('discrete_ordinal', [])}")
+    lines.append(f"  Date:        {results['columns'].get('date', [])}")
     lines.append(f"  One-hot features: {results['encoding']['one_hot_feature_count']}")
     if results.get("dropped_columns"):
         lines.append(f"  Dropped: {results['dropped_columns']}")
     lines.append("")
 
     d = results["discriminator"]
+    d_std = _get_nested(results.get("multi_run"), "std", "discriminator") or {}
     lines.append("Discriminator (logistic regression, held-out test + permutation null):")
-    lines.append(f"  AUC:               {d['auc']:.6f}")
-    lines.append(f"  Accuracy:          {d['accuracy']:.6f}")
-    lines.append(f"  pMSE (test):       {d['pmse_test']:.6f}")
-    lines.append(f"  pMSE null mean:    {d['pmse_null_mean']:.6f}")
-    lines.append(f"  pMSE ratio (perm): {d['pmse_ratio_perm']:.6f}")
-    lines.append(f"  Null percentile:   {d['pmse_null_percentile']:.1f}th")
+    lines.append(f"  AUC:               {_format_stat(d.get('auc'), d_std.get('auc'))}")
+    lines.append(f"  Accuracy:          {_format_stat(d.get('accuracy'), d_std.get('accuracy'))}")
+    lines.append(f"  pMSE (test):       {_format_stat(d.get('pmse_test'), d_std.get('pmse_test'))}")
+    lines.append(f"  pMSE null mean:    {_format_stat(d.get('pmse_null_mean'), d_std.get('pmse_null_mean'))}")
+    lines.append(f"  pMSE ratio (perm): {_format_stat(d.get('pmse_ratio_perm'), d_std.get('pmse_ratio_perm'))}")
+    lines.append(
+        f"  Null percentile:   {_format_stat(d.get('pmse_null_percentile'), d_std.get('pmse_null_percentile'), precision=1, suffix='th')}"
+    )
     lines.append("")
 
     s = results["support"]
+    s_std = _get_nested(results.get("multi_run"), "std", "support") or {}
     lines.append("Support / coverage (paper-style one-class embedding):")
-    lines.append(f"  Alpha precision (alpha=1.0): {s['alpha_precision']:.6f}")
-    lines.append(f"  Beta recall (beta=1.0):      {s['beta_recall']:.6f}")
-    lines.append(f"  Integrated IP_alpha:         {s['IP_alpha']:.6f}")
-    lines.append(f"  Integrated IR_beta:          {s['IR_beta']:.6f}")
-    lines.append(f"  Embedder radius:             {s['embedder']['radius']:.6f}")
+    lines.append(
+        f"  Alpha precision (alpha=1.0): {_format_stat(s.get('alpha_precision'), s_std.get('alpha_precision'))}"
+    )
+    lines.append(
+        f"  Beta recall (beta=1.0):      {_format_stat(s.get('beta_recall'), s_std.get('beta_recall'))}"
+    )
+    lines.append(f"  Integrated IP_alpha:         {_format_stat(s.get('IP_alpha'), s_std.get('IP_alpha'))}")
+    lines.append(f"  Integrated IR_beta:          {_format_stat(s.get('IR_beta'), s_std.get('IR_beta'))}")
+    lines.append(
+        f"  Embedder radius:             {_format_stat(_get_nested(s, 'embedder', 'radius'), _get_nested(s_std, 'embedder', 'radius'))}"
+    )
     lines.append(f"  Alpha grid:                  {s['alphas']}")
     lines.append(f"  P_alpha curve:               {s['alpha_precision_curve']}")
     lines.append(f"  Beta grid:                   {s['betas']}")
@@ -771,13 +1030,20 @@ def format_results(results: dict) -> str:
     lines.append("")
 
     gu = results.get("global_utility", {})
+    gu_std = _get_nested(results.get("multi_run"), "std", "global_utility") or {}
     lines.append("Global Utility (TabStruct-style):")
-    lines.append(f"  Global utility: {gu.get('global_utility')}")
-    lines.append(f"  Columns used:   {gu.get('num_columns_used')}")
+    lines.append(f"  Global utility: {_format_stat(gu.get('global_utility'), gu_std.get('global_utility'))}")
+    lines.append(f"  Columns used:   {_format_stat(gu.get('num_columns_used'), gu_std.get('num_columns_used'))}")
     lines.append(f"  Synth train cap:{gu.get('settings', {}).get('synth_train_cap')}")
     if gu.get("skipped"):
-        lines.append(f"  Skipped (too few rows): {gu['skipped'].get('too_few_rows', 0)}")
-        lines.append(f"  Skipped (single-class/fit fail): {gu['skipped'].get('single_class_or_failed_fit', 0)}")
+        skipped_std = gu_std.get("skipped", {}) if isinstance(gu_std, dict) else {}
+        lines.append(
+            f"  Skipped (too few rows): {_format_stat(gu['skipped'].get('too_few_rows', 0), skipped_std.get('too_few_rows'), precision=2)}"
+        )
+        lines.append(
+            "  Skipped (single-class/fit fail): "
+            f"{_format_stat(gu['skipped'].get('single_class_or_failed_fit', 0), skipped_std.get('single_class_or_failed_fit'), precision=2)}"
+        )
 
     per_col = gu.get("per_column", {})
     if per_col:
@@ -786,34 +1052,60 @@ def format_results(results: dict) -> str:
         if vals_sorted:
             lines.append("  Per-column utility (lowest 5):")
             for k, u in vals_sorted[:5]:
-                lines.append(f"    {k}: {u:.6f}")
+                lines.append(
+                    f"    {k}: {_format_stat(u, _get_nested(gu_std, 'per_column', k, 'utility'))}"
+                )
             lines.append("  Per-column utility (highest 5):")
             for k, u in vals_sorted[-5:][::-1]:
-                lines.append(f"    {k}: {u:.6f}")
+                lines.append(
+                    f"    {k}: {_format_stat(u, _get_nested(gu_std, 'per_column', k, 'utility'))}"
+                )
     lines.append("")
 
     lines.append("Marginal (numeric):")
+    marginal_numeric_std = _get_nested(results.get("multi_run"), "std", "marginal_numeric") or {}
     for col, m in results["marginal_numeric"].items():
         lines.append(
-            f"  {col}: KS={m['ks'] if m['ks'] is not None else 'NA'}, "
-            f"Wasserstein={m['wasserstein'] if m['wasserstein'] is not None else 'NA'}, "
+            f"  {col}: KS={_format_stat(m.get('ks'), _get_nested(marginal_numeric_std, col, 'ks'))}, "
+            f"Wasserstein={_format_stat(m.get('wasserstein'), _get_nested(marginal_numeric_std, col, 'wasserstein'))}, "
             "Wasserstein/IQR="
-            f"{m['wasserstein_normalized_iqr'] if m.get('wasserstein_normalized_iqr') is not None else 'NA'}"
+            f"{_format_stat(m.get('wasserstein_normalized_iqr'), _get_nested(marginal_numeric_std, col, 'wasserstein_normalized_iqr'))}"
         )
     lines.append("")
     lines.append("Marginal (discrete/ordinal):")
+    marginal_discrete_std = _get_nested(results.get("multi_run"), "std", "marginal_discrete_ordinal") or {}
     for col, m in results.get("marginal_discrete_ordinal", {}).items():
         lines.append(
-            f"  {col}: KS={m['ks'] if m['ks'] is not None else 'NA'}, "
-            f"Wasserstein={m['wasserstein'] if m['wasserstein'] is not None else 'NA'}, "
+            f"  {col}: KS={_format_stat(m.get('ks'), _get_nested(marginal_discrete_std, col, 'ks'))}, "
+            f"Wasserstein={_format_stat(m.get('wasserstein'), _get_nested(marginal_discrete_std, col, 'wasserstein'))}, "
             "Wasserstein/IQR="
-            f"{m['wasserstein_normalized_iqr'] if m.get('wasserstein_normalized_iqr') is not None else 'NA'}, "
-            f"TV={m['tv'] if m.get('tv') is not None else 'NA'}"
+            f"{_format_stat(m.get('wasserstein_normalized_iqr'), _get_nested(marginal_discrete_std, col, 'wasserstein_normalized_iqr'))}, "
+            f"TV={_format_stat(m.get('tv'), _get_nested(marginal_discrete_std, col, 'tv'))}"
+        )
+    lines.append("")
+    lines.append("Marginal (date as Unix timestamps):")
+    marginal_date_std = _get_nested(results.get("multi_run"), "std", "marginal_date") or {}
+    for col, m in results.get("marginal_date", {}).items():
+        lines.append(
+            f"  {col}: KS={_format_stat(m.get('ks'), _get_nested(marginal_date_std, col, 'ks'))}, "
+            "Wasserstein[0,1]="
+            f"{_format_stat(m.get('wasserstein_normalized'), _get_nested(marginal_date_std, col, 'wasserstein_normalized'))}"
+        )
+    lines.append("")
+    lines.append("Temporal consistency:")
+    tc = results.get("temporal_consistency", {})
+    tc_std = _get_nested(results.get("multi_run"), "std", "temporal_consistency") or {}
+    lines.append(f"  Overall: {_format_stat(tc.get('overall'), tc_std.get('overall'))}")
+    for pair_name, values in tc.get("pairs", {}).items():
+        lines.append(
+            f"  {pair_name}: score={_format_stat(values.get('score'), _get_nested(tc_std, 'pairs', pair_name, 'score'))}, "
+            f"valid_rows={values.get('valid_rows')}, real_fraction={_format_stat(values.get('real_fraction'))}"
         )
     lines.append("")
     lines.append("Marginal (categorical TV distance):")
+    marginal_cat_std = _get_nested(results.get("multi_run"), "std", "marginal_categorical_tv") or {}
     for col, tv in results["marginal_categorical_tv"].items():
-        lines.append(f"  {col}: TV={tv if tv is not None else 'NA'}")
+        lines.append(f"  {col}: TV={_format_stat(tv, marginal_cat_std.get(col))}")
     return "\n".join(lines)
 
 
@@ -845,6 +1137,9 @@ def main():
     parser.add_argument("--permutations", type=int, default=50)
     parser.add_argument("--id_unique_threshold", type=float, default=0.98)
     parser.add_argument("--global_utility_test_size", type=float, default=0.2)
+    parser.add_argument("--global_utility_min_real_train_rows", type=int, default=200)
+    parser.add_argument("--global_utility_min_real_test_rows", type=int, default=100)
+    parser.add_argument("--global_utility_min_synth_train_rows", type=int, default=200)
     parser.add_argument(
         "--synth_train_cap",
         type=int,
@@ -880,6 +1175,9 @@ def main():
         id_unique_threshold=args.id_unique_threshold,
         global_utility_test_size=args.global_utility_test_size,
         synth_train_cap=synth_cap,
+        global_utility_min_real_train_rows=args.global_utility_min_real_train_rows,
+        global_utility_min_real_test_rows=args.global_utility_min_real_test_rows,
+        global_utility_min_synth_train_rows=args.global_utility_min_synth_train_rows,
     )
 
     out = format_results(results)

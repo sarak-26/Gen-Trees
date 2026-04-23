@@ -1,7 +1,0 @@
-{
-  "model_name": "GenForest",
-  "dataset_name": "ibm_hr",
-  "tracking_uri": "sqlite:////Users/sarakhan/Projects/Uni/Gen-Trees/mlflow.db",
-  "experiment_name": "kaggle-fidelity",
-  "run_name": "ibm_hr_GenForest"
-}

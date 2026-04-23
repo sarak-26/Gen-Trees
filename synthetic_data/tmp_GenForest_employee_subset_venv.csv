@@ -1,0 +1,31 @@
+StartDate,ExitDate,Title,BusinessUnit,EmployeeStatus,EmployeeType,PayZone,EmployeeClassificationType,TerminationType,TerminationDescription,DepartmentType,Division,DOB,State,JobFunctionDescription,GenderCode,LocationCode,RaceDesc,MaritalDesc,Performance Score,Current Employee Rating
+13-Oct-21,18-Apr-22,Area Sales Manager,TNS,Active,Part-Time,Zone C,Temporary,Resignation,Your very trip successful memory to while out.,Sales,Aerial,09-01-1954,CA,Groundman,Male,20497,Hispanic,Widowed,Fully Meets,2
+23-Dec-20,05-Jul-23,Area Sales Manager,SVG,Active,Contract,Zone B,Full-Time,Unk,Summer personal bag.,Sales,General - Con,02-03-1992,CO,Technician,Male,91732,Black,Single,Fully Meets,4
+19-Mar-20,05-Jul-23,Area Sales Manager,BPC,Active,Contract,Zone B,Full-Time,Unk,Summer personal bag.,Sales,Field Operations,06-11-1948,GA,Flagger,Male,10491,Black,Married,Fully Meets,3
+05-Feb-19,06-Jul-23,Area Sales Manager,PYZ,Active,Full-Time,Zone C,Full-Time,Unk,Summer personal bag.,Sales,Project Management - Con,28-02-1985,CO,Driver,Male,30001,Asian,Widowed,Fully Meets,5
+29-Nov-18,05-Jul-23,Area Sales Manager,EW,Active,Part-Time,Zone B,Full-Time,Unk,Summer personal bag.,Sales,General - Con,05-06-1996,CO,Operator,Male,63014,Other,Single,Fully Meets,4
+29-Aug-18,28-Oct-19,Area Sales Manager,BPC,Active,Full-Time,Zone B,Part-Time,Voluntary,Game hour boy not write somebody owner.,Sales,Shop (Fleet),15-08-1994,TX,Mechanic,Female,80962,White,Divorced,Fully Meets,1
+23-Jan-21,05-Jul-23,Area Sales Manager,SVG,Active,Contract,Zone B,Full-Time,Unk,Summer personal bag.,Sales,General - Con,05-04-1988,CO,Technician,Male,79487,Black,Single,Fully Meets,4
+14-Apr-21,17-Mar-23,Area Sales Manager,TNS,Active,Full-Time,Zone A,Full-Time,Retirement,Line later deal stand sometimes too mind.,Sales,Project Management - Con,28-07-1965,CA,Manager,Male,11475,White,Single,Fully Meets,4
+06-Aug-22,05-Jul-23,Area Sales Manager,BPC,Active,Contract,Zone B,Part-Time,Unk,Summer personal bag.,Sales,General - Sga,06-10-1991,KY,Clerk,Female,38996,Other,Divorced,Fully Meets,4
+03-Oct-19,06-Jul-23,Production Technician I,CCDR,Active,Contract,Zone C,Temporary,Unk,Summer personal bag.,Production       ,Finance & Accounting,22-11-1961,MA,Accounting,Female,28973,White,Widowed,Fully Meets,4
+16-Nov-20,15-Mar-21,Area Sales Manager,TNS,Active,Part-Time,Zone A,Temporary,Retirement,Paper can score else investment.,Sales,Field Operations,08-03-1950,IN,Tower Hand,Male,21407,Hispanic,Single,Fully Meets,1
+19-Nov-18,01-Oct-20,Area Sales Manager,WBL,Active,Full-Time,Zone C,Temporary,Resignation,Read family dark scene scene guess.,Sales,Wireline Construction,05-06-1957,KY,Groundman,Female,50859,Hispanic,Married,Fully Meets,2
+11-Jan-21,27-Jun-21,Area Sales Manager,TNS,Active,Part-Time,Zone A,Temporary,Retirement,Paper can score else investment.,Sales,Field Operations,10-12-1949,IN,Tower Hand,Male,22798,Hispanic,Single,Fully Meets,1
+19-May-19,05-Aug-22,Area Sales Manager,PYZ,Active,Full-Time,Zone A,Full-Time,Retirement,Fear particular method stage.,Production       ,Field Operations,24-05-1951,MA,Laborer,Male,2683,Black,Single,Exceeds,2
+07-Jul-23,05-Jul-23,Area Sales Manager,CCDR,Active,Contract,Zone B,Full-Time,Unk,Summer personal bag.,Sales,Wireline Construction,28-10-1999,KY,Lineman,Female,53029,Asian,Single,Fully Meets,2
+05-Dec-20,22-May-21,Area Sales Manager,PL,Active,Full-Time,Zone B,Temporary,Retirement,Especially thing recognize year fine shoulder.,Sales,Aerial,28-11-1983,CO,Lineman,Male,43824,Black,Married,Fully Meets,1
+22-Nov-21,07-Feb-23,Area Sales Manager,TNS,Active,Full-Time,Zone C,Temporary,Resignation,Expert challenge education air none money wide.,Sales,General - Con,18-12-1955,IN,Foreman,Male,90346,Asian,Widowed,Fully Meets,2
+02-Aug-20,29-Jun-22,Area Sales Manager,PL,Future Start,Part-Time,Zone A,Part-Time,Retirement,Worker medical commercial participant tough leg.,Sales,General - Con,23-06-1961,TX,Technician,Male,5457,Other,Widowed,Fully Meets,4
+21-Feb-22,05-Jul-23,Area Sales Manager,EW,Active,Part-Time,Zone A,Temporary,Unk,Summer personal bag.,Sales,Field Operations,08-09-1953,TX,Laborer,Female,27710,Black,Divorced,Fully Meets,2
+26-Jan-23,18-May-23,Area Sales Manager,TNS,Active,Part-Time,Zone C,Temporary,Involuntary,Nature finish modern push former American.,Sales,Fielders,28-04-1992,IN,Engineer,Male,19703,Other,Widowed,Fully Meets,4
+20-Apr-20,05-Jul-23,Area Sales Manager,PL,Active,Full-Time,Zone B,Temporary,Unk,Summer personal bag.,Sales,Engineers,19-09-1947,KY,Technician,Female,73002,White,Divorced,Needs Improvement,3
+02-Feb-19,22-Jul-22,Area Sales Manager,PYZ,Active,Full-Time,Zone A,Full-Time,Retirement,Fear particular method stage.,Production       ,Field Operations,30-09-1952,MA,Laborer,Male,8679,Black,Single,Exceeds,2
+14-May-22,31-Dec-22,Area Sales Manager,CCDR,Future Start,Part-Time,Zone A,Part-Time,Retirement,School see rest firm I.,Sales,Finance & Accounting,29-11-1999,CO,Clerk,Male,62453,White,Single,Fully Meets,4
+01-May-21,06-Jul-23,Area Sales Manager,NEL,Active,Part-Time,Zone A,Part-Time,Unk,Summer personal bag.,Sales,Field Operations,10-02-1995,TX,Locator,Female,24510,White,Divorced,Exceeds,2
+14-Feb-20,15-Sep-22,Area Sales Manager,CCDR,Active,Full-Time,Zone B,Part-Time,Retirement,American rule surface very figure.,Sales,General - Eng,02-01-1988,CO,Supervisor,Male,14989,White,Widowed,Exceeds,4
+21-Jun-22,08-Mar-23,Area Sales Manager,NEL,Future Start,Contract,Zone C,Part-Time,Retirement,Manager lead both sing.,Sales,Field Operations,29-08-1957,TX,Foreman,Male,70299,Hispanic,Married,Fully Meets,2
+25-Mar-20,05-Jul-23,Area Sales Manager,NEL,Active,Contract,Zone B,Full-Time,Unk,Summer personal bag.,Sales,Field Operations,31-05-1943,CT,Controller,Male,3424,Black,Married,Fully Meets,3
+05-Feb-21,05-Jul-23,Area Sales Manager,CCDR,Active,Full-Time,Zone B,Part-Time,Unk,Summer personal bag.,Sales,Aerial,10-12-1943,GA,Laborer,Male,7853,Asian,Single,Fully Meets,5
+09-Dec-20,05-Jul-23,Area Sales Manager,PL,Active,Full-Time,Zone B,Temporary,Unk,Summer personal bag.,Sales,Engineers,09-03-1949,KY,Technician,Female,69534,White,Divorced,Needs Improvement,3
+05-Sep-18,18-Mar-20,Area Sales Manager,BPC,Active,Full-Time,Zone B,Part-Time,Voluntary,Game hour boy not write somebody owner.,Sales,Shop (Fleet),16-01-1995,TX,Mechanic,Female,85998,White,Divorced,Fully Meets,1
