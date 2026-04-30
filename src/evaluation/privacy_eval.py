@@ -128,9 +128,17 @@ def nndr_against_reference(
     X_reference: np.ndarray,
     percentile: float = 5.0,
 ) -> Dict[str, float]:
-    dists = nearest_neighbor_distances(X_query, X_reference, k=2)
-    d1 = dists[:, 0]
-    d2 = dists[:, 1]
+    nn1 = NearestNeighbors(n_neighbors=1, metric="euclidean")
+    nn1.fit(X_reference)
+    d1, nn1_idx = nn1.kneighbors(X_query)
+    d1 = d1.ravel()
+    nn1_idx = nn1_idx.ravel()
+
+    nn2 = NearestNeighbors(n_neighbors=2, metric="euclidean")
+    nn2.fit(X_reference)
+    d2_all = nn2.kneighbors(X_reference)[0]
+    d2 = d2_all[nn1_idx, 1]
+
     eps = 1e-12
     ratios = d1 / np.maximum(d2, eps)
 

@@ -1,0 +1,751 @@
+StartDate,ExitDate,Title,BusinessUnit,EmployeeStatus,EmployeeType,PayZone,EmployeeClassificationType,TerminationType,TerminationDescription,DepartmentType,Division,DOB,State,JobFunctionDescription,GenderCode,LocationCode,RaceDesc,MaritalDesc,Performance Score,Current Employee Rating
+01-Nov-18,14-Dec-22,Area Sales Manager,MSC,Active,Contract,Zone C,Part-Time,Involuntary,Can last meet shake imagine he.,Sales,General - Con,14-01-1959,MA,Laborer,Male,8433,Asian,Divorced,Fully Meets,2
+01-Jun-19,25-Sep-29,Production Technician I,CCDR,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Field Operations,22-08-1988,MA,Laborer,Male,9072,White,Married,Fully Meets,2
+12-Aug-22,19-Nov-22,Production Technician I,MSC,Active,Part-Time,Zone C,Temporary,Involuntary,,Production       ,Field Operations,14-04-1958,MA,Laborer,Male,84660,Asian,Married,Fully Meets,3
+03-Aug-19,27-Oct-22,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,19-02-1956,MA,Laborer,Female,94142,Asian,Married,Fully Meets,3
+24-Mar-19,24-Dec-29,Production Technician I,BPC,Active,Contract,Zone B,Part-Time,Unk,,Production       ,Field Operations,03-01-1948,MA,Laborer,Male,48900,Black,Single,Fully Meets,3
+06-Oct-19,20-Dec-29,Production Technician I,EW,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,10-12-1958,MA,Technician,Female,43088,Black,Widowed,Fully Meets,3
+28-May-19,30-Dec-21,Production Technician I,BPC,Voluntarily Terminated,Contract,Zone B,Temporary,Resignation,To prevent method stand decision.,Production       ,Field Operations,10-09-1987,MA,Laborer,Female,10351,Asian,Widowed,Fully Meets,3
+15-Sep-22,26-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,22-04-1959,MA,Laborer,Female,80752,Hispanic,Widowed,Fully Meets,3
+10-Apr-22,14-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,15-11-1957,MA,Laborer,Male,28599,Asian,Single,Fully Meets,3
+03-May-19,20-Dec-22,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Voluntary,,Production       ,Field Operations,28-12-1959,MA,Laborer,Female,93538,White,Married,Fully Meets,3
+17-Dec-22,19-Aug-23,Production Technician I,BPC,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Field Operations,26-02-1973,MA,Laborer,Female,74576,Other,Married,Fully Meets,3
+22-May-23,20-Nov-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,04-10-1944,MA,Laborer,Male,81854,Hispanic,Single,Fully Meets,3
+20-Mar-19,14-Feb-23,Production Technician I,CCDR,Active,Full-Time,Zone C,Part-Time,Retirement,,Production       ,Field Operations,16-02-1957,MA,Engineer,Male,83356,Asian,Divorced,Fully Meets,3
+17-Nov-21,22-Feb-23,Production Technician I,PYZ,Active,Contract,Zone A,Temporary,Involuntary,Stand cut knowledge staff course than class.,Production       ,Field Operations,03-04-1949,MA,Laborer,Male,76080,Asian,Divorced,Fully Meets,3
+25-Oct-22,24-Sep-22,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,22-03-1949,MA,Laborer,Female,89040,White,Single,Fully Meets,3
+28-Nov-19,16-Nov-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,22-09-1955,MA,Laborer,Female,11626,Black,Single,Fully Meets,3
+29-Jun-22,27-Jan-23,Area Sales Manager,MSC,Active,Full-Time,Zone C,Temporary,Resignation,,Sales,Field Operations,05-11-1997,MA,Laborer,Male,80542,Asian,Married,Fully Meets,2
+12-Jul-22,09-Nov-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,24-02-1989,MA,Laborer,Female,75715,White,Single,Fully Meets,3
+12-Jul-21,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,05-11-1966,MA,Laborer,Female,56311,Hispanic,Widowed,Fully Meets,3
+06-Oct-22,01-Nov-29,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Engineers,08-02-1949,MA,Laborer,Male,97893,White,Single,Fully Meets,3
+29-Oct-22,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,19-02-1955,MA,Laborer,Female,76336,White,Single,Fully Meets,3
+10-May-19,17-Mar-23,Software Engineer,BPC,Active,Part-Time,Zone B,Full-Time,Unk,,IT/IS,Field Operations,08-03-1984,MA,Laborer,Male,2707,Black,Single,Fully Meets,3
+01-Mar-20,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,19-07-1948,MA,Laborer,Male,88726,Black,Single,Fully Meets,3
+10-Apr-22,23-Jul-22,Production Technician I,BPC,Active,Full-Time,Zone A,Temporary,Resignation,Will raise compare realize evidence most product.,Production       ,Engineers,03-09-1941,MA,Laborer,Male,84433,Asian,Single,Fully Meets,3
+15-Mar-22,25-Dec-22,Production Technician I,PYZ,Voluntarily Terminated,Contract,Zone C,Temporary,Voluntary,Nation you bad daughter only huge them.,Production       ,Field Operations,03-03-1961,MA,Laborer,Female,83435,Asian,Divorced,Fully Meets,3
+07-Apr-19,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,26-08-1959,MA,Laborer,Female,22123,White,Single,Fully Meets,3
+21-Sep-19,05-Dec-29,Software Engineer,CCDR,Active,Contract,Zone A,Full-Time,Unk,,Software Engineering,Field Operations,20-08-1988,MA,Laborer,Male,13080,Black,Single,Fully Meets,3
+21-Nov-19,11-Nov-29,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,20-03-1952,MA,Laborer,Female,86042,White,Single,Fully Meets,3
+03-Oct-20,20-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Engineers,21-11-1987,MA,Technician,Female,71142,White,Single,Fully Meets,3
+16-Apr-22,17-Dec-29,Production Technician I,CCDR,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,15-07-1953,MA,Technician,Female,93174,White,Single,Fully Meets,3
+20-Jul-22,01-Jan-30,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,29-10-1944,MA,Laborer,Male,91865,Other,Single,Fully Meets,3
+04-Mar-19,01-Oct-22,Production Technician I,BPC,Voluntarily Terminated,Part-Time,Zone A,Part-Time,Voluntary,Stay word behavior financial.,Production       ,Field Operations,14-06-1989,MA,Laborer,Female,80805,Asian,Divorced,Fully Meets,3
+03-Nov-18,17-Aug-22,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,Summer might develop TV magazine down.,Production       ,Field Operations,03-01-1995,MA,Laborer,Female,9466,Other,Widowed,Fully Meets,3
+15-Apr-19,21-Oct-29,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,22-11-1950,MA,Laborer,Female,68246,Asian,Married,Fully Meets,3
+11-Oct-18,23-Nov-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,17-01-1964,MA,Laborer,Female,6445,White,Widowed,Fully Meets,3
+10-Oct-19,03-Dec-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,20-10-1961,MA,Laborer,Female,26192,White,Widowed,Fully Meets,3
+04-Jan-22,01-Jan-30,Production Technician I,BPC,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,11-04-1947,MA,Laborer,Male,87735,Black,Single,Fully Meets,3
+29-Jun-20,30-Apr-23,Production Technician I,TNS,Active,Full-Time,Zone B,Temporary,Resignation,,Production       ,Field Operations,07-12-1977,MA,Technician,Female,75693,Other,Widowed,Fully Meets,3
+28-Jun-22,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Unk,,Production       ,Field Operations,12-06-1956,MA,Laborer,Female,71661,White,Married,Fully Meets,3
+15-Jul-22,30-Dec-29,Production Technician I,PL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,14-04-1947,MA,Laborer,Female,83342,White,Single,Fully Meets,3
+24-Sep-22,16-Feb-23,Production Technician I,MSC,Active,Part-Time,Zone B,Temporary,Voluntary,,IT/IS,Field Operations,22-12-1990,MA,Laborer,Male,72729,Other,Single,Fully Meets,3
+09-Nov-18,10-Aug-22,Production Technician I,PYZ,Active,Full-Time,Zone A,Temporary,Voluntary,Interest again main describe end charge.,Production       ,Field Operations,09-05-1958,MA,Laborer,Female,10701,Asian,Divorced,Fully Meets,3
+12-Sep-19,17-Apr-22,Production Technician I,BPC,Active,Full-Time,Zone A,Part-Time,Retirement,,Production       ,Field Operations,25-05-1956,MA,Laborer,Female,10677,Asian,Divorced,Fully Meets,3
+12-Mar-20,16-Dec-29,Production Technician I,PL,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,24-07-1955,MA,Laborer,Female,12986,White,Single,Fully Meets,3
+12-Dec-22,01-Jan-30,Area Sales Manager,CCDR,Active,Contract,Zone A,Full-Time,Unk,,Sales,Engineers,26-09-1950,MA,Laborer,Male,73153,Asian,Single,Fully Meets,3
+19-Jun-19,19-Nov-29,Sr. Network Engineer,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,21-07-1955,MA,Laborer,Male,5056,White,Single,Fully Meets,3
+03-Feb-19,01-Jan-30,Production Technician I,PL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,12-04-1957,MA,Technician,Female,17234,White,Widowed,Fully Meets,3
+18-Dec-22,16-Nov-29,Production Technician I,BPC,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,09-07-1947,MA,Engineer,Female,74995,Asian,Single,Fully Meets,3
+24-May-19,24-Jul-22,Network Engineer,WBL,Active,Contract,Zone B,Part-Time,Voluntary,Upon writer black.,IT/IS,General - Con,05-05-1956,MA,Foreman,Male,1015,Hispanic,Single,Fully Meets,3
+23-Feb-19,01-Jan-30,Production Technician I,TNS,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,General - Con,12-07-1960,MA,Laborer,Female,83447,White,Single,Fully Meets,3
+30-Nov-22,31-Dec-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,11-08-1951,MA,Laborer,Female,97893,White,Single,Fully Meets,3
+28-May-22,10-Apr-22,Production Technician I,MSC,Active,Part-Time,Zone C,Temporary,Involuntary,,Production       ,Field Operations,15-10-1974,MA,Technician,Female,81576,White,Married,Fully Meets,3
+30-Mar-19,03-Sep-22,Production Technician I,WBL,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,General - Con,24-03-1957,MA,Laborer,Female,18986,Other,Widowed,Fully Meets,3
+25-May-19,25-Jan-23,Production Technician I,NEL,Voluntarily Terminated,Full-Time,Zone A,Part-Time,Involuntary,Board from heart ago allow list.,Production       ,Field Operations,05-01-1944,MA,Engineer,Female,82664,Asian,Divorced,Fully Meets,3
+12-Mar-20,04-Nov-22,Sr. Network Engineer,BPC,Active,Contract,Zone A,Part-Time,Retirement,,IT/IS,Field Operations,23-10-1943,MA,Laborer,Male,7556,Black,Single,Fully Meets,3
+16-Jul-19,08-Sep-29,Production Technician I,BPC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,08-09-1947,MA,Laborer,Female,5811,Black,Single,Fully Meets,3
+14-Oct-19,21-Oct-22,Production Technician I,MSC,Voluntarily Terminated,Contract,Zone B,Temporary,Resignation,Big large training region.,Production       ,Field Operations,01-08-1987,MA,Laborer,Female,3281,Asian,Widowed,Fully Meets,3
+15-Mar-21,01-Jan-30,Software Engineer,BPC,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,19-01-1947,MA,Laborer,Male,44129,Black,Single,Fully Meets,3
+17-May-21,15-Dec-21,Production Technician I,BPC,Active,Part-Time,Zone A,Temporary,Resignation,Top whether good.,Production       ,Field Operations,20-02-1980,MA,Technician,Female,91071,White,Single,Fully Meets,3
+20-Jul-23,12-Mar-23,Production Technician I,EW,Active,Part-Time,Zone A,Temporary,Voluntary,Me local somebody method away choose hit truth.,Production       ,Field Operations,21-04-1943,MA,Engineer,Male,92531,Asian,Married,Fully Meets,3
+31-May-23,15-Sep-22,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,22-11-1961,MA,Engineer,Female,89459,Asian,Divorced,Fully Meets,3
+20-Dec-19,24-Sep-22,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,Field Operations,10-12-1952,MA,Laborer,Female,77210,Hispanic,Widowed,Fully Meets,3
+12-Jan-23,02-Dec-29,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,06-08-1949,MA,Laborer,Male,79369,White,Married,Fully Meets,3
+02-Mar-19,18-Oct-22,Area Sales Manager,PYZ,Active,Contract,Zone C,Full-Time,Resignation,Miss onto none our discussion year.,IT/IS,Field Operations,13-03-1946,MA,Laborer,Male,86230,Asian,Divorced,Fully Meets,3
+10-Feb-20,29-Nov-22,Production Technician I,SVG,Voluntarily Terminated,Contract,Zone A,Temporary,Involuntary,Year color woman become year scene very.,Production       ,Field Operations,07-01-1995,MA,Laborer,Female,14685,Other,Widowed,Fully Meets,3
+23-Jul-19,10-Nov-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,01-08-1957,MA,Laborer,Male,77811,Asian,Single,Fully Meets,3
+05-Mar-21,19-Oct-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,General - Con,10-06-1953,MA,Laborer,Male,1015,Black,Single,Fully Meets,3
+11-Dec-18,22-Nov-20,Software Engineer,WBL,Active,Part-Time,Zone A,Temporary,Unk,,IT/IS,General - Con,12-05-1995,MA,Laborer,Male,74816,White,Single,Fully Meets,3
+31-Dec-22,07-Nov-29,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,17-12-1952,MA,Laborer,Female,56850,White,Widowed,Fully Meets,3
+13-Apr-19,10-Apr-20,Production Technician I,CCDR,Active,Part-Time,Zone A,Full-Time,Voluntary,Unit computer what age career.,Production       ,Engineers,16-04-1985,MA,Engineer,Female,20766,Black,Single,Fully Meets,3
+25-May-23,01-Jan-30,Production Technician I,NEL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Field Operations,01-02-1960,MA,Laborer,Female,80999,White,Married,Fully Meets,3
+03-Sep-22,01-Jan-30,Accountant I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,IT/IS,Field Operations,29-04-1962,MA,Foreman,Male,34121,White,Single,Fully Meets,3
+23-Dec-19,13-Oct-22,Production Technician I,PYZ,Voluntarily Terminated,Contract,Zone C,Temporary,Involuntary,Year color woman become year scene very.,Production       ,Field Operations,07-11-1948,MA,Laborer,Female,85183,Asian,Divorced,Fully Meets,3
+16-Mar-23,01-Jan-30,Production Technician I,PL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Field Operations,28-11-1957,MA,Laborer,Female,79742,Asian,Married,Fully Meets,3
+18-Mar-23,02-Sep-22,Production Technician I,MSC,Active,Part-Time,Zone C,Temporary,Voluntary,,Production       ,Field Operations,26-02-1949,MA,Laborer,Female,80594,White,Single,Fully Meets,3
+26-Aug-18,30-Jul-21,Production Technician I,MSC,Active,Part-Time,Zone C,Temporary,Voluntary,North help rock stage someone book.,Production       ,Field Operations,20-11-1988,MA,Laborer,Male,96599,Black,Single,Fully Meets,3
+06-Oct-18,31-Oct-22,Production Technician I,TNS,Active,Part-Time,Zone A,Part-Time,Resignation,,Production       ,Field Operations,22-08-1946,MA,Laborer,Female,80122,Asian,Single,Fully Meets,3
+01-Aug-19,18-Aug-22,BI Developer,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,10-10-1942,MA,Laborer,Male,77775,Asian,Single,Fully Meets,3
+25-Aug-19,01-Jan-30,Production Technician I,BPC,Active,Contract,Zone B,Part-Time,Unk,,Production       ,Field Operations,18-09-1942,MA,Laborer,Male,15019,Black,Single,Fully Meets,3
+12-May-21,04-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,22-02-1995,MA,Laborer,Male,5562,Black,Single,Fully Meets,3
+26-Feb-19,14-Dec-29,Production Technician I,PL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Field Operations,01-07-1949,MA,Laborer,Male,92395,White,Single,Fully Meets,3
+23-Oct-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,19-02-1950,MA,Technician,Female,73740,White,Widowed,Fully Meets,3
+15-May-20,25-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,08-08-1964,MA,Laborer,Female,1015,White,Widowed,Fully Meets,3
+11-Aug-18,17-Dec-20,Production Technician I,WBL,Active,Contract,Zone A,Part-Time,Voluntary,North help rock stage someone book.,Production       ,Field Operations,10-01-1988,MA,Engineer,Male,97893,Asian,Divorced,Fully Meets,3
+21-Feb-22,23-Oct-22,Network Engineer,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,,IT/IS,Field Operations,02-11-1959,MA,Foreman,Female,4906,Hispanic,Single,Fully Meets,3
+27-Jan-19,15-Dec-29,Production Technician I,WBL,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,01-03-1980,MA,Technician,Female,71044,Other,Widowed,Fully Meets,3
+30-Jul-19,21-Jun-22,Production Technician I,CCDR,Active,Full-Time,Zone A,Part-Time,Voluntary,,Production       ,General - Con,07-10-1957,MA,Laborer,Female,20225,Asian,Divorced,Fully Meets,3
+10-Sep-18,26-Oct-29,Production Technician I,TNS,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,15-04-1988,MA,Technician,Female,1015,Other,Widowed,Fully Meets,3
+26-Feb-19,29-Nov-29,Software Engineer,MSC,Active,Contract,Zone B,Temporary,Unk,,IT/IS,Field Operations,03-03-1952,MA,Laborer,Male,5615,Black,Single,Fully Meets,3
+11-Apr-21,08-Mar-23,Production Technician I,BPC,Active,Full-Time,Zone A,Part-Time,Resignation,Where forward evening huge cost share eat.,Production       ,Engineers,17-04-1983,MA,Engineer,Female,93241,Asian,Divorced,Fully Meets,3
+30-Jun-19,12-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,26-04-1981,MA,Laborer,Female,1015,Other,Single,Fully Meets,3
+03-Dec-22,07-Nov-29,Data Analyst,CCDR,Active,Full-Time,Zone A,Temporary,Unk,,IT/IS,Field Operations,01-11-1947,MA,Laborer,Male,73103,White,Single,Fully Meets,3
+30-Oct-22,09-Apr-23,Production Technician I,MSC,Active,Part-Time,Zone B,Temporary,Voluntary,Health American identify meeting.,Production       ,Field Operations,09-07-1954,MA,Engineer,Male,93325,Asian,Single,Fully Meets,3
+14-Jan-21,19-May-23,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,Field Operations,20-07-1968,MA,Laborer,Female,41778,White,Widowed,Fully Meets,3
+09-Nov-20,20-Sep-22,Production Technician I,BPC,Active,Full-Time,Zone A,Temporary,Resignation,,Production       ,Field Operations,05-08-1942,MA,Laborer,Female,87489,Asian,Single,Fully Meets,3
+01-Dec-19,30-Oct-22,Production Technician I,TNS,Active,Full-Time,Zone A,Temporary,Involuntary,Drive feel its former end allow.,Production       ,Field Operations,23-12-1961,MA,Laborer,Female,73775,White,Widowed,Fully Meets,3
+27-Jun-19,02-Dec-29,Area Sales Manager,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,29-12-1953,MA,Laborer,Male,60053,White,Single,Fully Meets,3
+24-Nov-22,22-Sep-22,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,03-06-1949,MA,Engineer,Female,76255,Asian,Single,Fully Meets,3
+15-Apr-23,02-May-23,Area Sales Manager,MSC,Active,Contract,Zone A,Full-Time,Unk,,Sales,Field Operations,03-04-1947,MA,Laborer,Male,93262,Asian,Single,Fully Meets,3
+25-Aug-22,31-Oct-22,Production Technician I,CCDR,Active,Part-Time,Zone C,Temporary,Resignation,,Production       ,Field Operations,09-12-1988,MA,Technician,Female,81530,White,Single,Fully Meets,3
+20-Sep-19,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,08-09-1956,MA,Laborer,Male,10707,White,Single,Fully Meets,3
+09-Dec-19,13-Nov-29,Area Sales Manager,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Sales,General - Con,12-05-1948,MA,Laborer,Male,12831,Asian,Divorced,Fully Meets,3
+17-Jan-23,01-Jan-30,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,14-08-1950,MA,Laborer,Female,72412,Asian,Divorced,Fully Meets,3
+25-Jun-19,28-Apr-23,Production Technician I,BPC,Active,Part-Time,Zone A,Temporary,Resignation,,Production       ,Field Operations,18-05-1944,MA,Laborer,Male,73639,Asian,Single,Fully Meets,3
+13-Dec-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,15-01-1946,MA,Laborer,Male,77673,White,Single,Fully Meets,3
+06-Aug-23,10-Nov-29,Production Technician I,NEL,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,17-11-1953,MA,Laborer,Male,76511,Asian,Married,Fully Meets,3
+13-Jan-21,10-Jan-23,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Resignation,,Production       ,Field Operations,30-07-1980,MA,Laborer,Female,73039,Other,Widowed,Fully Meets,3
+02-Nov-22,17-Jan-23,Production Technician I,EW,Voluntarily Terminated,Contract,Zone A,Temporary,Voluntary,Then sing son.,Production       ,Field Operations,21-06-1998,MA,Engineer,Female,70619,Asian,Divorced,Fully Meets,3
+03-Aug-19,05-Oct-22,Area Sales Manager,PYZ,Active,Contract,Zone B,Part-Time,Retirement,Miss onto none our discussion year.,IT/IS,General - Con,08-05-1958,MA,Foreman,Male,80796,Asian,Divorced,Fully Meets,3
+19-Jan-20,01-Jan-30,Production Technician I,EW,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,13-02-1956,MA,Laborer,Female,79496,White,Widowed,Fully Meets,3
+13-Dec-22,06-Oct-22,Production Technician I,TNS,Voluntarily Terminated,Contract,Zone A,Temporary,Resignation,Human box wish natural student staff.,Production       ,Field Operations,13-08-1947,MA,Laborer,Female,75772,Asian,Widowed,Fully Meets,3
+13-Feb-20,01-Jan-30,Production Technician I,BPC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,01-05-1955,MA,Laborer,Male,1015,Black,Single,Fully Meets,3
+09-Dec-18,28-Sep-21,Shared Services Manager,WBL,Active,Contract,Zone A,Part-Time,Voluntary,,IT/IS,Field Operations,01-01-1944,MA,Laborer,Male,1015,Black,Single,Fully Meets,3
+08-Dec-22,22-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,14-08-1948,MA,Laborer,Male,72835,Hispanic,Single,Fully Meets,3
+01-Oct-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,14-08-1954,MA,Laborer,Male,75227,White,Single,Fully Meets,3
+20-Feb-19,18-Dec-21,Production Technician I,WBL,Active,Contract,Zone B,Temporary,Involuntary,Summer begin quickly.,Production       ,Field Operations,06-02-1990,MA,Laborer,Female,4730,Hispanic,Widowed,Fully Meets,3
+19-Jan-23,01-Feb-23,Production Technician I,NEL,Active,Contract,Zone C,Temporary,Resignation,,Production       ,Field Operations,05-07-1951,MA,Engineer,Female,97893,Asian,Married,Fully Meets,3
+03-May-22,13-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,17-12-1951,MA,Laborer,Male,84768,White,Single,Fully Meets,3
+07-Apr-22,27-Dec-29,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,03-02-1967,MA,Laborer,Female,71612,Other,Single,Fully Meets,3
+04-Apr-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,15-02-1949,MA,Laborer,Male,79310,Other,Single,Fully Meets,3
+18-May-21,12-Feb-23,BI Developer,PYZ,Active,Contract,Zone C,Temporary,Resignation,,IT/IS,Field Operations,25-04-1952,MA,Laborer,Male,73496,Other,Single,Fully Meets,3
+25-Nov-18,29-May-22,Area Sales Manager,MSC,Active,Contract,Zone C,Temporary,Involuntary,,IT/IS,General - Con,25-10-1954,MA,Laborer,Male,78825,Black,Widowed,Fully Meets,3
+26-Mar-22,26-Dec-29,Software Engineer,BPC,Active,Full-Time,Zone C,Full-Time,Unk,,IT/IS,Field Operations,16-02-1953,MA,Laborer,Male,69904,Asian,Single,Fully Meets,3
+30-Dec-19,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,General - Con,10-08-1957,MA,Laborer,Female,73900,White,Single,Fully Meets,3
+06-Aug-23,17-Oct-29,Production Technician I,BPC,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,15-02-1949,MA,Engineer,Male,97055,Asian,Married,Fully Meets,3
+06-Aug-23,21-Dec-22,Production Technician I,NEL,Active,Full-Time,Zone A,Temporary,Involuntary,Officer thus service.,Production       ,General - Con,28-08-1961,MA,Foreman,Female,79731,White,Widowed,Fully Meets,3
+05-Jun-19,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,IT/IS,Field Operations,03-02-1953,MA,Laborer,Male,72795,Asian,Single,Fully Meets,3
+01-Apr-22,06-Feb-21,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,30-11-1958,MA,Laborer,Female,88695,Hispanic,Married,Fully Meets,3
+04-Jan-19,08-Nov-29,Production Technician I,CCDR,Active,Contract,Zone A,Full-Time,Unk,,Production       ,General - Con,05-01-1987,MA,Laborer,Female,5431,White,Single,Fully Meets,3
+06-Aug-23,10-Dec-29,Software Engineer,CCDR,Active,Part-Time,Zone C,Temporary,Unk,,Production       ,Engineers,14-09-1987,MA,Engineer,Male,87169,White,Single,Fully Meets,3
+04-Jun-19,06-Nov-29,Software Engineer,BPC,Active,Part-Time,Zone B,Full-Time,Unk,,IT/IS,Field Operations,03-09-1941,MA,Laborer,Male,7670,Black,Single,Fully Meets,3
+14-Jul-19,09-Nov-29,Production Technician I,BPC,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Engineers,19-10-1990,MA,Engineer,Female,15872,Black,Single,Fully Meets,3
+11-Sep-22,20-Oct-29,Production Technician I,TNS,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,18-09-1948,MA,Laborer,Female,70056,Black,Married,Fully Meets,3
+21-Jan-23,22-Apr-23,Production Technician I,CCDR,Active,Contract,Zone C,Temporary,Resignation,Visit you let sort amount visit.,Production       ,Engineers,17-08-1948,MA,Engineer,Male,85273,Asian,Married,Fully Meets,3
+31-Aug-19,06-Oct-22,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Involuntary,,Production       ,General - Con,04-05-1961,MA,Laborer,Female,36319,White,Widowed,Fully Meets,3
+15-Jun-19,05-Dec-29,Production Technician I,WBL,Active,Contract,Zone A,Temporary,Unk,,Production       ,General - Con,16-01-2000,MA,Laborer,Female,8638,White,Single,Fully Meets,3
+27-Sep-19,11-Oct-29,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Software Engineering,Engineers,30-08-1994,MA,Laborer,Male,17546,Black,Single,Fully Meets,3
+01-Nov-22,05-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,25-06-1989,MA,Engineer,Female,93488,White,Single,Fully Meets,3
+12-Apr-22,25-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,General - Con,04-11-1956,MA,Foreman,Female,57625,Hispanic,Widowed,Fully Meets,3
+23-Jan-22,01-Jan-30,Production Technician I,BPC,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,13-12-1953,MA,Laborer,Male,78266,Asian,Single,Fully Meets,3
+23-Jun-22,01-Jan-30,Production Technician I,PL,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,08-03-1956,MA,Laborer,Female,94124,White,Single,Fully Meets,3
+04-Aug-20,15-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,04-08-1953,MA,Laborer,Male,65251,Asian,Single,Fully Meets,3
+28-Mar-22,30-Mar-23,Production Technician I,MSC,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,General - Con,18-12-1953,MA,Laborer,Female,97893,White,Married,Fully Meets,2
+18-Oct-22,18-May-23,Production Technician I,NEL,Active,Contract,Zone A,Part-Time,Retirement,,Production       ,Field Operations,13-01-1955,MA,Engineer,Female,92841,Asian,Divorced,Fully Meets,3
+17-Oct-22,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone B,Part-Time,Unk,,Production       ,Field Operations,10-08-1977,MA,Laborer,Male,73217,Other,Married,Fully Meets,3
+01-May-19,01-Dec-21,Sr. Network Engineer,MSC,Active,Contract,Zone B,Part-Time,Voluntary,Issue teacher page true relate. Fight out learn.,IT/IS,Field Operations,28-02-1946,MA,Laborer,Male,1015,Black,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,13-11-1993,MA,Engineer,Male,80793,White,Married,Fully Meets,3
+12-Oct-19,03-May-22,Production Technician I,BPC,Voluntarily Terminated,Contract,Zone A,Part-Time,Resignation,Nor director yard within car into final.,Production       ,Field Operations,16-05-1990,MA,Laborer,Female,13834,Asian,Divorced,Fully Meets,3
+15-Jun-22,26-Oct-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,30-11-1992,MA,Engineer,Female,88143,White,Single,Fully Meets,3
+12-Dec-18,19-Aug-20,Production Technician I,CCDR,Active,Contract,Zone A,Part-Time,Involuntary,,Production       ,General - Con,24-04-1949,MA,Laborer,Female,7516,Black,Divorced,Fully Meets,3
+30-Jan-21,24-Nov-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,24-07-1956,MA,Laborer,Male,47298,Asian,Single,Fully Meets,3
+19-Apr-19,08-Jul-22,Production Technician I,NEL,Active,Full-Time,Zone A,Part-Time,Resignation,,Production       ,Field Operations,28-09-1990,MA,Laborer,Female,96100,Asian,Divorced,Fully Meets,3
+12-Jan-20,12-Nov-22,Production Technician I,TNS,Voluntarily Terminated,Part-Time,Zone B,Temporary,Resignation,Sound there everybody anything.,Production       ,Field Operations,09-02-1984,MA,Laborer,Female,80998,Hispanic,Widowed,Fully Meets,3
+25-Apr-20,01-Jun-22,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,14-06-1962,MA,Laborer,Female,38494,Asian,Single,Fully Meets,3
+24-Nov-19,19-Dec-29,Production Technician I,EW,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,12-05-1951,MA,Laborer,Female,91682,Asian,Single,Fully Meets,3
+28-Jun-19,11-Nov-29,Production Technician I,WBL,Active,Contract,Zone C,Part-Time,Unk,,Production       ,General - Con,23-04-1948,MA,Laborer,Female,9522,Black,Single,Fully Meets,3
+14-Oct-22,22-Oct-22,Production Technician I,BPC,Active,Full-Time,Zone A,Temporary,Resignation,,Production       ,Field Operations,04-08-1950,MA,Laborer,Male,73905,Asian,Single,Fully Meets,3
+12-Oct-18,15-Dec-29,Production Technician I,WBL,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,17-07-1946,MA,Technician,Female,83234,Hispanic,Widowed,Fully Meets,3
+04-Mar-20,01-Dec-29,Production Technician I,EW,Active,Full-Time,Zone C,Part-Time,Unk,,Production       ,Field Operations,10-11-1987,MA,Laborer,Female,91066,Black,Single,Fully Meets,3
+29-Jun-19,01-Oct-22,Software Engineer,CCDR,Active,Part-Time,Zone A,Part-Time,Voluntary,,Software Engineering,Field Operations,09-04-1949,MA,Laborer,Male,11815,Asian,Single,Fully Meets,3
+07-Mar-22,14-Jun-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,01-07-1963,MA,Laborer,Female,54743,White,Widowed,Fully Meets,3
+10-Jan-19,01-Jan-30,Production Technician I,WBL,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,14-10-1961,MA,Laborer,Female,14685,Hispanic,Single,Fully Meets,3
+05-Sep-19,20-Oct-22,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Involuntary,,Production       ,Field Operations,27-06-1945,MA,Laborer,Female,58158,Asian,Single,Fully Meets,3
+09-Sep-19,29-Nov-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,07-07-1955,MA,Laborer,Female,57533,White,Married,Fully Meets,3
+29-Sep-22,10-Oct-22,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,30-12-1946,MA,Engineer,Male,77465,Asian,Married,Fully Meets,3
+27-Apr-19,13-Jun-22,Production Technician I,MSC,Active,Contract,Zone B,Temporary,Involuntary,Condition control raise.,Production       ,General - Con,21-10-1951,MA,Laborer,Female,74136,Hispanic,Widowed,Fully Meets,3
+09-Apr-19,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,21-05-1955,MA,Laborer,Female,92381,White,Divorced,Fully Meets,3
+26-May-21,25-Apr-21,Production Technician I,PYZ,Active,Part-Time,Zone A,Temporary,Involuntary,North help rock stage someone book.,Production       ,Field Operations,08-03-1987,MA,Technician,Female,71383,Black,Single,Fully Meets,3
+04-Oct-22,01-Jan-30,Software Engineer,NEL,Active,Part-Time,Zone C,Full-Time,Unk,,IT/IS,Field Operations,13-03-1949,MA,Laborer,Male,83081,White,Single,Fully Meets,3
+15-Jul-22,22-Jul-22,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Field Operations,16-10-1960,MA,Laborer,Female,66719,White,Married,Fully Meets,3
+28-Jul-22,16-Jun-22,Area Sales Manager,MSC,Active,Full-Time,Zone A,Temporary,Involuntary,Somebody great could yet.,Sales,General - Con,17-01-1948,MA,Technician,Male,82082,Asian,Widowed,Fully Meets,2
+11-Aug-18,01-Jan-30,Software Engineer,CCDR,Active,Full-Time,Zone C,Full-Time,Unk,,Software Engineering,Field Operations,17-08-1990,MA,Laborer,Male,13966,Black,Single,Fully Meets,3
+15-Jun-19,09-Nov-29,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,18-03-1952,MA,Laborer,Female,1015,Black,Single,Fully Meets,3
+20-Jul-19,27-Nov-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,27-07-1956,MA,Laborer,Female,44591,White,Single,Fully Meets,3
+18-Apr-20,19-Jul-22,Production Technician I,NEL,Active,Full-Time,Zone A,Part-Time,Voluntary,,Production       ,Engineers,21-04-1955,MA,Engineer,Female,83662,Asian,Divorced,Fully Meets,3
+14-May-22,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,03-09-1950,MA,Laborer,Female,60848,White,Widowed,Fully Meets,3
+18-Jul-19,25-Dec-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Project Management - Con,22-11-1960,MA,Coordinator,Female,83853,Asian,Widowed,Fully Meets,2
+13-Dec-18,12-Dec-29,Production Technician I,WBL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,20-09-1990,MA,Laborer,Male,77505,Black,Single,Fully Meets,3
+06-Jul-19,28-Dec-29,Area Sales Manager,MSC,Active,Contract,Zone C,Temporary,Unk,,Sales,Field Operations,19-07-1972,MA,Laborer,Male,79724,Black,Married,Fully Meets,2
+08-Oct-21,17-Feb-23,Production Technician I,EW,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,09-01-1971,MA,Laborer,Female,70360,Other,Widowed,Fully Meets,3
+29-Dec-21,24-Nov-22,Production Technician I,NEL,Active,Contract,Zone C,Temporary,Retirement,,Production       ,Field Operations,12-12-1954,MA,Engineer,Female,75324,Other,Married,Fully Meets,3
+12-Mar-19,01-Jan-30,Production Technician I,CCDR,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,20-02-1944,MA,Technician,Female,60975,Black,Single,Fully Meets,3
+20-Nov-18,22-Oct-22,Production Technician I,PYZ,Voluntarily Terminated,Contract,Zone A,Part-Time,Involuntary,Year color woman become year scene very.,Production       ,Field Operations,15-08-1994,MA,Laborer,Female,75229,Asian,Divorced,Fully Meets,3
+09-Jul-19,19-Jul-22,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,03-09-1941,MA,Laborer,Female,14957,Black,Single,Fully Meets,3
+15-Jan-20,29-Jul-22,Production Technician I,BPC,Active,Full-Time,Zone A,Part-Time,Retirement,,Production       ,Engineers,09-01-1950,MA,Laborer,Male,9725,Asian,Single,Fully Meets,3
+15-Apr-19,23-Sep-22,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Involuntary,,Production       ,Field Operations,03-09-1941,MA,Laborer,Female,82491,White,Divorced,Fully Meets,3
+29-May-19,23-Nov-29,Area Sales Manager,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Sales,Field Operations,04-09-1988,MA,Engineer,Male,13558,Asian,Divorced,Fully Meets,2
+10-Apr-23,09-Dec-29,Software Engineer,BPC,Active,Part-Time,Zone C,Full-Time,Unk,,IT/IS,Engineers,22-12-1948,MA,Engineer,Male,90490,Asian,Single,Fully Meets,3
+21-Sep-20,28-Aug-23,Production Technician I,TNS,Voluntarily Terminated,Contract,Zone B,Temporary,Involuntary,Prevent involve hundred price.,Production       ,Field Operations,12-07-1995,MA,Laborer,Male,75304,Other,Widowed,Fully Meets,3
+23-Oct-19,25-Dec-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,27-08-1953,MA,Laborer,Female,91165,Asian,Single,Fully Meets,3
+07-Sep-22,20-Nov-29,Production Technician I,EW,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,21-11-1948,MA,Engineer,Female,97893,Asian,Married,Fully Meets,3
+13-Aug-18,24-Nov-29,Production Technician I,PL,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,27-08-1960,MA,Laborer,Female,74689,White,Widowed,Fully Meets,3
+10-Sep-19,25-Dec-29,Production Technician I,CCDR,Active,Contract,Zone C,Temporary,Unk,,Production       ,Field Operations,21-03-1963,MA,Laborer,Female,97893,White,Married,Fully Meets,2
+01-Dec-18,26-Nov-29,Production Technician I,PL,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,19-09-1991,MA,Laborer,Female,95192,White,Married,Fully Meets,3
+16-Mar-23,13-Jun-23,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Involuntary,Decision fill total.,Production       ,Field Operations,17-12-1989,MA,Laborer,Female,71210,White,Married,Fully Meets,3
+13-Sep-22,13-Jun-23,Production Technician I,CCDR,Active,Full-Time,Zone C,Full-Time,Voluntary,,Production       ,Field Operations,21-03-1995,MA,Engineer,Female,71025,White,Married,Fully Meets,3
+10-Dec-18,25-Jun-21,Production Technician I,NEL,Active,Part-Time,Zone A,Part-Time,Voluntary,North help rock stage someone book.,Production       ,Engineers,02-08-1988,MA,Engineer,Female,92113,White,Married,Fully Meets,3
+15-Jan-19,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Project Management - Con,13-05-1965,MA,Laborer,Female,53922,White,Single,Fully Meets,3
+16-Apr-22,06-Jul-23,Software Engineer,PYZ,Active,Part-Time,Zone A,Temporary,Voluntary,,IT/IS,Field Operations,06-08-1952,MA,Laborer,Male,77394,Black,Single,Fully Meets,3
+29-Nov-20,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,08-05-1957,MA,Laborer,Female,11513,White,Married,Fully Meets,3
+11-Aug-18,15-Jan-23,Software Engineer,MSC,Active,Contract,Zone A,Part-Time,Involuntary,North help rock stage someone book.,IT/IS,Field Operations,15-01-1993,MA,Laborer,Male,82331,Asian,Single,Fully Meets,3
+17-Dec-22,11-Dec-29,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,02-02-1956,MA,Laborer,Female,79511,White,Widowed,Fully Meets,3
+25-May-19,15-Nov-29,IT Support,WBL,Active,Contract,Zone A,Full-Time,Unk,,IT/IS,Field Operations,03-09-1941,MA,Laborer,Male,19032,Black,Single,Fully Meets,3
+05-May-22,13-Apr-23,Production Technician I,PL,Active,Full-Time,Zone A,Temporary,Involuntary,Somebody great could yet.,Production       ,General - Con,03-08-1963,MA,Laborer,Female,84474,White,Widowed,Fully Meets,3
+12-May-22,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,29-10-1954,MA,Laborer,Female,86051,White,Single,Fully Meets,3
+02-Oct-22,01-Jan-30,Production Technician I,TNS,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,General - Con,05-01-1954,MA,Laborer,Female,18126,White,Single,Fully Meets,3
+26-Jan-23,26-Jan-23,Area Sales Manager,MSC,Active,Full-Time,Zone C,Full-Time,Unk,,Sales,Field Operations,08-10-1954,TX,Laborer,Male,77363,Asian,Married,Fully Meets,2
+26-Jun-22,12-Aug-23,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Field Operations,04-01-1956,MA,Laborer,Female,73859,Other,Married,Fully Meets,3
+01-Feb-23,23-Apr-23,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Involuntary,Why development even.,Production       ,Field Operations,25-11-1961,MA,Laborer,Female,78791,White,Widowed,Fully Meets,3
+24-Oct-18,29-Jun-22,Production Technician I,MSC,Active,Part-Time,Zone B,Part-Time,Voluntary,Material agency modern degree general.,Production       ,Field Operations,15-08-1944,MA,Laborer,Male,6167,Hispanic,Single,Fully Meets,3
+26-Jul-22,03-Aug-22,Production Technician I,BPC,Active,Full-Time,Zone A,Temporary,Resignation,Top whether good.,Production       ,Engineers,18-12-1990,MA,Laborer,Female,90515,Asian,Single,Fully Meets,3
+30-Sep-22,18-Jun-23,Production Technician I,NEL,Voluntarily Terminated,Contract,Zone A,Part-Time,Involuntary,Design and respond dog true knowledge.,Production       ,Field Operations,19-11-1992,MA,Engineer,Female,72405,Asian,Divorced,Fully Meets,3
+25-Aug-19,20-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,04-08-1969,MA,Technician,Female,16199,Black,Widowed,Fully Meets,3
+04-Apr-21,15-Jan-23,Production Technician I,PYZ,Active,Part-Time,Zone C,Full-Time,Involuntary,,IT/IS,Field Operations,08-07-1955,MA,Laborer,Male,63314,Asian,Single,Fully Meets,3
+26-Mar-19,19-Nov-29,Production Technician I,WBL,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,19-03-1989,MA,Laborer,Male,12514,Black,Single,Fully Meets,3
+26-Dec-22,11-Apr-23,Production Technician I,TNS,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Field Operations,24-01-1958,MA,Laborer,Female,75072,Asian,Married,Fully Meets,3
+14-Jun-19,13-Oct-22,Area Sales Manager,MSC,Active,Full-Time,Zone A,Temporary,Retirement,,Sales,General - Con,11-04-1952,MA,Laborer,Male,12653,Asian,Widowed,Fully Meets,3
+27-Jul-19,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,13-01-1952,MA,Laborer,Male,70023,White,Single,Fully Meets,3
+20-Mar-20,01-Jan-30,Area Sales Manager,NEL,Active,Contract,Zone A,Full-Time,Unk,,IT/IS,Engineers,29-10-1944,MA,Engineer,Male,85572,Asian,Single,Fully Meets,3
+29-May-22,20-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,General - Con,22-06-1955,MA,Foreman,Male,22338,White,Single,Fully Meets,3
+07-Aug-19,01-Jan-30,Production Technician I,CCDR,Active,Contract,Zone A,Temporary,Unk,,Production       ,Field Operations,19-11-1951,MA,Laborer,Male,10126,White,Single,Fully Meets,3
+05-Dec-22,01-Jan-30,Production Technician I,BPC,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Engineers,03-09-1941,MA,Laborer,Male,78179,Asian,Single,Fully Meets,3
+12-Feb-19,05-Nov-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,23-05-1955,MA,Laborer,Female,11321,White,Divorced,Fully Meets,3
+24-Oct-19,22-Nov-29,Production Technician I,BPC,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,17-11-1951,MA,Laborer,Female,12971,Asian,Single,Fully Meets,3
+23-Sep-19,17-Dec-29,Production Technician I,PL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,02-10-1956,MA,Laborer,Female,7945,Black,Divorced,Fully Meets,3
+11-Feb-23,02-Dec-22,Production Technician I,EW,Active,Contract,Zone C,Full-Time,Resignation,,Production       ,Engineers,24-12-1948,MA,Engineer,Female,83482,Asian,Married,Fully Meets,3
+11-May-20,16-Jun-22,Production Technician I,BPC,Active,Contract,Zone A,Part-Time,Retirement,Interest again main describe end charge.,Production       ,Field Operations,14-03-1949,MA,Laborer,Female,18087,Asian,Divorced,Fully Meets,3
+10-Sep-18,01-Feb-21,Area Sales Manager,WBL,Active,Contract,Zone A,Part-Time,Involuntary,,IT/IS,General - Con,23-07-1988,MA,Foreman,Male,9598,Black,Single,Fully Meets,3
+15-May-19,31-Oct-29,Production Technician I,WBL,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,General - Con,17-11-1961,MA,Laborer,Male,8143,Black,Single,Fully Meets,3
+23-Sep-22,22-Sep-29,Production Technician I,CCDR,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,01-09-1954,MA,Laborer,Female,75266,White,Single,Fully Meets,3
+11-Aug-18,21-Nov-22,Production Technician I,MSC,Voluntarily Terminated,Contract,Zone A,Temporary,Involuntary,Describe current question quite coach.,Production       ,Field Operations,12-03-1952,MA,Laborer,Female,87157,White,Widowed,Fully Meets,3
+27-Apr-20,01-Jan-30,Production Technician I,WBL,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,General - Con,28-02-1955,MA,Laborer,Male,75810,Black,Single,Fully Meets,3
+25-May-21,26-Dec-22,BI Developer,PYZ,Active,Part-Time,Zone C,Temporary,Unk,,IT/IS,Field Operations,06-02-1956,MA,Laborer,Male,67021,Asian,Single,Fully Meets,3
+12-Jun-21,31-Jul-22,Production Technician I,BPC,Voluntarily Terminated,Part-Time,Zone A,Temporary,Resignation,Ok though floor sense want future.,Production       ,Field Operations,16-05-1958,MA,Laborer,Female,93287,Asian,Widowed,Fully Meets,3
+19-Apr-23,12-Apr-23,Production Technician I,NEL,Voluntarily Terminated,Contract,Zone C,Temporary,Voluntary,Beat hand ready reason development else doctor.,Production       ,Field Operations,31-12-1994,MA,Engineer,Female,97893,Other,Married,Fully Meets,3
+11-Aug-18,26-Dec-29,Production Technician I,MSC,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,25-11-1957,MA,Laborer,Male,11699,Black,Single,Fully Meets,3
+23-Sep-21,11-Dec-29,Production Technician I,BPC,Active,Part-Time,Zone C,Temporary,Unk,,IT/IS,Field Operations,10-12-1953,MA,Laborer,Male,77393,Asian,Single,Fully Meets,3
+07-Dec-22,26-Apr-23,Production Technician I,NEL,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,Field Operations,05-06-1961,MA,Laborer,Female,87262,White,Married,Fully Meets,3
+22-Dec-22,11-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,19-02-1957,MA,Laborer,Male,76574,White,Single,Fully Meets,3
+30-Nov-18,15-Oct-22,Production Technician I,SVG,Active,Full-Time,Zone A,Temporary,Resignation,,Production       ,Field Operations,06-06-1950,MA,Laborer,Female,84840,Asian,Married,Fully Meets,3
+04-Nov-22,30-Dec-29,Production Technician I,CCDR,Active,Contract,Zone A,Temporary,Unk,,Production       ,Engineers,24-12-1997,MA,Engineer,Female,93311,White,Married,Fully Meets,3
+20-Oct-19,19-Feb-23,Production Technician I,TNS,Voluntarily Terminated,Contract,Zone B,Temporary,Involuntary,Visit lawyer interesting.,Production       ,Field Operations,07-03-1954,MA,Foreman,Female,70331,Asian,Divorced,Fully Meets,3
+25-Nov-19,26-Dec-29,Production Technician I,TNS,Active,Contract,Zone A,Part-Time,Unk,,IT/IS,Field Operations,11-12-1952,MA,Laborer,Male,6608,Black,Single,Fully Meets,3
+10-Oct-18,31-Dec-29,Production Technician I,WBL,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,19-04-1958,MA,Laborer,Male,6220,Black,Single,Fully Meets,3
+19-Oct-22,01-Jan-30,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,23-07-1954,MA,Engineer,Female,80369,Asian,Divorced,Fully Meets,3
+27-Apr-23,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Unk,,Production       ,Field Operations,25-09-1959,MA,Laborer,Female,79039,White,Married,Fully Meets,3
+05-Dec-22,25-Jan-23,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Involuntary,Prevent involve hundred price.,Production       ,Field Operations,05-04-1957,MA,Laborer,Male,75410,Other,Single,Fully Meets,3
+13-Nov-18,01-Jan-30,Production Technician I,BPC,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Field Operations,28-04-1942,MA,Laborer,Female,13401,Other,Single,Fully Meets,3
+19-Jun-19,25-Aug-29,Production Technician I,WBL,Active,Contract,Zone B,Part-Time,Unk,,Production       ,Field Operations,03-02-1954,MA,Laborer,Male,1015,Black,Single,Fully Meets,3
+06-Aug-23,23-Nov-29,Production Technician I,EW,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,17-03-1954,MA,Laborer,Male,74041,White,Single,Fully Meets,3
+01-Feb-19,14-Aug-22,Production Technician I,MSC,Active,Contract,Zone C,Part-Time,Involuntary,Church happen network dog kid thought.,Production       ,General - Con,02-05-1955,MA,Laborer,Male,47209,White,Divorced,Fully Meets,3
+09-Feb-19,02-Oct-22,Area Sales Manager,MSC,Active,Contract,Zone C,Temporary,Involuntary,,Sales,General - Con,24-12-1950,MA,Laborer,Male,77895,Other,Married,Fully Meets,2
+26-Aug-19,08-Dec-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,06-04-1944,MA,Laborer,Female,88084,Asian,Single,Fully Meets,3
+13-Feb-23,23-Dec-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,16-11-1958,MA,Laborer,Male,85625,White,Single,Fully Meets,3
+31-Mar-21,24-Dec-22,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,21-03-1986,MA,Laborer,Female,93876,White,Married,Fully Meets,3
+07-Mar-22,03-Dec-22,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Resignation,Customer front detail bed say suddenly here.,IT/IS,Field Operations,23-06-1942,MA,Laborer,Male,5211,Asian,Single,Fully Meets,3
+05-Oct-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,IT/IS,General - Con,06-04-1958,MA,Laborer,Male,70861,Hispanic,Single,Fully Meets,3
+19-May-19,16-Jun-22,Production Technician I,MSC,Active,Contract,Zone A,Temporary,Retirement,,IT/IS,Field Operations,10-05-1953,MA,Laborer,Male,17699,Black,Single,Fully Meets,3
+24-Feb-19,08-Aug-22,Production Technician I,TNS,Active,Contract,Zone A,Full-Time,Involuntary,Herself Mr office bed.,Production       ,Field Operations,11-07-1957,MA,Laborer,Female,85050,Asian,Widowed,Fully Meets,3
+10-Apr-23,13-Oct-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,13-10-1960,MA,Laborer,Female,1015,Asian,Divorced,Fully Meets,3
+01-Aug-21,09-Oct-22,Production Technician I,SVG,Voluntarily Terminated,Contract,Zone A,Temporary,Voluntary,Treatment power card almost pretty sister.,Production       ,Field Operations,23-11-1953,MA,Laborer,Female,79576,Asian,Divorced,Fully Meets,3
+27-Apr-22,26-Aug-22,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Involuntary,Prepare simply play edge.,Production       ,General - Con,24-06-1959,MA,Engineer,Female,32251,Asian,Divorced,Fully Meets,3
+04-Oct-19,23-Mar-23,Production Technician I,SVG,Active,Contract,Zone A,Full-Time,Involuntary,Officer thus service.,Production       ,Field Operations,05-04-1964,MA,Foreman,Female,77959,White,Divorced,Fully Meets,3
+05-Mar-22,28-Dec-29,Software Engineer,BPC,Active,Part-Time,Zone B,Temporary,Unk,,IT/IS,Field Operations,28-10-1948,MA,Laborer,Male,77229,Black,Single,Fully Meets,3
+05-Dec-18,09-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,23-06-1959,MA,Laborer,Female,4548,Hispanic,Single,Fully Meets,3
+12-Nov-19,13-Dec-29,Production Technician I,PL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Engineers,10-02-1990,MA,Engineer,Female,97775,Asian,Divorced,Fully Meets,3
+02-Jun-22,28-Sep-22,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Involuntary,,Production       ,Field Operations,12-02-1989,MA,Laborer,Male,75662,White,Widowed,Fully Meets,3
+10-Jan-23,14-Dec-29,Production Technician I,TNS,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,General - Con,03-08-1946,MA,Laborer,Male,29350,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Active,Part-Time,Zone B,Part-Time,Unk,,IT/IS,Field Operations,23-09-1949,MA,Laborer,Male,7758,Black,Single,Fully Meets,3
+03-Sep-22,29-Dec-29,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Engineers,26-02-1949,MA,Engineer,Female,87493,Asian,Married,Fully Meets,3
+29-Nov-21,16-Oct-22,Production Technician I,TNS,Voluntarily Terminated,Contract,Zone A,Temporary,Involuntary,Decision fill total.,Production       ,Field Operations,13-11-1949,MA,Laborer,Female,72289,White,Widowed,Fully Meets,3
+10-Dec-19,25-Dec-29,Production Technician I,MSC,Active,Contract,Zone A,Temporary,Unk,,Production       ,Field Operations,14-06-1954,MA,Laborer,Male,81953,Black,Married,Fully Meets,3
+28-May-19,14-Nov-29,Area Sales Manager,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Sales,Field Operations,05-09-1948,MA,Laborer,Male,18185,Asian,Single,Fully Meets,3
+10-May-19,23-Oct-29,Software Engineer,CCDR,Active,Contract,Zone C,Full-Time,Unk,,IT/IS,Field Operations,03-09-1941,MA,Laborer,Male,6381,Black,Single,Fully Meets,3
+03-Jun-19,01-Nov-29,IT Support,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,02-09-1951,MA,Laborer,Male,21607,Asian,Single,Fully Meets,3
+28-Nov-22,14-Nov-29,Production Technician I,NEL,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,General - Con,03-12-1958,MA,Laborer,Female,83951,White,Single,Fully Meets,3
+14-Jun-19,01-Jan-30,Area Sales Manager,NEL,Active,Contract,Zone C,Full-Time,Unk,,Sales,Field Operations,30-06-1953,MA,Laborer,Male,79157,Asian,Single,Fully Meets,3
+20-Dec-20,30-Jan-23,Production Technician I,MSC,Active,Part-Time,Zone B,Temporary,Involuntary,Partner fact hand bag management woman.,Production       ,Field Operations,20-09-1951,MA,Laborer,Male,8028,Hispanic,Widowed,Fully Meets,3
+26-Aug-19,01-Jan-30,Production Technician I,WBL,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,25-04-1957,MA,Laborer,Male,3616,Black,Single,Fully Meets,3
+22-Jan-23,16-Dec-29,Area Sales Manager,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Sales,Engineers,03-09-1941,MA,Laborer,Male,56061,White,Single,Fully Meets,3
+03-Feb-20,01-Jan-30,Data Analyst,PL,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Engineers,11-09-1961,MA,Laborer,Male,46198,Asian,Single,Fully Meets,3
+11-Aug-18,14-Dec-29,Production Technician I,CCDR,Active,Contract,Zone A,Temporary,Unk,,Production       ,General - Con,04-04-1955,MA,Laborer,Female,12131,White,Single,Fully Meets,3
+04-Sep-21,29-Dec-22,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Retirement,,IT/IS,Field Operations,06-10-1955,MA,Laborer,Male,78912,Asian,Divorced,Fully Meets,3
+26-Sep-22,01-Jan-30,Production Technician I,WBL,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,09-10-1956,MA,Laborer,Female,86102,White,Widowed,Fully Meets,3
+05-Apr-19,11-Nov-22,Production Technician I,BPC,Active,Contract,Zone B,Part-Time,Retirement,Television represent skill police.,IT/IS,Field Operations,10-06-1948,MA,Laborer,Male,1015,Asian,Single,Fully Meets,3
+30-Dec-20,01-Jan-30,Production Technician I,PYZ,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,16-01-1952,MA,Laborer,Male,75583,Other,Single,Fully Meets,3
+23-Apr-23,27-Jan-23,Area Sales Manager,BPC,Active,Full-Time,Zone C,Full-Time,Resignation,,Sales,Engineers,27-10-1989,MA,Engineer,Male,80574,Asian,Married,Fully Meets,2
+22-Jun-19,27-May-21,Production Technician I,MSC,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Field Operations,13-01-1956,MA,Laborer,Female,89514,Hispanic,Married,Fully Meets,3
+22-Oct-20,23-Nov-29,Production Technician I,EW,Active,Full-Time,Zone C,Part-Time,Unk,,Production       ,Field Operations,17-02-1961,MA,Technician,Female,52639,Black,Widowed,Fully Meets,3
+09-Oct-21,22-Mar-23,Production Technician I,TNS,Voluntarily Terminated,Contract,Zone A,Temporary,Voluntary,Treatment power card almost pretty sister.,Production       ,Field Operations,26-11-1946,MA,Laborer,Female,73718,Asian,Widowed,Fully Meets,3
+14-Jun-22,06-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,12-09-1951,MA,Engineer,Female,91161,White,Single,Fully Meets,3
+12-Jun-19,30-Aug-22,Production Technician I,MSC,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,26-11-1954,MA,Laborer,Female,2255,Hispanic,Widowed,Fully Meets,3
+21-Sep-20,04-Sep-22,Production Technician I,EW,Active,Full-Time,Zone C,Temporary,Unk,,Production       ,Field Operations,01-09-1962,MA,Technician,Female,40532,Other,Widowed,Fully Meets,3
+09-Aug-22,10-Nov-29,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,24-01-1957,MA,Laborer,Female,65875,White,Widowed,Fully Meets,3
+06-Oct-18,23-Dec-29,Area Sales Manager,WBL,Active,Contract,Zone A,Full-Time,Unk,,Sales,General - Con,09-07-2001,MA,Laborer,Male,53616,White,Single,Fully Meets,3
+25-Jan-23,13-Jul-22,Production Technician I,SVG,Active,Contract,Zone A,Full-Time,Retirement,,Production       ,Field Operations,04-11-1952,MA,Laborer,Female,85193,Asian,Married,Fully Meets,3
+03-Feb-23,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,15-12-1954,MA,Laborer,Female,76688,White,Widowed,Fully Meets,3
+04-May-19,10-Dec-22,Production Technician I,NEL,Active,Full-Time,Zone A,Temporary,Retirement,Six agreement take. Newspaper back land health.,Production       ,Field Operations,20-03-1956,MA,Laborer,Female,79254,Asian,Divorced,Fully Meets,3
+06-Sep-22,06-Jan-23,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Field Operations,18-09-1962,MA,Technician,Female,66604,Other,Widowed,Fully Meets,3
+09-Jul-19,12-May-22,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,08-05-1947,MA,Laborer,Female,8327,Asian,Divorced,Fully Meets,3
+31-May-20,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,29-01-1960,MA,Technician,Female,31092,Other,Widowed,Fully Meets,3
+04-Mar-21,24-Nov-29,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,13-03-1949,MA,Laborer,Female,77576,White,Single,Fully Meets,3
+23-Sep-21,08-Nov-29,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Unk,,Production       ,Field Operations,30-12-1958,MA,Laborer,Female,74575,Other,Widowed,Fully Meets,3
+16-Dec-22,15-Jul-22,Area Sales Manager,CCDR,Active,Full-Time,Zone A,Full-Time,Retirement,,Sales,Engineers,09-09-1946,MA,Engineer,Male,91620,Asian,Married,Fully Meets,2
+21-Dec-22,06-Dec-22,Production Technician I,EW,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,14-05-1951,MA,Laborer,Female,78399,Asian,Married,Fully Meets,3
+15-Sep-22,10-Jan-23,Production Technician I,PYZ,Voluntarily Terminated,Contract,Zone A,Temporary,Voluntary,Past agreement focus back.,Production       ,Field Operations,12-02-1942,MA,Laborer,Female,89539,Asian,Divorced,Fully Meets,3
+12-Sep-21,17-Nov-22,Production Technician I,BPC,Active,Contract,Zone A,Part-Time,Retirement,,Production       ,Field Operations,03-09-1941,MA,Laborer,Female,80105,Asian,Divorced,Fully Meets,3
+14-Sep-22,11-Jan-23,Area Sales Manager,MSC,Active,Contract,Zone C,Temporary,Retirement,Something sense information final building.,Sales,General - Con,12-03-1957,TX,Foreman,Male,94869,Asian,Married,Fully Meets,2
+25-Mar-19,24-Sep-22,Production Technician I,NEL,Active,Contract,Zone C,Part-Time,Involuntary,,Production       ,Field Operations,01-09-1975,MA,Laborer,Female,83000,White,Widowed,Fully Meets,3
+26-Jul-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,11-08-1946,MA,Laborer,Male,67489,Other,Single,Fully Meets,3
+10-Sep-21,21-Oct-29,Production Technician I,EW,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,03-10-1949,MA,Laborer,Female,77063,Asian,Divorced,Fully Meets,3
+23-Dec-18,01-Jan-30,Production Technician I,CCDR,Active,Part-Time,Zone C,Full-Time,Unk,,Production       ,Field Operations,02-01-1959,MA,Engineer,Female,17474,Black,Single,Fully Meets,3
+31-May-22,01-Jan-21,Production Technician I,MSC,Active,Contract,Zone C,Temporary,Unk,,Production       ,General - Con,02-02-1967,MA,Technician,Female,73953,Other,Married,Fully Meets,2
+25-Dec-22,12-Feb-23,Production Technician I,PYZ,Active,Contract,Zone A,Temporary,Involuntary,Southern alone father state.,Production       ,Field Operations,15-02-1956,MA,Laborer,Female,69952,Asian,Married,Fully Meets,3
+14-Sep-19,20-May-22,IT Support,CCDR,Active,Full-Time,Zone A,Part-Time,Involuntary,,IT/IS,General - Con,30-12-1956,MA,Laborer,Male,2321,Asian,Divorced,Fully Meets,3
+05-Feb-19,26-Apr-22,Production Technician I,BPC,Active,Full-Time,Zone A,Part-Time,Resignation,,Production       ,Field Operations,12-07-1943,MA,Laborer,Female,12961,Black,Single,Fully Meets,3
+17-May-23,09-Jan-23,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Project Management - Con,16-05-1953,MA,Engineer,Female,95206,Asian,Divorced,Fully Meets,3
+30-Nov-20,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,01-06-1958,MA,Laborer,Male,85372,Asian,Single,Fully Meets,3
+03-Nov-19,08-Nov-22,Area Sales Manager,CCDR,Active,Full-Time,Zone A,Full-Time,Resignation,,Sales,Engineers,12-01-1991,MA,Engineer,Male,33133,Asian,Single,Fully Meets,3
+05-Oct-20,01-Feb-21,Production Technician I,MSC,Active,Part-Time,Zone A,Temporary,Voluntary,,Production       ,Field Operations,24-05-1982,MA,Engineer,Male,88618,White,Single,Fully Meets,3
+14-May-23,14-Mar-23,Software Engineer,PYZ,Active,Full-Time,Zone A,Full-Time,Resignation,,IT/IS,Engineers,22-01-1945,MA,Engineer,Male,94283,Asian,Single,Fully Meets,3
+28-Jul-19,13-Oct-29,Area Sales Manager,TNS,Active,Contract,Zone A,Full-Time,Unk,,IT/IS,General - Con,12-07-1961,MA,Laborer,Male,36492,White,Single,Fully Meets,3
+01-Jun-21,25-Feb-23,Production Technician I,SVG,Active,Contract,Zone A,Temporary,Resignation,Treatment power card almost pretty sister.,Production       ,Field Operations,15-11-1944,MA,Laborer,Female,85718,Asian,Married,Fully Meets,3
+15-May-22,30-Dec-22,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,29-08-1954,MA,Laborer,Female,87414,White,Married,Fully Meets,3
+17-Feb-20,02-Dec-29,Production Technician I,WBL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,03-12-1954,MA,Laborer,Male,50107,White,Single,Fully Meets,3
+24-Sep-18,31-Aug-22,Production Technician I,WBL,Active,Contract,Zone A,Full-Time,Involuntary,,Production       ,Field Operations,08-09-1952,MA,Laborer,Female,13005,White,Single,Fully Meets,3
+03-Jul-19,16-Oct-22,Production Technician I,BPC,Active,Part-Time,Zone A,Temporary,Resignation,Top whether good.,Production       ,Field Operations,31-01-1963,MA,Technician,Female,74818,White,Married,Fully Meets,3
+23-May-21,09-Apr-23,Software Engineer,BPC,Active,Full-Time,Zone C,Temporary,Resignation,,IT/IS,Field Operations,14-05-1943,MA,Laborer,Male,64102,Asian,Single,Fully Meets,3
+09-Feb-20,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,14-02-1963,MA,Laborer,Male,88471,White,Single,Fully Meets,3
+02-May-19,11-Aug-22,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Field Operations,22-01-1977,MA,Laborer,Female,69061,Other,Widowed,Fully Meets,3
+17-Jan-19,21-Jul-22,Production Technician I,NEL,Active,Contract,Zone C,Part-Time,Involuntary,,Production       ,Field Operations,12-09-1956,MA,Laborer,Female,89428,Black,Married,Fully Meets,3
+10-Apr-19,21-Sep-29,Production Technician I,WBL,Active,Part-Time,Zone A,Part-Time,Unk,,Production       ,General - Con,25-12-1950,MA,Laborer,Male,1015,Black,Single,Fully Meets,3
+19-Aug-22,21-Feb-23,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Involuntary,,Production       ,Field Operations,11-08-1964,MA,Laborer,Female,76300,White,Married,Fully Meets,3
+24-Apr-22,02-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,09-01-1948,MA,Laborer,Female,74468,Other,Married,Fully Meets,3
+03-Dec-21,27-Nov-29,Production Technician I,BPC,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,11-10-1952,MA,Laborer,Male,63951,Other,Single,Fully Meets,3
+20-Nov-22,29-Dec-29,Production Technician I,BPC,Active,Full-Time,Zone C,Part-Time,Unk,,Production       ,Field Operations,25-07-1948,MA,Laborer,Male,77131,Black,Married,Fully Meets,3
+20-Sep-19,19-Dec-29,Production Technician I,TNS,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,04-11-1960,MA,Laborer,Female,69667,White,Widowed,Fully Meets,3
+10-Apr-20,06-Dec-22,Production Technician I,BPC,Active,Full-Time,Zone A,Part-Time,Retirement,,Production       ,Field Operations,14-09-1941,MA,Laborer,Female,1015,Asian,Divorced,Fully Meets,3
+20-Dec-22,02-Oct-22,Production Technician I,NEL,Voluntarily Terminated,Contract,Zone A,Full-Time,Voluntary,Much try remember natural.,Production       ,Field Operations,06-01-1951,MA,Laborer,Female,97504,Asian,Divorced,Fully Meets,3
+29-Aug-19,24-Sep-22,Production Technician I,TNS,Voluntarily Terminated,Contract,Zone A,Temporary,Involuntary,Herself Mr office bed.,Production       ,Field Operations,11-10-1994,MA,Technician,Female,74306,White,Widowed,Fully Meets,3
+04-Sep-19,07-Apr-23,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,21-07-1958,MA,Laborer,Male,5634,Asian,Single,Fully Meets,3
+29-Apr-19,24-Sep-22,Production Technician I,NEL,Active,Full-Time,Zone C,Full-Time,Retirement,,Production       ,Field Operations,24-11-1948,MA,Laborer,Female,83162,Asian,Married,Fully Meets,3
+29-Nov-18,10-Jul-21,Production Technician I,MSC,Active,Contract,Zone A,Full-Time,Involuntary,,IT/IS,General - Con,09-06-1998,MA,Laborer,Female,6874,White,Single,Fully Meets,3
+28-May-21,01-Jan-30,Area Sales Manager,MSC,Active,Contract,Zone C,Temporary,Unk,,Sales,General - Con,17-12-1963,MA,Laborer,Male,90854,Hispanic,Single,Fully Meets,3
+30-Jun-19,01-Jan-30,Production Technician I,BPC,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,23-12-1942,MA,Technician,Female,42165,Black,Single,Fully Meets,3
+06-Dec-22,18-May-23,Production Technician I,PYZ,Voluntarily Terminated,Full-Time,Zone A,Temporary,Resignation,A discussion quite mission.,Production       ,Field Operations,26-10-1987,MA,Technician,Female,89274,Other,Married,Fully Meets,3
+12-Oct-18,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,13-10-1991,MA,Laborer,Male,15947,White,Single,Fully Meets,3
+24-Oct-18,17-Aug-22,Production Technician I,CCDR,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Field Operations,18-04-1988,MA,Technician,Female,2945,Other,Single,Fully Meets,3
+08-Oct-22,16-Oct-22,Production Technician I,SVG,Active,Full-Time,Zone A,Full-Time,Resignation,,Production       ,Field Operations,02-06-1959,MA,Laborer,Female,59077,Asian,Divorced,Fully Meets,3
+18-Mar-20,06-Dec-22,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,16-08-1946,MA,Laborer,Female,36242,Asian,Divorced,Fully Meets,3
+28-Mar-21,09-May-23,Software Engineer,BPC,Active,Part-Time,Zone A,Temporary,Resignation,,IT/IS,Field Operations,02-02-1987,MA,Laborer,Male,17811,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Production Technician I,WBL,Active,Full-Time,Zone C,Temporary,Unk,,Production       ,Field Operations,23-08-1975,MA,Technician,Male,83815,Other,Widowed,Fully Meets,3
+12-Apr-20,01-Oct-29,Production Technician I,TNS,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,23-09-1952,MA,Laborer,Female,78957,White,Widowed,Fully Meets,3
+18-Nov-19,29-Sep-22,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,18-12-1962,MA,Laborer,Female,61862,White,Widowed,Fully Meets,3
+02-Mar-19,19-Aug-22,Production Technician I,WBL,Active,Part-Time,Zone A,Temporary,Involuntary,Method suggest leave process deep tough seek.,Production       ,Field Operations,29-09-1951,MA,Laborer,Female,16996,White,Single,Fully Meets,3
+17-Feb-21,30-Mar-23,Production Technician I,PYZ,Active,Part-Time,Zone B,Temporary,Resignation,Customer front detail bed say suddenly here.,Production       ,Field Operations,26-06-1942,MA,Laborer,Male,2177,Hispanic,Single,Fully Meets,3
+20-Apr-20,18-Apr-22,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Voluntary,,Production       ,Field Operations,14-07-1950,MA,Laborer,Female,22542,Black,Divorced,Fully Meets,3
+01-Nov-21,01-Dec-22,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Retirement,,Production       ,Field Operations,10-01-1950,MA,Laborer,Male,80542,Asian,Single,Fully Meets,3
+29-Dec-19,29-Aug-22,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,Window paper dark power knowledge must current.,Production       ,Field Operations,04-08-1952,MA,Laborer,Female,78845,Hispanic,Widowed,Fully Meets,3
+09-Oct-22,31-Dec-22,Production Technician I,CCDR,Active,Contract,Zone C,Temporary,Resignation,,Production       ,Field Operations,29-09-1986,MA,Engineer,Female,97893,White,Single,Fully Meets,3
+22-Feb-23,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,17-04-1949,MA,Laborer,Female,69630,White,Widowed,Fully Meets,3
+03-Apr-21,01-Jan-30,Production Technician I,WBL,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,31-01-1950,MA,Laborer,Male,62441,Black,Single,Fully Meets,3
+22-Aug-20,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,19-12-1960,MA,Laborer,Female,67767,White,Married,Fully Meets,3
+22-Aug-19,28-Oct-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,22-10-1950,MA,Laborer,Female,10990,White,Single,Fully Meets,3
+17-Mar-19,02-Aug-22,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Involuntary,Late least forward bill realize camera.,Production       ,Field Operations,11-02-1954,MA,Laborer,Female,10046,Asian,Divorced,Fully Meets,3
+03-May-21,10-Nov-29,Production Technician I,BPC,Active,Contract,Zone A,Part-Time,Unk,,Production       ,Field Operations,14-03-1956,MA,Laborer,Male,82994,Asian,Divorced,Fully Meets,3
+03-May-19,18-Oct-22,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Involuntary,,Production       ,Field Operations,02-01-1953,MA,Engineer,Female,68092,Asian,Divorced,Fully Meets,3
+24-Feb-22,27-Nov-29,Production Technician I,BPC,Active,Contract,Zone C,Part-Time,Unk,,Production       ,Engineers,30-12-1946,MA,Engineer,Female,77527,Asian,Divorced,Fully Meets,3
+12-Aug-19,07-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,28-08-1954,MA,Foreman,Male,71848,White,Single,Fully Meets,3
+18-Jan-19,27-May-20,Production Technician I,MSC,Active,Part-Time,Zone A,Part-Time,Involuntary,North help rock stage someone book.,Production       ,Field Operations,04-11-1986,MA,Laborer,Male,12507,Black,Single,Fully Meets,3
+28-Jul-21,06-Dec-22,Production Technician I,SVG,Active,Contract,Zone B,Temporary,Resignation,Learn staff above address.,Production       ,Field Operations,08-08-1953,MA,Laborer,Male,70974,Asian,Married,Fully Meets,3
+03-Aug-22,14-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,General - Con,08-05-1956,MA,Laborer,Female,77493,White,Single,Fully Meets,3
+08-Jul-19,03-Dec-29,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,27-05-1961,MA,Technician,Female,92150,White,Married,Fully Meets,3
+12-May-19,08-Apr-22,Production Technician I,SVG,Active,Full-Time,Zone A,Temporary,Involuntary,Above fight animal support beautiful.,Production       ,Field Operations,09-11-1958,MA,Laborer,Female,1015,Hispanic,Widowed,Fully Meets,3
+08-Jan-23,07-May-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,Too former relationship risk.,Production       ,Field Operations,28-08-1961,MA,Laborer,Female,73614,Hispanic,Married,Fully Meets,3
+30-Jan-21,01-Jan-30,Production Technician I,EW,Active,Full-Time,Zone C,Temporary,Unk,,Production       ,Field Operations,31-05-1968,MA,Laborer,Female,66098,Other,Single,Fully Meets,3
+12-Nov-19,21-Nov-29,Production Technician I,WBL,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,05-04-1958,MA,Laborer,Female,6059,Black,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Software Engineer,BPC,Active,Part-Time,Zone B,Part-Time,Unk,,IT/IS,Field Operations,09-12-1944,MA,Laborer,Male,6476,Black,Single,Fully Meets,3
+18-Apr-19,01-Nov-29,Production Technician I,BPC,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,28-04-1952,MA,Laborer,Male,8162,Black,Single,Fully Meets,3
+18-May-20,08-Nov-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,08-12-1965,MA,Laborer,Male,1015,Other,Widowed,Fully Meets,3
+12-Dec-19,01-Jan-30,Production Technician I,WBL,Active,Contract,Zone A,Temporary,Unk,,Production       ,Field Operations,21-12-1952,MA,Laborer,Male,11746,Black,Single,Fully Meets,3
+02-Feb-19,14-Dec-29,Production Technician I,PYZ,Active,Contract,Zone B,Part-Time,Unk,,Production       ,Field Operations,12-06-1973,MA,Lineman,Male,34386,Other,Single,Fully Meets,3
+01-Oct-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,16-01-1952,MA,Laborer,Male,76755,White,Single,Fully Meets,3
+06-Mar-21,10-Feb-23,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Field Operations,23-04-1957,MA,Laborer,Male,87213,Asian,Single,Fully Meets,3
+26-Aug-18,14-Jun-21,Production Technician I,WBL,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,17-08-1987,MA,Technician,Female,84196,White,Single,Fully Meets,3
+09-Dec-22,01-Jan-30,Production Technician I,BPC,Active,Full-Time,Zone C,Temporary,Unk,,Production       ,Field Operations,19-09-1949,MA,Technician,Female,62000,Black,Single,Fully Meets,3
+22-Feb-22,29-Dec-22,Production Technician I,SVG,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,12-11-1951,MA,Laborer,Female,96880,Asian,Married,Fully Meets,3
+24-Feb-19,15-Apr-22,Production Technician I,PYZ,Voluntarily Terminated,Contract,Zone A,Part-Time,Involuntary,Stay word behavior financial.,Production       ,General - Con,01-03-1953,MA,Laborer,Female,96260,Asian,Divorced,Fully Meets,3
+25-Nov-18,01-Sep-22,Area Sales Manager,CCDR,Active,Full-Time,Zone A,Temporary,Resignation,,Sales,Field Operations,29-09-1992,MA,Engineer,Male,97893,Asian,Married,Fully Meets,2
+31-Dec-22,20-Mar-23,Production Technician I,TNS,Voluntarily Terminated,Part-Time,Zone A,Temporary,Involuntary,Order protect raise exist by behind dream memory.,Production       ,Field Operations,03-06-1986,MA,Laborer,Female,68564,Other,Married,Fully Meets,3
+07-Aug-21,05-Jan-23,Production Technician I,SVG,Voluntarily Terminated,Contract,Zone A,Temporary,Involuntary,Build very significant imagine cell doctor.,Production       ,Field Operations,23-06-1954,MA,Laborer,Female,87087,Other,Widowed,Fully Meets,3
+18-Mar-23,10-Oct-22,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Field Operations,04-06-1956,MA,Laborer,Male,89234,Asian,Single,Fully Meets,3
+28-Jul-21,01-Jan-30,Production Technician I,BPC,Active,Part-Time,Zone C,Temporary,Unk,,Production       ,Field Operations,17-12-1947,MA,Laborer,Female,72208,Other,Married,Fully Meets,3
+16-Sep-18,30-Dec-29,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,07-02-1963,MA,Laborer,Female,26532,White,Married,Fully Meets,3
+13-Sep-22,22-Nov-22,Production Technician I,NEL,Active,Part-Time,Zone A,Temporary,Voluntary,,Production       ,Project Management - Con,12-07-1957,MA,Engineer,Male,92564,Asian,Married,Fully Meets,2
+22-Jul-22,22-Mar-23,Production Technician I,TNS,Active,Contract,Zone A,Full-Time,Involuntary,,Production       ,Field Operations,03-03-1968,MA,Laborer,Female,84414,White,Married,Fully Meets,3
+28-May-22,19-Mar-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,05-10-1952,MA,Laborer,Female,77345,Hispanic,Widowed,Fully Meets,3
+04-May-19,13-Sep-22,Production Technician I,CCDR,Active,Contract,Zone A,Part-Time,Resignation,,Production       ,Engineers,16-03-1987,MA,Engineer,Female,26458,Asian,Single,Fully Meets,3
+26-Nov-22,01-Jan-30,Production Technician I,TNS,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,20-02-1952,MA,Laborer,Female,93029,White,Married,Fully Meets,3
+12-Apr-23,26-Mar-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Resignation,,Production       ,Field Operations,03-09-1956,MA,Laborer,Male,71222,Asian,Married,Fully Meets,3
+21-Sep-21,28-Mar-23,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,30-11-1953,MA,Laborer,Male,82999,Asian,Single,Fully Meets,3
+20-Apr-21,10-Nov-29,Production Technician I,BPC,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,27-08-1942,MA,Laborer,Male,1188,Asian,Single,Fully Meets,3
+11-Nov-22,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,16-03-1944,MA,Technician,Female,58941,Black,Married,Fully Meets,3
+28-Sep-19,11-Dec-29,Production Technician I,BPC,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,30-11-1948,MA,Laborer,Female,85571,White,Single,Fully Meets,3
+14-Nov-20,18-Jan-23,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Involuntary,Out always about must with ago here.,Production       ,Field Operations,21-11-1959,MA,Laborer,Female,60435,Hispanic,Widowed,Fully Meets,3
+03-Jun-22,15-Jun-22,BI Developer,MSC,Active,Contract,Zone A,Temporary,Retirement,Behind bar item management.,IT/IS,Field Operations,03-06-1953,MA,Laborer,Male,82588,Asian,Single,Fully Meets,3
+29-Sep-22,10-May-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,08-10-1957,MA,Laborer,Female,76305,White,Married,Fully Meets,3
+20-Aug-19,01-Jan-30,Software Engineer,PL,Active,Full-Time,Zone C,Full-Time,Unk,,IT/IS,Field Operations,22-01-1954,MA,Laborer,Male,7479,White,Single,Fully Meets,3
+18-May-22,14-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,25-04-1965,MA,Laborer,Male,58373,Other,Single,Fully Meets,3
+12-Sep-19,03-Nov-29,Production Technician I,WBL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,28-05-1980,MA,Laborer,Male,18324,Black,Single,Fully Meets,3
+02-Dec-19,01-Jan-30,Network Engineer,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,15-10-1954,MA,Laborer,Male,7810,Black,Single,Fully Meets,3
+13-Dec-18,25-Jan-23,Production Technician I,WBL,Active,Contract,Zone B,Part-Time,Voluntary,Choose system picture one party decision.,IT/IS,Field Operations,22-04-1946,MA,Laborer,Male,66665,Hispanic,Single,Fully Meets,3
+18-Jan-20,01-Jan-30,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,21-01-1950,MA,Laborer,Male,16559,White,Single,Fully Meets,3
+19-Apr-23,01-Jan-30,Production Technician I,BPC,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,30-07-1957,MA,Engineer,Female,93060,Asian,Married,Fully Meets,3
+25-Feb-19,23-Jul-22,Production Technician I,MSC,Active,Contract,Zone B,Part-Time,Involuntary,Material agency modern degree general.,Production       ,Field Operations,07-06-1943,MA,Laborer,Female,2918,Black,Single,Fully Meets,3
+25-Dec-18,14-Sep-22,Production Technician I,CCDR,Active,Part-Time,Zone A,Full-Time,Voluntary,,Production       ,Field Operations,03-05-1994,MA,Engineer,Female,89427,White,Single,Fully Meets,3
+19-Aug-19,19-Oct-22,BI Developer,MSC,Active,Part-Time,Zone A,Temporary,Involuntary,Begin mind time similar night travel.,IT/IS,Field Operations,29-06-1955,MA,Laborer,Male,7453,Other,Single,Fully Meets,3
+21-Jun-22,16-Dec-29,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,16-07-1992,MA,Laborer,Male,66047,Other,Single,Fully Meets,3
+12-Jun-19,01-Jan-30,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,14-08-1962,MA,Laborer,Female,9030,Black,Single,Fully Meets,3
+10-May-20,21-Nov-22,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Resignation,That commercial east message peace.,Production       ,Field Operations,18-02-1945,MA,Laborer,Male,91768,Asian,Single,Fully Meets,3
+19-Nov-21,23-Nov-29,Production Technician I,BPC,Active,Full-Time,Zone C,Temporary,Unk,,Production       ,Engineers,17-06-1951,MA,Laborer,Male,81078,Black,Married,Fully Meets,3
+14-Feb-19,02-Jul-22,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Retirement,,Software Engineering,Engineers,06-04-1942,MA,Laborer,Male,14666,Asian,Divorced,Fully Meets,3
+22-Jul-22,19-Jan-23,Production Technician I,BPC,Active,Part-Time,Zone A,Temporary,Resignation,Treatment power card almost pretty sister.,Production       ,Field Operations,30-07-1948,MA,Laborer,Female,81326,Asian,Single,Fully Meets,3
+27-Jun-22,20-Oct-22,Production Technician I,BPC,Active,Contract,Zone C,Full-Time,Resignation,,Production       ,Field Operations,18-03-1957,MA,Laborer,Male,79867,Asian,Divorced,Fully Meets,3
+14-Mar-21,01-Jan-30,Production Technician I,SVG,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,17-07-1955,MA,Laborer,Female,80388,Asian,Married,Fully Meets,3
+22-Mar-20,23-Jul-22,Production Technician I,BPC,Active,Contract,Zone A,Part-Time,Retirement,,Production       ,Field Operations,19-05-1949,MA,Laborer,Female,15575,Asian,Single,Fully Meets,3
+27-Oct-20,24-Dec-22,Production Technician I,BPC,Active,Full-Time,Zone A,Temporary,Resignation,Past agreement focus back.,Production       ,Field Operations,18-03-1944,MA,Laborer,Male,90822,Asian,Married,Fully Meets,3
+11-Mar-23,13-Jan-23,Production Technician I,TNS,Active,Contract,Zone A,Full-Time,Voluntary,,Production       ,Field Operations,10-12-1952,MA,Laborer,Female,80588,Asian,Married,Fully Meets,3
+01-Jul-19,16-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,07-07-1991,MA,Laborer,Male,71191,White,Single,Fully Meets,3
+13-Dec-21,23-Oct-22,Production Technician I,NEL,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,Field Operations,11-10-1966,MA,Laborer,Female,90540,Asian,Married,Fully Meets,3
+10-Apr-23,01-Jan-30,Production Technician I,BPC,Active,Full-Time,Zone C,Part-Time,Unk,,Production       ,Field Operations,19-04-1944,MA,Engineer,Female,82418,Other,Widowed,Fully Meets,3
+12-Jun-22,01-Jan-30,Production Technician I,NEL,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,General - Con,09-11-1966,MA,Foreman,Female,80303,White,Widowed,Fully Meets,2
+12-Dec-21,25-Dec-22,Production Technician I,NEL,Active,Contract,Zone C,Full-Time,Retirement,,Production       ,Field Operations,06-11-1948,MA,Engineer,Female,85398,White,Married,Fully Meets,3
+18-Aug-22,11-Sep-22,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Resignation,,Production       ,Field Operations,02-07-1967,MA,Technician,Female,81038,Other,Married,Fully Meets,3
+08-Dec-18,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,18-08-1961,MA,Laborer,Female,83742,White,Widowed,Fully Meets,3
+13-Jul-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,12-08-1957,MA,Laborer,Female,85200,White,Married,Fully Meets,3
+21-Apr-22,20-Dec-29,Production Technician I,TNS,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,14-08-1952,MA,Laborer,Male,79966,White,Single,Fully Meets,3
+26-Jun-19,21-Mar-23,Production Technician I,PYZ,Voluntarily Terminated,Contract,Zone A,Part-Time,Involuntary,Stay word behavior financial.,Production       ,Field Operations,09-05-1954,MA,Laborer,Female,86971,Asian,Divorced,Fully Meets,3
+07-Oct-22,30-Dec-22,Production Technician I,BPC,Active,Full-Time,Zone C,Part-Time,Resignation,,Production       ,Engineers,06-08-1989,MA,Engineer,Male,90979,Asian,Divorced,Fully Meets,3
+15-Nov-19,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,25-03-1961,MA,Laborer,Female,74607,Asian,Single,Fully Meets,3
+28-Dec-21,18-Dec-29,Production Technician I,TNS,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,02-10-1953,MA,Laborer,Female,17331,White,Single,Fully Meets,3
+17-Dec-18,01-Apr-22,Area Sales Manager,PYZ,Active,Contract,Zone C,Part-Time,Involuntary,Stay herself cultural pass large.,Sales,General - Con,02-02-1951,MA,Laborer,Male,7875,Asian,Divorced,Fully Meets,2
+08-Nov-22,30-Aug-22,Production Technician I,BPC,Active,Full-Time,Zone A,Part-Time,Retirement,,Production       ,Field Operations,03-09-1941,MA,Laborer,Female,89842,Asian,Divorced,Fully Meets,3
+05-Nov-22,12-Mar-23,BI Developer,MSC,Active,Contract,Zone C,Temporary,Involuntary,Shake war over young like anything order.,IT/IS,Field Operations,28-02-1953,MA,Laborer,Male,86682,Asian,Married,Fully Meets,3
+01-Dec-21,12-Dec-29,Production Technician I,BPC,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Field Operations,24-12-1962,MA,Technician,Female,90206,Other,Married,Fully Meets,3
+17-Nov-21,08-Jan-23,Production Technician I,MSC,Voluntarily Terminated,Part-Time,Zone A,Part-Time,Voluntary,Too within that room.,Production       ,Field Operations,10-12-1988,MA,Laborer,Male,83715,Asian,Divorced,Fully Meets,3
+02-May-22,01-Jan-30,Production Technician I,BPC,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,16-04-1953,MA,Laborer,Male,75356,Asian,Single,Fully Meets,3
+05-Dec-20,01-Jan-30,Production Technician I,TNS,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,25-03-1961,MA,Laborer,Female,66975,White,Widowed,Fully Meets,3
+21-Nov-18,05-Aug-22,Production Technician I,BPC,Active,Contract,Zone A,Part-Time,Retirement,Too within that room.,Production       ,Field Operations,11-08-1985,MA,Laborer,Male,83044,Asian,Divorced,Fully Meets,3
+29-Oct-22,10-Sep-22,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Field Operations,11-01-1955,MA,Laborer,Female,83103,Hispanic,Married,Fully Meets,3
+28-Jul-19,24-Dec-29,Data Analyst,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,22-12-1948,MA,Laborer,Male,33598,Black,Single,Fully Meets,3
+05-Mar-19,15-Nov-29,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,14-11-1972,MA,Laborer,Female,18689,Black,Married,Fully Meets,3
+02-Jul-19,25-Oct-22,Production Technician I,TNS,Active,Full-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,17-07-1988,MA,Laborer,Female,84118,White,Widowed,Fully Meets,3
+02-Apr-22,03-Oct-22,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,11-02-1999,MA,Technician,Female,76611,White,Married,Fully Meets,3
+21-Dec-19,07-Nov-22,Production Technician I,PYZ,Active,Full-Time,Zone A,Part-Time,Voluntary,Nation you bad daughter only huge them.,Production       ,Field Operations,17-10-1949,MA,Engineer,Female,96415,Asian,Divorced,Fully Meets,3
+26-Jan-23,11-Nov-22,Production Technician I,BPC,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Field Operations,17-01-1944,MA,Laborer,Male,75663,Asian,Single,Fully Meets,3
+01-Jun-21,19-Nov-29,Production Technician I,PL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,09-12-1954,MA,Laborer,Female,69197,Asian,Divorced,Fully Meets,3
+24-Mar-22,25-Feb-22,Production Technician I,CCDR,Active,Part-Time,Zone C,Temporary,Involuntary,,Production       ,Field Operations,02-07-1994,MA,Technician,Female,96234,White,Single,Fully Meets,3
+30-Sep-22,11-Oct-22,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,09-08-1948,MA,Laborer,Male,61943,White,Married,Fully Meets,3
+05-Apr-22,01-Jan-30,Production Technician I,CCDR,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,06-10-1998,MA,Engineer,Female,93483,White,Married,Fully Meets,3
+06-Aug-23,26-Jun-23,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Voluntary,Where forward evening huge cost share eat.,Production       ,Engineers,21-11-1952,MA,Engineer,Male,90926,Asian,Divorced,Fully Meets,3
+24-Jan-19,02-Dec-29,Software Engineer,PYZ,Active,Full-Time,Zone C,Part-Time,Unk,,IT/IS,Field Operations,26-01-1942,MA,Laborer,Male,40918,Black,Single,Fully Meets,3
+03-May-20,01-Jan-30,Area Sales Manager,MSC,Active,Full-Time,Zone A,Temporary,Unk,,Sales,General - Con,27-06-1953,TX,Laborer,Male,35148,Asian,Married,Fully Meets,2
+18-Jul-21,09-Oct-22,Production Technician I,MSC,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Field Operations,27-06-1985,MA,Laborer,Male,81134,Black,Single,Fully Meets,3
+07-May-21,22-Oct-22,Area Sales Manager,MSC,Active,Contract,Zone A,Temporary,Involuntary,,Sales,General - Con,07-09-1957,MA,Laborer,Male,81682,Black,Single,Fully Meets,3
+18-Jun-22,13-Jan-23,Production Technician I,TNS,Voluntarily Terminated,Contract,Zone A,Temporary,Voluntary,Build very significant imagine cell doctor.,Production       ,Field Operations,03-06-1991,MA,Laborer,Female,81029,Other,Widowed,Fully Meets,3
+05-Nov-19,27-Nov-22,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Engineers,11-12-1949,MA,Laborer,Female,92596,Asian,Divorced,Fully Meets,3
+29-Sep-19,01-Jan-30,Area Sales Manager,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Sales,Engineers,29-01-1956,MA,Laborer,Male,72941,White,Single,Fully Meets,3
+14-Apr-23,01-Jan-30,Production Technician I,NEL,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,06-03-1961,MA,Laborer,Female,80845,Asian,Married,Fully Meets,3
+13-Jun-19,01-Sep-22,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Involuntary,Artist technology ever body provide today doctor.,Production       ,Field Operations,03-02-1958,MA,Laborer,Female,31639,Asian,Widowed,Fully Meets,3
+06-Dec-19,10-Nov-29,Data Analyst,PL,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,16-11-1950,MA,Laborer,Male,82953,White,Single,Fully Meets,3
+22-Jun-19,11-Mar-23,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,Field Operations,17-11-1947,MA,Laborer,Male,18037,Hispanic,Single,Fully Meets,3
+25-Aug-18,01-Jan-30,Software Engineer,CCDR,Active,Contract,Zone A,Full-Time,Unk,,IT/IS,General - Con,11-08-1988,MA,Laborer,Male,16112,Black,Single,Fully Meets,3
+26-Oct-19,01-Sep-22,Production Technician I,BPC,Active,Full-Time,Zone A,Full-Time,Resignation,,Production       ,Engineers,02-02-1987,MA,Laborer,Female,21875,Asian,Divorced,Fully Meets,3
+13-Jun-22,25-May-23,Production Technician I,CCDR,Active,Contract,Zone A,Temporary,Voluntary,,Production       ,Fielders,24-02-1993,MA,Engineer,Male,97893,Asian,Married,Fully Meets,2
+19-Feb-23,01-Jan-30,Production Technician I,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,29-05-1961,MA,Laborer,Male,87863,White,Single,Fully Meets,3
+14-May-23,20-Nov-29,Production Technician I,SVG,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,30-07-1953,MA,Laborer,Female,70609,White,Married,Fully Meets,3
+03-Oct-19,05-Apr-22,Production Technician I,BPC,Active,Contract,Zone A,Part-Time,Voluntary,,IT/IS,Field Operations,09-02-1947,MA,Laborer,Male,11665,Black,Single,Fully Meets,3
+27-Oct-18,20-Nov-21,Production Technician I,BPC,Voluntarily Terminated,Contract,Zone B,Part-Time,Voluntary,Summer begin quickly.,Production       ,Field Operations,22-08-1946,MA,Laborer,Female,1015,Black,Divorced,Fully Meets,3
+20-Jul-23,17-Mar-23,Production Technician I,BPC,Voluntarily Terminated,Part-Time,Zone A,Part-Time,Voluntary,Hard thousand fund follow take want full.,Production       ,Field Operations,22-02-1952,MA,Engineer,Female,79860,Asian,Divorced,Fully Meets,3
+25-Oct-19,21-Nov-22,Production Technician I,BPC,Voluntarily Terminated,Full-Time,Zone A,Temporary,Retirement,Wonder worry life stand.,Production       ,Field Operations,15-01-1950,MA,Laborer,Female,88707,Asian,Divorced,Fully Meets,3
+29-Jun-22,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone C,Part-Time,Unk,,Production       ,Field Operations,16-06-1958,MA,Technician,Female,91333,Black,Single,Fully Meets,3
+12-Jan-23,13-Oct-22,Area Sales Manager,CCDR,Active,Contract,Zone C,Temporary,Resignation,,Sales,Field Operations,02-08-1994,MA,Engineer,Male,97893,Asian,Married,Fully Meets,2
+10-Jul-19,16-Oct-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,04-09-1957,MA,Laborer,Female,15133,White,Widowed,Fully Meets,3
+17-Oct-22,11-Dec-29,Production Technician I,PL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,21-10-1948,MA,Laborer,Female,73270,White,Single,Fully Meets,3
+12-Nov-22,28-Dec-22,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Resignation,Arrive its during organization about.,Production       ,Field Operations,24-08-1991,MA,Laborer,Male,76454,Other,Single,Fully Meets,3
+26-Dec-18,16-Aug-22,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Field Operations,06-01-1957,MA,Laborer,Female,20972,Asian,Single,Fully Meets,3
+29-Jun-19,01-Jan-30,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,17-02-1954,MA,Laborer,Female,32521,Asian,Single,Fully Meets,3
+06-Aug-23,10-Jun-23,Production Technician I,SVG,Voluntarily Terminated,Full-Time,Zone A,Full-Time,Voluntary,Report provide home follow price.,Production       ,Field Operations,02-06-1955,MA,Laborer,Female,85312,Asian,Divorced,Fully Meets,3
+26-Oct-19,18-Apr-22,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,25-06-1949,MA,Laborer,Female,15006,Asian,Divorced,Fully Meets,3
+21-Oct-18,13-Sep-22,Network Engineer,MSC,Active,Contract,Zone A,Full-Time,Voluntary,If require particularly civil.,Production       ,General - Con,18-05-1956,MA,Foreman,Female,9409,Hispanic,Widowed,Fully Meets,3
+26-Jun-21,27-Sep-22,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Field Operations,03-09-1941,MA,Laborer,Male,62618,Other,Married,Fully Meets,3
+16-Sep-18,10-Mar-20,Software Engineer,WBL,Active,Contract,Zone B,Full-Time,Voluntary,,Software Engineering,Field Operations,24-04-1986,MA,Laborer,Male,5804,Black,Single,Fully Meets,3
+24-Jan-19,11-Dec-29,Data Analyst,WBL,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,General - Con,20-12-1946,MA,Laborer,Male,42956,Black,Single,Fully Meets,3
+03-Mar-20,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,22-04-1945,MA,Laborer,Female,6979,White,Single,Fully Meets,3
+03-Sep-22,07-Oct-22,Production Technician I,SVG,Active,Contract,Zone C,Full-Time,Resignation,Light free he rest thought.,Production       ,Field Operations,22-02-1945,MA,Laborer,Male,77883,Asian,Married,Fully Meets,3
+18-Mar-22,31-Dec-22,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Involuntary,Administration away choose.,Production       ,General - Con,18-11-1994,MA,Laborer,Female,76287,Hispanic,Widowed,Fully Meets,3
+12-Jun-19,05-Mar-23,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Involuntary,Question kitchen gun find four wall heavy.,Production       ,Field Operations,30-10-1950,MA,Laborer,Female,84362,Asian,Divorced,Fully Meets,3
+14-Jan-19,24-Jul-22,Production Technician I,TNS,Active,Full-Time,Zone B,Temporary,Involuntary,,Production       ,Field Operations,14-08-1977,MA,Laborer,Female,70721,Other,Widowed,Fully Meets,3
+02-Oct-19,27-Feb-22,Production Technician I,BPC,Active,Full-Time,Zone A,Part-Time,Resignation,,Production       ,Engineers,09-07-1986,MA,Laborer,Female,24884,Asian,Single,Fully Meets,3
+23-Feb-19,22-Jul-22,Production Technician I,BPC,Active,Contract,Zone A,Part-Time,Retirement,Nor director yard within car into final.,Production       ,Field Operations,13-01-1953,MA,Laborer,Female,5745,Asian,Divorced,Fully Meets,3
+31-Dec-18,07-Jul-22,Production Technician I,CCDR,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Field Operations,07-07-1996,MA,Laborer,Female,18779,Other,Widowed,Fully Meets,3
+04-Nov-18,11-Dec-29,Production Technician I,WBL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,22-03-1956,MA,Laborer,Female,21259,White,Married,Fully Meets,3
+31-Jan-19,14-Dec-29,Sr. Network Engineer,WBL,Active,Contract,Zone A,Full-Time,Unk,,IT/IS,General - Con,08-01-1947,MA,Laborer,Male,8690,Black,Single,Fully Meets,3
+15-May-20,31-Dec-29,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Software Engineering,Engineers,21-07-1984,MA,Laborer,Male,13139,Black,Single,Fully Meets,3
+18-Feb-23,07-May-23,Production Technician I,PYZ,Voluntarily Terminated,Part-Time,Zone A,Temporary,Voluntary,Fast light home sign build not.,Production       ,Field Operations,14-12-1984,MA,Engineer,Female,80626,Asian,Divorced,Fully Meets,3
+07-Jan-22,13-Aug-21,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Involuntary,,Production       ,Field Operations,24-10-1996,MA,Laborer,Female,61160,White,Single,Fully Meets,3
+02-May-19,14-Nov-22,Production Technician I,TNS,Active,Full-Time,Zone A,Temporary,Involuntary,Hold season meeting voice.,Production       ,Field Operations,13-12-1964,MA,Laborer,Female,30017,White,Widowed,Fully Meets,3
+14-Mar-23,14-Feb-23,Production Technician I,NEL,Active,Contract,Zone C,Temporary,Involuntary,Lot as card response consumer.,Production       ,General - Con,07-05-1959,MA,Foreman,Female,82672,Asian,Married,Fully Meets,3
+01-Feb-22,01-Jan-30,Production Technician I,BPC,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,09-03-1946,MA,Laborer,Male,72506,Asian,Single,Fully Meets,3
+19-May-23,11-Dec-29,Production Technician I,EW,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,23-05-1943,MA,Technician,Female,81787,Other,Widowed,Fully Meets,3
+18-Oct-19,12-Jun-22,Production Technician I,CCDR,Active,Full-Time,Zone A,Temporary,Retirement,,Production       ,Field Operations,24-03-1949,MA,Laborer,Female,8997,Asian,Divorced,Fully Meets,3
+27-Nov-18,19-Sep-22,Software Engineer,BPC,Active,Part-Time,Zone A,Full-Time,Retirement,,IT/IS,Field Operations,11-08-1989,MA,Laborer,Male,85169,Asian,Single,Fully Meets,3
+27-Dec-18,12-Nov-29,Production Technician I,WBL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,12-04-1956,MA,Laborer,Female,2218,Black,Single,Fully Meets,3
+22-Feb-23,11-Feb-23,Production Technician I,PYZ,Active,Contract,Zone C,Temporary,Involuntary,Begin mind time similar night travel.,Production       ,Field Operations,11-02-1954,MA,Foreman,Male,81201,Other,Single,Fully Meets,3
+24-Feb-19,08-Sep-22,Production Technician I,NEL,Voluntarily Terminated,Full-Time,Zone A,Part-Time,Voluntary,Factor strategy defense citizen.,Production       ,Field Operations,25-01-1991,MA,Engineer,Female,97624,Asian,Divorced,Fully Meets,3
+09-Jan-22,12-Mar-23,Production Technician I,BPC,Voluntarily Terminated,Contract,Zone A,Temporary,Resignation,Treatment power card almost pretty sister.,Production       ,Field Operations,03-11-1946,MA,Laborer,Female,79326,Asian,Divorced,Fully Meets,3
+23-Jul-22,24-Jan-23,Production Technician I,MSC,Active,Full-Time,Zone A,Temporary,Involuntary,,Production       ,General - Con,22-03-1952,MA,Laborer,Female,85533,White,Married,Fully Meets,3
+10-Feb-22,14-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,General - Con,22-06-1954,MA,Foreman,Male,2447,Hispanic,Single,Fully Meets,3
+05-Nov-19,19-Oct-22,Production Technician I,PYZ,Active,Contract,Zone A,Temporary,Voluntary,Past agreement focus back.,Production       ,Field Operations,09-04-1951,MA,Laborer,Female,85894,Asian,Single,Fully Meets,3
+13-Oct-19,15-Oct-22,Production Technician I,PYZ,Active,Full-Time,Zone A,Part-Time,Retirement,,Production       ,Field Operations,05-12-1943,MA,Laborer,Female,7200,Black,Single,Fully Meets,3
+13-Nov-19,09-Dec-29,Software Engineer,PYZ,Active,Contract,Zone B,Full-Time,Unk,,IT/IS,Field Operations,28-10-1948,MA,Laborer,Male,93328,Black,Single,Fully Meets,3
+27-Nov-21,20-Mar-23,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Resignation,Food fire property exist southern audience.,Production       ,Field Operations,30-03-1950,MA,Laborer,Male,71828,Asian,Widowed,Fully Meets,3
+14-Dec-22,27-Sep-22,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,Field Operations,29-02-1952,MA,Laborer,Female,84394,White,Widowed,Fully Meets,3
+06-Sep-19,01-Jan-30,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,26-03-1949,MA,Laborer,Male,16229,Black,Single,Fully Meets,3
+11-Jul-22,11-Apr-23,Production Technician I,EW,Active,Part-Time,Zone A,Full-Time,Resignation,,Production       ,Field Operations,31-12-1971,MA,Engineer,Female,89572,Asian,Married,Fully Meets,3
+02-May-19,01-Jan-30,Production Technician I,CCDR,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,03-09-1941,MA,Laborer,Female,12859,Black,Married,Fully Meets,3
+05-Oct-22,01-Jan-30,Production Technician I,NEL,Active,Full-Time,Zone C,Temporary,Unk,,Production       ,Field Operations,13-07-1959,MA,Technician,Female,88828,Other,Married,Fully Meets,3
+23-Nov-19,18-Nov-29,Production Technician I,PL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,28-01-1964,MA,Laborer,Female,9345,White,Single,Fully Meets,3
+22-Apr-22,24-Nov-22,Production Technician I,EW,Active,Part-Time,Zone C,Temporary,Resignation,,Production       ,Field Operations,07-08-1988,MA,Laborer,Female,89992,Asian,Married,Fully Meets,3
+10-May-23,07-Apr-23,Production Technician I,NEL,Active,Contract,Zone C,Temporary,Resignation,,Production       ,Field Operations,25-03-1954,MA,Technician,Female,89286,Asian,Divorced,Fully Meets,3
+02-Aug-19,24-May-22,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,13-09-1992,MA,Engineer,Female,26979,Asian,Single,Fully Meets,3
+25-Nov-18,08-Aug-22,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Field Operations,02-06-1971,MA,Laborer,Female,79819,Other,Widowed,Fully Meets,3
+05-Oct-22,15-Dec-29,Production Technician I,TNS,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,General - Con,25-01-1956,MA,Foreman,Female,73730,Hispanic,Widowed,Fully Meets,3
+30-Dec-18,03-Oct-22,Production Technician I,NEL,Active,Full-Time,Zone A,Temporary,Retirement,,Production       ,Field Operations,08-03-1947,MA,Laborer,Female,90310,White,Widowed,Fully Meets,3
+20-Dec-22,20-Mar-23,Production Technician I,PYZ,Active,Part-Time,Zone C,Temporary,Resignation,Future where and.,Production       ,Field Operations,12-12-1950,MA,Laborer,Male,72343,Other,Married,Fully Meets,3
+10-May-22,27-Nov-29,Production Technician I,CCDR,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,05-06-1956,MA,Foreman,Male,75753,White,Single,Fully Meets,3
+08-Oct-22,06-Dec-29,Production Technician I,PL,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,05-11-1963,MA,Laborer,Male,91328,White,Single,Fully Meets,3
+23-Dec-21,10-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,13-01-1956,MA,Laborer,Male,65643,White,Single,Fully Meets,3
+19-Jul-19,26-Dec-29,Production Technician I,BPC,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,01-07-1945,MA,Laborer,Male,81574,Black,Single,Fully Meets,3
+18-Feb-19,05-Jun-22,Production Technician I,TNS,Voluntarily Terminated,Full-Time,Zone A,Full-Time,Involuntary,Late least forward bill realize camera.,Production       ,Field Operations,25-10-1962,MA,Laborer,Female,59653,Asian,Divorced,Fully Meets,3
+28-Aug-18,08-Jun-21,Production Technician I,MSC,Active,Full-Time,Zone C,Temporary,Involuntary,Shake hold standard team seat word.,Production       ,Field Operations,05-10-1965,MA,Technician,Female,97893,Other,Widowed,Fully Meets,3
+21-Sep-22,01-Jan-30,Production Technician I,TNS,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,25-09-1963,MA,Technician,Female,78702,Other,Widowed,Fully Meets,3
+08-Sep-19,01-Jan-30,Production Technician I,PL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,24-11-1961,MA,Laborer,Female,88468,Asian,Divorced,Fully Meets,3
+25-Oct-19,09-Aug-22,Production Technician I,EW,Active,Full-Time,Zone B,Temporary,Resignation,Dinner level write land effort.,Production       ,Field Operations,09-01-1968,MA,Laborer,Female,76518,Asian,Widowed,Fully Meets,3
+15-Oct-18,05-Apr-21,Production Technician I,WBL,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,General - Con,01-10-1960,MA,Technician,Female,69083,Black,Single,Fully Meets,3
+07-Jan-23,20-Dec-22,Production Technician I,PL,Active,Contract,Zone A,Full-Time,Involuntary,,Production       ,Field Operations,29-09-1962,MA,Laborer,Female,76113,White,Married,Fully Meets,3
+27-Apr-19,11-Dec-22,Production Technician I,NEL,Active,Full-Time,Zone A,Temporary,Involuntary,,Production       ,General - Con,17-09-1958,MA,Laborer,Female,72732,White,Widowed,Fully Meets,3
+30-May-22,01-Jan-30,Software Engineer,MSC,Active,Part-Time,Zone A,Temporary,Unk,,IT/IS,Field Operations,02-08-1993,MA,Laborer,Male,70751,White,Single,Fully Meets,3
+04-Dec-19,26-Dec-29,Software Engineer,BPC,Active,Contract,Zone C,Temporary,Unk,,Software Engineering,Field Operations,29-10-1990,MA,Laborer,Male,36658,White,Single,Fully Meets,3
+22-Jan-21,23-Dec-29,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,15-06-1975,MA,Laborer,Female,77559,White,Widowed,Fully Meets,3
+06-May-19,10-Apr-21,Software Engineer,CCDR,Active,Part-Time,Zone C,Full-Time,Unk,,Software Engineering,Field Operations,10-04-1991,MA,Laborer,Male,12130,Black,Single,Fully Meets,3
+14-Jun-21,29-Dec-29,Production Technician I,SVG,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,14-04-1976,MA,Laborer,Female,18864,Other,Married,Fully Meets,3
+21-Jan-22,14-Dec-22,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,Decision fill total.,Production       ,Field Operations,06-08-1951,MA,Laborer,Female,70311,Asian,Divorced,Fully Meets,3
+14-Jan-19,01-Jan-30,Production Technician I,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,25-08-1956,MA,Laborer,Female,79905,White,Married,Fully Meets,3
+20-Nov-19,01-Sep-22,Area Sales Manager,NEL,Active,Full-Time,Zone A,Full-Time,Retirement,,IT/IS,Field Operations,29-07-1956,MA,Engineer,Male,93979,Asian,Divorced,Fully Meets,3
+28-Oct-19,19-Dec-29,Production Technician I,BPC,Active,Full-Time,Zone C,Part-Time,Unk,,Production       ,Field Operations,03-09-1941,MA,Laborer,Male,29255,Black,Single,Fully Meets,3
+01-Jun-22,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,General - Con,15-11-1960,MA,Laborer,Female,60564,White,Widowed,Fully Meets,3
+19-Nov-19,09-Dec-29,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,03-09-1941,MA,Laborer,Male,10175,Black,Single,Fully Meets,3
+13-May-19,30-Aug-22,Area Sales Manager,CCDR,Active,Full-Time,Zone A,Temporary,Retirement,,Sales,Engineers,23-09-1946,MA,Engineer,Male,26397,Asian,Divorced,Fully Meets,2
+28-Nov-18,06-Jul-22,Production Technician I,BPC,Active,Full-Time,Zone B,Temporary,Resignation,West run alone address week wear.,Production       ,Field Operations,13-11-1947,MA,Laborer,Male,1224,Asian,Widowed,Fully Meets,3
+07-Feb-20,08-Aug-22,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Retirement,,Software Engineering,Engineers,11-08-1954,MA,Engineer,Male,17401,Asian,Single,Fully Meets,3
+04-Aug-19,10-Oct-22,Production Technician I,SVG,Active,Contract,Zone A,Full-Time,Voluntary,Brother election movie born enough.,Production       ,Field Operations,03-03-1952,MA,Laborer,Male,18165,Asian,Divorced,Fully Meets,3
+18-Jan-20,01-Nov-22,Production Technician I,MSC,Active,Contract,Zone A,Full-Time,Voluntary,Stand cut knowledge staff course than class.,IT/IS,Field Operations,29-08-1951,MA,Laborer,Male,69643,Asian,Divorced,Fully Meets,3
+23-Jul-19,20-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,08-06-1956,MA,Laborer,Female,67083,White,Single,Fully Meets,3
+18-Nov-22,22-Jan-23,Production Technician I,PL,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,17-10-1953,MA,Foreman,Female,87850,White,Married,Fully Meets,3
+30-Aug-22,01-Jan-30,Area Sales Manager,MSC,Active,Full-Time,Zone A,Temporary,Unk,,Sales,Field Operations,09-01-1951,MA,Laborer,Male,78190,White,Married,Fully Meets,2
+01-Jul-22,11-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,General - Con,14-05-1958,MA,Laborer,Female,74607,White,Widowed,Fully Meets,3
+07-Jul-19,19-Feb-21,Network Engineer,MSC,Active,Contract,Zone A,Temporary,Involuntary,,IT/IS,General - Con,29-03-1954,MA,Laborer,Male,12023,Black,Single,Fully Meets,3
+10-Aug-22,13-Sep-22,Area Sales Manager,MSC,Active,Part-Time,Zone A,Temporary,Unk,,IT/IS,Field Operations,07-10-1953,MA,Laborer,Male,88630,White,Single,Fully Meets,3
+24-Apr-19,22-Nov-29,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,08-02-1947,MA,Laborer,Male,78798,White,Single,Fully Meets,3
+06-Aug-23,13-Jun-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,Page year stock own popular health.,Production       ,Field Operations,15-04-1949,MA,Laborer,Female,64875,Asian,Divorced,Fully Meets,3
+23-Dec-20,11-Dec-29,Production Technician I,BPC,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,26-08-1943,MA,Laborer,Male,68579,Other,Single,Fully Meets,3
+14-Sep-19,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Unk,,Production       ,General - Con,27-10-1956,MA,Laborer,Female,87956,Black,Single,Fully Meets,3
+19-Dec-21,29-Nov-22,Production Technician I,BPC,Voluntarily Terminated,Full-Time,Zone A,Temporary,Resignation,Treatment power card almost pretty sister.,Production       ,Field Operations,21-03-1997,MA,Laborer,Female,85268,Asian,Widowed,Fully Meets,3
+06-Oct-18,29-Oct-22,BI Developer,WBL,Active,Part-Time,Zone B,Temporary,Voluntary,Scientist become a become value cell policy.,IT/IS,Field Operations,08-07-1959,MA,Laborer,Male,1015,Black,Single,Fully Meets,3
+01-Jul-22,23-Mar-23,Production Technician I,SVG,Active,Part-Time,Zone A,Temporary,Resignation,,Production       ,Field Operations,21-08-1951,MA,Laborer,Female,69643,Asian,Married,Fully Meets,3
+12-Oct-22,01-Jan-30,Software Engineer,CCDR,Active,Contract,Zone A,Full-Time,Unk,,Software Engineering,Field Operations,05-04-1990,MA,Engineer,Male,78154,White,Single,Fully Meets,3
+06-Nov-19,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,23-07-1954,MA,Laborer,Female,97893,White,Single,Fully Meets,3
+19-Sep-19,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,14-05-1945,MA,Laborer,Female,17553,Asian,Single,Fully Meets,3
+12-Aug-22,13-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Field Operations,30-03-1950,MA,Technician,Female,11683,Black,Single,Fully Meets,3
+18-Oct-19,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,12-08-1956,MA,Laborer,Female,64014,Asian,Married,Fully Meets,3
+07-Dec-22,01-Jan-30,Production Technician I,BPC,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Engineers,28-02-1960,MA,Laborer,Female,94266,Asian,Single,Fully Meets,3
+07-May-22,01-Jan-30,Production Technician I,NEL,Active,Contract,Zone A,Temporary,Unk,,Production       ,Field Operations,26-07-1952,MA,Laborer,Female,83208,White,Married,Fully Meets,3
+25-Nov-22,21-Jan-23,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Involuntary,Tell its wind child more though.,Production       ,Field Operations,23-07-1994,MA,Laborer,Female,59380,Other,Married,Fully Meets,3
+30-Jun-19,07-Oct-22,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Involuntary,Material agency modern degree general.,Production       ,Field Operations,18-04-1953,MA,Laborer,Male,1015,Black,Single,Fully Meets,3
+02-Nov-22,01-Jan-30,Area Sales Manager,MSC,Active,Contract,Zone A,Temporary,Unk,,Sales,General - Con,09-07-2001,MA,Laborer,Male,44238,White,Single,Fully Meets,3
+01-Oct-18,15-Dec-29,Production Technician I,WBL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,07-11-1954,MA,Laborer,Male,9753,Black,Single,Fully Meets,3
+11-Oct-19,01-Jan-30,Area Sales Manager,WBL,Active,Contract,Zone A,Temporary,Unk,,IT/IS,General - Con,21-10-1995,MA,Laborer,Male,14382,Black,Single,Fully Meets,3
+17-Sep-21,10-Sep-22,Production Technician I,TNS,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,25-08-1968,MA,Laborer,Female,70250,White,Widowed,Fully Meets,3
+24-Jan-22,28-Dec-22,Production Technician I,BPC,Voluntarily Terminated,Part-Time,Zone B,Temporary,Resignation,Account between environmental section group.,Production       ,Field Operations,22-07-1946,MA,Laborer,Male,75368,Asian,Single,Fully Meets,3
+17-Dec-22,28-May-23,Production Technician I,SVG,Active,Contract,Zone A,Full-Time,Voluntary,Officer thus service.,Production       ,Field Operations,21-09-1966,MA,Foreman,Female,81393,Asian,Divorced,Fully Meets,3
+04-Nov-21,27-Oct-29,Production Technician I,BPC,Active,Full-Time,Zone C,Part-Time,Unk,,Production       ,Engineers,17-09-1950,MA,Engineer,Male,81407,Asian,Divorced,Fully Meets,3
+05-Jul-19,01-Jan-30,Production Technician I,CCDR,Active,Contract,Zone A,Temporary,Unk,,Production       ,General - Con,20-04-1954,MA,Laborer,Female,83355,White,Married,Fully Meets,3
+14-Dec-18,07-Jul-21,Production Technician I,BPC,Active,Part-Time,Zone A,Part-Time,Resignation,Guy present clear.,Production       ,Engineers,11-03-1988,MA,Engineer,Female,8570,Asian,Single,Fully Meets,3
+02-Dec-18,25-Jun-22,Area Sales Manager,MSC,Active,Contract,Zone C,Full-Time,Resignation,Popular west moment natural step activity.,Sales,General - Con,06-12-1953,MA,Laborer,Male,2090,Asian,Married,Fully Meets,3
+08-Mar-19,02-Dec-29,Software Engineer,WBL,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,29-03-1953,MA,Laborer,Male,17150,Black,Single,Fully Meets,3
+27-Jul-21,15-Feb-23,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Resignation,Figure third where boy.,Production       ,Field Operations,03-08-1991,MA,Laborer,Female,57370,Hispanic,Widowed,Fully Meets,3
+24-Oct-18,09-Oct-22,Production Technician I,BPC,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Field Operations,01-10-1952,MA,Laborer,Female,10055,Other,Widowed,Fully Meets,3
+22-Apr-20,17-Jul-22,Production Technician I,TNS,Active,Part-Time,Zone A,Part-Time,Retirement,West run alone address week wear.,Production       ,Field Operations,13-02-1957,MA,Laborer,Female,4247,Asian,Divorced,Fully Meets,3
+06-May-20,29-Nov-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,21-06-1957,MA,Laborer,Male,16067,White,Single,Fully Meets,3
+19-Nov-22,06-Dec-29,Production Technician I,CCDR,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,09-12-1966,MA,Foreman,Male,47630,White,Single,Fully Meets,3
+03-Feb-23,06-Feb-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Retirement,,Production       ,Field Operations,26-08-1945,MA,Laborer,Female,77398,Asian,Married,Fully Meets,3
+28-Jul-21,11-Dec-29,Production Technician I,SVG,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,27-08-1965,MA,Laborer,Female,76535,Other,Widowed,Fully Meets,3
+24-Apr-19,14-Oct-22,Production Technician I,CCDR,Active,Part-Time,Zone C,Temporary,Involuntary,,Production       ,Field Operations,31-03-1952,MA,Laborer,Female,19533,Black,Single,Fully Meets,3
+23-Oct-18,05-May-22,Production Technician I,MSC,Active,Contract,Zone C,Part-Time,Involuntary,Participant candidate wonder growth agree.,Production       ,General - Con,20-01-1961,MA,Laborer,Female,72688,Hispanic,Divorced,Fully Meets,3
+15-Oct-19,01-Jan-30,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,15-03-1943,MA,Laborer,Male,9492,Black,Single,Fully Meets,3
+01-Jul-19,12-Nov-22,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,29-08-1948,MA,Laborer,Male,72151,Asian,Single,Fully Meets,3
+14-Jan-19,16-Oct-22,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,21-12-1951,MA,Laborer,Female,76365,White,Widowed,Fully Meets,3
+04-Sep-22,28-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Field Operations,03-06-1972,MA,Engineer,Female,96351,White,Married,Fully Meets,3
+31-Dec-20,01-Jan-30,Production Technician I,TNS,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,09-06-1943,MA,Laborer,Female,70285,Other,Married,Fully Meets,3
+26-Aug-22,11-May-23,Production Technician I,MSC,Active,Contract,Zone B,Temporary,Involuntary,Body move possible play. Relate husband Mrs.,Production       ,General - Con,10-10-1950,MA,Laborer,Female,75176,Hispanic,Married,Fully Meets,3
+16-Mar-21,13-Oct-22,Production Technician I,BPC,Active,Contract,Zone B,Temporary,Resignation,Ball total direction school.,Production       ,Field Operations,05-11-1942,MA,Laborer,Female,12602,Other,Widowed,Fully Meets,3
+29-Jun-20,19-Mar-23,BI Developer,PYZ,Active,Contract,Zone B,Temporary,Retirement,Type three hear court street sport key.,IT/IS,Field Operations,17-04-1948,MA,Laborer,Male,97423,Asian,Single,Fully Meets,3
+17-Oct-19,21-Dec-29,Production Technician I,PL,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,05-01-1952,MA,Laborer,Male,15119,Black,Single,Fully Meets,3
+28-May-19,23-Oct-29,Production Technician I,CCDR,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Field Operations,03-09-1941,MA,Laborer,Male,15987,Black,Single,Fully Meets,3
+14-Dec-19,01-Jan-30,Production Technician I,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,29-01-1953,MA,Laborer,Male,92644,Black,Single,Fully Meets,3
+12-May-21,01-Jan-30,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,07-06-1945,MA,Laborer,Female,82577,Asian,Married,Fully Meets,3
+03-Nov-18,01-Jan-30,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,15-11-1986,MA,Laborer,Male,87264,Black,Single,Fully Meets,3
+21-Feb-19,10-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,11-08-1951,MA,Laborer,Female,25442,White,Single,Fully Meets,3
+28-Jan-21,01-Jan-30,Software Engineer,CCDR,Active,Full-Time,Zone C,Full-Time,Unk,,IT/IS,Field Operations,03-03-1944,MA,Laborer,Male,1687,Black,Single,Fully Meets,3
+30-Sep-21,22-Mar-22,Area Sales Manager,MSC,Active,Contract,Zone A,Temporary,Involuntary,,IT/IS,General - Con,02-03-1949,MA,Laborer,Male,85569,White,Single,Fully Meets,3
+13-Feb-23,02-Nov-22,Production Technician I,TNS,Voluntarily Terminated,Part-Time,Zone A,Temporary,Voluntary,Hot stage record listen cost against.,Production       ,Field Operations,21-11-1990,MA,Laborer,Female,70855,Asian,Married,Fully Meets,3
+06-Aug-23,12-Dec-29,Production Technician I,EW,Active,Contract,Zone C,Temporary,Unk,,Production       ,Field Operations,14-12-1966,MA,Technician,Female,79968,Other,Married,Fully Meets,2
+23-Jan-23,17-Sep-29,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,General - Con,03-11-1964,MA,Laborer,Male,42216,White,Single,Fully Meets,3
+05-Mar-19,16-Apr-23,Production Technician I,SVG,Active,Full-Time,Zone A,Temporary,Resignation,,Production       ,Field Operations,30-09-1969,MA,Laborer,Female,64489,Asian,Widowed,Fully Meets,3
+22-Jan-23,01-Jan-30,Production Technician I,BPC,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,03-04-1947,MA,Laborer,Male,73490,Black,Single,Fully Meets,3
+07-Feb-23,25-Apr-23,Software Engineer,PYZ,Active,Full-Time,Zone C,Temporary,Resignation,,Production       ,Engineers,09-06-1991,MA,Engineer,Male,76383,Asian,Married,Fully Meets,3
+09-May-20,19-Oct-22,Production Technician I,TNS,Voluntarily Terminated,Part-Time,Zone A,Temporary,Voluntary,Process firm life from final medical.,Production       ,Field Operations,26-11-1987,MA,Laborer,Female,93541,Asian,Single,Fully Meets,3
+21-Feb-23,20-Aug-22,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Retirement,,Production       ,Field Operations,08-04-1966,MA,Technician,Female,87207,Asian,Married,Fully Meets,3
+14-Apr-19,01-Jan-30,Production Technician I,TNS,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,21-02-1951,MA,Laborer,Female,15754,White,Widowed,Fully Meets,3
+11-Nov-18,18-Feb-22,Network Engineer,MSC,Active,Contract,Zone C,Part-Time,Voluntary,Upon writer black.,IT/IS,General - Con,15-10-1952,MA,Laborer,Male,3470,Hispanic,Single,Fully Meets,3
+14-Oct-18,22-Nov-29,Area Sales Manager,WBL,Active,Full-Time,Zone A,Full-Time,Unk,,Sales,General - Con,09-01-1956,MA,Laborer,Male,51804,White,Single,Fully Meets,3
+25-Jul-21,21-Aug-22,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Involuntary,Describe current question quite coach.,Production       ,General - Con,26-07-1951,MA,Laborer,Female,92484,White,Married,Fully Meets,3
+06-May-20,28-Dec-22,Production Technician I,PL,Active,Full-Time,Zone A,Temporary,Involuntary,Artist technology ever body provide today doctor.,Production       ,Field Operations,16-08-1959,MA,Foreman,Female,50824,White,Widowed,Fully Meets,3
+13-Jan-23,15-Sep-22,Production Technician I,TNS,Active,Full-Time,Zone A,Temporary,Involuntary,Hold season meeting voice.,Production       ,Field Operations,28-07-1970,MA,Laborer,Female,86785,White,Widowed,Fully Meets,3
+18-Jun-20,02-Mar-22,Production Technician I,BPC,Voluntarily Terminated,Contract,Zone A,Part-Time,Retirement,Question kitchen gun find four wall heavy.,Production       ,Field Operations,27-11-1950,MA,Laborer,Female,5833,Asian,Divorced,Fully Meets,3
+01-Dec-22,07-Dec-29,Production Technician I,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,25-02-1964,MA,Laborer,Female,93497,White,Married,Fully Meets,3
+08-Mar-19,05-Jul-22,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Field Operations,18-03-1952,MA,Laborer,Female,7387,Black,Single,Fully Meets,3
+31-Dec-22,05-Nov-29,Production Technician I,CCDR,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,23-07-1955,MA,Laborer,Female,68985,White,Single,Fully Meets,3
+21-Mar-19,29-Dec-22,Production Technician I,PL,Active,Contract,Zone A,Temporary,Involuntary,Year color woman become year scene very.,Production       ,Field Operations,29-05-1958,MA,Laborer,Female,83075,Asian,Divorced,Fully Meets,3
+19-Jan-23,06-Aug-23,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Involuntary,Why development even.,Production       ,Field Operations,22-02-1954,MA,Technician,Female,69110,White,Divorced,Fully Meets,3
+08-May-19,02-Sep-21,Production Technician I,WBL,Active,Part-Time,Zone B,Temporary,Involuntary,Guy ten dream. Thing he care series.,Production       ,General - Con,25-06-1986,MA,Laborer,Male,77825,Black,Single,Fully Meets,3
+01-Jul-21,23-Oct-22,Production Technician I,BPC,Active,Part-Time,Zone A,Part-Time,Resignation,,Production       ,Engineers,16-09-1981,MA,Laborer,Female,86474,Asian,Single,Fully Meets,3
+04-Mar-23,25-Oct-22,Production Technician I,BPC,Active,Contract,Zone C,Full-Time,Retirement,,Production       ,Field Operations,16-12-1941,MA,Laborer,Male,76339,Asian,Single,Fully Meets,3
+04-Jul-22,06-Dec-29,Production Technician I,TNS,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,23-04-1953,MA,Laborer,Female,83561,White,Single,Fully Meets,3
+14-Jan-19,10-Aug-22,Production Technician I,WBL,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,09-05-1944,MA,Lineman,Female,3442,Black,Single,Fully Meets,3
+15-Aug-22,01-Jan-30,Production Technician I,SVG,Active,Contract,Zone A,Temporary,Unk,,Production       ,Field Operations,17-02-1948,MA,Laborer,Male,74098,Other,Single,Fully Meets,3
+10-May-19,30-Jul-23,Accountant I,MSC,Active,Full-Time,Zone A,Temporary,Involuntary,,Admin Offices,General - Con,09-04-1956,MA,Laborer,Male,39983,White,Widowed,Fully Meets,3
+23-Mar-23,22-Feb-23,Production Technician I,NEL,Active,Contract,Zone C,Temporary,Involuntary,Prepare simply play edge.,Production       ,Field Operations,26-10-1950,MA,Technician,Female,76394,White,Married,Fully Meets,2
+10-Oct-19,22-Jul-22,Production Technician I,BPC,Voluntarily Terminated,Full-Time,Zone A,Part-Time,Involuntary,Stay word behavior financial.,Production       ,Field Operations,19-10-1984,MA,Laborer,Female,71551,Asian,Divorced,Fully Meets,3
+16-Feb-21,25-Jan-23,Production Technician I,NEL,Active,Full-Time,Zone A,Temporary,Involuntary,Prepare simply play edge.,Production       ,Field Operations,16-06-1972,MA,Laborer,Female,97848,White,Married,Fully Meets,3
+26-Oct-19,13-Nov-29,Production Technician I,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,24-03-1956,MA,Laborer,Female,1015,Hispanic,Widowed,Fully Meets,3
+09-Aug-22,24-Nov-29,Production Technician I,TNS,Active,Contract,Zone B,Temporary,Unk,,Production       ,Field Operations,18-08-1956,MA,Laborer,Female,68512,White,Widowed,Fully Meets,3
+30-Jun-20,16-Jan-23,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Resignation,Trouble hot lead article guess travel.,Production       ,Field Operations,01-11-1982,MA,Laborer,Male,87425,Asian,Single,Fully Meets,3
+14-Jul-22,17-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,12-01-1960,MA,Laborer,Female,74320,White,Married,Fully Meets,3
+30-Mar-23,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,28-09-1958,MA,Laborer,Female,93257,Asian,Divorced,Fully Meets,3
+11-Nov-22,28-Apr-23,Production Technician I,BPC,Active,Part-Time,Zone A,Part-Time,Resignation,Century risk machine pay car region.,Production       ,Engineers,26-07-1987,MA,Engineer,Male,88111,Asian,Single,Fully Meets,3
+26-Nov-19,28-Nov-29,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,29-04-1949,MA,Laborer,Male,74390,Asian,Divorced,Fully Meets,3
+01-Nov-18,13-Apr-21,Production Technician I,WBL,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,General - Con,23-12-1954,MA,Technician,Female,80035,White,Widowed,Fully Meets,3
+12-Jun-20,23-Jan-23,Production Technician I,TNS,Active,Full-Time,Zone A,Full-Time,Retirement,Fire necessary sing first traditional.,Production       ,Field Operations,13-02-1961,MA,Laborer,Female,17913,White,Married,Fully Meets,3
+12-Dec-22,27-Jul-23,Production Technician I,SVG,Active,Contract,Zone C,Temporary,Voluntary,Board industry once tough investment age.,Production       ,Field Operations,15-10-1953,MA,Laborer,Female,87153,Asian,Married,Fully Meets,3
+20-Jun-19,09-Aug-22,Area Sales Manager,MSC,Active,Contract,Zone A,Temporary,Involuntary,,Sales,General - Con,26-10-1955,MA,Laborer,Male,76642,Asian,Single,Fully Meets,3
+24-Apr-19,31-Oct-29,Production Technician I,PL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Field Operations,06-12-1950,MA,Laborer,Female,91871,White,Single,Fully Meets,3
+03-Apr-19,24-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,23-03-1951,MA,Laborer,Male,7284,Black,Single,Fully Meets,3
+04-Mar-23,02-Mar-23,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Involuntary,Once type here really.,Production       ,Field Operations,27-10-1981,MA,Laborer,Female,74350,Other,Married,Fully Meets,3
+29-Jun-21,22-Nov-29,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,IT/IS,Field Operations,23-02-1953,MA,Laborer,Male,74611,Black,Single,Fully Meets,3
+06-Dec-21,28-Sep-22,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Resignation,Central baby moment benefit do.,Production       ,Field Operations,16-02-1946,MA,Laborer,Male,78296,Asian,Single,Fully Meets,3
+17-Feb-19,18-Jan-22,Production Technician I,WBL,Active,Part-Time,Zone A,Part-Time,Voluntary,,Production       ,Field Operations,08-09-1950,MA,Laborer,Male,17582,Black,Single,Fully Meets,3
+11-Jul-19,01-Nov-22,Software Engineer,CCDR,Active,Contract,Zone C,Part-Time,Voluntary,Industry majority population final. Bit go deal.,IT/IS,Field Operations,17-04-1947,MA,Laborer,Male,3737,Black,Single,Fully Meets,3
+22-May-21,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,01-01-1952,MA,Laborer,Male,73309,Black,Married,Fully Meets,3
+19-Dec-22,24-May-23,Production Technician I,TNS,Active,Full-Time,Zone A,Full-Time,Involuntary,Officer thus service.,Production       ,Field Operations,19-01-1956,MA,Foreman,Female,49696,Asian,Widowed,Fully Meets,3
+03-Dec-18,18-Dec-29,Production Technician I,CCDR,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,31-05-1951,MA,Laborer,Female,72619,Black,Single,Fully Meets,3
+22-Mar-19,03-Sep-22,Production Technician I,NEL,Active,Contract,Zone A,Temporary,Involuntary,More best if page.,Production       ,Field Operations,10-08-1993,MA,Technician,Female,84084,White,Married,Fully Meets,3
+27-May-19,25-Dec-29,Production Technician I,PL,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,General - Con,10-08-1957,MA,Laborer,Female,89535,White,Married,Fully Meets,3
+27-Oct-19,15-Dec-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,14-06-1954,MA,Laborer,Male,8786,Black,Single,Fully Meets,3
+28-Nov-20,29-Mar-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,22-01-1955,MA,Foreman,Female,65479,Hispanic,Widowed,Fully Meets,3
+20-Jun-19,24-Nov-22,Software Engineer,BPC,Active,Contract,Zone A,Full-Time,Retirement,According term along ago leave.,IT/IS,Field Operations,03-09-1941,MA,Laborer,Male,16754,Asian,Divorced,Fully Meets,3
+20-Nov-22,01-Jan-30,Production Technician I,WBL,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,18-10-1954,MA,Laborer,Female,75296,White,Single,Fully Meets,3
+25-Dec-18,23-Aug-22,Production Technician I,MSC,Active,Contract,Zone A,Temporary,Involuntary,,Production       ,General - Con,11-05-1953,MA,Laborer,Female,69819,Hispanic,Widowed,Fully Meets,3
+01-Dec-22,01-Jan-30,Production Technician I,CCDR,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,01-11-1991,MA,Laborer,Male,55335,White,Single,Fully Meets,3
+09-Sep-22,14-Oct-21,Production Technician I,MSC,Voluntarily Terminated,Part-Time,Zone A,Temporary,Involuntary,Prepare simply play edge.,Production       ,Field Operations,10-02-1989,MA,Technician,Female,94944,White,Widowed,Fully Meets,3
+14-Oct-22,01-Jan-30,Production Technician I,NEL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Field Operations,19-10-1951,MA,Laborer,Male,87972,Black,Single,Fully Meets,3
+08-Apr-23,09-May-23,Production Technician I,PYZ,Active,Full-Time,Zone A,Full-Time,Voluntary,Nation you bad daughter only huge them.,Production       ,Field Operations,20-08-1948,MA,Engineer,Female,97893,Asian,Divorced,Fully Meets,3
+06-Sep-22,25-Mar-23,Production Technician I,MSC,Voluntarily Terminated,Part-Time,Zone B,Temporary,Involuntary,Arrive its during organization about.,Production       ,Field Operations,26-01-1989,MA,Laborer,Female,87854,Other,Single,Fully Meets,3
+08-Dec-22,04-Mar-23,Production Technician I,PYZ,Active,Full-Time,Zone A,Temporary,Resignation,,Production       ,Engineers,01-09-1996,MA,Engineer,Male,97893,Asian,Married,Fully Meets,2
+11-Aug-18,19-Nov-29,Production Technician I,WBL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,16-05-1957,MA,Laborer,Female,4658,White,Single,Fully Meets,3
+01-Apr-19,04-Aug-21,Production Technician I,CCDR,Active,Full-Time,Zone A,Part-Time,Voluntary,Success realize political move adult new.,Production       ,General - Con,23-11-1958,MA,Laborer,Female,7558,Black,Divorced,Fully Meets,3
+18-Mar-19,21-Feb-22,Production Technician I,CCDR,Active,Part-Time,Zone A,Part-Time,Voluntary,Investment radio bring who. Big move rise return.,IT/IS,General - Con,15-04-1954,MA,Laborer,Male,15513,Black,Single,Fully Meets,3
+25-Mar-22,01-May-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Resignation,Sort blue time total.,Production       ,Field Operations,17-05-1947,MA,Laborer,Male,88602,Asian,Single,Fully Meets,3
+02-Sep-21,09-Oct-22,Production Technician I,SVG,Active,Contract,Zone A,Full-Time,Involuntary,Too former relationship risk.,Production       ,Field Operations,11-04-1957,MA,Laborer,Female,28978,Asian,Divorced,Fully Meets,3
+25-Jul-22,02-Feb-23,Production Technician I,TNS,Active,Contract,Zone A,Temporary,Involuntary,Too former relationship risk.,Production       ,Field Operations,19-07-1960,MA,Laborer,Female,3272,Hispanic,Widowed,Fully Meets,3
+12-Sep-22,25-Jun-23,Production Technician I,EW,Voluntarily Terminated,Contract,Zone A,Full-Time,Voluntary,Program deal run.,Production       ,Field Operations,20-06-1993,MA,Engineer,Female,75749,Asian,Divorced,Fully Meets,3
+26-Apr-19,01-Jan-30,Software Engineer,PYZ,Active,Contract,Zone B,Full-Time,Unk,,IT/IS,Field Operations,10-09-1990,MA,Laborer,Male,79830,Black,Single,Fully Meets,3
+08-Aug-20,16-Nov-22,Production Technician I,PYZ,Active,Full-Time,Zone A,Full-Time,Voluntary,,Production       ,Field Operations,07-10-1947,MA,Engineer,Female,84414,Asian,Divorced,Fully Meets,3
+15-May-23,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,16-03-1956,MA,Laborer,Female,17545,White,Single,Fully Meets,3
+02-Oct-22,01-Oct-29,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,09-01-1960,MA,Foreman,Female,66385,Asian,Married,Fully Meets,3
+11-Jul-19,17-Nov-29,Production Technician I,CCDR,Active,Contract,Zone A,Full-Time,Unk,,IT/IS,General - Con,23-02-1947,MA,Laborer,Male,3365,Black,Single,Fully Meets,3
+28-Jun-19,12-Jul-22,Production Technician I,BPC,Voluntarily Terminated,Full-Time,Zone A,Part-Time,Retirement,Stay word behavior financial.,Production       ,Field Operations,18-03-1986,MA,Laborer,Female,14405,Asian,Divorced,Fully Meets,3
+30-Mar-20,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,16-02-1954,MA,Laborer,Male,73605,White,Single,Fully Meets,3
+04-Jul-20,30-Nov-29,Area Sales Manager,MSC,Active,Contract,Zone A,Temporary,Unk,,Sales,General - Con,01-01-1955,MA,Laborer,Male,84574,Hispanic,Single,Fully Meets,3
+25-Apr-21,01-Jan-30,Production Technician I,BPC,Active,Contract,Zone C,Temporary,Unk,,Production       ,Field Operations,24-09-1972,MA,Laborer,Female,45832,Asian,Married,Fully Meets,3
+05-Oct-19,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,20-02-1962,MA,Laborer,Female,72128,White,Single,Fully Meets,3
+06-Nov-22,01-Dec-29,Software Engineer,CCDR,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Engineers,22-02-1989,MA,Engineer,Male,85425,White,Single,Fully Meets,3
+27-Nov-18,24-Sep-22,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Resignation,Trouble hot lead article guess travel.,Production       ,Field Operations,22-03-1953,MA,Laborer,Female,1015,Other,Widowed,Fully Meets,3
+02-Jan-19,09-Dec-22,Production Technician I,BPC,Active,Part-Time,Zone A,Full-Time,Voluntary,,IT/IS,Field Operations,03-01-1987,MA,Laborer,Male,19607,Asian,Single,Fully Meets,3
+21-Sep-19,03-Jul-22,Production Technician I,PL,Voluntarily Terminated,Full-Time,Zone A,Temporary,Retirement,Few success street.,Production       ,Field Operations,21-05-1954,MA,Laborer,Female,87364,Asian,Divorced,Fully Meets,3
+24-May-22,25-Oct-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,03-11-1957,MA,Laborer,Male,82781,White,Single,Fully Meets,3
+18-Apr-19,02-Jan-23,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Retirement,,Production       ,Field Operations,06-05-1966,MA,Laborer,Female,77158,Asian,Single,Fully Meets,3
+23-Feb-20,16-May-22,Production Technician I,BPC,Voluntarily Terminated,Full-Time,Zone A,Temporary,Resignation,Question kitchen gun find four wall heavy.,Production       ,Field Operations,30-11-1947,MA,Laborer,Female,78055,Asian,Single,Fully Meets,3
+27-Sep-21,24-Feb-23,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Resignation,Process firm life from final medical.,Production       ,Field Operations,21-10-1987,MA,Laborer,Male,81835,Asian,Widowed,Fully Meets,3
+10-Apr-19,01-Jan-30,Software Engineer,BPC,Active,Full-Time,Zone C,Full-Time,Unk,,IT/IS,Field Operations,03-09-1941,MA,Laborer,Male,16074,Black,Divorced,Fully Meets,3
+15-Sep-21,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Field Operations,03-09-1941,MA,Laborer,Male,74048,White,Single,Fully Meets,3
+07-Jan-23,12-Nov-22,Production Technician I,NEL,Active,Contract,Zone A,Full-Time,Voluntary,Night official cut director seven.,Production       ,Field Operations,28-07-1960,MA,Laborer,Female,90656,Asian,Married,Fully Meets,3
+17-Mar-20,01-Jan-30,Production Technician I,EW,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,30-08-1948,MA,Laborer,Male,4693,Black,Single,Fully Meets,3
+23-Jul-22,11-Jun-23,Production Technician I,BPC,Active,Part-Time,Zone A,Part-Time,Voluntary,Hold parent PM claim star seek.,Production       ,Field Operations,21-02-1952,MA,Engineer,Female,91991,Asian,Single,Fully Meets,3
+08-May-23,02-Dec-29,Production Technician I,PL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Field Operations,13-09-1959,MA,Laborer,Female,93292,White,Married,Fully Meets,3
+20-Jun-19,16-Aug-22,Area Sales Manager,CCDR,Active,Contract,Zone A,Temporary,Resignation,According term along ago leave.,Sales,Engineers,05-12-1984,MA,Engineer,Male,93414,Asian,Single,Fully Meets,2
+18-Jun-19,01-Jan-30,Production Technician I,CCDR,Active,Part-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,23-05-1953,MA,Laborer,Male,14953,White,Single,Fully Meets,3
+24-Jan-19,20-Nov-22,Production Technician I,PL,Active,Full-Time,Zone A,Temporary,Involuntary,,Production       ,Field Operations,19-07-1953,MA,Laborer,Female,77859,White,Married,Fully Meets,3
+02-Mar-20,12-Dec-29,Production Technician I,BPC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Field Operations,26-10-1945,MA,Laborer,Female,1015,Asian,Divorced,Fully Meets,3
+05-Aug-20,23-Jul-22,Production Technician I,TNS,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,04-01-1995,MA,Laborer,Female,90626,White,Single,Fully Meets,3
+27-Jan-19,05-May-22,Production Technician I,WBL,Active,Contract,Zone A,Part-Time,Voluntary,,Production       ,General - Con,23-07-1948,MA,Laborer,Female,23447,Black,Single,Fully Meets,3
+26-Aug-22,24-Jun-23,Production Technician I,PYZ,Active,Part-Time,Zone A,Full-Time,Voluntary,Century risk machine pay car region.,Production       ,Field Operations,21-04-1994,MA,Engineer,Female,80338,White,Single,Fully Meets,3
+02-May-20,06-Sep-22,Production Technician I,PYZ,Active,Contract,Zone A,Part-Time,Resignation,Past agreement focus back.,Production       ,Field Operations,29-09-1947,MA,Engineer,Female,97893,Asian,Divorced,Fully Meets,3
+22-May-19,05-Dec-29,Software Engineer,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,IT/IS,Field Operations,08-07-1947,MA,Laborer,Male,82625,White,Single,Fully Meets,3
+01-Sep-19,22-Jan-23,Production Technician I,BPC,Active,Part-Time,Zone B,Temporary,Resignation,Trouble hot lead article guess travel.,Production       ,Field Operations,24-04-1947,MA,Laborer,Female,2199,Asian,Single,Fully Meets,3
+24-Jul-19,18-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,16-09-1999,MA,Laborer,Female,91613,White,Single,Fully Meets,3
+20-Jul-19,01-Jan-30,Production Technician I,CCDR,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,28-08-1968,MA,Laborer,Female,9848,Other,Single,Fully Meets,3
+14-Jan-23,17-Nov-22,Software Engineer,BPC,Active,Full-Time,Zone C,Full-Time,Resignation,Where forward evening huge cost share eat.,Software Engineering,Engineers,12-04-1950,MA,Engineer,Male,85270,Asian,Divorced,Fully Meets,3
+11-Aug-18,29-Aug-20,Production Technician I,WBL,Active,Part-Time,Zone B,Part-Time,Voluntary,,Production       ,Field Operations,15-09-1981,MA,Laborer,Female,4038,Black,Single,Fully Meets,3
+08-Mar-22,01-Jan-30,Production Technician I,MSC,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,18-05-1993,MA,Laborer,Male,93581,White,Single,Fully Meets,3
+24-Mar-23,01-Jan-30,Production Technician I,NEL,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,05-10-1950,MA,Laborer,Female,27207,White,Married,Fully Meets,3
+31-Dec-22,10-Nov-29,Production Technician I,TNS,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Field Operations,24-07-1950,MA,Laborer,Female,76768,Hispanic,Single,Fully Meets,3
+20-Jul-19,01-Oct-29,Software Engineer,CCDR,Active,Contract,Zone C,Full-Time,Unk,,Software Engineering,Field Operations,27-02-1985,MA,Engineer,Male,80893,Black,Single,Fully Meets,3
+01-Jul-22,07-Apr-23,Production Technician I,TNS,Voluntarily Terminated,Contract,Zone A,Temporary,Involuntary,Professor phone billion none very evidence.,Production       ,Field Operations,18-05-1953,MA,Foreman,Female,76729,White,Widowed,Fully Meets,3
+06-Dec-18,31-Oct-29,Production Technician I,WBL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,General - Con,11-10-1998,MA,Laborer,Female,85284,White,Single,Fully Meets,3
+13-Apr-19,01-Jan-30,Production Technician I,CCDR,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,01-02-1951,MA,Laborer,Female,93897,White,Single,Fully Meets,3
+01-Apr-22,09-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Field Operations,09-02-1950,MA,Laborer,Male,84065,Black,Single,Fully Meets,3
+09-Nov-19,01-Dec-29,Production Technician I,CCDR,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Engineers,08-12-1945,MA,Laborer,Female,19529,Black,Married,Fully Meets,3
+25-Mar-20,01-Jan-30,Production Technician I,PL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,08-01-1956,MA,Laborer,Female,26166,Asian,Divorced,Fully Meets,3
+22-Apr-21,16-Nov-29,Area Sales Manager,MSC,Active,Full-Time,Zone A,Full-Time,Unk,,Sales,Field Operations,21-08-1952,MA,Laborer,Male,62722,White,Married,Fully Meets,3
+07-Sep-19,09-Nov-29,Production Technician I,PYZ,Active,Full-Time,Zone C,Part-Time,Unk,,Production       ,Field Operations,28-06-1967,MA,Laborer,Female,82683,Other,Widowed,Fully Meets,3
+18-Feb-19,06-May-23,Production Technician I,NEL,Voluntarily Terminated,Full-Time,Zone A,Temporary,Involuntary,Hold season meeting voice.,Production       ,Field Operations,15-05-1961,MA,Laborer,Female,64307,White,Widowed,Fully Meets,3
+23-Jan-20,15-Dec-29,Production Technician I,TNS,Active,Full-Time,Zone A,Temporary,Unk,,Production       ,Field Operations,26-05-1959,MA,Laborer,Female,9774,White,Widowed,Fully Meets,3
+28-Nov-19,01-Apr-23,Production Technician I,BPC,Active,Full-Time,Zone A,Temporary,Retirement,Will raise compare realize evidence most product.,Production       ,Field Operations,28-04-1947,MA,Laborer,Female,89394,Asian,Divorced,Fully Meets,3
+24-Dec-18,16-Jun-22,Area Sales Manager,CCDR,Active,Contract,Zone A,Full-Time,Resignation,,IT/IS,Field Operations,15-05-1997,MA,Engineer,Male,16267,Asian,Single,Fully Meets,3
+05-Jun-23,01-Jan-30,Production Technician I,TNS,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Field Operations,09-03-1955,MA,Laborer,Female,75885,White,Single,Fully Meets,3
+12-Apr-22,16-Nov-29,Production Technician I,CCDR,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,General - Con,20-06-1994,MA,Laborer,Male,97893,White,Single,Fully Meets,3
+06-Dec-19,24-Jul-22,Production Technician I,SVG,Active,Full-Time,Zone A,Full-Time,Retirement,,Production       ,Field Operations,31-03-1960,MA,Laborer,Female,9221,Asian,Divorced,Fully Meets,3

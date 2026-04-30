@@ -1,0 +1,751 @@
+StartDate,ExitDate,Title,BusinessUnit,EmployeeStatus,EmployeeType,PayZone,EmployeeClassificationType,TerminationType,TerminationDescription,DepartmentType,Division,DOB,State,JobFunctionDescription,GenderCode,LocationCode,RaceDesc,MaritalDesc,Performance Score,Current Employee Rating
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,White,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Black,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Single,Fully Meets,2
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Widowed,PIP,4
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Black,Single,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Accounting,Female,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Hispanic,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Terminated for Cause,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Black,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Hispanic,Married,PIP,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone C,Part-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone C,Full-Time,Voluntary,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,BPC,Active,Part-Time,Zone B,Temporary,Retirement,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,White,Single,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,White,Single,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Terminated for Cause,Full-Time,Zone B,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Single,Fully Meets,1
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Full-Time,Resignation,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Other,Single,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,BPC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Single,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Terminated for Cause,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,BPC,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,1
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone B,Part-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Black,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone B,Part-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,1
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone A,Temporary,Retirement,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,White,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Involuntary,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Divorced,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Resignation,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone C,Temporary,Unk,A discussion quite mission.,Sales,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone B,Part-Time,Retirement,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,Other,Married,Fully Meets,2
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone C,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Black,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PL,Active,Contract,Zone B,Full-Time,Voluntary,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,WBL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Other,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Black,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone A,Full-Time,Voluntary,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Single,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Accountant I,MSC,Active,Full-Time,Zone B,Temporary,Voluntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,1
+11-Aug-18,01-Jan-30,Accountant I,SVG,Active,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Hispanic,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,SVG,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Hispanic,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone C,Part-Time,Resignation,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,White,Single,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,BPC,Active,Part-Time,Zone A,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone C,Full-Time,Involuntary,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Black,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Divorced,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Leave of Absence,Part-Time,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Hispanic,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,White,Single,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Single,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,WBL,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,White,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,WBL,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Retirement,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Other,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,SVG,Voluntarily Terminated,Full-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Needs Improvement,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone B,Part-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Married,Fully Meets,2
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Contract,Zone A,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,CCDR,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Black,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Terminated for Cause,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Divorced,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,BPC,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,BPC,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Contract,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Married,PIP,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Black,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,BPC,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Part-Time,Unk,A discussion quite mission.,IT/IS,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Female,1015.0,Asian,Married,PIP,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Contract,Zone B,Full-Time,Voluntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Divorced,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Full-Time,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,1015.0,Black,Married,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Married,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Black,Single,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Part-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,PIP,4
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Needs Improvement,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,TNS,Leave of Absence,Part-Time,Zone C,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Female,97893.0,Hispanic,Divorced,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone B,Part-Time,Voluntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Needs Improvement,4
+11-Aug-18,01-Jan-30,Accountant I,CCDR,Terminated for Cause,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,MSC,Leave of Absence,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Married,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Terminated for Cause,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,MSC,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone B,Temporary,Unk,,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Exceeds,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,WBL,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Asian,Divorced,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone A,Part-Time,Voluntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Black,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,MSC,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,PIP,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone B,Part-Time,Voluntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,SVG,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Unk,,Executive Office,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,White,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,SVG,Leave of Absence,Part-Time,Zone B,Temporary,Unk,,Executive Office,Yard (Material Handling),09-07-2001,WA,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone A,Part-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Black,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,BPC,Active,Part-Time,Zone B,Temporary,Retirement,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,MSC,Voluntarily Terminated,Contract,Zone B,Part-Time,Voluntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Black,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone C,Full-Time,Resignation,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Leave of Absence,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Active,Contract,Zone A,Part-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Married,PIP,3
+11-Aug-18,25-Dec-18,Accountant I,WBL,Active,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,1015.0,Black,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Other,Married,PIP,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,TNS,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Leave of Absence,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,Needs Improvement,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Leave of Absence,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,Other,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone C,Temporary,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Female,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Active,Part-Time,Zone A,Part-Time,Unk,A discussion quite mission.,Sales,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Involuntary,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Other,Married,Fully Meets,2
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Black,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Active,Contract,Zone C,Part-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone C,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,1015.0,Other,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Resignation,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Female,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,5
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone C,Part-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Female,1015.0,Hispanic,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Executive Office,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,2
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone A,Part-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Voluntarily Terminated,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Black,Married,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Contract,Zone C,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Widowed,Exceeds,4
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Contract,Zone C,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PL,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Female,97893.0,White,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Software Engineering,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Hispanic,Widowed,Needs Improvement,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Hispanic,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Married,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Resignation,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Divorced,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Female,1015.0,Asian,Divorced,PIP,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,NEL,Terminated for Cause,Part-Time,Zone B,Temporary,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Hispanic,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Retirement,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Single,Fully Meets,2
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Part-Time,Involuntary,,Sales,Aerial,09-07-2001,AL,Accounting,Female,97893.0,Asian,Married,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Voluntarily Terminated,Part-Time,Zone C,Part-Time,Resignation,A discussion quite mission.,Software Engineering,Aerial,09-07-2001,WA,Accounting,Female,97893.0,White,Married,PIP,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Active,Contract,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone B,Full-Time,Involuntary,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Full-Time,Voluntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,WBL,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,NEL,Terminated for Cause,Full-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Married,PIP,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Single,PIP,4
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone C,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone B,Part-Time,Unk,,Executive Office,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,PIP,4
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Other,Single,PIP,2
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,CCDR,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,1
+11-Aug-18,25-Dec-18,Accountant I,MSC,Active,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Single,Fully Meets,1
+11-Aug-18,01-Jan-30,Accountant I,SVG,Terminated for Cause,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Leave of Absence,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Terminated for Cause,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Full-Time,Voluntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,BPC,Active,Part-Time,Zone B,Temporary,Retirement,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Divorced,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Voluntary,A discussion quite mission.,Executive Office,Aerial,03-09-1941,AL,Accounting,Female,97893.0,Asian,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Voluntarily Terminated,Contract,Zone C,Part-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Part-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Retirement,A discussion quite mission.,IT/IS,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,5
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Black,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Other,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Full-Time,Zone A,Part-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Retirement,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Single,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Married,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,CCDR,Active,Contract,Zone B,Temporary,Voluntary,A discussion quite mission.,Sales,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,5
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Terminated for Cause,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Black,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Female,1015.0,Black,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone A,Temporary,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Leave of Absence,Part-Time,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Divorced,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone C,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,BPC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Part-Time,Retirement,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Black,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Single,PIP,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Leave of Absence,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Black,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,BPC,Active,Part-Time,Zone A,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Black,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Female,1015.0,Black,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone A,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Asian,Married,Exceeds,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Temporary,Resignation,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,WBL,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Software Engineering,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone A,Part-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,White,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Married,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Leave of Absence,Part-Time,Zone A,Temporary,Retirement,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Part-Time,Resignation,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Female,97893.0,White,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,CCDR,Terminated for Cause,Full-Time,Zone C,Part-Time,Unk,A discussion quite mission.,Admin Offices,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Married,PIP,1
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Female,97893.0,White,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Female,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Hispanic,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Black,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Black,Divorced,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Voluntarily Terminated,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Voluntarily Terminated,Full-Time,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Hispanic,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,White,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Full-Time,Zone C,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,Needs Improvement,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Terminated for Cause,Full-Time,Zone B,Temporary,Voluntary,A discussion quite mission.,Sales,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Divorced,PIP,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Full-Time,Zone B,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone C,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,MSC,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,CCDR,Leave of Absence,Contract,Zone A,Part-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,97893.0,Asian,Single,Fully Meets,5
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Leave of Absence,Contract,Zone A,Temporary,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Welder,Female,1015.0,Hispanic,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Temporary,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,MSC,Leave of Absence,Contract,Zone C,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,PIP,2
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Sales,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Needs Improvement,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Part-Time,Resignation,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Part-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Black,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Sales,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Sales,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Married,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Part-Time,Zone C,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Accountant I,MSC,Leave of Absence,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Part-Time,Zone C,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Voluntarily Terminated,Contract,Zone B,Full-Time,Involuntary,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Black,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,BPC,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Leave of Absence,Contract,Zone A,Part-Time,Voluntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,97893.0,White,Divorced,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Leave of Absence,Contract,Zone C,Temporary,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,BPC,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Black,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,SVG,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Involuntary,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,MSC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Terminated for Cause,Full-Time,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,PIP,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,PIP,4
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Voluntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,White,Single,Fully Meets,5
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,SVG,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Married,Fully Meets,1
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Part-Time,Zone A,Part-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Exceeds,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,CCDR,Leave of Absence,Part-Time,Zone A,Part-Time,Voluntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Retirement,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Married,Fully Meets,2
+06-Aug-23,01-Jan-30,Accountant I,CCDR,Leave of Absence,Part-Time,Zone A,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,MSC,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Female,1015.0,Asian,Widowed,Exceeds,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Part-Time,Resignation,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,MSC,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Leave of Absence,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,BPC,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,White,Single,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Married,PIP,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Terminated for Cause,Part-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,WBL,Terminated for Cause,Contract,Zone A,Full-Time,Involuntary,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Black,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,Asian,Married,Fully Meets,5
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Female,1015.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Married,Needs Improvement,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Terminated for Cause,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Other,Married,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Voluntary,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Contract,Zone B,Full-Time,Unk,,Executive Office,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Contract,Zone A,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,White,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Executive Office,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Other,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Black,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Welder,Female,97893.0,Other,Single,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone C,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,White,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,5
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Leave of Absence,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Single,Fully Meets,1
+11-Aug-18,01-Jan-30,Accountant I,SVG,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Hispanic,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,SVG,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Part-Time,Voluntary,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,NEL,Voluntarily Terminated,Full-Time,Zone B,Part-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Terminated for Cause,Contract,Zone A,Temporary,Voluntary,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Black,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,White,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Software Engineering,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Black,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone C,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Divorced,PIP,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone C,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Other,Married,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Terminated for Cause,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Software Engineering,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,2
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Hispanic,Divorced,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,Needs Improvement,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Leave of Absence,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Single,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Black,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Active,Part-Time,Zone B,Temporary,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,CCDR,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Black,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Hispanic,Married,Fully Meets,5
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone B,Part-Time,Involuntary,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Part-Time,Resignation,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Divorced,PIP,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Hispanic,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Leave of Absence,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Black,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Resignation,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,EW,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,White,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Full-Time,Resignation,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,MSC,Active,Part-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Single,Needs Improvement,4
+11-Aug-18,25-Dec-18,Accountant I,NEL,Terminated for Cause,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,White,Single,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Leave of Absence,Contract,Zone C,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,PIP,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,TNS,Leave of Absence,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,WBL,Terminated for Cause,Part-Time,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,2
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Widowed,Needs Improvement,4
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Married,PIP,4
+11-Aug-18,01-Jan-30,Accountant I,WBL,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,BPC,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Voluntarily Terminated,Full-Time,Zone A,Part-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone C,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Leave of Absence,Full-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Contract,Zone C,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Black,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,CCDR,Active,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Welder,Male,97893.0,White,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Female,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Leave of Absence,Part-Time,Zone B,Temporary,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Hispanic,Married,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Terminated for Cause,Contract,Zone B,Part-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,1
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone C,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,MSC,Terminated for Cause,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PL,Active,Part-Time,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Involuntary,A discussion quite mission.,Sales,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,PIP,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone A,Full-Time,Voluntary,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Terminated for Cause,Part-Time,Zone B,Part-Time,Retirement,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,2
+11-Aug-18,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Full-Time,Zone C,Part-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Female,1015.0,Hispanic,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Married,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone A,Temporary,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Voluntarily Terminated,Full-Time,Zone B,Temporary,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Needs Improvement,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Voluntarily Terminated,Contract,Zone C,Part-Time,Resignation,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Divorced,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,PIP,2
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Temporary,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Black,Divorced,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Leave of Absence,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Sales,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Black,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,WBL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,BPC,Voluntarily Terminated,Part-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,SVG,Active,Part-Time,Zone A,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,White,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Hispanic,Married,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Hispanic,Married,Needs Improvement,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Full-Time,Resignation,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,White,Single,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Hispanic,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,CCDR,Active,Full-Time,Zone C,Temporary,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,IT/IS,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Voluntarily Terminated,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Voluntarily Terminated,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,White,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,NEL,Terminated for Cause,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Other,Married,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,MSC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,1
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Part-Time,Zone A,Temporary,Voluntary,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,WBL,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Full-Time,Zone A,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,PIP,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,White,Widowed,PIP,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,PIP,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Retirement,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone A,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,WBL,Voluntarily Terminated,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Other,Married,Needs Improvement,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Leave of Absence,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Exceeds,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Other,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone A,Part-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Leave of Absence,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Black,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,5
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Female,1015.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,CCDR,Terminated for Cause,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,SVG,Active,Full-Time,Zone B,Temporary,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Female,97893.0,Hispanic,Single,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,TNS,Active,Contract,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Voluntarily Terminated,Contract,Zone A,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,1015.0,Black,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,NEL,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Black,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Temporary,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,CCDR,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PL,Leave of Absence,Part-Time,Zone B,Part-Time,Retirement,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Single,Needs Improvement,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,SVG,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Terminated for Cause,Full-Time,Zone A,Full-Time,Involuntary,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Black,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Active,Full-Time,Zone B,Temporary,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone A,Part-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Female,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Hispanic,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Divorced,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,IT/IS,Aerial,09-07-2001,AL,Accounting,Female,97893.0,Asian,Married,Fully Meets,5
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Female,97893.0,Black,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,White,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Single,PIP,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Single,Needs Improvement,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,CCDR,Active,Part-Time,Zone B,Part-Time,Voluntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,PIP,4
+11-Aug-18,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone B,Temporary,Retirement,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,SVG,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Hispanic,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Leave of Absence,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Black,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone B,Part-Time,Retirement,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,White,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone C,Full-Time,Voluntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Active,Contract,Zone B,Temporary,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Black,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,CCDR,Terminated for Cause,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Active,Part-Time,Zone A,Temporary,Voluntary,A discussion quite mission.,Executive Office,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Asian,Single,PIP,2
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Terminated for Cause,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Full-Time,Voluntary,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Full-Time,Zone B,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Contract,Zone A,Temporary,Voluntary,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Leave of Absence,Part-Time,Zone A,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Married,Exceeds,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Other,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Terminated for Cause,Full-Time,Zone C,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Sales,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,WBL,Active,Part-Time,Zone B,Temporary,Voluntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,1015.0,Black,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,CCDR,Active,Full-Time,Zone C,Part-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Married,PIP,4
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,White,Married,Needs Improvement,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Voluntarily Terminated,Part-Time,Zone C,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone A,Part-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Hispanic,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Leave of Absence,Contract,Zone B,Part-Time,Resignation,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Other,Single,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,WBL,Active,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Hispanic,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Full-Time,Voluntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Leave of Absence,Contract,Zone A,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Married,Needs Improvement,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,WBL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,Other,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,PIP,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,WBL,Voluntarily Terminated,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,MSC,Voluntarily Terminated,Contract,Zone C,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Welder,Male,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Leave of Absence,Part-Time,Zone A,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Hispanic,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,SVG,Active,Part-Time,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Black,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Part-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone A,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,WA,Accounting,Male,1015.0,Black,Widowed,PIP,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Part-Time,Zone B,Temporary,Resignation,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Full-Time,Voluntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Female,97893.0,White,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,TNS,Active,Part-Time,Zone B,Temporary,Retirement,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,White,Single,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone A,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Other,Single,Fully Meets,2
+11-Aug-18,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Female,1015.0,Hispanic,Widowed,PIP,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,BPC,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,TNS,Leave of Absence,Contract,Zone B,Full-Time,Voluntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Divorced,PIP,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Voluntarily Terminated,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Single,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Part-Time,Voluntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Accountant I,SVG,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Married,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Exceeds,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,5
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Full-Time,Zone B,Temporary,Voluntary,,Production       ,Aerial,03-09-1941,AL,Welder,Male,97893.0,Asian,Divorced,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone B,Temporary,Voluntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Terminated for Cause,Part-Time,Zone B,Full-Time,Unk,,Executive Office,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Contract,Zone C,Part-Time,Voluntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,4
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Software Engineering,Yard (Material Handling),03-09-1941,WA,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Voluntarily Terminated,Contract,Zone A,Part-Time,Resignation,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Black,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Hispanic,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Leave of Absence,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,Asian,Married,Fully Meets,5
+11-Aug-18,25-Dec-18,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Black,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,White,Single,Fully Meets,2
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Sales,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Married,Exceeds,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Black,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,Asian,Married,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Accounting,Male,97893.0,White,Single,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Contract,Zone C,Full-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,97893.0,White,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Accountant I,NEL,Terminated for Cause,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,CCDR,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,CCDR,Voluntarily Terminated,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,White,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Sales,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Voluntarily Terminated,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,MSC,Active,Full-Time,Zone C,Temporary,Unk,A discussion quite mission.,Software Engineering,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,AL,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,2
+11-Aug-18,25-Dec-18,Sr. Network Engineer,SVG,Terminated for Cause,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,White,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,MSC,Leave of Absence,Contract,Zone A,Temporary,Resignation,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,1015.0,Asian,Widowed,PIP,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Black,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Leave of Absence,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,PIP,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone A,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone A,Part-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Contract,Zone C,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone C,Part-Time,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Needs Improvement,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,25-Dec-18,Accountant I,WBL,Active,Contract,Zone B,Full-Time,Involuntary,,Executive Office,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Accounting,Female,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone A,Part-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,SVG,Active,Contract,Zone C,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Hispanic,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Part-Time,Zone B,Part-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Asian,Widowed,Needs Improvement,4
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Temporary,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,TNS,Leave of Absence,Contract,Zone A,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Executive Office,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Widowed,PIP,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Terminated for Cause,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,1015.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,1015.0,White,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,1015.0,Asian,Married,Fully Meets,5
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Leave of Absence,Contract,Zone C,Full-Time,Unk,A discussion quite mission.,Executive Office,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Accountant I,SVG,Terminated for Cause,Part-Time,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),03-09-1941,WA,Welder,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Male,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,SVG,Active,Full-Time,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Hispanic,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Divorced,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Full-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone A,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,SVG,Leave of Absence,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,MSC,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Hispanic,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,97893.0,Hispanic,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Voluntarily Terminated,Contract,Zone A,Part-Time,Resignation,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,NEL,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,1015.0,Black,Married,PIP,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Contract,Zone B,Temporary,Resignation,,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Software Engineering,Aerial,09-07-2001,WA,Accounting,Male,97893.0,Asian,Single,Fully Meets,4
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone A,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,SVG,Active,Full-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Full-Time,Zone C,Full-Time,Resignation,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,PYZ,Terminated for Cause,Contract,Zone A,Part-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Single,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Active,Contract,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Leave of Absence,Full-Time,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Active,Contract,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Welder,Male,97893.0,Asian,Married,PIP,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Voluntarily Terminated,Full-Time,Zone C,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone A,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Aerial,09-07-2001,WA,Welder,Male,1015.0,Asian,Divorced,PIP,3
+06-Aug-23,25-Dec-18,Accountant I,SVG,Active,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,WA,Accounting,Male,97893.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Resignation,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Female,97893.0,Asian,Married,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,MSC,Active,Part-Time,Zone B,Part-Time,Involuntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,WA,Welder,Male,97893.0,White,Married,Needs Improvement,4
+06-Aug-23,01-Jan-30,Accountant I,SVG,Active,Full-Time,Zone B,Part-Time,Unk,,Production       ,Yard (Material Handling),09-07-2001,WA,Welder,Male,1015.0,Hispanic,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Temporary,Unk,,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Sr. Network Engineer,PYZ,Active,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Accountant I,NEL,Leave of Absence,Contract,Zone B,Full-Time,Involuntary,,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Female,97893.0,Hispanic,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Active,Part-Time,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Aerial,03-09-1941,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Female,97893.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,PYZ,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,3
+11-Aug-18,25-Dec-18,Accountant I,PYZ,Active,Part-Time,Zone B,Part-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,4
+11-Aug-18,01-Jan-30,Sr. Network Engineer,MSC,Leave of Absence,Contract,Zone C,Temporary,Retirement,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,WA,Accounting,Male,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,25-Dec-18,Accountant I,PYZ,Leave of Absence,Contract,Zone B,Full-Time,Unk,,Production       ,Aerial,03-09-1941,AL,Accounting,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,PYZ,Active,Part-Time,Zone B,Temporary,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Accounting,Female,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,25-Dec-18,Sr. Network Engineer,NEL,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Welder,Male,97893.0,Asian,Widowed,Fully Meets,5
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Part-Time,Zone B,Full-Time,Involuntary,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,AL,Welder,Male,1015.0,Asian,Married,Fully Meets,3
+11-Aug-18,01-Jan-30,Sr. Network Engineer,WBL,Leave of Absence,Contract,Zone B,Full-Time,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),03-09-1941,WA,Accounting,Male,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,25-Dec-18,Sr. Network Engineer,NEL,Voluntarily Terminated,Full-Time,Zone B,Full-Time,Resignation,,Production       ,Aerial,09-07-2001,AL,Accounting,Male,1015.0,Asian,Divorced,Fully Meets,3
+06-Aug-23,25-Dec-18,Accountant I,NEL,Active,Part-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Yard (Material Handling),09-07-2001,AL,Welder,Female,1015.0,Asian,Widowed,Fully Meets,3
+06-Aug-23,01-Jan-30,Accountant I,NEL,Active,Full-Time,Zone B,Temporary,Unk,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Female,1015.0,Asian,Widowed,PIP,2
+11-Aug-18,25-Dec-18,Sr. Network Engineer,CCDR,Active,Full-Time,Zone C,Full-Time,Voluntary,A discussion quite mission.,Production       ,Aerial,09-07-2001,AL,Accounting,Female,97893.0,Asian,Widowed,Fully Meets,4

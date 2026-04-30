@@ -1,0 +1,17 @@
+{
+  "model_name": "GenForest",
+  "dataset_name": "Employee",
+  "tracking_uri": "file:///Users/sarakhan/Projects/Uni/Gen-Trees/tmp_genforest_eval",
+  "experiment_name": "Dataset4_full",
+  "run_name": "Employee_GenForest",
+  "synthetic_paths": [
+    "tmp_genforest_regen/Employee_GenForest_seed2026.csv",
+    "tmp_genforest_regen/Employee_GenForest_seed2003.csv",
+    "tmp_genforest_regen/Employee_GenForest_seed42.csv"
+  ],
+  "seeds": [
+    2026,
+    2003,
+    42
+  ]
+}

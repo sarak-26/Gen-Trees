@@ -1,0 +1,1418 @@
+[
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/employee_data.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/employee_data_GenForest_seed2026.csv"
+    },
+    "columns": {
+      "numeric": [
+        "LocationCode"
+      ],
+      "categorical": [
+        "BusinessUnit",
+        "DepartmentType",
+        "Division",
+        "EmployeeClassificationType",
+        "EmployeeStatus",
+        "EmployeeType",
+        "GenderCode",
+        "JobFunctionDescription",
+        "MaritalDesc",
+        "PayZone",
+        "Performance Score",
+        "RaceDesc",
+        "State",
+        "TerminationType",
+        "Title"
+      ],
+      "discrete_ordinal": [
+        "Current Employee Rating"
+      ],
+      "date": [
+        "StartDate",
+        "ExitDate",
+        "DOB"
+      ]
+    },
+    "dropped_columns": [
+      "TerminationDescription"
+    ],
+    "encoding": {
+      "one_hot_feature_count": 209
+    },
+    "marginal_numeric": {
+      "LocationCode": {
+        "ks": 0.076,
+        "wasserstein": 1712.8653333333332,
+        "wasserstein_normalized_iqr": 0.03242328362823552
+      }
+    },
+    "marginal_categorical_tv": {
+      "BusinessUnit": 0.052000000000000005,
+      "DepartmentType": 0.09600000000000006,
+      "Division": 0.22133333333333333,
+      "EmployeeClassificationType": 0.060000000000000026,
+      "EmployeeStatus": 0.058666666666666624,
+      "EmployeeType": 0.03333333333333338,
+      "GenderCode": 0.016000000000000014,
+      "JobFunctionDescription": 0.372,
+      "MaritalDesc": 0.017333333333333326,
+      "PayZone": 0.033333333333333326,
+      "Performance Score": 0.037333333333333336,
+      "RaceDesc": 0.030666666666666675,
+      "State": 0.05866666666666665,
+      "TerminationType": 0.04400000000000001,
+      "Title": 0.25333333333333335
+    },
+    "marginal_discrete_ordinal": {
+      "Current Employee Rating": {
+        "ks": 0.04666666666666667,
+        "wasserstein": 0.10400000000000008,
+        "wasserstein_normalized_iqr": 0.10400000000000008,
+        "tv": 0.08533333333333334
+      }
+    },
+    "marginal_date": {
+      "StartDate": {
+        "ks": 0.072,
+        "wasserstein_normalized": 0.02280944535969248
+      },
+      "ExitDate": {
+        "ks": 0.4866666666666667,
+        "wasserstein_normalized": 0.17761159420289857
+      },
+      "DOB": {
+        "ks": 0.04533333333333334,
+        "wasserstein_normalized": 0.018825075865013648
+      }
+    },
+    "temporal_consistency": {
+      "overall": 0.9253333333333332,
+      "pairs": {
+        "StartDate <= ExitDate": {
+          "score": 0.776,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        },
+        "DOB <= StartDate": {
+          "score": 1.0,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        },
+        "DOB <= ExitDate": {
+          "score": 1.0,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        }
+      }
+    },
+    "support": {
+      "alpha_precision": 0.9986666666666667,
+      "beta_recall": 0.692,
+      "IP_alpha": 0.9080333333333332,
+      "IR_beta": 0.6645000000000001,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.196,
+        0.24133333333333334,
+        0.268,
+        0.2906666666666667,
+        0.308,
+        0.352,
+        0.36933333333333335,
+        0.42933333333333334,
+        0.47333333333333333,
+        0.5146666666666667,
+        0.5666666666666667,
+        0.6146666666666667,
+        0.6786666666666666,
+        0.7346666666666667,
+        0.8213333333333334,
+        0.856,
+        0.8973333333333333,
+        0.924,
+        0.956,
+        0.9986666666666667
+      ],
+      "alpha_radii": [
+        1594889.4875,
+        1715190.7875,
+        1804964.1625,
+        1872690.5250000001,
+        1926328.09375,
+        2019798.875,
+        2088453.50625,
+        2208362.9499999997,
+        2308816.875,
+        2411007.2499999995,
+        2517344.0874999994,
+        2636597.2,
+        2762598.45,
+        2935598.05,
+        3203226.6875,
+        3433950.4499999993,
+        3701270.675,
+        3944181.6,
+        4233513.649999999,
+        5623830.5
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.05333333333333334,
+        0.11466666666666667,
+        0.15466666666666667,
+        0.18133333333333335,
+        0.19333333333333333,
+        0.20133333333333334,
+        0.224,
+        0.25733333333333336,
+        0.2826666666666667,
+        0.312,
+        0.336,
+        0.37466666666666665,
+        0.4013333333333333,
+        0.456,
+        0.48133333333333334,
+        0.5226666666666666,
+        0.5613333333333334,
+        0.6,
+        0.6346666666666667,
+        0.692
+      ],
+      "beta_radii": [
+        1036825.6125,
+        1239834.3875,
+        1421869.4437499999,
+        1583028.4000000001,
+        1711888.8125,
+        1832405.0625,
+        1980744.5875,
+        2085002.6249999998,
+        2178571.3625,
+        2265526.9999999995,
+        2365746.5999999996,
+        2493526.15,
+        2600571.6875,
+        2704190.1999999997,
+        2852504.375,
+        3029301.4999999986,
+        3276337.8125,
+        3509804.95,
+        3935625.299999999,
+        5023173.0
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 4953060.792052624,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.899041975308642,
+      "accuracy": 0.8377777777777777,
+      "pmse_test": 0.18085187598354732,
+      "pmse_null_mean": 0.05138088105354089,
+      "pmse_ratio_perm": 3.519828237182087,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.9820226461089643,
+      "num_columns_used": 20,
+      "per_column": {
+        "BusinessUnit": {
+          "type": "categorical",
+          "perf_ref": 0.12562959915901092,
+          "perf_synth": 0.24349318981671925,
+          "utility": 1.938183289978717
+        },
+        "Current Employee Rating": {
+          "type": "numerical",
+          "perf_ref": 1.023018235325858,
+          "perf_synth": 1.106640287401338,
+          "utility": 0.9244361035582348
+        },
+        "DOB": {
+          "type": "numerical",
+          "perf_ref": 603716167.9800032,
+          "perf_synth": 538775014.7692006,
+          "utility": 1.120534827025381
+        },
+        "DepartmentType": {
+          "type": "categorical",
+          "perf_ref": 0.5930555555555556,
+          "perf_synth": 0.5017094017094017,
+          "utility": 0.8459736984327149
+        },
+        "Division": {
+          "type": "categorical",
+          "perf_ref": 0.222284065141208,
+          "perf_synth": 0.09801071943929086,
+          "utility": 0.4409255309283131
+        },
+        "EmployeeClassificationType": {
+          "type": "categorical",
+          "perf_ref": 0.3665593129361245,
+          "perf_synth": 0.4203327965646806,
+          "utility": 1.146697905989164
+        },
+        "EmployeeStatus": {
+          "type": "categorical",
+          "perf_ref": 0.2373359261059796,
+          "perf_synth": 0.24350024307243562,
+          "utility": 1.0259729619008604
+        },
+        "EmployeeType": {
+          "type": "categorical",
+          "perf_ref": 0.3390774051743706,
+          "perf_synth": 0.4692560665703324,
+          "utility": 1.3839201887516432
+        },
+        "ExitDate": {
+          "type": "numerical",
+          "perf_ref": 21965332.71168285,
+          "perf_synth": 77363806.78652933,
+          "utility": 0.28392259409224774
+        },
+        "GenderCode": {
+          "type": "categorical",
+          "perf_ref": 0.6148504273504274,
+          "perf_synth": 0.6586538461538461,
+          "utility": 1.0712423979148566
+        },
+        "JobFunctionDescription": {
+          "type": "categorical",
+          "perf_ref": 0.08374641231784088,
+          "perf_synth": 0.052222222222222225,
+          "utility": 0.6235756347868897
+        },
+        "LocationCode": {
+          "type": "numerical",
+          "perf_ref": 31415.470925882422,
+          "perf_synth": 29101.0758152122,
+          "utility": 1.0795295378551057
+        },
+        "MaritalDesc": {
+          "type": "categorical",
+          "perf_ref": 0.29153301458572894,
+          "perf_synth": 0.3489933224394278,
+          "utility": 1.1970970867068023
+        },
+        "PayZone": {
+          "type": "categorical",
+          "perf_ref": 0.3399507089657568,
+          "perf_synth": 0.4383129220680521,
+          "utility": 1.289342573814733
+        },
+        "Performance Score": {
+          "type": "categorical",
+          "perf_ref": 0.2767045454545455,
+          "perf_synth": 0.30010198135198135,
+          "utility": 1.0845574685410413
+        },
+        "RaceDesc": {
+          "type": "categorical",
+          "perf_ref": 0.2673276771948499,
+          "perf_synth": 0.2982070803702682,
+          "utility": 1.1155114333818528
+        },
+        "StartDate": {
+          "type": "numerical",
+          "perf_ref": 46523260.421122484,
+          "perf_synth": 52368125.45049159,
+          "utility": 0.8883888819947394
+        },
+        "State": {
+          "type": "categorical",
+          "perf_ref": 0.15091210613598674,
+          "perf_synth": 0.12437810945273631,
+          "utility": 0.824175824175824
+        },
+        "TerminationType": {
+          "type": "categorical",
+          "perf_ref": 0.3907296650717703,
+          "perf_synth": 0.366267942583732,
+          "utility": 0.9373947650390325
+        },
+        "Title": {
+          "type": "categorical",
+          "perf_ref": 0.23927905427905424,
+          "perf_synth": 0.10027472527472528,
+          "utility": 0.4190702173111315
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2026,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2026,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200,
+      "date_column_metadata": {
+        "StartDate": {
+          "original_format": "%d-%b-%y",
+          "min_timestamp": 1533945600,
+          "max_timestamp": 1691280000,
+          "parse_strategy": "infer_datetime_format"
+        },
+        "ExitDate": {
+          "original_format": "%d-%b-%y",
+          "min_timestamp": 1545696000,
+          "max_timestamp": 1893456000,
+          "parse_strategy": "infer_datetime_format"
+        },
+        "DOB": {
+          "original_format": "%d-%m-%Y",
+          "min_timestamp": -893980800,
+          "max_timestamp": 994636800,
+          "parse_strategy": "dayfirst"
+        }
+      },
+      "temporal_orderings": [
+        {
+          "left": "StartDate",
+          "right": "ExitDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        },
+        {
+          "left": "DOB",
+          "right": "StartDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        },
+        {
+          "left": "DOB",
+          "right": "ExitDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/employee_data.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/employee_data_GenForest_seed2003.csv"
+    },
+    "columns": {
+      "numeric": [
+        "LocationCode"
+      ],
+      "categorical": [
+        "BusinessUnit",
+        "DepartmentType",
+        "Division",
+        "EmployeeClassificationType",
+        "EmployeeStatus",
+        "EmployeeType",
+        "GenderCode",
+        "JobFunctionDescription",
+        "MaritalDesc",
+        "PayZone",
+        "Performance Score",
+        "RaceDesc",
+        "State",
+        "TerminationType",
+        "Title"
+      ],
+      "discrete_ordinal": [
+        "Current Employee Rating"
+      ],
+      "date": [
+        "StartDate",
+        "ExitDate",
+        "DOB"
+      ]
+    },
+    "dropped_columns": [
+      "TerminationDescription"
+    ],
+    "encoding": {
+      "one_hot_feature_count": 209
+    },
+    "marginal_numeric": {
+      "LocationCode": {
+        "ks": 0.06933333333333333,
+        "wasserstein": 2533.7253333333338,
+        "wasserstein_normalized_iqr": 0.047961560970377286
+      }
+    },
+    "marginal_categorical_tv": {
+      "BusinessUnit": 0.064,
+      "DepartmentType": 0.07600000000000003,
+      "Division": 0.21733333333333332,
+      "EmployeeClassificationType": 0.014666666666666689,
+      "EmployeeStatus": 0.06533333333333333,
+      "EmployeeType": 0.01733333333333331,
+      "GenderCode": 0.0040000000000000036,
+      "JobFunctionDescription": 0.3653333333333334,
+      "MaritalDesc": 0.025333333333333347,
+      "PayZone": 0.026666666666666644,
+      "Performance Score": 0.05199999999999996,
+      "RaceDesc": 0.032000000000000015,
+      "State": 0.044000000000000004,
+      "TerminationType": 0.00933333333333334,
+      "Title": 0.232
+    },
+    "marginal_discrete_ordinal": {
+      "Current Employee Rating": {
+        "ks": 0.04133333333333333,
+        "wasserstein": 0.08000000000000008,
+        "wasserstein_normalized_iqr": 0.08000000000000008,
+        "tv": 0.06400000000000003
+      }
+    },
+    "marginal_date": {
+      "StartDate": {
+        "ks": 0.03866666666666667,
+        "wasserstein_normalized": 0.011855756910122642
+      },
+      "ExitDate": {
+        "ks": 0.4866666666666667,
+        "wasserstein_normalized": 0.1799241407867495
+      },
+      "DOB": {
+        "ks": 0.08,
+        "wasserstein_normalized": 0.0344930692163411
+      }
+    },
+    "temporal_consistency": {
+      "overall": 0.9248888888888889,
+      "pairs": {
+        "StartDate <= ExitDate": {
+          "score": 0.7746666666666666,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        },
+        "DOB <= StartDate": {
+          "score": 1.0,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        },
+        "DOB <= ExitDate": {
+          "score": 1.0,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        }
+      }
+    },
+    "support": {
+      "alpha_precision": 1.0,
+      "beta_recall": 0.7106666666666667,
+      "IP_alpha": 0.9796333333333334,
+      "IR_beta": 0.7516333333333334,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.112,
+        0.12666666666666668,
+        0.15866666666666668,
+        0.19733333333333333,
+        0.26,
+        0.284,
+        0.33866666666666667,
+        0.39066666666666666,
+        0.452,
+        0.5,
+        0.556,
+        0.6213333333333333,
+        0.6573333333333333,
+        0.7053333333333334,
+        0.7533333333333333,
+        0.7973333333333333,
+        0.8306666666666667,
+        0.8946666666666667,
+        0.9346666666666666,
+        1.0
+      ],
+      "alpha_radii": [
+        1374545.34375,
+        1528199.9875,
+        1647213.80625,
+        1764524.35,
+        1940898.34375,
+        2066729.6,
+        2243211.275,
+        2428572.9999999995,
+        2618118.5624999995,
+        2800871.75,
+        3028962.737499999,
+        3223016.1,
+        3436384.8375,
+        3652566.1249999995,
+        3864653.0625,
+        4088079.0999999996,
+        4256299.524999999,
+        4498264.65,
+        4735954.925,
+        5616122.0
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.05733333333333333,
+        0.09733333333333333,
+        0.14266666666666666,
+        0.18133333333333335,
+        0.22,
+        0.252,
+        0.2866666666666667,
+        0.32133333333333336,
+        0.352,
+        0.37466666666666665,
+        0.4026666666666667,
+        0.432,
+        0.468,
+        0.5026666666666667,
+        0.5373333333333333,
+        0.576,
+        0.6266666666666667,
+        0.652,
+        0.6893333333333334,
+        0.7106666666666667
+      ],
+      "beta_radii": [
+        1079893.88125,
+        1374120.85,
+        1575019.98125,
+        1727644.375,
+        1872216.625,
+        2042585.7874999999,
+        2203165.0,
+        2362196.15,
+        2553064.3999999994,
+        2744677.1249999995,
+        2914451.1124999993,
+        3104254.05,
+        3312418.9,
+        3550136.8249999997,
+        3809768.6875,
+        4018560.15,
+        4213887.75,
+        4552512.3,
+        4781336.899999999,
+        5315221.0
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 5488856.7856889395,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.8764839506172839,
+      "accuracy": 0.8,
+      "pmse_test": 0.16905588811704092,
+      "pmse_null_mean": 0.054142445774787155,
+      "pmse_ratio_perm": 3.122427989682103,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 1.0093860752398862,
+      "num_columns_used": 20,
+      "per_column": {
+        "BusinessUnit": {
+          "type": "categorical",
+          "perf_ref": 0.10945726616005254,
+          "perf_synth": 0.18960248214118183,
+          "utility": 1.7322055336549147
+        },
+        "Current Employee Rating": {
+          "type": "numerical",
+          "perf_ref": 1.1722485308704356,
+          "perf_synth": 1.196375076284914,
+          "utility": 0.9798336275197256
+        },
+        "DOB": {
+          "type": "numerical",
+          "perf_ref": 614297363.7333254,
+          "perf_synth": 586035551.5187366,
+          "utility": 1.048225422743291
+        },
+        "DepartmentType": {
+          "type": "categorical",
+          "perf_ref": 0.6280798149219201,
+          "perf_synth": 0.3092024934130197,
+          "utility": 0.4922980902537972
+        },
+        "Division": {
+          "type": "categorical",
+          "perf_ref": 0.15052213868003342,
+          "perf_synth": 0.08149160780739728,
+          "utility": 0.5413928377713586
+        },
+        "EmployeeClassificationType": {
+          "type": "categorical",
+          "perf_ref": 0.35108024691358025,
+          "perf_synth": 0.41203703703703703,
+          "utility": 1.1736263736263737
+        },
+        "EmployeeStatus": {
+          "type": "categorical",
+          "perf_ref": 0.3002903600464576,
+          "perf_synth": 0.2889372822299651,
+          "utility": 0.9621929994198414
+        },
+        "EmployeeType": {
+          "type": "categorical",
+          "perf_ref": 0.3618827160493827,
+          "perf_synth": 0.5084876543209877,
+          "utility": 1.4051172707889128
+        },
+        "ExitDate": {
+          "type": "numerical",
+          "perf_ref": 23157260.116292574,
+          "perf_synth": 73199272.52158752,
+          "utility": 0.31635915656761704
+        },
+        "GenderCode": {
+          "type": "categorical",
+          "perf_ref": 0.6406333870101986,
+          "perf_synth": 0.6414385399892646,
+          "utility": 1.0012568077084205
+        },
+        "JobFunctionDescription": {
+          "type": "categorical",
+          "perf_ref": 0.0807972222002517,
+          "perf_synth": 0.08436011522774593,
+          "utility": 1.044096726724884
+        },
+        "LocationCode": {
+          "type": "numerical",
+          "perf_ref": 31436.157292457512,
+          "perf_synth": 29096.328518321418,
+          "utility": 1.080416633069796
+        },
+        "MaritalDesc": {
+          "type": "categorical",
+          "perf_ref": 0.2571418941691945,
+          "perf_synth": 0.3843607459835974,
+          "utility": 1.4947418320357215
+        },
+        "PayZone": {
+          "type": "categorical",
+          "perf_ref": 0.28701809512898985,
+          "perf_synth": 0.3455040396270778,
+          "utility": 1.2037709311386922
+        },
+        "Performance Score": {
+          "type": "categorical",
+          "perf_ref": 0.24498132586367882,
+          "perf_synth": 0.3270483193277311,
+          "utility": 1.334992853739876
+        },
+        "RaceDesc": {
+          "type": "categorical",
+          "perf_ref": 0.22011288998357967,
+          "perf_synth": 0.29820812807881775,
+          "utility": 1.3547962961236115
+        },
+        "StartDate": {
+          "type": "numerical",
+          "perf_ref": 45337141.78192788,
+          "perf_synth": 50230018.34268969,
+          "utility": 0.9025905878158235
+        },
+        "State": {
+          "type": "categorical",
+          "perf_ref": 0.25,
+          "perf_synth": 0.14285714285714285,
+          "utility": 0.5714285714285714
+        },
+        "TerminationType": {
+          "type": "categorical",
+          "perf_ref": 0.4375416403120388,
+          "perf_synth": 0.40648534682690285,
+          "utility": 0.9290209419542612
+        },
+        "Title": {
+          "type": "categorical",
+          "perf_ref": 0.252347920896308,
+          "perf_synth": 0.1562937062937063,
+          "utility": 0.6193580107122373
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2003,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2003,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200,
+      "date_column_metadata": {
+        "StartDate": {
+          "original_format": "%d-%b-%y",
+          "min_timestamp": 1533945600,
+          "max_timestamp": 1691280000,
+          "parse_strategy": "infer_datetime_format"
+        },
+        "ExitDate": {
+          "original_format": "%d-%b-%y",
+          "min_timestamp": 1545696000,
+          "max_timestamp": 1893456000,
+          "parse_strategy": "infer_datetime_format"
+        },
+        "DOB": {
+          "original_format": "%d-%m-%Y",
+          "min_timestamp": -893980800,
+          "max_timestamp": 994636800,
+          "parse_strategy": "dayfirst"
+        }
+      },
+      "temporal_orderings": [
+        {
+          "left": "StartDate",
+          "right": "ExitDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        },
+        {
+          "left": "DOB",
+          "right": "StartDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        },
+        {
+          "left": "DOB",
+          "right": "ExitDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "paths": {
+      "real": "/Users/sarakhan/Projects/Uni/Gen-Trees/data/employee_data.csv",
+      "synthetic": "/Users/sarakhan/Projects/Uni/Gen-Trees/synthetic_data/employee_data_GenForest_seed42.csv"
+    },
+    "columns": {
+      "numeric": [
+        "LocationCode"
+      ],
+      "categorical": [
+        "BusinessUnit",
+        "DepartmentType",
+        "Division",
+        "EmployeeClassificationType",
+        "EmployeeStatus",
+        "EmployeeType",
+        "GenderCode",
+        "JobFunctionDescription",
+        "MaritalDesc",
+        "PayZone",
+        "Performance Score",
+        "RaceDesc",
+        "State",
+        "TerminationType",
+        "Title"
+      ],
+      "discrete_ordinal": [
+        "Current Employee Rating"
+      ],
+      "date": [
+        "StartDate",
+        "ExitDate",
+        "DOB"
+      ]
+    },
+    "dropped_columns": [
+      "TerminationDescription"
+    ],
+    "encoding": {
+      "one_hot_feature_count": 209
+    },
+    "marginal_numeric": {
+      "LocationCode": {
+        "ks": 0.068,
+        "wasserstein": 1581.322666666667,
+        "wasserstein_normalized_iqr": 0.029933277491998447
+      }
+    },
+    "marginal_categorical_tv": {
+      "BusinessUnit": 0.04666666666666666,
+      "DepartmentType": 0.08533333333333332,
+      "Division": 0.20933333333333332,
+      "EmployeeClassificationType": 0.032,
+      "EmployeeStatus": 0.08533333333333336,
+      "EmployeeType": 0.02266666666666667,
+      "GenderCode": 0.033333333333333326,
+      "JobFunctionDescription": 0.37733333333333335,
+      "MaritalDesc": 0.010666666666666658,
+      "PayZone": 0.033333333333333354,
+      "Performance Score": 0.05600000000000004,
+      "RaceDesc": 0.04533333333333331,
+      "State": 0.048,
+      "TerminationType": 0.05600000000000005,
+      "Title": 0.248
+    },
+    "marginal_discrete_ordinal": {
+      "Current Employee Rating": {
+        "ks": 0.02266666666666667,
+        "wasserstein": 0.06933333333333347,
+        "wasserstein_normalized_iqr": 0.06933333333333347,
+        "tv": 0.03733333333333334
+      }
+    },
+    "marginal_date": {
+      "StartDate": {
+        "ks": 0.032,
+        "wasserstein_normalized": 0.010838733296723413
+      },
+      "ExitDate": {
+        "ks": 0.4866666666666667,
+        "wasserstein_normalized": 0.19896944099378883
+      },
+      "DOB": {
+        "ks": 0.042666666666666665,
+        "wasserstein_normalized": 0.01637433856382573
+      }
+    },
+    "temporal_consistency": {
+      "overall": 0.9217777777777778,
+      "pairs": {
+        "StartDate <= ExitDate": {
+          "score": 0.7653333333333333,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        },
+        "DOB <= StartDate": {
+          "score": 1.0,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        },
+        "DOB <= ExitDate": {
+          "score": 1.0,
+          "valid_rows": 750,
+          "real_fraction": 1.0
+        }
+      }
+    },
+    "support": {
+      "alpha_precision": 1.0,
+      "beta_recall": 0.6066666666666667,
+      "IP_alpha": 0.8564333333333334,
+      "IR_beta": 0.6486333333333334,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.216,
+        0.2733333333333333,
+        0.30933333333333335,
+        0.3466666666666667,
+        0.384,
+        0.44533333333333336,
+        0.48533333333333334,
+        0.5186666666666667,
+        0.54,
+        0.564,
+        0.592,
+        0.6253333333333333,
+        0.6693333333333333,
+        0.7146666666666667,
+        0.7613333333333333,
+        0.8,
+        0.8333333333333334,
+        0.8693333333333333,
+        0.924,
+        1.0
+      ],
+      "alpha_radii": [
+        1624121.8625,
+        1755451.7375,
+        1843562.65,
+        1917468.925,
+        2004240.125,
+        2120019.075,
+        2208827.0375,
+        2301497.9,
+        2380274.3499999996,
+        2447990.375,
+        2553651.9,
+        2666855.6,
+        2808027.0625,
+        3011036.349999999,
+        3186661.8125,
+        3356022.05,
+        3551423.9374999995,
+        3739893.95,
+        4130504.1749999993,
+        5594900.0
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.064,
+        0.12133333333333333,
+        0.16533333333333333,
+        0.21733333333333332,
+        0.23866666666666667,
+        0.26266666666666666,
+        0.292,
+        0.304,
+        0.33066666666666666,
+        0.33466666666666667,
+        0.3506666666666667,
+        0.37066666666666664,
+        0.38666666666666666,
+        0.4013333333333333,
+        0.42533333333333334,
+        0.448,
+        0.48533333333333334,
+        0.5386666666666666,
+        0.5746666666666667,
+        0.6066666666666667
+      ],
+      "beta_radii": [
+        874046.315625,
+        1078045.55,
+        1284320.2,
+        1502057.9,
+        1608294.21875,
+        1707068.2875,
+        1805551.9624999997,
+        1913046.0999999999,
+        2012531.96875,
+        2096592.3125,
+        2217103.2874999996,
+        2354733.05,
+        2502515.525,
+        2634952.0249999994,
+        2791294.3125,
+        2964850.4499999997,
+        3148393.8,
+        3301312.1500000004,
+        3735538.012499999,
+        4888978.5
+      ],
+      "embedder": {
+        "rep_dim": 32,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 4509068.726147766,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.8742123456790124,
+      "accuracy": 0.8,
+      "pmse_test": 0.17171190375920553,
+      "pmse_null_mean": 0.04990585193625994,
+      "pmse_ratio_perm": 3.4407168116980955,
+      "pmse_null_percentile": 100.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 0.943741798129078,
+      "num_columns_used": 20,
+      "per_column": {
+        "BusinessUnit": {
+          "type": "categorical",
+          "perf_ref": 0.12910554314966077,
+          "perf_synth": 0.1546005709976298,
+          "utility": 1.1974743084300794
+        },
+        "Current Employee Rating": {
+          "type": "numerical",
+          "perf_ref": 1.2302395602720646,
+          "perf_synth": 1.2597745897591734,
+          "utility": 0.9765553062212861
+        },
+        "DOB": {
+          "type": "numerical",
+          "perf_ref": 616008593.829285,
+          "perf_synth": 613321051.2451506,
+          "utility": 1.0043819506581069
+        },
+        "DepartmentType": {
+          "type": "categorical",
+          "perf_ref": 0.687962962962963,
+          "perf_synth": 0.32917540181691124,
+          "utility": 0.47847837679981714
+        },
+        "Division": {
+          "type": "categorical",
+          "perf_ref": 0.18380048522905665,
+          "perf_synth": 0.06222222222222222,
+          "utility": 0.3385313272958957
+        },
+        "EmployeeClassificationType": {
+          "type": "categorical",
+          "perf_ref": 0.3829180795125067,
+          "perf_synth": 0.39790653103346596,
+          "utility": 1.0391427104722792
+        },
+        "EmployeeStatus": {
+          "type": "categorical",
+          "perf_ref": 0.24,
+          "perf_synth": 0.26166666666666666,
+          "utility": 1.0902777777777777
+        },
+        "EmployeeType": {
+          "type": "categorical",
+          "perf_ref": 0.3333333333333333,
+          "perf_synth": 0.52,
+          "utility": 1.56
+        },
+        "ExitDate": {
+          "type": "numerical",
+          "perf_ref": 19254585.407930505,
+          "perf_synth": 69966786.17822461,
+          "utility": 0.2751960817363226
+        },
+        "GenderCode": {
+          "type": "categorical",
+          "perf_ref": 0.6578947368421053,
+          "perf_synth": 0.7064366998577525,
+          "utility": 1.0737837837837836
+        },
+        "JobFunctionDescription": {
+          "type": "categorical",
+          "perf_ref": 0.0762399505256648,
+          "perf_synth": 0.05918367346938775,
+          "utility": 0.7762816353017521
+        },
+        "LocationCode": {
+          "type": "numerical",
+          "perf_ref": 30673.00880237703,
+          "perf_synth": 30080.457885393145,
+          "utility": 1.0196988662619935
+        },
+        "MaritalDesc": {
+          "type": "categorical",
+          "perf_ref": 0.23568800411324267,
+          "perf_synth": 0.3613660464667887,
+          "utility": 1.5332390285470814
+        },
+        "PayZone": {
+          "type": "categorical",
+          "perf_ref": 0.3369256917970907,
+          "perf_synth": 0.41474582723436654,
+          "utility": 1.2309712121453238
+        },
+        "Performance Score": {
+          "type": "categorical",
+          "perf_ref": 0.26204351204351206,
+          "perf_synth": 0.29662004662004665,
+          "utility": 1.1319495922905856
+        },
+        "RaceDesc": {
+          "type": "categorical",
+          "perf_ref": 0.23326521171081863,
+          "perf_synth": 0.24989705501075204,
+          "utility": 1.071300144491979
+        },
+        "StartDate": {
+          "type": "numerical",
+          "perf_ref": 45700789.476045325,
+          "perf_synth": 44797217.56642122,
+          "utility": 1.0201702685726937
+        },
+        "State": {
+          "type": "categorical",
+          "perf_ref": 0.26143790849673204,
+          "perf_synth": 0.1642156862745098,
+          "utility": 0.6281249999999999
+        },
+        "TerminationType": {
+          "type": "categorical",
+          "perf_ref": 0.3887426900584795,
+          "perf_synth": 0.42136939571150095,
+          "utility": 1.0839287952864485
+        },
+        "Title": {
+          "type": "categorical",
+          "perf_ref": 0.4318022148130507,
+          "perf_synth": 0.14912280701754385,
+          "utility": 0.3453497965083545
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 42,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 42,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200,
+      "date_column_metadata": {
+        "StartDate": {
+          "original_format": "%d-%b-%y",
+          "min_timestamp": 1533945600,
+          "max_timestamp": 1691280000,
+          "parse_strategy": "infer_datetime_format"
+        },
+        "ExitDate": {
+          "original_format": "%d-%b-%y",
+          "min_timestamp": 1545696000,
+          "max_timestamp": 1893456000,
+          "parse_strategy": "infer_datetime_format"
+        },
+        "DOB": {
+          "original_format": "%d-%m-%Y",
+          "min_timestamp": -893980800,
+          "max_timestamp": 994636800,
+          "parse_strategy": "dayfirst"
+        }
+      },
+      "temporal_orderings": [
+        {
+          "left": "StartDate",
+          "right": "ExitDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        },
+        {
+          "left": "DOB",
+          "right": "StartDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        },
+        {
+          "left": "DOB",
+          "right": "ExitDate",
+          "direction": "<=",
+          "real_fraction": 1.0
+        }
+      ]
+    }
+  }
+]

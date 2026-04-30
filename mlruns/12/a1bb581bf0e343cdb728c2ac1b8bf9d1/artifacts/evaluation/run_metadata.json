@@ -1,0 +1,17 @@
+{
+  "model_name": "GenForest",
+  "dataset_name": "aug_combined",
+  "tracking_uri": "file:///Users/sarakhan/Projects/Uni/Gen-Trees/tmp_genforest_eval",
+  "experiment_name": "Dataset3_full",
+  "run_name": "aug_combined_GenForest",
+  "synthetic_paths": [
+    "tmp_genforest_regen/aug_combined_GenForest_seed2026.csv",
+    "tmp_genforest_regen/aug_combined_GenForest_seed2003.csv",
+    "tmp_genforest_regen/aug_combined_GenForest_seed42.csv"
+  ],
+  "seeds": [
+    2026,
+    2003,
+    42
+  ]
+}

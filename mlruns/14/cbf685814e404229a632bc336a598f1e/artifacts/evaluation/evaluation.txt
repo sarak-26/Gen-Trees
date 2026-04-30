@@ -1,0 +1,86 @@
+=== Evaluation Summary ===
+Model:     CTGAN
+Dataset:   employee_data
+Real:      /Users/sarakhan/Projects/Uni/Gen-Trees/data/employee_data.csv
+Synthetic: 3 synthetic runs averaged
+Runs:      3 (seeds=[2026, 2003, 42])
+
+Columns:
+  Numeric:     ['LocationCode']
+  Categorical: ['BusinessUnit', 'DepartmentType', 'Division', 'EmployeeClassificationType', 'EmployeeStatus', 'EmployeeType', 'GenderCode', 'JobFunctionDescription', 'MaritalDesc', 'PayZone', 'Performance Score', 'RaceDesc', 'State', 'TerminationType', 'Title']
+  Discrete/Ordinal: ['Current Employee Rating']
+  Date:        ['StartDate', 'ExitDate', 'DOB']
+  One-hot features: 209.0
+  Dropped: ['TerminationDescription']
+
+Discriminator (logistic regression, held-out test + permutation null):
+  AUC:               0.754798 +/- 0.061346
+  Accuracy:          0.694815 +/- 0.035199
+  pMSE (test):       0.133256 +/- 0.013762
+  pMSE null mean:    0.052231 +/- 0.002519
+  pMSE ratio (perm): 2.561468 +/- 0.332790
+  Null percentile:   100.0 +/- 0.0th
+
+Support / coverage (paper-style one-class embedding):
+  Alpha precision (alpha=1.0): 1.000000 +/- 0.000000
+  Beta recall (beta=1.0):      0.625778 +/- 0.055951
+  Integrated IP_alpha:         0.796078 +/- 0.052142
+  Integrated IR_beta:          0.639211 +/- 0.115725
+  Embedder radius:             4983662.101296 +/- 400581.652517
+  Alpha grid:                  [0.05000000000000001, 0.10000000000000002, 0.15, 0.20000000000000004, 0.25, 0.3, 0.3499999999999999, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.6999999999999998, 0.75, 0.7999999999999999, 0.85, 0.9, 0.9499999999999998, 1.0]
+  P_alpha curve:               [0.034666666666666665, 0.052888888888888895, 0.07155555555555555, 0.08666666666666667, 0.1191111111111111, 0.16, 0.19866666666666669, 0.24533333333333332, 0.29244444444444445, 0.3471111111111111, 0.40399999999999997, 0.4533333333333333, 0.5013333333333333, 0.5777777777777778, 0.6635555555555556, 0.7191111111111111, 0.7835555555555556, 0.8448888888888888, 0.9342222222222222, 1.0]
+  Beta grid:                   [0.05000000000000001, 0.10000000000000002, 0.15, 0.20000000000000004, 0.25, 0.3, 0.3499999999999999, 0.39999999999999997, 0.44999999999999996, 0.49999999999999994, 0.5499999999999999, 0.6, 0.65, 0.6999999999999998, 0.75, 0.7999999999999999, 0.85, 0.9, 0.9499999999999998, 1.0]
+  R_beta curve:                [0.04311111111111111, 0.08577777777777777, 0.13377777777777777, 0.168, 0.20533333333333334, 0.22755555555555554, 0.2537777777777778, 0.27777777777777773, 0.30666666666666664, 0.33688888888888885, 0.3635555555555556, 0.3813333333333333, 0.4017777777777778, 0.4235555555555555, 0.45022222222222225, 0.47822222222222227, 0.5075555555555556, 0.5479999999999999, 0.5760000000000001, 0.6257777777777779]
+
+Global Utility (TabStruct-style):
+  Global utility: 0.749116 +/- 0.033414
+  Columns used:   20.000000 +/- 0.000000
+  Synth train cap:5000.0
+  Skipped (too few rows): 0.00 +/- 0.00
+  Skipped (single-class/fit fail): 0.00 +/- 0.00
+  Per-column utility (lowest 5):
+    ExitDate: 0.156921 +/- 0.012794
+    Title: 0.177568 +/- 0.042053
+    Division: 0.252600 +/- 0.036444
+    DepartmentType: 0.275740 +/- 0.027825
+    JobFunctionDescription: 0.511542 +/- 0.117239
+  Per-column utility (highest 5):
+    PayZone: 1.133747 +/- 0.172250
+    BusinessUnit: 1.120245 +/- 0.235489
+    EmployeeType: 1.050392 +/- 0.087479
+    MaritalDesc: 1.030397 +/- 0.135959
+    EmployeeClassificationType: 1.022799 +/- 0.099045
+
+Marginal (numeric):
+  LocationCode: KS=0.312889 +/- 0.122881, Wasserstein=19034.884444 +/- 9255.771085, Wasserstein/IQR=0.360316 +/- 0.175205
+
+Marginal (discrete/ordinal):
+  Current Employee Rating: KS=0.049778 +/- 0.004400, Wasserstein=0.099111 +/- 0.021007, Wasserstein/IQR=0.099111 +/- 0.021007, TV=0.068889 +/- 0.010347
+
+Marginal (date as Unix timestamps):
+  StartDate: KS=0.300444 +/- 0.020113, Wasserstein[0,1]=0.199144 +/- 0.015451
+  ExitDate: KS=0.381333 +/- 0.078753, Wasserstein[0,1]=0.162071 +/- 0.092554
+  DOB: KS=0.300889 +/- 0.099208, Wasserstein[0,1]=0.210154 +/- 0.071637
+
+Temporal consistency:
+  Overall: 0.893926 +/- 0.067634
+  StartDate <= ExitDate: score=0.681778 +/- 0.202901, valid_rows=750.0, real_fraction=1.000000
+  DOB <= StartDate: score=1.000000 +/- 0.000000, valid_rows=750.0, real_fraction=1.000000
+  DOB <= ExitDate: score=1.000000 +/- 0.000000, valid_rows=750.0, real_fraction=1.000000
+
+Marginal (categorical TV distance):
+  BusinessUnit: TV=0.068000 +/- 0.008219
+  DepartmentType: TV=0.052889 +/- 0.016049
+  Division: TV=0.127111 +/- 0.024278
+  EmployeeClassificationType: TV=0.043111 +/- 0.016049
+  EmployeeStatus: TV=0.037778 +/- 0.008171
+  EmployeeType: TV=0.032444 +/- 0.006652
+  GenderCode: TV=0.029778 +/- 0.021370
+  JobFunctionDescription: TV=0.122667 +/- 0.014236
+  MaritalDesc: TV=0.049333 +/- 0.013899
+  PayZone: TV=0.071556 +/- 0.025516
+  Performance Score: TV=0.008444 +/- 0.005479
+  RaceDesc: TV=0.034667 +/- 0.002177
+  State: TV=0.043556 +/- 0.007647
+  TerminationType: TV=0.093778 +/- 0.014456
+  Title: TV=0.120889 +/- 0.027202

@@ -1,0 +1,87 @@
+SYNTHETIC DATA PRIVACY EVALUATION
+================================================================================
+
+RAW RESULTS (JSON)
+--------------------------------------------------------------------------------
+{
+  "data_summary": {
+    "training_csv_rows": 3500,
+    "synthetic_csv_rows": 3500,
+    "num_columns": 13,
+    "holdout_fraction": 0.2,
+    "real_train_rows": 2800,
+    "real_holdout_rows": 700
+  },
+  "exact_match_train_vs_synth": {
+    "count": 0,
+    "share_of_synth": 0.0,
+    "share_of_real": 0.0
+  },
+  "exact_match_holdout_vs_synth": {
+    "count": 0,
+    "share_of_synth": 0.0,
+    "share_of_real": 0.0
+  },
+  "dcr_train_to_synth": {
+    "mean": 1.9828007080023131,
+    "median": 2.0113400461601305,
+    "min": 0.016213613683418334,
+    "p5": 1.4146818469713007
+  },
+  "dcr_holdout_to_synth": {
+    "mean": 2.1929840493487114,
+    "median": 2.129679645280331,
+    "min": 0.040605590077209965,
+    "p5": 1.4256189288794892
+  },
+  "dcr_train_to_train": {
+    "mean": 1.7544969995928723,
+    "median": 2.0,
+    "min": 0.0,
+    "p5": 0.35669950103474024
+  },
+  "share_synth_closer_to_train_than_holdout": 0.7745714285714286,
+  "nndr_vs_train": {
+    "mean": 700305564.7053461,
+    "median": 1.2222824322439212,
+    "min": 0.017225948379658892,
+    "p5": 0.7317709849732816
+  },
+  "nndr_vs_holdout": {
+    "mean": 2.077265302316606,
+    "median": 1.182472523884378,
+    "min": 0.028525628778748396,
+    "p5": 0.7454790532192456
+  },
+  "distance_based_mia": {
+    "avg_accuracy": 0.5075714285714285,
+    "avg_precision": 0.5904519606620354,
+    "avg_recall": 0.05000000000000001,
+    "avg_tpr": 0.05000000000000001,
+    "avg_fpr": 0.03485714285714286,
+    "avg_threshold": 1.041734208446166
+  }
+}
+
+Privacy Metric Interpretation
+================================================================================
+
+Exact matches (train vs synth): 0 (lower is better, ideally 0)
+Exact matches (holdout vs synth): 0
+
+Median DCR train-train:  2.000000
+Median DCR train-synth:  2.011340
+Median DCR holdout-synth:2.129680
+Interpretation: train-synth distances should generally not be unusually smaller than holdout-synth distances.
+
+Share synth closer to train than holdout: 0.774571
+Interpretation: values near 0.5 are usually more reassuring; much higher values can indicate training-specific leakage.
+
+Median NNDR vs train:   1.222282
+Median NNDR vs holdout: 1.182473
+Interpretation: higher NNDR is generally better; very low values may indicate synthetic points lying unusually close to specific real records or outliers.
+
+MIA average accuracy:  0.507571
+MIA average precision: 0.590452
+Interpretation: values near 0.5 suggest attack performance close to chance.
+

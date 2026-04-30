@@ -1,0 +1,995 @@
+[
+  {
+    "paths": {
+      "real": "data/Employee.csv",
+      "synthetic": "tmp_genforest_regen/Employee_GenForest_seed2026.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Age",
+        "ExperienceInCurrentDomain"
+      ],
+      "categorical": [
+        "City",
+        "Education",
+        "EverBenched",
+        "Gender"
+      ],
+      "discrete_ordinal": [
+        "JoiningYear",
+        "LeaveOrNot",
+        "PaymentTier"
+      ],
+      "date": []
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 31
+    },
+    "marginal_numeric": {
+      "Age": {
+        "ks": 0.015688802922845475,
+        "wasserstein": 0.09563722329679777,
+        "wasserstein_normalized_iqr": 0.015939537216132962
+      },
+      "ExperienceInCurrentDomain": {
+        "ks": 0.020846765527616593,
+        "wasserstein": 0.061035890823125036,
+        "wasserstein_normalized_iqr": 0.030517945411562518
+      }
+    },
+    "marginal_categorical_tv": {
+      "City": 0.011175585643670757,
+      "Education": 0.01053084031807432,
+      "EverBenched": 0.00752202879862459,
+      "Gender": 0.009671179883945835
+    },
+    "marginal_discrete_ordinal": {
+      "JoiningYear": {
+        "ks": 0.015688802922845475,
+        "wasserstein": 0.05845690952073927,
+        "wasserstein_normalized_iqr": 0.014614227380184818,
+        "tv": 0.017837954008166783
+      },
+      "LeaveOrNot": {
+        "ks": 0.0012894906511927789,
+        "wasserstein": 0.0012894906511927706,
+        "wasserstein_normalized_iqr": 0.0012894906511927706,
+        "tv": 0.0012894906511927706
+      },
+      "PaymentTier": {
+        "ks": 0.01096067053513862,
+        "wasserstein": 0.011390500752202867,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.010960670535138613
+      }
+    },
+    "marginal_date": {},
+    "temporal_consistency": {
+      "overall": null,
+      "pairs": {}
+    },
+    "support": {
+      "alpha_precision": 1.0,
+      "beta_recall": 0.998280679131743,
+      "IP_alpha": 0.9840248226950354,
+      "IR_beta": 0.8315425531914893,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.052654201590371805,
+        0.10724263915753278,
+        0.15903718031377606,
+        0.20524392864818397,
+        0.25961745110681284,
+        0.30603911454975286,
+        0.357618740597464,
+        0.4081237911025145,
+        0.46314205888673976,
+        0.5157962604771116,
+        0.5684504620674834,
+        0.615946701053084,
+        0.6610788738448313,
+        0.7137330754352031,
+        0.7590801633354824,
+        0.8022781001504405,
+        0.8536428110896196,
+        0.9004943047496239,
+        0.9518590156888029,
+        1.0
+      ],
+      "alpha_radii": [
+        0.0127088138833642,
+        0.013267626985907555,
+        0.013785691000521183,
+        0.014243716932833194,
+        0.01480448804795742,
+        0.015132389031350613,
+        0.01556504424661398,
+        0.015978418290615082,
+        0.01643885299563408,
+        0.016782373189926147,
+        0.017236294224858284,
+        0.017798755690455435,
+        0.01834682859480381,
+        0.018823429942131042,
+        0.019469670951366425,
+        0.020132582634687424,
+        0.020877273753285408,
+        0.022191163152456284,
+        0.023863619193434712,
+        0.033977728337049484
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.07113690092413497,
+        0.13023855577047067,
+        0.1938534278959811,
+        0.2578981302385558,
+        0.31055233182892755,
+        0.3928648183967333,
+        0.4472383408553621,
+        0.5222437137330754,
+        0.559638942617666,
+        0.624113475177305,
+        0.6698903932946486,
+        0.7173866322802493,
+        0.7702557489791533,
+        0.8143133462282398,
+        0.8744895766172361,
+        0.9161831076724694,
+        0.9501396948205458,
+        0.9789383193638512,
+        0.9929078014184397,
+        0.998280679131743
+      ],
+      "beta_radii": [
+        0.012560630775988102,
+        0.013230359181761742,
+        0.013626464642584324,
+        0.014200245030224323,
+        0.01463897991925478,
+        0.015120667405426502,
+        0.015462909638881682,
+        0.01586245931684971,
+        0.016225523129105565,
+        0.016624445095658302,
+        0.017083412036299706,
+        0.01762459613382816,
+        0.01816045455634594,
+        0.018657060340046883,
+        0.019382737576961517,
+        0.020070776343345642,
+        0.02090299129486084,
+        0.022219863533973695,
+        0.02389453537762165,
+        0.03412998095154762
+      ],
+      "embedder": {
+        "rep_dim": 31,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 0.025956032777200974,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.5056919175540431,
+      "accuracy": 0.5100286532951289,
+      "pmse_test": 0.0005826364234132472,
+      "pmse_null_mean": 0.0006637829918594939,
+      "pmse_ratio_perm": 0.8777513593427182,
+      "pmse_null_percentile": 46.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 1.1132767534446535,
+      "num_columns_used": 9,
+      "per_column": {
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 4.793377641915998,
+          "perf_synth": 4.620851878355229,
+          "utility": 1.0373363544434104
+        },
+        "City": {
+          "type": "categorical",
+          "perf_ref": 0.6051702044068457,
+          "perf_synth": 0.6723759332454984,
+          "utility": 1.111052606934811
+        },
+        "Education": {
+          "type": "categorical",
+          "perf_ref": 0.5212656586990289,
+          "perf_synth": 0.6526711514894156,
+          "utility": 1.2520892957313696
+        },
+        "EverBenched": {
+          "type": "categorical",
+          "perf_ref": 0.5026466588966589,
+          "perf_synth": 0.5943995240870241,
+          "utility": 1.1825394908458529
+        },
+        "ExperienceInCurrentDomain": {
+          "type": "numerical",
+          "perf_ref": 1.1806380398925267,
+          "perf_synth": 1.059520589878976,
+          "utility": 1.1143134462609976
+        },
+        "Gender": {
+          "type": "categorical",
+          "perf_ref": 0.6912829736211031,
+          "perf_synth": 0.7447098321342926,
+          "utility": 1.0772865245520615
+        },
+        "JoiningYear": {
+          "type": "numerical",
+          "perf_ref": 1.698084614850786,
+          "perf_synth": 1.6109672652081575,
+          "utility": 1.05407766596137
+        },
+        "LeaveOrNot": {
+          "type": "numerical",
+          "perf_ref": 0.3149352627510981,
+          "perf_synth": 0.2885100525948483,
+          "utility": 1.091591991053977
+        },
+        "PaymentTier": {
+          "type": "numerical",
+          "perf_ref": 0.5184258503094918,
+          "perf_synth": 0.4716377768195328,
+          "utility": 1.0992034052180304
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2026,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2026,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200,
+      "date_column_metadata": {},
+      "temporal_orderings": []
+    }
+  },
+  {
+    "paths": {
+      "real": "data/Employee.csv",
+      "synthetic": "tmp_genforest_regen/Employee_GenForest_seed2003.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Age",
+        "ExperienceInCurrentDomain"
+      ],
+      "categorical": [
+        "City",
+        "Education",
+        "EverBenched",
+        "Gender"
+      ],
+      "discrete_ordinal": [
+        "JoiningYear",
+        "LeaveOrNot",
+        "PaymentTier"
+      ],
+      "date": []
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 31
+    },
+    "marginal_numeric": {
+      "Age": {
+        "ks": 0.01246507629486353,
+        "wasserstein": 0.10724263915753278,
+        "wasserstein_normalized_iqr": 0.01787377319292213
+      },
+      "ExperienceInCurrentDomain": {
+        "ks": 0.004298302170642596,
+        "wasserstein": 0.012250161186331376,
+        "wasserstein_normalized_iqr": 0.006125080593165688
+      }
+    },
+    "marginal_categorical_tv": {
+      "City": 0.006232538147431757,
+      "Education": 0.0023640661938534348,
+      "EverBenched": 0.005802707930367454,
+      "Gender": 0.00021491510853216544
+    },
+    "marginal_discrete_ordinal": {
+      "JoiningYear": {
+        "ks": 0.004728132387706856,
+        "wasserstein": 0.015903718031377703,
+        "wasserstein_normalized_iqr": 0.003975929507844426,
+        "tv": 0.013109821620459934
+      },
+      "LeaveOrNot": {
+        "ks": 0.001074575542660649,
+        "wasserstein": 0.0010745755426606607,
+        "wasserstein_normalized_iqr": 0.0010745755426606607,
+        "tv": 0.0010745755426606607
+      },
+      "PaymentTier": {
+        "ks": 0.007522028798624543,
+        "wasserstein": 0.0075220287986245415,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.007522028798624528
+      }
+    },
+    "marginal_date": {},
+    "temporal_consistency": {
+      "overall": null,
+      "pairs": {}
+    },
+    "support": {
+      "alpha_precision": 1.0,
+      "beta_recall": 0.9989254244573393,
+      "IP_alpha": 0.9911707500537288,
+      "IR_beta": 0.8957699333763163,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.05329894691596819,
+        0.10659789383193638,
+        0.15731785944551901,
+        0.2033096926713948,
+        0.2538147431764453,
+        0.2983021706425962,
+        0.34644315495379324,
+        0.3965183752417795,
+        0.45046206748334405,
+        0.50655491081023,
+        0.5557704706640877,
+        0.6071351816032667,
+        0.6531270148291425,
+        0.6993337631635504,
+        0.7453255963894262,
+        0.7919621749408984,
+        0.8439716312056738,
+        0.890823124865678,
+        0.9447668171072426,
+        1.0
+      ],
+      "alpha_radii": [
+        0.013479819521307945,
+        0.01442464254796505,
+        0.015509458258748055,
+        0.01663600206375122,
+        0.01728386990725994,
+        0.018250083178281782,
+        0.018980858847498894,
+        0.01944580040872097,
+        0.019949553906917567,
+        0.020497495308518406,
+        0.021124566346406935,
+        0.021648745983839035,
+        0.02220631018280983,
+        0.022841891273856163,
+        0.02339484915137291,
+        0.02406734824180603,
+        0.024878955259919167,
+        0.025772643461823463,
+        0.027225097641348832,
+        0.03661518543958664
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.0548033526756931,
+        0.10767246937459704,
+        0.16548463356973994,
+        0.22394154309047926,
+        0.27788523533204385,
+        0.33161401246507627,
+        0.4059746400171932,
+        0.4665807006232538,
+        0.5207393079733506,
+        0.5658714807650977,
+        0.6178809370298732,
+        0.6759080163335482,
+        0.731785944551902,
+        0.7855147216849344,
+        0.8465506125080593,
+        0.8893187191059532,
+        0.9234902213625618,
+        0.9653986675263271,
+        0.9877498388136686,
+        0.9989254244573393
+      ],
+      "beta_radii": [
+        0.013438224792480469,
+        0.014394664205610752,
+        0.015457434579730034,
+        0.016613109037280083,
+        0.01729106903076172,
+        0.018301606923341752,
+        0.01902785710990429,
+        0.019496675580739975,
+        0.019911278411746024,
+        0.020485734567046165,
+        0.02105996012687683,
+        0.021592980250716206,
+        0.02218865118920803,
+        0.02283132672309874,
+        0.02347797341644764,
+        0.024101780354976655,
+        0.024939574673771857,
+        0.025847143679857253,
+        0.027366700023412703,
+        0.036529265344142914
+      ],
+      "embedder": {
+        "rep_dim": 31,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 0.029199042726388038,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.48688921888982856,
+      "accuracy": 0.4863896848137536,
+      "pmse_test": 0.0002508316843281653,
+      "pmse_null_mean": 0.0006783875430259985,
+      "pmse_ratio_perm": 0.3697468901172798,
+      "pmse_null_percentile": 2.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 1.1117383122031248,
+      "num_columns_used": 9,
+      "per_column": {
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 4.735834866797983,
+          "perf_synth": 4.471555838401917,
+          "utility": 1.059102253879159
+        },
+        "City": {
+          "type": "categorical",
+          "perf_ref": 0.626171654432524,
+          "perf_synth": 0.6867055649664345,
+          "utility": 1.0966730290414857
+        },
+        "Education": {
+          "type": "categorical",
+          "perf_ref": 0.5452455952455953,
+          "perf_synth": 0.7460341460341461,
+          "utility": 1.3682534119291865
+        },
+        "EverBenched": {
+          "type": "categorical",
+          "perf_ref": 0.5121467074592074,
+          "perf_synth": 0.521646756021756,
+          "utility": 1.0185494672213729
+        },
+        "ExperienceInCurrentDomain": {
+          "type": "numerical",
+          "perf_ref": 1.175960705714196,
+          "perf_synth": 1.0537905775059264,
+          "utility": 1.1159339728557998
+        },
+        "Gender": {
+          "type": "categorical",
+          "perf_ref": 0.6851808905380334,
+          "perf_synth": 0.7457096474953617,
+          "utility": 1.0883398206126247
+        },
+        "JoiningYear": {
+          "type": "numerical",
+          "perf_ref": 1.739870808788905,
+          "perf_synth": 1.6393508118578344,
+          "utility": 1.0613169531524214
+        },
+        "LeaveOrNot": {
+          "type": "numerical",
+          "perf_ref": 0.33171813286185076,
+          "perf_synth": 0.30408159606453405,
+          "utility": 1.090885266175239
+        },
+        "PaymentTier": {
+          "type": "numerical",
+          "perf_ref": 0.5038403782418788,
+          "perf_synth": 0.45530873145308276,
+          "utility": 1.106590634960834
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 2003,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 2003,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200,
+      "date_column_metadata": {},
+      "temporal_orderings": []
+    }
+  },
+  {
+    "paths": {
+      "real": "data/Employee.csv",
+      "synthetic": "tmp_genforest_regen/Employee_GenForest_seed42.csv"
+    },
+    "columns": {
+      "numeric": [
+        "Age",
+        "ExperienceInCurrentDomain"
+      ],
+      "categorical": [
+        "City",
+        "Education",
+        "EverBenched",
+        "Gender"
+      ],
+      "discrete_ordinal": [
+        "JoiningYear",
+        "LeaveOrNot",
+        "PaymentTier"
+      ],
+      "date": []
+    },
+    "dropped_columns": [],
+    "encoding": {
+      "one_hot_feature_count": 31
+    },
+    "marginal_numeric": {
+      "Age": {
+        "ks": 0.014614227380184827,
+        "wasserstein": 0.11648398882441445,
+        "wasserstein_normalized_iqr": 0.019413998137402407
+      },
+      "ExperienceInCurrentDomain": {
+        "ks": 0.004083387062110466,
+        "wasserstein": 0.011605415860734852,
+        "wasserstein_normalized_iqr": 0.005802707930367426
+      }
+    },
+    "marginal_categorical_tv": {
+      "City": 0.006877283473028115,
+      "Education": 0.011390500752202905,
+      "EverBenched": 0.0008596604341284744,
+      "Gender": 0.0017193208682570182
+    },
+    "marginal_discrete_ordinal": {
+      "JoiningYear": {
+        "ks": 0.004083387062110466,
+        "wasserstein": 0.012250161186331363,
+        "wasserstein_normalized_iqr": 0.0030625402965828406,
+        "tv": 0.00902643455834945
+      },
+      "LeaveOrNot": {
+        "ks": 0.005587792821835375,
+        "wasserstein": 0.005587792821835413,
+        "wasserstein_normalized_iqr": 0.005587792821835413,
+        "tv": 0.005587792821835386
+      },
+      "PaymentTier": {
+        "ks": 0.0036535568450462067,
+        "wasserstein": 0.005157962604771117,
+        "wasserstein_normalized_iqr": null,
+        "tv": 0.0036535568450461915
+      }
+    },
+    "marginal_date": {},
+    "temporal_consistency": {
+      "overall": null,
+      "pairs": {}
+    },
+    "support": {
+      "alpha_precision": 1.0,
+      "beta_recall": 0.9995701697829358,
+      "IP_alpha": 0.9928889963464432,
+      "IR_beta": 0.838624006017623,
+      "alphas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "alpha_precision_curve": [
+        0.04771115409413282,
+        0.09929078014184398,
+        0.14807650977863743,
+        0.20030088115194497,
+        0.2437137330754352,
+        0.29228454760369654,
+        0.3483773909305824,
+        0.3945841392649903,
+        0.4442295293359123,
+        0.491725768321513,
+        0.5407264130668386,
+        0.5940253599828068,
+        0.647324306898775,
+        0.6991188480550182,
+        0.7461852568235547,
+        0.7960455620030088,
+        0.851063829787234,
+        0.8974854932301741,
+        0.9482054588437567,
+        1.0
+      ],
+      "alpha_radii": [
+        0.022416573017835617,
+        0.024143896251916888,
+        0.025439292192459106,
+        0.026811840012669563,
+        0.028055794537067413,
+        0.02910293787717819,
+        0.029958559200167656,
+        0.0308939840644598,
+        0.031847525388002396,
+        0.032824147492647164,
+        0.03399808183312416,
+        0.034946661442518234,
+        0.03579342663288117,
+        0.03687830418348312,
+        0.038023486733436584,
+        0.03951222077012062,
+        0.041022393852472305,
+        0.0429832860827446,
+        0.04589069113135338,
+        0.06010405346751213
+      ],
+      "betas": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.39999999999999997,
+        0.44999999999999996,
+        0.49999999999999994,
+        0.5499999999999999,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.7999999999999999,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "beta_recall_curve": [
+        0.06447453255963895,
+        0.1261551687083602,
+        0.19277885235332043,
+        0.25553406404470236,
+        0.33204384268214054,
+        0.39608854502471524,
+        0.45368579411132604,
+        0.5173006662368365,
+        0.574468085106383,
+        0.6316355039759295,
+        0.6711798839458414,
+        0.7223296797764883,
+        0.768106597893832,
+        0.806146572104019,
+        0.8517085751128304,
+        0.8914678701912745,
+        0.9264990328820116,
+        0.9529335912314636,
+        0.9862454330539437,
+        0.9995701697829358
+      ],
+      "beta_radii": [
+        0.022640906274318695,
+        0.024262474104762077,
+        0.0256064523011446,
+        0.026883261278271675,
+        0.02835235372185707,
+        0.02923385575413704,
+        0.0300702266395092,
+        0.030992582440376282,
+        0.03195108100771904,
+        0.03290902078151703,
+        0.034136392176151276,
+        0.03508650064468384,
+        0.0358448326587677,
+        0.03686825558543205,
+        0.038172367960214615,
+        0.0397174172103405,
+        0.04095455631613731,
+        0.04314744845032692,
+        0.045893844962120046,
+        0.05617526173591614
+      ],
+      "embedder": {
+        "rep_dim": 31,
+        "hidden_dim": 64,
+        "num_layers": 3,
+        "activation": "ReLU",
+        "dropout_prob": 0.0,
+        "nu": 0.01,
+        "lr": 0.001,
+        "weight_decay": 1e-05,
+        "batch_size": 256,
+        "epochs": 200,
+        "warm_up_epochs": 10,
+        "radius": 0.04910250865795513,
+        "k_recall": 5
+      }
+    },
+    "discriminator": {
+      "auc": 0.48008970574954224,
+      "accuracy": 0.48173352435530087,
+      "pmse_test": 0.0003767900014361876,
+      "pmse_null_mean": 0.0006195959381903498,
+      "pmse_ratio_perm": 0.6081221296199519,
+      "pmse_null_percentile": 20.0,
+      "permutations": 50,
+      "test_size": 0.3
+    },
+    "global_utility": {
+      "global_utility": 1.112460942928224,
+      "num_columns_used": 9,
+      "per_column": {
+        "Age": {
+          "type": "numerical",
+          "perf_ref": 4.726591384643536,
+          "perf_synth": 4.4951533134188715,
+          "utility": 1.051486135196719
+        },
+        "City": {
+          "type": "categorical",
+          "perf_ref": 0.6140942121730315,
+          "perf_synth": 0.6780529428832492,
+          "utility": 1.1041513328775623
+        },
+        "Education": {
+          "type": "categorical",
+          "perf_ref": 0.5031843447199804,
+          "perf_synth": 0.6851446740334715,
+          "utility": 1.3616176282566006
+        },
+        "EverBenched": {
+          "type": "categorical",
+          "perf_ref": 0.5,
+          "perf_synth": 0.5433817594834545,
+          "utility": 1.086763518966909
+        },
+        "ExperienceInCurrentDomain": {
+          "type": "numerical",
+          "perf_ref": 1.1372033565156963,
+          "perf_synth": 1.032750307470273,
+          "utility": 1.1011406612904153
+        },
+        "Gender": {
+          "type": "categorical",
+          "perf_ref": 0.6940156822539918,
+          "perf_synth": 0.7459346699322207,
+          "utility": 1.0748095309742984
+        },
+        "JoiningYear": {
+          "type": "numerical",
+          "perf_ref": 1.72341276870912,
+          "perf_synth": 1.6055250667504597,
+          "utility": 1.0734262606047391
+        },
+        "LeaveOrNot": {
+          "type": "numerical",
+          "perf_ref": 0.31927765185455215,
+          "perf_synth": 0.295054737571436,
+          "utility": 1.0820963407755875
+        },
+        "PaymentTier": {
+          "type": "numerical",
+          "perf_ref": 0.4577160562482015,
+          "perf_synth": 0.4251270584212174,
+          "utility": 1.0766570774111837
+        }
+      },
+      "skipped": {
+        "too_few_rows": 0,
+        "single_class_or_failed_fit": 0
+      },
+      "settings": {
+        "test_size": 0.2,
+        "seed": 42,
+        "synth_train_cap": 5000,
+        "min_real_train_rows": 200,
+        "min_real_test_rows": 100,
+        "min_synth_train_rows": 200
+      }
+    },
+    "settings": {
+      "numeric_threshold": 0.95,
+      "id_unique_threshold": 0.98,
+      "k": 5,
+      "rep_dim": 32,
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "activation": "ReLU",
+      "dropout_prob": 0.0,
+      "nu": 0.01,
+      "svdd_lr": 0.001,
+      "svdd_weight_decay": 1e-05,
+      "svdd_batch_size": 256,
+      "svdd_epochs": 200,
+      "svdd_warm_up_epochs": 10,
+      "seed": 42,
+      "permutations": 50,
+      "global_utility_test_size": 0.2,
+      "synth_train_cap": 5000,
+      "global_utility_min_real_train_rows": 200,
+      "global_utility_min_real_test_rows": 100,
+      "global_utility_min_synth_train_rows": 200,
+      "date_column_metadata": {},
+      "temporal_orderings": []
+    }
+  }
+]

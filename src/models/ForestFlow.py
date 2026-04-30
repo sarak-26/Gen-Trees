@@ -129,12 +129,16 @@ def generate(
     output_dir,
     *,
     n_t: int = 10,
-    duplicate_K: int = 20,
+    duplicate_K: int = 10,
     n_batch: int = 1,
-    n_jobs: int = 1,
+    n_jobs: int = 4,
     seed: int = 42,
     discrete_cardinality_threshold: int = 10,
-    model_kwargs: dict | None = None,
+    model_kwargs= {
+        "max_depth": 4,    
+        "n_estimators": 50, 
+    }
+,
 ):
     if ForestDiffusionModel is None:
         raise ModuleNotFoundError("ForestDiffusion is not installed.")

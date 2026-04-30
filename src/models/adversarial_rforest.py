@@ -154,6 +154,10 @@ def generate(
     myarf = arf.arf(x = df)
     myarf.forde()
     _apply_finite_bounds(myarf, df, finite_bounds=finite_bounds, epsilon=epsilon)
+    if not myarf.params.empty and "sd" in myarf.params.columns:
+        myarf.params = myarf.params.assign(
+            sd=myarf.params["sd"].clip(lower=1e-9).fillna(1e-9)
+        )
     new_data = myarf.forge(n = n_generated)
     new_data = _postprocess_generated_data(new_data, df)
     new_data = finalize_synthetic_dates(new_data, df)

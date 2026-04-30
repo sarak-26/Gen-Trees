@@ -1,0 +1,6 @@
+Age,Attrition,BusinessTravel,DailyRate,Department,DistanceFromHome,Education,EducationField,EmployeeCount,EnvironmentSatisfaction,Gender,HourlyRate,JobInvolvement,JobLevel,JobRole,JobSatisfaction,MaritalStatus,MonthlyIncome,MonthlyRate,NumCompaniesWorked,Over18,OverTime,PercentSalaryHike,PerformanceRating,RelationshipSatisfaction,StandardHours,StockOptionLevel,TotalWorkingYears,TrainingTimesLastYear,WorkLifeBalance,YearsAtCompany,YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager
+22.0,No,Travel_Rarely,583.0,Sales,13.0,1,Medical,1,4,Male,82.0,3,1,Research Scientist,2,Single,2200.0,26735.0,1,Y,No,17.0,3,3,80,0,2.0,0.0,3,2.0,2.0,2.0,2.0
+37.0,No,Travel_Rarely,1159.0,Sales,10.0,4,Life Sciences,1,4,Male,79.0,3,2,Healthcare Representative,1,Single,4717.0,11182.0,6,Y,No,15.0,3,3,80,2,10.0,0.0,2,11.0,1.0,5.0,6.0
+55.0,Yes,Travel_Rarely,753.0,Sales,9.0,4,Medical,1,1,Male,68.0,3,4,Sales Representative,1,Married,10668.0,17829.0,2,Y,Yes,15.0,3,1,80,0,11.0,0.0,3,20.0,6.0,4.0,4.0
+41.0,No,Travel_Rarely,1494.0,Sales,4.0,2,Life Sciences,1,3,Female,63.0,3,1,Manufacturing Director,2,Single,4574.0,13268.0,4,Y,No,16.0,4,4,80,0,11.0,0.0,3,1.0,0.0,1.0,0.0
+46.0,No,Travel_Frequently,493.0,Research & Development,13.0,4,Medical,1,4,Male,81.0,3,2,Human Resources,2,Married,2165.0,11538.0,5,Y,No,21.0,3,2,80,1,7.0,0.0,3,5.0,2.0,0.0,3.0

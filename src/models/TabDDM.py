@@ -58,9 +58,9 @@ class TabDDM:
             ) from exc
 
         plugin_kwargs = {
-            "n_iter": 1000,
+            "n_iter": 2000,
             "batch_size": 256,
-            "lr": 1e-3,
+            "lr": 1e-5,
             **self.plugin_kwargs,
         }
         plugin_kwargs.setdefault("workspace", Path("workspace"))
@@ -100,7 +100,7 @@ def generate(train_data, n_generated, output_dir, *, seed: int = 42):
     _seed_everything(seed)
     model = TabDDM(
         plugin_name="ddpm",
-        plugin_kwargs={"n_iter": 1000, "batch_size": 256, "lr": 1e-3, "random_state": seed},
+        plugin_kwargs={"n_iter": 2000, "batch_size": 256, "lr": 1e-5, "random_state": seed},
     )
     model.fit(df)
     new_data = model.sample(n_generated)
