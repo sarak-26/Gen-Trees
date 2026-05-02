@@ -6,20 +6,9 @@ from typing import Any, Dict, Optional
 import numpy as np
 import pandas as pd
 
-try:
-    from ..date_columns import finalize_synthetic_dates
-except ImportError:
-    from date_columns import finalize_synthetic_dates
-
-try:
-    from .backend_adapters import adapt_for_synthcity
-except ImportError:
-    from backend_adapters import adapt_for_synthcity
-
-try:
-    from .preprocessing import prepare_training_dataframe
-except ImportError:
-    from preprocessing import prepare_training_dataframe
+from ..date_columns import finalize_synthetic_dates
+from .backend_adapters import adapt_for_synthcity
+from .preprocessing import prepare_training_dataframe
 
 
 def _seed_everything(seed: int) -> None:
@@ -68,21 +57,16 @@ class TabDDM:
         return TabDDPMPlugin(**plugin_kwargs)
 
     def fit(self, df: pd.DataFrame) -> "TabDDM":
-        if not isinstance(df, pd.DataFrame) or df.empty:
-            raise ValueError("Input training data must be a non-empty pandas DataFrame.")
-
         self.plugin = self._build_plugin()
         self.plugin.fit(df)
         self.backend = f"synthcity:{self.plugin_name}"
         return self
 
     def sample(self, n: int) -> pd.DataFrame:
-        if int(n) <= 0:
-            raise ValueError("n must be a positive integer.")
         if self.plugin is None:
             raise RuntimeError("Model must be fitted before sampling.")
 
-        synthetic = self.plugin.generate(count=int(n))
+        synthetic = self.plugin.generate(count=n)
         if hasattr(synthetic, "dataframe"):
             dataframe_attr = synthetic.dataframe
             return dataframe_attr() if callable(dataframe_attr) else dataframe_attr

@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-import os
 from pathlib import Path
 from typing import Any
 
@@ -14,38 +11,14 @@ except ModuleNotFoundError:
 
 try:
     from ..date_columns import finalize_synthetic_dates
-except ImportError:
-    from date_columns import finalize_synthetic_dates
-
-try:
     from .preprocessing import prepare_training_dataframe
 except ImportError:
+    from date_columns import finalize_synthetic_dates
     from preprocessing import prepare_training_dataframe
 
 ROOT = Path(__file__).resolve().parents[2]
 SYNTHETIC_DIR = ROOT / "synthetic_data"
 
-
-def _resolve_int_env(name: str, default: int) -> int:
-    value = os.getenv(name)
-    return int(value) if value is not None else default
-
-
-def _resolve_model_kwargs(model_kwargs: dict[str, Any] | None) -> dict[str, Any]:
-    resolved = dict(model_kwargs or {})
-    env_overrides = {
-        "n_estimators": ("FORESTFLOW_N_ESTIMATORS", 100),
-        "max_depth": ("FORESTFLOW_MAX_DEPTH", 7),
-    }
-
-    for key, (env_name, _) in env_overrides.items():
-        if key not in resolved and os.getenv(env_name):
-            resolved[key] = _resolve_int_env(env_name, env_overrides[key][1])
-
-    if "model" not in resolved and os.getenv("FORESTFLOW_MODEL"):
-        resolved["model"] = os.getenv("FORESTFLOW_MODEL", "xgboost")
-
-    return resolved
 
 
 def _is_categorical(series: pd.Series) -> bool:
@@ -134,12 +107,10 @@ def generate(
     n_jobs: int = 4,
     seed: int = 42,
     discrete_cardinality_threshold: int = 10,
-    model_kwargs= {
-        "max_depth": 4,    
-        "n_estimators": 50, 
-    }
-,
+    model_kwargs: dict | None = None,
 ):
+    if model_kwargs is None:
+        model_kwargs = {"max_depth": 4, "n_estimators": 50}
     if ForestDiffusionModel is None:
         raise ModuleNotFoundError("ForestDiffusion is not installed.")
 
@@ -153,49 +124,22 @@ def generate(
         df, discrete_cardinality_threshold=discrete_cardinality_threshold
     )
 
-    env_n_t = _resolve_int_env("FORESTFLOW_N_T", n_t)
-    env_duplicate_k = _resolve_int_env("FORESTFLOW_DUPLICATE_K", duplicate_K)
-    env_n_batch = _resolve_int_env("FORESTFLOW_N_BATCH", n_batch)
-    env_n_jobs = _resolve_int_env("FORESTFLOW_N_JOBS", n_jobs)
-    resolved_model_kwargs = _resolve_model_kwargs(model_kwargs)
-
-    kind_to_columns = {
-        "binary": [metadata[idx]["name"] for idx in bin_indexes],
-        "categorical": [metadata[idx]["name"] for idx in cat_indexes],
-        "integer": [metadata[idx]["name"] for idx in int_indexes],
-    }
     print(
-        "[ForestFlow] column kinds="
-        f"binary={kind_to_columns['binary']} "
-        f"categorical={kind_to_columns['categorical']} "
-        f"integer={kind_to_columns['integer']}",
-        flush=True,
-    )
-
-    estimated_training_rows = len(df) * env_duplicate_k
-    print(
-        "[ForestFlow] build config="
-        f"n_t={env_n_t} duplicate_K={env_duplicate_k} n_batch={env_n_batch} n_jobs={env_n_jobs} "
-        f"estimated_fits={env_n_t} estimated_training_rows_per_fit~={estimated_training_rows} "
-        f"extra_model_kwargs={resolved_model_kwargs}",
-        flush=True,
-    )
-    print(
-        f"[ForestFlow] seed={seed} n_jobs={env_n_jobs} rows={len(df)} cols={len(df.columns)} starting model build",
+        f"[ForestFlow] seed={seed} n_jobs={n_jobs} rows={len(df)} cols={len(df.columns)} starting model build",
         flush=True,
     )
     model = ForestDiffusionModel(
         encoded.to_numpy(dtype=float),
-        n_t=env_n_t,
-        duplicate_K=env_duplicate_k,
-        n_batch=env_n_batch,
+        n_t=n_t,
+        duplicate_K=duplicate_K,
+        n_batch=n_batch,
         diffusion_type="flow",
         bin_indexes=bin_indexes,
         cat_indexes=cat_indexes,
         int_indexes=int_indexes,
-        n_jobs=env_n_jobs,
+        n_jobs=n_jobs,
         seed=seed,
-        **resolved_model_kwargs,
+        **model_kwargs,
     )
     print(f"[ForestFlow] seed={seed} starting sample generation", flush=True)
     samples = model.generate(batch_size=int(n_generated))

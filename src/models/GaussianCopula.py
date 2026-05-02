@@ -4,28 +4,10 @@ import random
 import numpy as np
 import pandas as pd
 
-try:
-    from sdv.single_table import GaussianCopulaSynthesizer
-except ModuleNotFoundError as exc:
-    GaussianCopulaSynthesizer = None
-    _SDV_IMPORT_ERROR = exc
-else:
-    _SDV_IMPORT_ERROR = None
-
-try:
-    from ..date_columns import finalize_synthetic_dates
-except ImportError:
-    from date_columns import finalize_synthetic_dates
-
-try:
-    from .backend_adapters import build_sdv_metadata
-except ImportError:
-    from backend_adapters import build_sdv_metadata
-
-try:
-    from .preprocessing import prepare_training_dataframe
-except ImportError:
-    from preprocessing import prepare_training_dataframe
+from sdv.single_table import GaussianCopulaSynthesizer
+from ..date_columns import finalize_synthetic_dates
+from .backend_adapters import build_sdv_metadata
+from .preprocessing import prepare_training_dataframe
 
 
 def _seed_everything(seed: int) -> None:
@@ -41,11 +23,6 @@ def _seed_everything(seed: int) -> None:
 
 
 def generate(train_data, n_generated, output_dir, *, seed: int = 42):
-    if GaussianCopulaSynthesizer is None:
-        raise ModuleNotFoundError(
-            "GaussianCopula generation requires the 'sdv' package to be installed."
-        ) from _SDV_IMPORT_ERROR
-
     df = prepare_training_dataframe(train_data)
     _seed_everything(seed)
 

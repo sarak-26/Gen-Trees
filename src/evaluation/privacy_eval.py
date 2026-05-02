@@ -9,7 +9,6 @@ import argparse
 import json
 from collections import Counter
 from dataclasses import dataclass
-from typing import Dict, List, Tuple
 
 import numpy as np
 import pandas as pd
@@ -21,11 +20,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
-# =========================================================
-# Helpers
-# =========================================================
-
-def split_column_types(df: pd.DataFrame) -> Tuple[List[str], List[str]]:
+def split_column_types(df: pd.DataFrame) -> tuple[list[str], list[str]]:
     numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
     categorical_cols = [c for c in df.columns if c not in numeric_cols]
     return numeric_cols, categorical_cols
@@ -53,7 +48,7 @@ def make_preprocessor(df_reference: pd.DataFrame) -> ColumnTransformer:
     )
 
 
-def align_columns(train_df: pd.DataFrame, synth_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
+def align_columns(train_df: pd.DataFrame, synth_df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     missing_in_synth = [c for c in train_df.columns if c not in synth_df.columns]
     extra_in_synth = [c for c in synth_df.columns if c not in train_df.columns]
 
@@ -74,11 +69,7 @@ def nearest_neighbor_distances(X_query: np.ndarray, X_reference: np.ndarray, k: 
     return distances
 
 
-# =========================================================
-# Metrics
-# =========================================================
-
-def exact_match_count(real_df: pd.DataFrame, synth_df: pd.DataFrame) -> Dict[str, float]:
+def exact_match_count(real_df: pd.DataFrame, synth_df: pd.DataFrame) -> dict[str, float]:
     real_records = Counter(map(tuple, real_df.astype(object).to_numpy()))
     synth_records = Counter(map(tuple, synth_df.astype(object).to_numpy()))
 
@@ -93,7 +84,7 @@ def exact_match_count(real_df: pd.DataFrame, synth_df: pd.DataFrame) -> Dict[str
     }
 
 
-def dcr_summary(X_query: np.ndarray, X_reference: np.ndarray, percentile: float = 5.0) -> Dict[str, float]:
+def dcr_summary(X_query: np.ndarray, X_reference: np.ndarray, percentile: float = 5.0) -> dict[str, float]:
     dists = nearest_neighbor_distances(X_query, X_reference, k=1).ravel()
     return {
         "mean": float(np.mean(dists)),
@@ -103,7 +94,7 @@ def dcr_summary(X_query: np.ndarray, X_reference: np.ndarray, percentile: float 
     }
 
 
-def train_train_dcr(X_train: np.ndarray, percentile: float = 5.0) -> Dict[str, float]:
+def train_train_dcr(X_train: np.ndarray, percentile: float = 5.0) -> dict[str, float]:
     dists = nearest_neighbor_distances(X_train, X_train, k=2)[:, 1]
     return {
         "mean": float(np.mean(dists)),
@@ -127,7 +118,7 @@ def nndr_against_reference(
     X_query: np.ndarray,
     X_reference: np.ndarray,
     percentile: float = 5.0,
-) -> Dict[str, float]:
+) -> dict[str, float]:
     nn1 = NearestNeighbors(n_neighbors=1, metric="euclidean")
     nn1.fit(X_reference)
     d1, nn1_idx = nn1.kneighbors(X_query)
@@ -220,7 +211,7 @@ def repeated_distance_based_mia(
     n_runs: int = 20,
     threshold_quantile: float = 0.05,
     random_state: int = 42,
-) -> Dict[str, float]:
+) -> dict[str, float]:
     results = []
     for i in range(n_runs):
         results.append(
@@ -243,11 +234,7 @@ def repeated_distance_based_mia(
     }
 
 
-# =========================================================
-# Main evaluation
-# =========================================================
-
-def format_privacy_results(results: Dict[str, object]) -> str:
+def format_privacy_results(results: dict[str, object]) -> str:
     interpretation = []
     metadata = results.get("metadata", {})
     paths = results.get("paths", {})
@@ -333,7 +320,7 @@ def run_privacy_evaluation(
     random_state: int = 42,
     mia_runs: int = 20,
     mia_threshold_quantile: float = 0.05,
-) -> Dict[str, object]:
+) -> dict[str, object]:
     train_df = pd.read_csv(train_csv)
     synth_df = pd.read_csv(synth_csv)
 
@@ -431,10 +418,6 @@ def evaluate_privacy(
 
     print(f"Done. Results written to: {output_txt}")
 
-
-# =========================================================
-# CLI
-# =========================================================
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate privacy metrics for synthetic tabular data.")

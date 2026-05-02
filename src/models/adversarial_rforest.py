@@ -7,12 +7,9 @@ from arfpy import arf
 
 try:
     from ..date_columns import finalize_synthetic_dates
-except ImportError:
-    from date_columns import finalize_synthetic_dates
-
-try:
     from .preprocessing import prepare_training_dataframe
 except ImportError:
+    from date_columns import finalize_synthetic_dates
     from preprocessing import prepare_training_dataframe
 
 def _seed_everything(seed: int) -> None:
@@ -145,10 +142,6 @@ def generate(
     finite_bounds: str = "global",
     epsilon: float = 1e-14,
 ):
-    # iris = load_iris()
-    # print(iris['feature_names'])
-    # df = pd.DataFrame(iris['data'], columns=iris['feature_names'])
-
     df = prepare_training_dataframe(train_data)
     _seed_everything(seed)
     myarf = arf.arf(x = df)

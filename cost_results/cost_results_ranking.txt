@@ -1,0 +1,35 @@
+============================================================
+  Model Ranking — averaged across all datasets
+============================================================
+
+Ranked by Average Training Time (s) (lower is better):
+  1. arf                 10.694
+  2. GenForest           31.152
+  3. TVAE                59.395
+  4. CTGAN              110.756
+  5. TabDDM             181.711
+  6. ForestFlow         396.735
+
+Ranked by Average Generation Time (s) (lower is better):
+  1. TVAE                 0.065
+  2. CTGAN                0.113
+  3. ForestFlow           0.385
+  4. arf                  0.496
+  5. GenForest            0.886
+  6. TabDDM              10.724
+
+Ranked by Average Peak RAM delta (MB) (lower is better):
+  1. GenForest            1.950
+  2. TVAE                95.977
+  3. arf                115.915
+  4. ForestFlow         136.312
+  5. TabDDM             169.827
+  6. CTGAN              217.518
+
+Ranked by Samples Generated per Second (higher is better):
+  1. TVAE             18124.150
+  2. ForestFlow       13543.945
+  3. CTGAN             9877.948
+  4. arf               2774.363
+  5. GenForest         1341.570
+  6. TabDDM              99.512

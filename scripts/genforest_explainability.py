@@ -30,32 +30,23 @@ Dependencies (beyond GenForests.py):
 import math
 import sys
 import os
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-# ── import your GenerativeForest ──────────────────────────────────────────────
-# Adjust the import to match how GenForests.py sits in your project.
-# If this script is in the same folder as GenForests.py:
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src', 'models')))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 from GenForests import GenerativeForest, FeatureInfo, Constraint, SplitTest, Node, PartitionCell
 
-# ─────────────────────────────────────────────────────────────────────────────
-# CONFIG — edit these
-# ─────────────────────────────────────────────────────────────────────────────
-DATA_PATH  = "data/ibm_hr.csv"   # path to your CSV
-N_SYNTH    = 500                         # synthetic rows to generate
-SYNTH_ROW  = 0                           # which synthetic row to trace
-SEED       = 2026
+DATA_PATH = "data/ibm_hr.csv"
+N_SYNTH = 500
+SYNTH_ROW = 0
+SEED = 2026
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 0. LOAD + TRAIN
-# ─────────────────────────────────────────────────────────────────────────────
-print("── Loading data ──")
+print("Loading data ...")
 df = pd.read_csv(DATA_PATH)
 
 # Drop constant columns that carry no information (same as ARF experiment)
@@ -66,28 +57,26 @@ if constant_cols:
 
 print(f"  Dataset shape: {df.shape}")
 
-print("\n── Fitting GenerativeForest ──")
+print("\nFitting GenerativeForest ...")
 gf = GenerativeForest(
     n_trees=50,
-    n_splits=800,  
-    max_numeric_splits=16, 
-    prior_real=0.6,    
+    n_splits=800,
+    max_numeric_splits=16,
+    prior_real=0.6,
     random_state=SEED,
 )
 gf.fit(df)
 
-print(f"\n── Generating {N_SYNTH} synthetic rows ──")
+print(f"\nGenerating {N_SYNTH} synthetic rows ...")
 df_synth = gf.sample(N_SYNTH)
 print(df_synth.head(3))
 
 
-# ─────────────────────────────────────────────────────────────────────────────
 # 1. FEATURE IMPORTANCE
 #    For every internal (non-leaf) node across all trees, record which feature
 #    was split on. Weight each split by the empirical_count of the node being
 #    split, so splits on denser regions of the data count more.
 #    This is directly analogous to impurity-decrease importance in sklearn.
-# ─────────────────────────────────────────────────────────────────────────────
 
 def gf_feature_importance(gf: GenerativeForest) -> pd.Series:
     """
@@ -97,7 +86,7 @@ def gf_feature_importance(gf: GenerativeForest) -> pd.Series:
     split. empirical_count is zeroed out after a split is applied in GenForests,
     so weighting by it would always give zero. The final scores are normalised to sum to 1.
     """
-    importance: Dict[str, float] = {info.name: 0.0 for info in gf.feature_info}
+    importance: dict[str, float] = {info.name: 0.0 for info in gf.feature_info}
 
     for tree in gf.trees:
         for node in tree.values():
@@ -136,7 +125,6 @@ plt.close()
 print("Saved → results/gf_feature_importance.png")
 
 
-# ─────────────────────────────────────────────────────────────────────────────
 # 2. ROW TRACING
 #    Re-run the STARUPDATE sampling procedure for a chosen synthetic row,
 #    recording every split decision made in each tree.
@@ -146,7 +134,6 @@ print("Saved → results/gf_feature_importance.png")
 #    decisions. The final "partition cell" is the intersection of one leaf per
 #    tree. We recover this by simulating STARUPDATE deterministically given
 #    the actual feature values of the target synthetic row.
-# ─────────────────────────────────────────────────────────────────────────────
 
 def _value_goes_left(test: SplitTest, value: Any) -> bool:
     """Deterministically evaluate the split direction for a known value."""
@@ -157,7 +144,7 @@ def _value_goes_left(test: SplitTest, value: Any) -> bool:
     return float(value) >= test.threshold
 
 
-def trace_row(gf: GenerativeForest, synth_row: pd.Series) -> Dict:
+def trace_row(gf: GenerativeForest, synth_row: pd.Series) -> dict:
     """
     Trace a synthetic row back through the GenerativeForest.
 
@@ -175,7 +162,6 @@ def trace_row(gf: GenerativeForest, synth_row: pd.Series) -> Dict:
     final_leaf_ids = []
 
     for t, tree in enumerate(gf.trees):
-        # Find root
         root_id = None
         for node_id, node in tree.items():
             if node.parent is None:
@@ -190,7 +176,7 @@ def trace_row(gf: GenerativeForest, synth_row: pd.Series) -> Dict:
                 final_leaf_ids.append(current_id)
                 break
             test = node.split_test
-            val  = synth_row[test.feature_name] if test.feature_name in synth_row.index else np.nan
+            val = synth_row[test.feature_name] if test.feature_name in synth_row.index else np.nan
             go_left = _value_goes_left(test, val)
 
             if test.kind == "categorical":
@@ -201,13 +187,13 @@ def trace_row(gf: GenerativeForest, synth_row: pd.Series) -> Dict:
                 threshold_str = f"threshold={test.threshold:.3f}"
 
             path.append({
-                "tree"       : t,
-                "node_id"    : current_id,
-                "feature"    : test.feature_name,
-                "value"      : val,
-                "direction"  : direction,
-                "split_info" : threshold_str,
-                "go_left"    : go_left,
+                "tree": t,
+                "node_id": current_id,
+                "feature": test.feature_name,
+                "value": val,
+                "direction": direction,
+                "split_info": threshold_str,
+                "go_left": go_left,
             })
 
             current_id = node.left_id if go_left else node.right_id
@@ -235,14 +221,13 @@ def trace_row(gf: GenerativeForest, synth_row: pd.Series) -> Dict:
     real_in_cell = gf.X.iloc[final_cell.row_idx] if final_cell is not None else pd.DataFrame()
 
     return {
-        "tree_paths"   : tree_paths,
-        "final_cell"   : final_cell,
-        "real_in_cell" : real_in_cell,
+        "tree_paths": tree_paths,
+        "final_cell": final_cell,
+        "real_in_cell": real_in_cell,
         "final_leaf_ids": final_leaf_ids,
     }
 
 
-# ── Run trace on synthetic row #SYNTH_ROW ────────────────────────────────────
 target_row = df_synth.iloc[SYNTH_ROW]
 
 print("\n" + "═" * 60)
@@ -289,21 +274,19 @@ if cell is not None:
                 print(f"    {info.name:30s}  {len(vals)} allowed values")
 
 
-# ─────────────────────────────────────────────────────────────────────────────
 # 3. PARTITION CELL DIAGRAM
 #    Visualise the final partition cell in the 2D subspace of the two most
 #    important features, showing all real records, real records in the cell,
 #    and the synthetic row itself. The dashed box marks the cell's constraint
 #    bounds for those two features — directly analogous to the ARF leaf diagram.
-# ─────────────────────────────────────────────────────────────────────────────
 
 def plot_partition_cell(
     gf: GenerativeForest,
     fi: pd.Series,
     real_df: pd.DataFrame,
     synth_row: pd.Series,
-    trace: Dict,
-    top_features: Optional[List[str]] = None,
+    trace: dict,
+    top_features: list[str] | None = None,
 ):
     """
     Plot the partition cell for the traced synthetic row in 2D.
@@ -381,14 +364,12 @@ def plot_partition_cell(
 plot_partition_cell(gf, fi, df, target_row, trace)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
 # 4. DECISION PATH SUMMARY PLOT
 #    For the traced row, draw a compact horizontal diagram showing which
 #    feature was used at each split step across the first N trees.
 #    This makes the multi-tree intersection structure of GenForests visible.
-# ─────────────────────────────────────────────────────────────────────────────
 
-def plot_decision_paths(trace: Dict, n_trees: int = 5, max_depth: int = 8):
+def plot_decision_paths(trace: dict, n_trees: int = 5, max_depth: int = 8):
     """
     Horizontal bar chart showing the sequence of features split on for each
     tree during STARUPDATE for the traced row. Each row = one tree, each
@@ -396,7 +377,7 @@ def plot_decision_paths(trace: Dict, n_trees: int = 5, max_depth: int = 8):
     """
     tree_paths = trace["tree_paths"][:n_trees]
     all_features = sorted({step["feature"] for path in tree_paths for step in path})
-    cmap   = plt.cm.get_cmap("tab20", len(all_features))
+    cmap = plt.cm.get_cmap("tab20", len(all_features))
     f_color = {f: cmap(i) for i, f in enumerate(all_features)}
 
     fig, ax = plt.subplots(figsize=(max(8, max_depth * 1.2), n_trees * 0.7 + 1.5))
@@ -405,9 +386,9 @@ def plot_decision_paths(trace: Dict, n_trees: int = 5, max_depth: int = 8):
 
     for t_idx, path in enumerate(tree_paths):
         for depth, step in enumerate(path[:max_depth]):
-            feat  = step["feature"]
+            feat = step["feature"]
             color = f_color[feat]
-            rect  = mpatches.FancyBboxPatch(
+            rect = mpatches.FancyBboxPatch(
                 (depth - 0.45, t_idx - 0.4), 0.9, 0.8,
                 boxstyle="round,pad=0.05",
                 facecolor=color, edgecolor="white", linewidth=0.8
@@ -441,8 +422,8 @@ def plot_decision_paths(trace: Dict, n_trees: int = 5, max_depth: int = 8):
 plot_decision_paths(trace, n_trees=min(8, gf.n_trees), max_depth=8)
 
 
-print("\n✓  All GenForest explainability outputs generated.")
-print("   Files produced:")
-print("     results/gf_feature_importance.png  — global feature importance bar chart")
-print("     results/gf_partition_cell.png      — 2D partition cell boundary diagram")
-print("     results/gf_decision_paths.png      — per-tree decision path heatmap")
+print("\nAll GenForest explainability outputs generated.")
+print("Files produced:")
+print("  results/gf_feature_importance.png  — global feature importance bar chart")
+print("  results/gf_partition_cell.png      — 2D partition cell boundary diagram")
+print("  results/gf_decision_paths.png      — per-tree decision path heatmap")

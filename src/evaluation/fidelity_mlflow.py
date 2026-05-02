@@ -2,13 +2,14 @@ import argparse
 import json
 import math
 import re
+from dataclasses import replace
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
 try:
-    from .fidelity_amended import aggregate_evaluation_results, format_results, run_evaluation
+    from .fidelity import EvalConfig, aggregate_evaluation_results, format_results, run_evaluation
 except ImportError:
-    from fidelity_amended import aggregate_evaluation_results, format_results, run_evaluation
+    from fidelity import EvalConfig, aggregate_evaluation_results, format_results, run_evaluation
 
 
 def _require_mlflow():
@@ -178,7 +179,7 @@ def _aggregate_metric_dicts(metric_dicts: list[dict[str, float]]) -> tuple[dict[
 
 
 def _build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Run fidelity_amended evaluation and log results to MLflow.")
+    parser = argparse.ArgumentParser(description="Run fidelity evaluation and log results to MLflow.")
     parser.add_argument("--real", required=True, help="Path to real.csv")
     parser.add_argument("--synthetic", nargs="+", required=True, help="One or more paths to synthetic CSV files.")
     parser.add_argument("--categorical", nargs="*", default=None, help="Categorical columns (optional).")
@@ -254,35 +255,38 @@ def main() -> None:
     run_name = args.run_name or f"{dataset_name}_{model_name}"
     synth_cap = None if args.synth_train_cap is None or args.synth_train_cap <= 0 else args.synth_train_cap
 
+    base_config = EvalConfig(
+        numeric_threshold=args.numeric_threshold,
+        k=args.k,
+        rep_dim=args.rep_dim,
+        hidden_dim=args.hidden_dim,
+        num_layers=args.num_layers,
+        activation=args.activation,
+        dropout_prob=args.dropout_prob,
+        nu=args.nu,
+        svdd_lr=args.svdd_lr,
+        svdd_weight_decay=args.svdd_weight_decay,
+        svdd_batch_size=args.svdd_batch_size,
+        svdd_epochs=args.svdd_epochs,
+        svdd_warm_up_epochs=args.svdd_warm_up_epochs,
+        permutations=args.permutations,
+        id_unique_threshold=args.id_unique_threshold,
+        global_utility_test_size=args.global_utility_test_size,
+        synth_train_cap=synth_cap,
+        global_utility_min_real_train_rows=args.global_utility_min_real_train_rows,
+        global_utility_min_real_test_rows=args.global_utility_min_real_test_rows,
+        global_utility_min_synth_train_rows=args.global_utility_min_synth_train_rows,
+    )
+
     run_results = []
     for synthetic_path, seed in zip(synthetic_paths, seeds):
         run_results.append(
             run_evaluation(
-                real_path=args.real,
-                synth_path=synthetic_path,
+                args.real,
+                synthetic_path,
+                replace(base_config, seed=seed),
                 categorical_cols=args.categorical,
                 numeric_cols=args.numeric,
-                numeric_threshold=args.numeric_threshold,
-                k=args.k,
-                rep_dim=args.rep_dim,
-                hidden_dim=args.hidden_dim,
-                num_layers=args.num_layers,
-                activation=args.activation,
-                dropout_prob=args.dropout_prob,
-                nu=args.nu,
-                svdd_lr=args.svdd_lr,
-                svdd_weight_decay=args.svdd_weight_decay,
-                svdd_batch_size=args.svdd_batch_size,
-                svdd_epochs=args.svdd_epochs,
-                svdd_warm_up_epochs=args.svdd_warm_up_epochs,
-                seed=seed,
-                permutations=args.permutations,
-                id_unique_threshold=args.id_unique_threshold,
-                global_utility_test_size=args.global_utility_test_size,
-                synth_train_cap=synth_cap,
-                global_utility_min_real_train_rows=args.global_utility_min_real_train_rows,
-                global_utility_min_real_test_rows=args.global_utility_min_real_test_rows,
-                global_utility_min_synth_train_rows=args.global_utility_min_synth_train_rows,
             )
         )
 

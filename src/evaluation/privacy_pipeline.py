@@ -1,5 +1,4 @@
 import argparse
-import importlib
 import subprocess
 import sys
 from pathlib import Path
@@ -8,82 +7,16 @@ from tempfile import TemporaryDirectory
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-
-ROOT = Path(__file__).resolve().parents[2]
-DATA_DIR = ROOT / "data"
-SYNTHETIC_DIR = ROOT / "synthetic_data"
-RESULTS_DIR = ROOT / "results"
-
-MODEL_MODULES = {
-    "ctgan": ("CTGAN", "src.models.CTGAN"),
-    "ctabganplus": ("CTABGANPlus", "src.models.CTABGANPlus"),
-    "tvae": ("TVAE", "src.models.TVAE"),
-    "gaussiancopula": ("GaussianCopula", "src.models.GaussianCopula"),
-    "forestflow": ("ForestFlow", "src.models.ForestFlow"),
-    "genforest": ("GenForest", "src.models.GenForests"),
-    "arf": ("arf", "src.models.adversarial_rforest"),
-    "tabddm": ("TabDDM", "src.models.TabDDM"),
-}
-
-
-def _discover_datasets() -> dict[str, Path]:
-    datasets: dict[str, Path] = {}
-    for csv_path in sorted(DATA_DIR.rglob("*.csv")):
-        if "generated" in csv_path.parts:
-            continue
-        datasets[csv_path.stem.lower()] = csv_path
-    return datasets
-
-
-def _resolve_models(selection: str) -> list[tuple[str, str]]:
-    if selection.upper() == "ALL":
-        return list(MODEL_MODULES.values())
-
-    key = selection.strip().lower()
-    aliases = {
-        "ctabgan+": "ctabganplus",
-        "ctabgan_plus": "ctabganplus",
-        "ctabgan": "ctabganplus",
-        "forest_flow": "forestflow",
-        "forest-flows": "forestflow",
-        "forestflows": "forestflow",
-        "forestdiffusion": "forestflow",
-        "gaussian_copula": "gaussiancopula",
-        "copula": "gaussiancopula",
-        "genforests": "genforest",
-        "adversarial_rforest": "arf",
-        "random_forest": "arf",
-    }
-    key = aliases.get(key, key)
-    if key not in MODEL_MODULES:
-        available = ", ".join(name for name, _ in MODEL_MODULES.values())
-        raise SystemExit(f"Unknown model '{selection}'. Available: ALL, {available}")
-    return [MODEL_MODULES[key]]
-
-
-def _resolve_datasets(selection: str) -> list[tuple[str, Path]]:
-    datasets = _discover_datasets()
-    if selection.upper() == "ALL":
-        return [(path.stem, path) for path in datasets.values()]
-
-    candidate = Path(selection)
-    if candidate.exists():
-        return [(candidate.stem, candidate.resolve())]
-
-    key = selection.strip().lower()
-    if key not in datasets:
-        available = ", ".join(sorted(path.stem for path in datasets.values()))
-        raise SystemExit(f"Unknown dataset '{selection}'. Available: ALL, {available}")
-    path = datasets[key]
-    return [(path.stem, path)]
-
-
-def _load_generate_function(module_path: str):
-    module = importlib.import_module(module_path)
-    generate = getattr(module, "generate", None)
-    if generate is None:
-        raise SystemExit(f"Module '{module_path}' does not expose a generate(...) function.")
-    return generate
+from .pipeline import (
+    MODEL_MODULES,
+    RESULTS_DIR,
+    ROOT,
+    SYNTHETIC_DIR,
+    _discover_datasets,
+    _load_generate_function,
+    _resolve_datasets,
+    _resolve_models,
+)
 
 
 def _split_real_dataset(
